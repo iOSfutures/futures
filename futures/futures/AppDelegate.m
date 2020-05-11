@@ -7,8 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import "HomeVC.h"
+#import "CommunityVC.h"
+#import "ReleaseVC.h"
+#import "QuotesVC.h"
+#import "MineVC.h"
+
+#import "UIImage+OriginalImage.h"
 
 @interface AppDelegate ()
+
+@property(nonatomic, strong)UITabBarController *tabBarC;
 
 @end
 
@@ -16,25 +25,54 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    UITabBarController *tabBarC = [[UITabBarController alloc] init];
+    tabBarC.tabBar.unselectedItemTintColor = [UIColor blackColor];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:254/255.0 green:114/255.0 blue:34/255.0 alpha:1.0]} forState:UIControlStateSelected];
+    UIView *tabBarBgColorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tabBarC.tabBar.bounds.size.width, tabBarC.tabBar.bounds.size.height)];
+    tabBarBgColorView.backgroundColor =[UIColor systemBackgroundColor];
+    [tabBarC.tabBar insertSubview:tabBarBgColorView atIndex:0];
+    tabBarC.tabBar.opaque = YES;
+//    [tabBarC.tabBarItem setImageInsets:UIEdgeInsetsMake(-40, 0, 0, 0)];
+    self.tabBarC = tabBarC;
+    
+    HomeVC *homeVC = [[HomeVC alloc]init];
+    UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    [self addChildVC:homeNav title:@"首页" imgName:@"ic_home_tob" selectedImgName:@"ic_home_sstate"];
+    [tabBarC addChildViewController:homeNav];
+    
+    CommunityVC *communityVC = [[CommunityVC alloc]init];
+    UINavigationController *communityNav = [[UINavigationController alloc] initWithRootViewController:communityVC];
+    [self addChildVC:communityNav title: @"社区" imgName:@"ic_community_tob" selectedImgName:@"ic_community_sstate_tob"];
+    [tabBarC addChildViewController:communityNav];
+    
+    ReleaseVC *releaseVC = [[ReleaseVC alloc]init];
+    UINavigationController *releaseNav = [[UINavigationController alloc] initWithRootViewController:releaseVC];
+    [self addChildVC:releaseNav title:@"发布" imgName:@"ic_release" selectedImgName:@"ic_release"];
+    [tabBarC addChildViewController:releaseNav];
+    
+    QuotesVC *quoteVC = [[QuotesVC alloc]init];
+    UINavigationController *quoteNav = [[UINavigationController alloc] initWithRootViewController:quoteVC];
+    [self addChildVC:quoteNav title:@"行情" imgName:@"ic_quotes_tob" selectedImgName:@"ic_quotes_tob"];
+    [tabBarC addChildViewController:quoteNav];
+    
+    MineVC *mineVC = [[MineVC alloc]init];
+    UINavigationController *mineNav = [[UINavigationController alloc] initWithRootViewController:mineVC];
+    [self addChildVC:mineNav title:@"我的" imgName:@"ic_mine_tob" selectedImgName:@"ic_mine_sstate_tob"];
+ 
+    self.window.rootViewController = tabBarC;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
-
-#pragma mark - UISceneSession lifecycle
-
-
-- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
-    // Called when a new scene session is being created.
-    // Use this method to select a configuration to create the new scene with.
-    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
-}
-
-
-- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
-    // Called when the user discards a scene session.
-    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+- (void)addChildVC:(UINavigationController *)nav title:(NSString *)title imgName:(NSString *)imageName selectedImgName:(NSString *)selectedImgName
+{
+    nav.tabBarItem.title = title;
+    nav.tabBarItem.image = [UIImage originalImageWithName:imageName];
+    nav.tabBarItem.selectedImage = [UIImage originalImageWithName:selectedImgName];
+    [self.tabBarC addChildViewController:nav];
 }
 
 

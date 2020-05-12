@@ -86,9 +86,9 @@
 		154DFC622468F4AE0098498C /* futures */ = {
 			isa = PBXGroup;
 			children = (
-				18590131246921A100CA7A68 /* Model */,
-				18590132246921B100CA7A68 /* View */,
-				18590133246921B800CA7A68 /* Controller */,
+				18590131246921A100CA7A68 /* M */,
+				18590132246921B100CA7A68 /* V */,
+				18590133246921B800CA7A68 /* C */,
 				154DFC632468F4AE0098498C /* AppDelegate.h */,
 				154DFC642468F4AE0098498C /* AppDelegate.m */,
 				154DFC692468F4AE0098498C /* ViewController.h */,
@@ -104,21 +104,21 @@
 			path = futures;
 			sourceTree = "<group>";
 		};
-		18590131246921A100CA7A68 /* Model */ = {
+		18590131246921A100CA7A68 /* M */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model;
+			path = M;
 			sourceTree = "<group>";
 		};
-		18590132246921B100CA7A68 /* View */ = {
+		18590132246921B100CA7A68 /* V */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = View;
+			path = V;
 			sourceTree = "<group>";
 		};
-		18590133246921B800CA7A68 /* Controller */ = {
+		18590133246921B800CA7A68 /* C */ = {
 			isa = PBXGroup;
 			children = (
 				185901342469221400CA7A68 /* HomeVC.h */,
@@ -137,7 +137,7 @@
 				18590149246933DB00CA7A68 /* MineVC.m */,
 				1859014A246933DB00CA7A68 /* MineVC.xib */,
 			);
-			path = Controller;
+			path = C;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

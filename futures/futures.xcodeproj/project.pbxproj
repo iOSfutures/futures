@@ -13,6 +13,14 @@
 		154DFC702468F4B00098498C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154DFC6F2468F4B00098498C /* Assets.xcassets */; };
 		154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154DFC712468F4B00098498C /* LaunchScreen.storyboard */; };
 		154DFC762468F4B00098498C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 154DFC752468F4B00098498C /* main.m */; };
+		155F34FB246A962F00CC2C34 /* HomeCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F34F9246A962F00CC2C34 /* HomeCalendarVC.m */; };
+		155F34FC246A962F00CC2C34 /* HomeCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F34FA246A962F00CC2C34 /* HomeCalendarVC.xib */; };
+		155F3500246A964A00CC2C34 /* HomeIndustryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F34FE246A964A00CC2C34 /* HomeIndustryVC.m */; };
+		155F3501246A964A00CC2C34 /* HomeIndustryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F34FF246A964A00CC2C34 /* HomeIndustryVC.xib */; };
+		155F3505246A968800CC2C34 /* HomeExpressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F3503246A968800CC2C34 /* HomeExpressVC.m */; };
+		155F3506246A968800CC2C34 /* HomeExpressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F3504246A968800CC2C34 /* HomeExpressVC.xib */; };
+		155F350A246A96D600CC2C34 /* HomeQuoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F3508246A96D600CC2C34 /* HomeQuoteVC.m */; };
+		155F350B246A96D600CC2C34 /* HomeQuoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F3509246A96D600CC2C34 /* HomeQuoteVC.xib */; };
 		185901372469221400CA7A68 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185901352469221400CA7A68 /* HomeVC.m */; };
 		185901382469221400CA7A68 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185901362469221400CA7A68 /* HomeVC.xib */; };
 		1859013C24692D6B00CA7A68 /* CommunityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859013A24692D6B00CA7A68 /* CommunityVC.m */; };
@@ -37,6 +45,18 @@
 		154DFC722468F4B00098498C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		154DFC742468F4B00098498C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		154DFC752468F4B00098498C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		155F34F8246A962F00CC2C34 /* HomeCalendarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCalendarVC.h; sourceTree = "<group>"; };
+		155F34F9246A962F00CC2C34 /* HomeCalendarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCalendarVC.m; sourceTree = "<group>"; };
+		155F34FA246A962F00CC2C34 /* HomeCalendarVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCalendarVC.xib; sourceTree = "<group>"; };
+		155F34FD246A964A00CC2C34 /* HomeIndustryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeIndustryVC.h; sourceTree = "<group>"; };
+		155F34FE246A964A00CC2C34 /* HomeIndustryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeIndustryVC.m; sourceTree = "<group>"; };
+		155F34FF246A964A00CC2C34 /* HomeIndustryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeIndustryVC.xib; sourceTree = "<group>"; };
+		155F3502246A968800CC2C34 /* HomeExpressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeExpressVC.h; sourceTree = "<group>"; };
+		155F3503246A968800CC2C34 /* HomeExpressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeExpressVC.m; sourceTree = "<group>"; };
+		155F3504246A968800CC2C34 /* HomeExpressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeExpressVC.xib; sourceTree = "<group>"; };
+		155F3507246A96D600CC2C34 /* HomeQuoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeQuoteVC.h; sourceTree = "<group>"; };
+		155F3508246A96D600CC2C34 /* HomeQuoteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeQuoteVC.m; sourceTree = "<group>"; };
+		155F3509246A96D600CC2C34 /* HomeQuoteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeQuoteVC.xib; sourceTree = "<group>"; };
 		185901342469221400CA7A68 /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		185901352469221400CA7A68 /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		185901362469221400CA7A68 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
@@ -124,6 +144,18 @@
 				185901342469221400CA7A68 /* HomeVC.h */,
 				185901352469221400CA7A68 /* HomeVC.m */,
 				185901362469221400CA7A68 /* HomeVC.xib */,
+				155F34F8246A962F00CC2C34 /* HomeCalendarVC.h */,
+				155F34F9246A962F00CC2C34 /* HomeCalendarVC.m */,
+				155F34FA246A962F00CC2C34 /* HomeCalendarVC.xib */,
+				155F34FD246A964A00CC2C34 /* HomeIndustryVC.h */,
+				155F34FE246A964A00CC2C34 /* HomeIndustryVC.m */,
+				155F34FF246A964A00CC2C34 /* HomeIndustryVC.xib */,
+				155F3502246A968800CC2C34 /* HomeExpressVC.h */,
+				155F3503246A968800CC2C34 /* HomeExpressVC.m */,
+				155F3504246A968800CC2C34 /* HomeExpressVC.xib */,
+				155F3507246A96D600CC2C34 /* HomeQuoteVC.h */,
+				155F3508246A96D600CC2C34 /* HomeQuoteVC.m */,
+				155F3509246A96D600CC2C34 /* HomeQuoteVC.xib */,
 				1859013924692D6B00CA7A68 /* CommunityVC.h */,
 				1859013A24692D6B00CA7A68 /* CommunityVC.m */,
 				1859013B24692D6B00CA7A68 /* CommunityVC.xib */,
@@ -197,13 +229,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155F350B246A96D600CC2C34 /* HomeQuoteVC.xib in Resources */,
 				1859014224692D8B00CA7A68 /* ReleaseVC.xib in Resources */,
 				154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */,
+				155F34FC246A962F00CC2C34 /* HomeCalendarVC.xib in Resources */,
+				155F3501246A964A00CC2C34 /* HomeIndustryVC.xib in Resources */,
 				185901382469221400CA7A68 /* HomeVC.xib in Resources */,
 				154DFC702468F4B00098498C /* Assets.xcassets in Resources */,
 				154DFC6E2468F4AE0098498C /* Main.storyboard in Resources */,
 				1859014C246933DB00CA7A68 /* MineVC.xib in Resources */,
 				1859014724692F3800CA7A68 /* QuoteVC.xib in Resources */,
+				155F3506246A968800CC2C34 /* HomeExpressVC.xib in Resources */,
 				1859013D24692D6B00CA7A68 /* CommunityVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,8 +257,12 @@
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
 				1859014124692D8B00CA7A68 /* ReleaseVC.m in Sources */,
 				1859014B246933DB00CA7A68 /* MineVC.m in Sources */,
+				155F350A246A96D600CC2C34 /* HomeQuoteVC.m in Sources */,
+				155F3500246A964A00CC2C34 /* HomeIndustryVC.m in Sources */,
 				154DFC762468F4B00098498C /* main.m in Sources */,
+				155F34FB246A962F00CC2C34 /* HomeCalendarVC.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,
+				155F3505246A968800CC2C34 /* HomeExpressVC.m in Sources */,
 				1859014624692F3800CA7A68 /* QuotesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

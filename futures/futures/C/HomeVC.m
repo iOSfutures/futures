@@ -12,13 +12,13 @@
 #import "HomeExpressVC.h"
 #import "HomeQuoteVC.h"
 
+#import "UIImage+OriginalImage.h"
+
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
 #define kScaleFrom_iPhone6_Desgin(_X_) (_X_ * (SCREEN_WIDTH/375))
 
 @interface HomeVC ()
 @property(nonatomic, weak) UIScrollView *homeScrollView;
-@property(nonatomic, weak) UITextField *searchView;
-@property(nonatomic, weak) UIImageView *qiandaoImage;
 @end
 
 @implementation HomeVC
@@ -101,16 +101,15 @@
     //设置边角弧度
     searchView.layer.cornerRadius = 12;
     searchView.placeholder = @"数字货币";
-    self.searchView = searchView;
-    [self.navigationController.navigationBar addSubview:searchView];
     
-    //导航栏右边签到图片
-    UIImageView *qiandaoImage = [[UIImageView alloc]init];
-    qiandaoImage.frame = CGRectMake(340.5, 12.5, 19.5, 20.5);
-    qiandaoImage.image = [UIImage imageNamed:@"ic_qiandao"];
-    self.qiandaoImage = qiandaoImage;
-    [self.navigationController.navigationBar addSubview:qiandaoImage];
-    //44    NSLog(@"%d", (int) self.navigationController.navigationBar.frame.size.height);
+//    self.navigationItem.titleView.alignmentRectInsets = UIEdgeInsetsMake(0, -20, 0, 20);
+    
+    self.navigationItem.titleView = searchView;
+    
+    
+    UIBarButtonItem *qiandaoBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_qiandao"] style:UIBarButtonItemStylePlain target:self action:nil];
+    
+    self.navigationItem.rightBarButtonItem = qiandaoBtn;
 }
 
 //设置轮播图
@@ -179,32 +178,21 @@
 
 //跳转界面
 -(void)calendarBtnClick{
-    [self.searchView removeFromSuperview];
-    [self.qiandaoImage removeFromSuperview];
     HomeCalendarVC *calendarVC = [[HomeCalendarVC alloc]init];
     [self.navigationController pushViewController:calendarVC animated:YES];
 }
 
--(void)industryBtnClick
-{
-    [self.searchView removeFromSuperview];
-    [self.qiandaoImage removeFromSuperview];
+-(void)industryBtnClick{
     HomeIndustryVC *industryVC = [[HomeIndustryVC alloc]init];
     [self.navigationController pushViewController:industryVC animated:YES];
 }
 
--(void)expressBtnClick
-{
-    [self.searchView removeFromSuperview];
-    [self.qiandaoImage removeFromSuperview];
+-(void)expressBtnClick{
     HomeExpressVC *expressVC = [[HomeExpressVC alloc]init];
     [self.navigationController pushViewController:expressVC animated:YES];
 }
 
--(void)quoteBtnClick
-{
-    [self.searchView removeFromSuperview];
-    [self.qiandaoImage removeFromSuperview];
+-(void)quoteBtnClick{
     HomeQuoteVC *quoteVC = [[HomeQuoteVC alloc]init];
     [self.navigationController pushViewController:quoteVC animated:YES];
 }

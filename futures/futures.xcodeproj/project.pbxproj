@@ -21,6 +21,7 @@
 		155F3506246A968800CC2C34 /* HomeExpressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F3504246A968800CC2C34 /* HomeExpressVC.xib */; };
 		155F350A246A96D600CC2C34 /* HomeQuoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F3508246A96D600CC2C34 /* HomeQuoteVC.m */; };
 		155F350B246A96D600CC2C34 /* HomeQuoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F3509246A96D600CC2C34 /* HomeQuoteVC.xib */; };
+		181F5036246B908500CCCBDB /* CustomTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F5035246B908500CCCBDB /* CustomTBC.m */; };
 		185901372469221400CA7A68 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185901352469221400CA7A68 /* HomeVC.m */; };
 		185901382469221400CA7A68 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185901362469221400CA7A68 /* HomeVC.xib */; };
 		1859013C24692D6B00CA7A68 /* CommunityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859013A24692D6B00CA7A68 /* CommunityVC.m */; };
@@ -57,6 +58,8 @@
 		155F3507246A96D600CC2C34 /* HomeQuoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeQuoteVC.h; sourceTree = "<group>"; };
 		155F3508246A96D600CC2C34 /* HomeQuoteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeQuoteVC.m; sourceTree = "<group>"; };
 		155F3509246A96D600CC2C34 /* HomeQuoteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeQuoteVC.xib; sourceTree = "<group>"; };
+		181F5034246B908500CCCBDB /* CustomTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTBC.h; sourceTree = "<group>"; };
+		181F5035246B908500CCCBDB /* CustomTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTBC.m; sourceTree = "<group>"; };
 		185901342469221400CA7A68 /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		185901352469221400CA7A68 /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		185901362469221400CA7A68 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 		18590133246921B800CA7A68 /* C */ = {
 			isa = PBXGroup;
 			children = (
+				181F5034246B908500CCCBDB /* CustomTBC.h */,
+				181F5035246B908500CCCBDB /* CustomTBC.m */,
 				185901342469221400CA7A68 /* HomeVC.h */,
 				185901352469221400CA7A68 /* HomeVC.m */,
 				185901362469221400CA7A68 /* HomeVC.xib */,
@@ -251,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181F5036246B908500CCCBDB /* CustomTBC.m in Sources */,
 				1859013C24692D6B00CA7A68 /* CommunityVC.m in Sources */,
 				154DFC6B2468F4AE0098498C /* ViewController.m in Sources */,
 				185901372469221400CA7A68 /* HomeVC.m in Sources */,

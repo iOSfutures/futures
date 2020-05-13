@@ -12,6 +12,9 @@
 #import "HomeExpressVC.h"
 #import "HomeQuoteVC.h"
 
+#define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
+#define kScaleFrom_iPhone6_Desgin(_X_) (_X_ * (SCREEN_WIDTH/375))
+
 @interface HomeVC ()
 @property(nonatomic, weak) UIScrollView *homeScrollView;
 @property(nonatomic, weak) UITextField *searchView;
@@ -22,6 +25,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //不使用系统TabBar设置背景图片的方式来设置图片
+    [self getBackView:self.tabBarController.tabBar getViewBlock:^(UIView *subView) {
+        if ([subView isKindOfClass:NSClassFromString(@"_UIBarBackground")]) {
+            [self getBackView:subView getViewBlock:^(UIView *view) {
+                
+                if ([view isKindOfClass:NSClassFromString(@"UIImageView")]) {
+                    [view removeFromSuperview];
+                    UIImageView *imageView = [UIImageView new];
+                    if(SCREEN_WIDTH == 375)
+                    {
+                        imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, kScaleFrom_iPhone6_Desgin(74));
+                    }
+                    else if (SCREEN_WIDTH == 414)
+                    {
+                        imageView.frame = CGRectMake(0, -20, SCREEN_WIDTH, kScaleFrom_iPhone6_Desgin(74));
+                    }
+                    imageView.image = [UIImage imageNamed:@"background_tob"];
+                    [subView addSubview:imageView];
+                }
+            }];
+        }
+    }];
+    
     UIScrollView *homeScrollView = [[UIScrollView alloc]init];
     homeScrollView.frame = [UIScreen mainScreen].bounds;
     homeScrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 1575);
@@ -38,6 +65,20 @@
     
 }
 
+-(void)getBackView:(UIView*)superView getViewBlock:(void(^)(UIView *view))Blcok
+
+{
+    if (Blcok) {
+        Blcok(superView);
+    }
+    
+    for (UIView *view in superView.subviews)
+    {
+        [self getBackView:view getViewBlock:Blcok];
+    }
+    
+}
+
 - (void)viewWillAppear:(BOOL)animated{
     [self setNavBarView];
 }
@@ -49,9 +90,9 @@
     //去掉透明后导航栏下边的黑边
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     self.navigationController.navigationBar.translucent = YES;
-
+    
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:254/255.0 green:162/255.0 blue:3/255.0 alpha:1.0];
-//{{0, 0}, {375, 44}}    NSLog(@"%@", NSStringFromCGRect(self.navigationController.navigationBar.frame));
+    //{{0, 0}, {375, 44}}    NSLog(@"%@", NSStringFromCGRect(self.navigationController.navigationBar.frame));
     
     //导航栏搜索框
     UITextField *searchView = [[UITextField alloc] init];
@@ -69,7 +110,7 @@
     qiandaoImage.image = [UIImage imageNamed:@"ic_qiandao"];
     self.qiandaoImage = qiandaoImage;
     [self.navigationController.navigationBar addSubview:qiandaoImage];
-//44    NSLog(@"%d", (int) self.navigationController.navigationBar.frame.size.height);
+    //44    NSLog(@"%d", (int) self.navigationController.navigationBar.frame.size.height);
 }
 
 //设置轮播图
@@ -79,7 +120,7 @@
     CGFloat bannerRimW = 9;
     CGFloat bannerViewW = [UIScreen mainScreen].bounds.size.width;//banner的frame的宽度
     CGFloat bannerSpaceW = ([UIScreen mainScreen].bounds.size.width - bannerW - 2 * bannerRimW)/2;
-//6    NSLog(@"%d",(int)bannerSpaceW);
+    //6    NSLog(@"%d",(int)bannerSpaceW);
     
     //轮播图
     UIScrollView *bannerScrollView = [[UIScrollView alloc]init];
@@ -97,15 +138,15 @@
     }
     
     bannerScrollView.contentSize = CGSizeMake(bannerCount * (bannerW + bannerSpaceW), 190);
-//{1053, 190}    NSLog(@"%@", NSStringFromCGSize(bannerScrollView.contentSize));
-//{{0, 67}, {375, 190}}    NSLog(@"%@", NSStringFromCGRect(bannerScrollView.frame));
+    //{1053, 190}    NSLog(@"%@", NSStringFromCGSize(bannerScrollView.contentSize));
+    //{{0, 67}, {375, 190}}    NSLog(@"%@", NSStringFromCGRect(bannerScrollView.frame));
     
     [self.homeScrollView addSubview:bannerScrollView];
     
     bannerScrollView.pagingEnabled = YES;
     
-//    UIPageControl *pageControl = [[UIPageControl alloc]init];
-//    pageControl.numberOfPages = bannerCount;
+    //    UIPageControl *pageControl = [[UIPageControl alloc]init];
+    //    pageControl.numberOfPages = bannerCount;
     
 }
 

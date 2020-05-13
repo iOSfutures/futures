@@ -63,6 +63,8 @@
     
     [self setButton];
     
+    [self setQiandaoBtn];
+    
 }
 
 -(void)getBackView:(UIView*)superView getViewBlock:(void(^)(UIView *view))Blcok
@@ -149,27 +151,28 @@
     
 }
 
+//设置4个跳转界面按钮
 -(void)setButton{
     UIButton *calendarBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    calendarBtn.frame = CGRectMake(26, 276-64, 55, 54);
+    calendarBtn.frame = CGRectMake(26, 296-64, 55, 54);
     [calendarBtn setImage:[UIImage imageNamed:@"ic_calendar data_home"] forState:UIControlStateNormal];
     [self.homeScrollView addSubview:calendarBtn];
     [calendarBtn addTarget:self action:@selector(calendarBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *industryBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    industryBtn.frame = CGRectMake(113.5, 276-64, 55, 54);
+    industryBtn.frame = CGRectMake(113.5, 296-64, 55, 54);
     [industryBtn setImage:[UIImage imageNamed:@"ic_industry storm_home"] forState:UIControlStateNormal];
     [self.homeScrollView addSubview:industryBtn];
     [industryBtn addTarget:self action:@selector(industryBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *expressBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    expressBtn.frame = CGRectMake(204, 276-64, 55, 54);
+    expressBtn.frame = CGRectMake(204, 296-64, 55, 54);
     [expressBtn setImage:[UIImage imageNamed:@"ic_7X24 express_home"] forState:UIControlStateNormal];
     [self.homeScrollView addSubview:expressBtn];
     [expressBtn addTarget:self action:@selector(expressBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *quoteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    quoteBtn.frame = CGRectMake(294, 276-64, 55, 54);
+    quoteBtn.frame = CGRectMake(294, 296-64, 55, 54);
     [quoteBtn setImage:[UIImage imageNamed:@"ic_quote data_home"] forState:UIControlStateNormal];
     [self.homeScrollView addSubview:quoteBtn];
     [quoteBtn addTarget:self action:@selector(quoteBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -195,6 +198,13 @@
 -(void)quoteBtnClick{
     HomeQuoteVC *quoteVC = [[HomeQuoteVC alloc]init];
     [self.navigationController pushViewController:quoteVC animated:YES];
+}
+
+-(void)setQiandaoBtn{
+    UIButton *qianBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    qianBtn.frame = CGRectMake(15.5, 386-64, 338.5, 101);
+    [qianBtn setImage:[UIImage imageNamed:@"qiandao_banner02_home"] forState:UIControlStateNormal];
+    [self.homeScrollView addSubview:qianBtn];
 }
 
 /*

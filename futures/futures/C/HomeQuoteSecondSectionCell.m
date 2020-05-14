@@ -6,9 +6,9 @@
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
-#import "HomeQuoteTableViewCell.h"
+#import "HomeQuoteSecondSectionCell.h"
 
-@implementation HomeQuoteTableViewCell
+@implementation HomeQuoteSecondSectionCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

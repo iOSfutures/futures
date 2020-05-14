@@ -11,7 +11,7 @@
 #import "HomeIndustryVC.h"
 #import "HomeExpressVC.h"
 #import "HomeQuoteVC.h"
-#import "HomeQuoteTableViewCell.h"
+#import "HomeQuoteSecondSectionCell.h"
 
 #import "UIImage+OriginalImage.h"
 
@@ -19,8 +19,8 @@
 #define kScaleFrom_iPhone6_Desgin(_X_) (_X_ * (SCREEN_WIDTH/375))
 
 @interface HomeVC ()<UITableViewDelegate, UITableViewDataSource>
-@property(nonatomic, weak) UIScrollView *homeScrollView;
-@property(nonatomic, weak) UITableView *quoteTableView;
+@property (weak, nonatomic) IBOutlet UITableView *quoteTableView;
+
 @end
 
 @implementation HomeVC
@@ -51,26 +51,9 @@
         }
     }];
     
-    UIScrollView *homeScrollView = [[UIScrollView alloc]init];
-    homeScrollView.frame = [UIScreen mainScreen].bounds;
-    homeScrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 1575);
-    homeScrollView.backgroundColor = [UIColor redColor];
-    self.homeScrollView = homeScrollView;
-    [self.view addSubview:homeScrollView];
-    NSLog(@"homeScrollView---%@", NSStringFromCGRect(homeScrollView.frame));
-    NSLog(@"homeScrollView---%@", NSStringFromCGSize(homeScrollView.contentSize));
-    
-    
-    [self setBannerView];
-    
-    [self setButton];
-    
-    [self setQiandaoBtn];
-    
-    [self.quoteTableView registerNib:[UINib nibWithNibName:@"HomeQuoteTableViewCell" bundle:nil] forCellReuseIdentifier:@"HomeQuoteTableViewCell"];
-    self.quoteTableView.rowHeight = 107;
-    [self setQuoteTableView];
-    [self.homeScrollView addSubview:self.quoteTableView];
+
+    //为quoteTableView注册cell
+    [self.quoteTableView registerNib:[UINib nibWithNibName:@"HomeQuoteSecondSectionCell" bundle:nil] forCellReuseIdentifier:@"HomeQuoteSecondSectionCell"];
 }
 
 -(void)getBackView:(UIView*)superView getViewBlock:(void(^)(UIView *view))Blcok
@@ -121,18 +104,16 @@
 }
 
 //设置轮播图
--(void)setBannerView{
+-(void)setBannerView:(UIView *)fView{
     CGFloat bannerW = 345;//单个banner宽度
     CGFloat bannerH = 190;
     CGFloat bannerRimW = 9;
     CGFloat bannerViewW = [UIScreen mainScreen].bounds.size.width;//banner的frame的宽度
     CGFloat bannerSpaceW = ([UIScreen mainScreen].bounds.size.width - bannerW - 2 * bannerRimW)/2;
-    //6    NSLog(@"%d",(int)bannerSpaceW);
     
     //轮播图
     UIScrollView *bannerScrollView = [[UIScrollView alloc]init];
     bannerScrollView.frame = CGRectMake(0, 13, bannerViewW, bannerH);
-    NSLog(@"bannerScrollView---%@", NSStringFromCGRect(bannerScrollView.frame));
     bannerScrollView.backgroundColor = [UIColor whiteColor];
     
     //添加轮播图图片
@@ -145,10 +126,8 @@
     }
     
     bannerScrollView.contentSize = CGSizeMake(bannerCount * (bannerW + bannerSpaceW), 190);
-    //{1053, 190}    NSLog(@"%@", NSStringFromCGSize(bannerScrollView.contentSize));
-    //{{0, 67}, {375, 190}}    NSLog(@"%@", NSStringFromCGRect(bannerScrollView.frame));
     
-    [self.homeScrollView addSubview:bannerScrollView];
+    [fView addSubview:bannerScrollView];
     
     bannerScrollView.pagingEnabled = YES;
     
@@ -158,29 +137,29 @@
 }
 
 //设置4个跳转界面按钮
--(void)setButton{
+-(void)setButton:(UIView *)fView{
     UIButton *calendarBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     calendarBtn.frame = CGRectMake(26, 296-64, 55, 54);
     [calendarBtn setImage:[UIImage imageNamed:@"ic_calendar data_home"] forState:UIControlStateNormal];
-    [self.homeScrollView addSubview:calendarBtn];
+    [fView addSubview:calendarBtn];
     [calendarBtn addTarget:self action:@selector(calendarBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *industryBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     industryBtn.frame = CGRectMake(113.5, 296-64, 55, 54);
     [industryBtn setImage:[UIImage imageNamed:@"ic_industry storm_home"] forState:UIControlStateNormal];
-    [self.homeScrollView addSubview:industryBtn];
+    [fView addSubview:industryBtn];
     [industryBtn addTarget:self action:@selector(industryBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *expressBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     expressBtn.frame = CGRectMake(204, 296-64, 55, 54);
     [expressBtn setImage:[UIImage imageNamed:@"ic_7X24 express_home"] forState:UIControlStateNormal];
-    [self.homeScrollView addSubview:expressBtn];
+    [fView addSubview:expressBtn];
     [expressBtn addTarget:self action:@selector(expressBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *quoteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     quoteBtn.frame = CGRectMake(294, 296-64, 55, 54);
     [quoteBtn setImage:[UIImage imageNamed:@"ic_quote data_home"] forState:UIControlStateNormal];
-    [self.homeScrollView addSubview:quoteBtn];
+    [fView addSubview:quoteBtn];
     [quoteBtn addTarget:self action:@selector(quoteBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
 }
@@ -206,53 +185,127 @@
     [self.navigationController pushViewController:quoteVC animated:YES];
 }
 
--(void)setQiandaoBtn{
+-(void)setQiandaoBtn:(UIView *)fView{
     UIButton *qianBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     qianBtn.frame = CGRectMake(15.5, 386-64, 338.5, 101);
     [qianBtn setImage:[UIImage imageNamed:@"qiandao_banner02_home"] forState:UIControlStateNormal];
-    [self.homeScrollView addSubview:qianBtn];
+    [fView addSubview:qianBtn];
 }
 
--(void)setQuoteTableView{
-    UITableView *quoteTableView = [[UITableView alloc] initWithFrame:CGRectMake(15, 518-64, 345, 500)];
-    self.quoteTableView = quoteTableView;
-    self.quoteTableView.delegate = self;
-    self.quoteTableView.dataSource = self;
-    [self.homeScrollView addSubview:self.quoteTableView];
-}
 
 #pragma mark - Table view data source
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    UIView *quoteView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 24)];
-    UIImageView *quoteImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"quick quotes_title_home"]];
-    //headerView里x,y,w无效;只有h有效
-    quoteImageView.frame = CGRectMake(100, 0, 176, 24);
-    [quoteView addSubview:quoteImageView];
-    return quoteView;
+    return 3;
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    if(section == 1){
+        return 4;
+    }
+    else if(section == 3 || section == 4){
+        return 1;
+    }
+    else{
+        return 0;
+    }
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *quoteID = @"HomeQuoteTableViewCell";
-    HomeQuoteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:quoteID];
-    if(cell == nil){
-        cell = [[NSBundle mainBundle] loadNibNamed:@"HomeQuoteTableViewCell" owner:self options:nil].firstObject;
-//        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
+    if(indexPath.section == 1){
+        static NSString *quoteID = @"HomeQuoteSecondSectionCell";
+        HomeQuoteSecondSectionCell *cell = [tableView dequeueReusableCellWithIdentifier:quoteID];
+        if(cell == nil){
+            cell = [[NSBundle mainBundle] loadNibNamed:@"HomeQuoteSecondSectionCell" owner:self options:nil].firstObject;
+        }
+        return cell;
     }
-    // Configure the cell...
-    
-    return cell;
+    else{
+        return nil;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 107;
+    if(indexPath.section == 1){
+        return 107;
+    }
+    else if(indexPath.section == 3){
+        return 190;
+    }
+    else if(indexPath.section == 4){
+        return 80;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 450)];
+        [self setBannerView:headerView];
+        [self setButton:headerView];
+        [self setQiandaoBtn:headerView];
+        return headerView;
+    }
+    else if(section == 1){
+        UIView *quoteView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 24)];
+        UIImageView *quoteImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"quick quotes_title_home"]];
+        //headerView里x,y,w无效;只有h有效
+        quoteImageView.frame = CGRectMake(100, 0, 176, 24);
+        [quoteView addSubview:quoteImageView];
+        return quoteView;
+    }
+    else if (section == 2){
+        UIView *TouSectionView = [[NSBundle mainBundle]loadNibNamed:@"HomeQuoteThirdSectionHead" owner:self options:nil].firstObject;
+        return TouSectionView;
+    }
+    else if(section == 3){
+        UIView *secondSectionHeaderView = [[NSBundle mainBundle]loadNibNamed:@"HomeQuoteSecondSectionHeaderView" owner:self options:nil].firstObject;
+        return secondSectionHeaderView;
+    }
+    else{
+        return nil;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if(section == 0){
+        return 450;
+    }
+    else if (section == 1){
+        return 24;
+    }
+    else if(section == 2){
+        return 57;
+    }
+    else{
+        return 0;
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    if(section == 1){
+        UIView *footerView = [[NSBundle mainBundle] loadNibNamed:@"HomeQuoteSecondSectionFoot" owner:self options:nil].firstObject;
+        return footerView;
+    }
+    else{
+        return nil;
+    }
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    if(section == 1){
+        return 44;
+    }
+    else{
+        return 0;
+    }
 }
 
 /*

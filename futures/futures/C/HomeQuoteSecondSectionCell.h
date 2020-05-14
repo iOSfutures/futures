@@ -10,8 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeQuoteTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *numLabel;
+@interface HomeQuoteSecondSectionCell : UITableViewCell
 
 @end
 

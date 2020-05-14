@@ -11,14 +11,16 @@
 #import "HomeIndustryVC.h"
 #import "HomeExpressVC.h"
 #import "HomeQuoteVC.h"
+#import "HomeQuoteTableViewCell.h"
 
 #import "UIImage+OriginalImage.h"
 
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
 #define kScaleFrom_iPhone6_Desgin(_X_) (_X_ * (SCREEN_WIDTH/375))
 
-@interface HomeVC ()
+@interface HomeVC ()<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, weak) UIScrollView *homeScrollView;
+@property(nonatomic, weak) UITableView *quoteTableView;
 @end
 
 @implementation HomeVC
@@ -65,6 +67,10 @@
     
     [self setQiandaoBtn];
     
+    [self.quoteTableView registerNib:[UINib nibWithNibName:@"HomeQuoteTableViewCell" bundle:nil] forCellReuseIdentifier:@"HomeQuoteTableViewCell"];
+    self.quoteTableView.rowHeight = 107;
+    [self setQuoteTableView];
+    [self.homeScrollView addSubview:self.quoteTableView];
 }
 
 -(void)getBackView:(UIView*)superView getViewBlock:(void(^)(UIView *view))Blcok
@@ -205,6 +211,48 @@
     qianBtn.frame = CGRectMake(15.5, 386-64, 338.5, 101);
     [qianBtn setImage:[UIImage imageNamed:@"qiandao_banner02_home"] forState:UIControlStateNormal];
     [self.homeScrollView addSubview:qianBtn];
+}
+
+-(void)setQuoteTableView{
+    UITableView *quoteTableView = [[UITableView alloc] initWithFrame:CGRectMake(15, 518-64, 345, 500)];
+    self.quoteTableView = quoteTableView;
+    self.quoteTableView.delegate = self;
+    self.quoteTableView.dataSource = self;
+    [self.homeScrollView addSubview:self.quoteTableView];
+}
+
+#pragma mark - Table view data source
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *quoteView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 24)];
+    UIImageView *quoteImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"quick quotes_title_home"]];
+    //headerView里x,y,w无效;只有h有效
+    quoteImageView.frame = CGRectMake(100, 0, 176, 24);
+    [quoteView addSubview:quoteImageView];
+    return quoteView;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 4;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *quoteID = @"HomeQuoteTableViewCell";
+    HomeQuoteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:quoteID];
+    if(cell == nil){
+        cell = [[NSBundle mainBundle] loadNibNamed:@"HomeQuoteTableViewCell" owner:self options:nil].firstObject;
+//        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
+    }
+    // Configure the cell...
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 107;
 }
 
 /*

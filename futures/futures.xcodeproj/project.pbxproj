@@ -21,6 +21,8 @@
 		155F3506246A968800CC2C34 /* HomeExpressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F3504246A968800CC2C34 /* HomeExpressVC.xib */; };
 		155F350A246A96D600CC2C34 /* HomeQuoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F3508246A96D600CC2C34 /* HomeQuoteVC.m */; };
 		155F350B246A96D600CC2C34 /* HomeQuoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F3509246A96D600CC2C34 /* HomeQuoteVC.xib */; };
+		157B5571246BCE5400223176 /* HomeQuoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 157B556F246BCE5400223176 /* HomeQuoteTableViewCell.m */; };
+		157B5572246BCE5400223176 /* HomeQuoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157B5570246BCE5400223176 /* HomeQuoteTableViewCell.xib */; };
 		181F5036246B908500CCCBDB /* CustomTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F5035246B908500CCCBDB /* CustomTBC.m */; };
 		185901372469221400CA7A68 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185901352469221400CA7A68 /* HomeVC.m */; };
 		185901382469221400CA7A68 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185901362469221400CA7A68 /* HomeVC.xib */; };
@@ -58,6 +60,9 @@
 		155F3507246A96D600CC2C34 /* HomeQuoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeQuoteVC.h; sourceTree = "<group>"; };
 		155F3508246A96D600CC2C34 /* HomeQuoteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeQuoteVC.m; sourceTree = "<group>"; };
 		155F3509246A96D600CC2C34 /* HomeQuoteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeQuoteVC.xib; sourceTree = "<group>"; };
+		157B556E246BCE5400223176 /* HomeQuoteTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeQuoteTableViewCell.h; sourceTree = "<group>"; };
+		157B556F246BCE5400223176 /* HomeQuoteTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeQuoteTableViewCell.m; sourceTree = "<group>"; };
+		157B5570246BCE5400223176 /* HomeQuoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeQuoteTableViewCell.xib; sourceTree = "<group>"; };
 		181F5034246B908500CCCBDB /* CustomTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTBC.h; sourceTree = "<group>"; };
 		181F5035246B908500CCCBDB /* CustomTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTBC.m; sourceTree = "<group>"; };
 		185901342469221400CA7A68 /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
@@ -149,6 +154,9 @@
 				185901342469221400CA7A68 /* HomeVC.h */,
 				185901352469221400CA7A68 /* HomeVC.m */,
 				185901362469221400CA7A68 /* HomeVC.xib */,
+				157B556E246BCE5400223176 /* HomeQuoteTableViewCell.h */,
+				157B556F246BCE5400223176 /* HomeQuoteTableViewCell.m */,
+				157B5570246BCE5400223176 /* HomeQuoteTableViewCell.xib */,
 				155F34F8246A962F00CC2C34 /* HomeCalendarVC.h */,
 				155F34F9246A962F00CC2C34 /* HomeCalendarVC.m */,
 				155F34FA246A962F00CC2C34 /* HomeCalendarVC.xib */,
@@ -244,6 +252,7 @@
 				154DFC6E2468F4AE0098498C /* Main.storyboard in Resources */,
 				1859014C246933DB00CA7A68 /* MineVC.xib in Resources */,
 				1859014724692F3800CA7A68 /* QuoteVC.xib in Resources */,
+				157B5572246BCE5400223176 /* HomeQuoteTableViewCell.xib in Resources */,
 				155F3506246A968800CC2C34 /* HomeExpressVC.xib in Resources */,
 				1859013D24692D6B00CA7A68 /* CommunityVC.xib in Resources */,
 			);
@@ -268,6 +277,7 @@
 				154DFC762468F4B00098498C /* main.m in Sources */,
 				155F34FB246A962F00CC2C34 /* HomeCalendarVC.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,
+				157B5571246BCE5400223176 /* HomeQuoteTableViewCell.m in Sources */,
 				155F3505246A968800CC2C34 /* HomeExpressVC.m in Sources */,
 				1859014624692F3800CA7A68 /* QuotesVC.m in Sources */,
 			);

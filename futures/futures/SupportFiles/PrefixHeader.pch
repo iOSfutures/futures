@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  futures
+//
+//  Created by Ssiswent on 2020/5/13.
+//  Copyright © 2020 Francis. All rights reserved.
+//
+
+#define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT   [[UIScreen mainScreen] bounds].size.height
+
+#define kScaleFrom_iPhone8_Width(x) (x * (SCREEN_WIDTH/375))
+#define kScaleFrom_iPhone8_Height(x) (x * (SCREEN_HEIGHT/667))
+
+#define UIColorWithRGBA(r,g,b,a)        [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]

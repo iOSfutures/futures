@@ -12,9 +12,6 @@
 #import "HomeExpressVC.h"
 #import "HomeQuoteVC.h"
 
-#define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
-#define kScaleFrom_iPhone6_Desgin(_X_) (_X_ * (SCREEN_WIDTH/375))
-
 @interface HomeVC ()
 @property(nonatomic, weak) UIScrollView *homeScrollView;
 @property(nonatomic, weak) UITextField *searchView;
@@ -36,11 +33,11 @@
                     UIImageView *imageView = [UIImageView new];
                     if(SCREEN_WIDTH == 375)
                     {
-                        imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, kScaleFrom_iPhone6_Desgin(74));
+                        imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, kScaleFrom_iPhone8_Width(74));
                     }
                     else if (SCREEN_WIDTH == 414)
                     {
-                        imageView.frame = CGRectMake(0, -20, SCREEN_WIDTH, kScaleFrom_iPhone6_Desgin(74));
+                        imageView.frame = CGRectMake(0, -20, SCREEN_WIDTH, kScaleFrom_iPhone8_Width(74));
                     }
                     imageView.image = [UIImage imageNamed:@"background_tob"];
                     [subView addSubview:imageView];

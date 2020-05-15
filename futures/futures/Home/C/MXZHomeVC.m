@@ -88,19 +88,12 @@
     self.navigationController.navigationBar.translucent = YES;
     
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:254/255.0 green:162/255.0 blue:3/255.0 alpha:1.0];
-    //{{0, 0}, {375, 44}}    NSLog(@"%@", NSStringFromCGRect(self.navigationController.navigationBar.frame));
     
     //导航栏搜索框
-    UITextField *searchView = [[UITextField alloc] init];
-    searchView.frame = CGRectMake(0,9,300,27);
-    searchView.backgroundColor = [UIColor colorWithRed:254/255.0 green:247/255.0 blue:231/255.0 alpha:1.0];
-    //设置边角弧度
-    searchView.layer.cornerRadius = 12;
-    searchView.placeholder = @"数字货币";
-    
-//    self.navigationItem.titleView.alignmentRectInsets = UIEdgeInsetsMake(0, -20, 0, 20);
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:searchView];
+    UIView *searchView = [[NSBundle mainBundle] loadNibNamed:@"MXZHomeNavSearchView" owner:nil options:nil].firstObject;
+    searchView.subviews.firstObject.layer.cornerRadius = 20;
+    NSLog(@"%@", searchView.subviews.firstObject.subviews);
+    self.navigationItem.titleView = searchView;
     
     
     UIBarButtonItem *qiandaoBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_qiandao"] style:UIBarButtonItemStylePlain target:self action:nil];

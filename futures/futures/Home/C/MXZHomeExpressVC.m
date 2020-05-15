@@ -1,22 +1,22 @@
 //
-//  HomeCalendarVC.m
+//  HomeExpressVC.m
 //  futures
 //
 //  Created by Francis on 2020/5/12.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
-#import "HomeCalendarVC.h"
+#import "MXZHomeExpressVC.h"
 
-@interface HomeCalendarVC ()
+@interface MXZHomeExpressVC ()
 
 @end
 
-@implementation HomeCalendarVC
+@implementation MXZHomeExpressVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"日历数据";
+    self.navigationItem.title = @"7X24快讯";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 

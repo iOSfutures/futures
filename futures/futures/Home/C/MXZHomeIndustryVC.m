@@ -1,22 +1,22 @@
 //
-//  HomeQuoteVC.m
+//  HomeIndustryVC.m
 //  futures
 //
 //  Created by Francis on 2020/5/12.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
-#import "HomeQuoteVC.h"
+#import "MXZHomeIndustryVC.h"
 
-@interface HomeQuoteVC ()
+@interface MXZHomeIndustryVC ()
 
 @end
 
-@implementation HomeQuoteVC
+@implementation MXZHomeIndustryVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"行情数据";
+    self.navigationItem.title = @"行业风暴";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 

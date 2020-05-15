@@ -6,24 +6,24 @@
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
-#import "HomeVC.h"
-#import "HomeCalendarVC.h"
-#import "HomeIndustryVC.h"
-#import "HomeExpressVC.h"
-#import "HomeQuoteVC.h"
-#import "HomeQuoteSecondSectionCell.h"
-
+#import "MXZHomeVC.h"
+#import "MXZHomeCalendarVC.h"
+#import "MXZHomeIndustryVC.h"
+#import "MXZHomeExpressVC.h"
+#import "MXZHomeQuoteVC.h"
+#import "MXZHomeSecondSectionCell.h"
+#import "MXZHomeFourthSectionCell.h"
+#import "MXZHomeFifthSectionCell.h"
 #import "UIImage+OriginalImage.h"
-
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
 #define kScaleFrom_iPhone6_Desgin(_X_) (_X_ * (SCREEN_WIDTH/375))
 
-@interface HomeVC ()<UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *quoteTableView;
+@interface MXZHomeVC ()<UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 
 @end
 
-@implementation HomeVC
+@implementation MXZHomeVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,8 +52,10 @@
     }];
     
 
-    //为quoteTableView注册cell
-    [self.quoteTableView registerNib:[UINib nibWithNibName:@"HomeQuoteSecondSectionCell" bundle:nil] forCellReuseIdentifier:@"HomeQuoteSecondSectionCell"];
+    //为homeTableView注册cell
+    [self.homeTableView registerNib:[UINib nibWithNibName:@"MXZHomeSecondSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZHomeSecondSectionCell"];
+    [self.homeTableView registerNib:[UINib nibWithNibName:@"MXZHomeFourthSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZHomeFourthSectionCell"];
+    [self.homeTableView registerNib:[UINib nibWithNibName:@"MXZHomeFifthSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZHomeFifthSectionCell"];
 }
 
 -(void)getBackView:(UIView*)superView getViewBlock:(void(^)(UIView *view))Blcok
@@ -87,7 +89,7 @@
     
     //导航栏搜索框
     UITextField *searchView = [[UITextField alloc] init];
-    searchView.frame = CGRectMake(15.5,9,300,27);
+    searchView.frame = CGRectMake(0,9,300,27);
     searchView.backgroundColor = [UIColor colorWithRed:254/255.0 green:247/255.0 blue:231/255.0 alpha:1.0];
     //设置边角弧度
     searchView.layer.cornerRadius = 12;
@@ -95,7 +97,7 @@
     
 //    self.navigationItem.titleView.alignmentRectInsets = UIEdgeInsetsMake(0, -20, 0, 20);
     
-    self.navigationItem.titleView = searchView;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:searchView];
     
     
     UIBarButtonItem *qiandaoBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_qiandao"] style:UIBarButtonItemStylePlain target:self action:nil];
@@ -166,22 +168,22 @@
 
 //跳转界面
 -(void)calendarBtnClick{
-    HomeCalendarVC *calendarVC = [[HomeCalendarVC alloc]init];
+    MXZHomeCalendarVC *calendarVC = [[MXZHomeCalendarVC alloc]init];
     [self.navigationController pushViewController:calendarVC animated:YES];
 }
 
 -(void)industryBtnClick{
-    HomeIndustryVC *industryVC = [[HomeIndustryVC alloc]init];
+    MXZHomeIndustryVC *industryVC = [[MXZHomeIndustryVC alloc]init];
     [self.navigationController pushViewController:industryVC animated:YES];
 }
 
 -(void)expressBtnClick{
-    HomeExpressVC *expressVC = [[HomeExpressVC alloc]init];
+    MXZHomeExpressVC *expressVC = [[MXZHomeExpressVC alloc]init];
     [self.navigationController pushViewController:expressVC animated:YES];
 }
 
 -(void)quoteBtnClick{
-    HomeQuoteVC *quoteVC = [[HomeQuoteVC alloc]init];
+    MXZHomeQuoteVC *quoteVC = [[MXZHomeQuoteVC alloc]init];
     [self.navigationController pushViewController:quoteVC animated:YES];
 }
 
@@ -197,14 +199,17 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(section == 1){
         return 4;
     }
-    else if(section == 3 || section == 4){
+    else if(section == 3){
+        return 1;
+    }
+    else if (section == 4){
         return 1;
     }
     else{
@@ -214,13 +219,30 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.section == 1){
-        static NSString *quoteID = @"HomeQuoteSecondSectionCell";
-        HomeQuoteSecondSectionCell *cell = [tableView dequeueReusableCellWithIdentifier:quoteID];
+        static NSString *cellID = @"MXZHomeSecondSectionCell";
+        MXZHomeSecondSectionCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
         if(cell == nil){
-            cell = [[NSBundle mainBundle] loadNibNamed:@"HomeQuoteSecondSectionCell" owner:self options:nil].firstObject;
+            cell = [[NSBundle mainBundle] loadNibNamed:@"MXZHomeSecondSectionCell" owner:self options:nil].firstObject;
         }
         return cell;
     }
+    else if(indexPath.section == 3){
+        static NSString *cellID = @"MXZHomeFourthSectionCell";
+        MXZHomeFourthSectionCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+        if(cell == nil){
+            cell = [[NSBundle mainBundle] loadNibNamed:@"MXZHomeFourthSectionCell" owner:self options:nil].firstObject;
+        }
+        return cell;
+    }
+    else if(indexPath.section == 4){
+        static NSString *cellID = @"MXZHomeFifthSectionCell";
+        MXZHomeFifthSectionCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+        if(cell == nil){
+            cell = [[NSBundle mainBundle] loadNibNamed:@"MXZHomeFifthSectionCell" owner:self options:nil].firstObject;
+        }
+        return cell;
+    }
+    
     else{
         return nil;
     }
@@ -234,7 +256,7 @@
         return 190;
     }
     else if(indexPath.section == 4){
-        return 80;
+        return 90;
     }
     else
     {
@@ -251,46 +273,51 @@
         [self setQiandaoBtn:headerView];
         return headerView;
     }
-    else if(section == 1){
-        UIView *quoteView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 24)];
+    else if (section == 1){
+        UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 24)];
         UIImageView *quoteImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"quick quotes_title_home"]];
         //headerView里x,y,w无效;只有h有效
         quoteImageView.frame = CGRectMake(100, 0, 176, 24);
-        [quoteView addSubview:quoteImageView];
-        return quoteView;
+        [headerView addSubview:quoteImageView];
+        return headerView;
     }
     else if (section == 2){
-        UIView *TouSectionView = [[NSBundle mainBundle]loadNibNamed:@"HomeQuoteThirdSectionHead" owner:self options:nil].firstObject;
-        return TouSectionView;
+        UIView *headerView = [[NSBundle mainBundle]loadNibNamed:@"MXZHomeThirdSectionHeadView" owner:self options:nil].firstObject;
+        return headerView;
     }
-    else if(section == 3){
-        UIView *secondSectionHeaderView = [[NSBundle mainBundle]loadNibNamed:@"HomeQuoteSecondSectionHeaderView" owner:self options:nil].firstObject;
-        return secondSectionHeaderView;
+    else if (section == 3 || section == 4){
+        UIView *headerView = [[NSBundle mainBundle]loadNibNamed:@"MXZHomeFourthSectionHeadView" owner:self options:nil].firstObject;
+        return headerView;
     }
-    else{
+    else {
         return nil;
     }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if(section == 0){
+    if (section == 0) {
         return 450;
     }
     else if (section == 1){
         return 24;
     }
-    else if(section == 2){
+    else if (section == 2){
         return 57;
+    }
+    else if (section == 3 || section == 4){
+        return 40;
     }
     else{
         return 0;
     }
 }
 
+
+
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     if(section == 1){
-        UIView *footerView = [[NSBundle mainBundle] loadNibNamed:@"HomeQuoteSecondSectionFoot" owner:self options:nil].firstObject;
+        UIView *footerView = [[NSBundle mainBundle] loadNibNamed:@"MXZHomeSecondSectionFootView" owner:self options:nil].firstObject;
         return footerView;
     }
     else{
@@ -304,7 +331,7 @@
         return 44;
     }
     else{
-        return 0;
+        return 0.01;
     }
 }
 

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeQuoteVC : UIViewController
+@interface MXZHomeQuoteVC : UIViewController
 
 @end
 

@@ -7,28 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1526366A246D4D5B00D01BE0 /* MXZHomeFourthSectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263669246D4D5B00D01BE0 /* MXZHomeFourthSectionHeadView.xib */; };
+		1526366E246E266500D01BE0 /* MXZHomeFifthSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526366C246E266500D01BE0 /* MXZHomeFifthSectionCell.m */; };
+		1526366F246E266500D01BE0 /* MXZHomeFifthSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526366D246E266500D01BE0 /* MXZHomeFifthSectionCell.xib */; };
+		153A44A1246D27CA007D8DC7 /* MXZHomeFourthSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 153A449F246D27CA007D8DC7 /* MXZHomeFourthSectionCell.m */; };
+		153A44A2246D27CA007D8DC7 /* MXZHomeFourthSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153A44A0246D27CA007D8DC7 /* MXZHomeFourthSectionCell.xib */; };
+		153A44A7246D3082007D8DC7 /* MXZHomeFourthCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153A44A5246D3082007D8DC7 /* MXZHomeFourthCollectionCell.xib */; };
+		153A44AA246D3291007D8DC7 /* MXZHomeFourthCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 153A44A9246D3290007D8DC7 /* MXZHomeFourthCollectionCell.m */; };
 		154DFC652468F4AE0098498C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 154DFC642468F4AE0098498C /* AppDelegate.m */; };
 		154DFC6B2468F4AE0098498C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 154DFC6A2468F4AE0098498C /* ViewController.m */; };
 		154DFC6E2468F4AE0098498C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154DFC6C2468F4AE0098498C /* Main.storyboard */; };
 		154DFC702468F4B00098498C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154DFC6F2468F4B00098498C /* Assets.xcassets */; };
 		154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154DFC712468F4B00098498C /* LaunchScreen.storyboard */; };
 		154DFC762468F4B00098498C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 154DFC752468F4B00098498C /* main.m */; };
-		155F34FB246A962F00CC2C34 /* HomeCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F34F9246A962F00CC2C34 /* HomeCalendarVC.m */; };
-		155F34FC246A962F00CC2C34 /* HomeCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F34FA246A962F00CC2C34 /* HomeCalendarVC.xib */; };
-		155F3500246A964A00CC2C34 /* HomeIndustryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F34FE246A964A00CC2C34 /* HomeIndustryVC.m */; };
-		155F3501246A964A00CC2C34 /* HomeIndustryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F34FF246A964A00CC2C34 /* HomeIndustryVC.xib */; };
-		155F3505246A968800CC2C34 /* HomeExpressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F3503246A968800CC2C34 /* HomeExpressVC.m */; };
-		155F3506246A968800CC2C34 /* HomeExpressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F3504246A968800CC2C34 /* HomeExpressVC.xib */; };
-		155F350A246A96D600CC2C34 /* HomeQuoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F3508246A96D600CC2C34 /* HomeQuoteVC.m */; };
-		155F350B246A96D600CC2C34 /* HomeQuoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F3509246A96D600CC2C34 /* HomeQuoteVC.xib */; };
-		157B5571246BCE5400223176 /* HomeQuoteSecondSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 157B556F246BCE5400223176 /* HomeQuoteSecondSectionCell.m */; };
-		157B5572246BCE5400223176 /* HomeQuoteSecondSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157B5570246BCE5400223176 /* HomeQuoteSecondSectionCell.xib */; };
-		157B559C246CE71500223176 /* HomeQuoteSecondSectionFoot.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157B559A246CE71500223176 /* HomeQuoteSecondSectionFoot.xib */; };
-		157B55A1246CF20C00223176 /* HomeQuoteThirdSectionHead.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157B559F246CF20C00223176 /* HomeQuoteThirdSectionHead.xib */; };
-		157B55A6246D0E3C00223176 /* HomeQuoteFourthSectionHead.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157B55A4246D0E3C00223176 /* HomeQuoteFourthSectionHead.xib */; };
+		155F34FB246A962F00CC2C34 /* MXZHomeCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F34F9246A962F00CC2C34 /* MXZHomeCalendarVC.m */; };
+		155F34FC246A962F00CC2C34 /* MXZHomeCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F34FA246A962F00CC2C34 /* MXZHomeCalendarVC.xib */; };
+		155F3500246A964A00CC2C34 /* MXZHomeIndustryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F34FE246A964A00CC2C34 /* MXZHomeIndustryVC.m */; };
+		155F3501246A964A00CC2C34 /* MXZHomeIndustryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F34FF246A964A00CC2C34 /* MXZHomeIndustryVC.xib */; };
+		155F3505246A968800CC2C34 /* MXZHomeExpressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F3503246A968800CC2C34 /* MXZHomeExpressVC.m */; };
+		155F3506246A968800CC2C34 /* MXZHomeExpressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F3504246A968800CC2C34 /* MXZHomeExpressVC.xib */; };
+		155F350A246A96D600CC2C34 /* MXZHomeQuoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 155F3508246A96D600CC2C34 /* MXZHomeQuoteVC.m */; };
+		155F350B246A96D600CC2C34 /* MXZHomeQuoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155F3509246A96D600CC2C34 /* MXZHomeQuoteVC.xib */; };
+		157B5571246BCE5400223176 /* MXZHomeSecondSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 157B556F246BCE5400223176 /* MXZHomeSecondSectionCell.m */; };
+		157B5572246BCE5400223176 /* MXZHomeSecondSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157B5570246BCE5400223176 /* MXZHomeSecondSectionCell.xib */; };
+		157B559C246CE71500223176 /* MXZHomeSecondSectionFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157B559A246CE71500223176 /* MXZHomeSecondSectionFootView.xib */; };
+		157B55A1246CF20C00223176 /* MXZHomeThirdSectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157B559F246CF20C00223176 /* MXZHomeThirdSectionHeadView.xib */; };
 		181F5036246B908500CCCBDB /* CustomTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F5035246B908500CCCBDB /* CustomTBC.m */; };
-		185901372469221400CA7A68 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185901352469221400CA7A68 /* HomeVC.m */; };
-		185901382469221400CA7A68 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185901362469221400CA7A68 /* HomeVC.xib */; };
+		185901372469221400CA7A68 /* MXZHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185901352469221400CA7A68 /* MXZHomeVC.m */; };
+		185901382469221400CA7A68 /* MXZHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185901362469221400CA7A68 /* MXZHomeVC.xib */; };
 		1859013C24692D6B00CA7A68 /* CommunityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859013A24692D6B00CA7A68 /* CommunityVC.m */; };
 		1859013D24692D6B00CA7A68 /* CommunityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859013B24692D6B00CA7A68 /* CommunityVC.xib */; };
 		1859014124692D8B00CA7A68 /* ReleaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859013F24692D8B00CA7A68 /* ReleaseVC.m */; };
@@ -41,6 +47,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15263669246D4D5B00D01BE0 /* MXZHomeFourthSectionHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeFourthSectionHeadView.xib; sourceTree = "<group>"; };
+		1526366B246E266500D01BE0 /* MXZHomeFifthSectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeFifthSectionCell.h; sourceTree = "<group>"; };
+		1526366C246E266500D01BE0 /* MXZHomeFifthSectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeFifthSectionCell.m; sourceTree = "<group>"; };
+		1526366D246E266500D01BE0 /* MXZHomeFifthSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeFifthSectionCell.xib; sourceTree = "<group>"; };
+		153A449E246D27CA007D8DC7 /* MXZHomeFourthSectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeFourthSectionCell.h; sourceTree = "<group>"; };
+		153A449F246D27CA007D8DC7 /* MXZHomeFourthSectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeFourthSectionCell.m; sourceTree = "<group>"; };
+		153A44A0246D27CA007D8DC7 /* MXZHomeFourthSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeFourthSectionCell.xib; sourceTree = "<group>"; };
+		153A44A5246D3082007D8DC7 /* MXZHomeFourthCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeFourthCollectionCell.xib; sourceTree = "<group>"; };
+		153A44A8246D3290007D8DC7 /* MXZHomeFourthCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeFourthCollectionCell.h; sourceTree = "<group>"; };
+		153A44A9246D3290007D8DC7 /* MXZHomeFourthCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeFourthCollectionCell.m; sourceTree = "<group>"; };
 		154DFC602468F4AE0098498C /* futures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = futures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		154DFC632468F4AE0098498C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		154DFC642468F4AE0098498C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,29 +67,28 @@
 		154DFC722468F4B00098498C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		154DFC742468F4B00098498C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		154DFC752468F4B00098498C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		155F34F8246A962F00CC2C34 /* HomeCalendarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCalendarVC.h; sourceTree = "<group>"; };
-		155F34F9246A962F00CC2C34 /* HomeCalendarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCalendarVC.m; sourceTree = "<group>"; };
-		155F34FA246A962F00CC2C34 /* HomeCalendarVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCalendarVC.xib; sourceTree = "<group>"; };
-		155F34FD246A964A00CC2C34 /* HomeIndustryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeIndustryVC.h; sourceTree = "<group>"; };
-		155F34FE246A964A00CC2C34 /* HomeIndustryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeIndustryVC.m; sourceTree = "<group>"; };
-		155F34FF246A964A00CC2C34 /* HomeIndustryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeIndustryVC.xib; sourceTree = "<group>"; };
-		155F3502246A968800CC2C34 /* HomeExpressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeExpressVC.h; sourceTree = "<group>"; };
-		155F3503246A968800CC2C34 /* HomeExpressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeExpressVC.m; sourceTree = "<group>"; };
-		155F3504246A968800CC2C34 /* HomeExpressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeExpressVC.xib; sourceTree = "<group>"; };
-		155F3507246A96D600CC2C34 /* HomeQuoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeQuoteVC.h; sourceTree = "<group>"; };
-		155F3508246A96D600CC2C34 /* HomeQuoteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeQuoteVC.m; sourceTree = "<group>"; };
-		155F3509246A96D600CC2C34 /* HomeQuoteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeQuoteVC.xib; sourceTree = "<group>"; };
-		157B556E246BCE5400223176 /* HomeQuoteSecondSectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeQuoteSecondSectionCell.h; sourceTree = "<group>"; };
-		157B556F246BCE5400223176 /* HomeQuoteSecondSectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeQuoteSecondSectionCell.m; sourceTree = "<group>"; };
-		157B5570246BCE5400223176 /* HomeQuoteSecondSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeQuoteSecondSectionCell.xib; sourceTree = "<group>"; };
-		157B559A246CE71500223176 /* HomeQuoteSecondSectionFoot.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeQuoteSecondSectionFoot.xib; sourceTree = "<group>"; };
-		157B559F246CF20C00223176 /* HomeQuoteThirdSectionHead.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeQuoteThirdSectionHead.xib; sourceTree = "<group>"; };
-		157B55A4246D0E3C00223176 /* HomeQuoteFourthSectionHead.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeQuoteFourthSectionHead.xib; sourceTree = "<group>"; };
+		155F34F8246A962F00CC2C34 /* MXZHomeCalendarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeCalendarVC.h; sourceTree = "<group>"; };
+		155F34F9246A962F00CC2C34 /* MXZHomeCalendarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeCalendarVC.m; sourceTree = "<group>"; };
+		155F34FA246A962F00CC2C34 /* MXZHomeCalendarVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeCalendarVC.xib; sourceTree = "<group>"; };
+		155F34FD246A964A00CC2C34 /* MXZHomeIndustryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeIndustryVC.h; sourceTree = "<group>"; };
+		155F34FE246A964A00CC2C34 /* MXZHomeIndustryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeIndustryVC.m; sourceTree = "<group>"; };
+		155F34FF246A964A00CC2C34 /* MXZHomeIndustryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeIndustryVC.xib; sourceTree = "<group>"; };
+		155F3502246A968800CC2C34 /* MXZHomeExpressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeExpressVC.h; sourceTree = "<group>"; };
+		155F3503246A968800CC2C34 /* MXZHomeExpressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeExpressVC.m; sourceTree = "<group>"; };
+		155F3504246A968800CC2C34 /* MXZHomeExpressVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeExpressVC.xib; sourceTree = "<group>"; };
+		155F3507246A96D600CC2C34 /* MXZHomeQuoteVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeQuoteVC.h; sourceTree = "<group>"; };
+		155F3508246A96D600CC2C34 /* MXZHomeQuoteVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeQuoteVC.m; sourceTree = "<group>"; };
+		155F3509246A96D600CC2C34 /* MXZHomeQuoteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeQuoteVC.xib; sourceTree = "<group>"; };
+		157B556E246BCE5400223176 /* MXZHomeSecondSectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeSecondSectionCell.h; sourceTree = "<group>"; };
+		157B556F246BCE5400223176 /* MXZHomeSecondSectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeSecondSectionCell.m; sourceTree = "<group>"; };
+		157B5570246BCE5400223176 /* MXZHomeSecondSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeSecondSectionCell.xib; sourceTree = "<group>"; };
+		157B559A246CE71500223176 /* MXZHomeSecondSectionFootView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeSecondSectionFootView.xib; sourceTree = "<group>"; };
+		157B559F246CF20C00223176 /* MXZHomeThirdSectionHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeThirdSectionHeadView.xib; sourceTree = "<group>"; };
 		181F5034246B908500CCCBDB /* CustomTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTBC.h; sourceTree = "<group>"; };
 		181F5035246B908500CCCBDB /* CustomTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTBC.m; sourceTree = "<group>"; };
-		185901342469221400CA7A68 /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
-		185901352469221400CA7A68 /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
-		185901362469221400CA7A68 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		185901342469221400CA7A68 /* MXZHomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeVC.h; sourceTree = "<group>"; };
+		185901352469221400CA7A68 /* MXZHomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeVC.m; sourceTree = "<group>"; };
+		185901362469221400CA7A68 /* MXZHomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeVC.xib; sourceTree = "<group>"; };
 		1859013924692D6B00CA7A68 /* CommunityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityVC.h; sourceTree = "<group>"; };
 		1859013A24692D6B00CA7A68 /* CommunityVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityVC.m; sourceTree = "<group>"; };
 		1859013B24692D6B00CA7A68 /* CommunityVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityVC.xib; sourceTree = "<group>"; };
@@ -101,6 +116,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15263670246E2FC900D01BE0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				15263673246E2FEA00D01BE0 /* M */,
+				15263672246E2FEA00D01BE0 /* V */,
+				15263671246E2FEA00D01BE0 /* C */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		15263671246E2FEA00D01BE0 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				185901342469221400CA7A68 /* MXZHomeVC.h */,
+				185901352469221400CA7A68 /* MXZHomeVC.m */,
+				185901362469221400CA7A68 /* MXZHomeVC.xib */,
+				155F34F8246A962F00CC2C34 /* MXZHomeCalendarVC.h */,
+				155F34F9246A962F00CC2C34 /* MXZHomeCalendarVC.m */,
+				155F34FA246A962F00CC2C34 /* MXZHomeCalendarVC.xib */,
+				155F34FD246A964A00CC2C34 /* MXZHomeIndustryVC.h */,
+				155F34FE246A964A00CC2C34 /* MXZHomeIndustryVC.m */,
+				155F34FF246A964A00CC2C34 /* MXZHomeIndustryVC.xib */,
+				155F3502246A968800CC2C34 /* MXZHomeExpressVC.h */,
+				155F3503246A968800CC2C34 /* MXZHomeExpressVC.m */,
+				155F3504246A968800CC2C34 /* MXZHomeExpressVC.xib */,
+				155F3507246A96D600CC2C34 /* MXZHomeQuoteVC.h */,
+				155F3508246A96D600CC2C34 /* MXZHomeQuoteVC.m */,
+				155F3509246A96D600CC2C34 /* MXZHomeQuoteVC.xib */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		15263672246E2FEA00D01BE0 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				157B556E246BCE5400223176 /* MXZHomeSecondSectionCell.h */,
+				157B556F246BCE5400223176 /* MXZHomeSecondSectionCell.m */,
+				157B5570246BCE5400223176 /* MXZHomeSecondSectionCell.xib */,
+				157B559A246CE71500223176 /* MXZHomeSecondSectionFootView.xib */,
+				157B559F246CF20C00223176 /* MXZHomeThirdSectionHeadView.xib */,
+				15263669246D4D5B00D01BE0 /* MXZHomeFourthSectionHeadView.xib */,
+				153A449E246D27CA007D8DC7 /* MXZHomeFourthSectionCell.h */,
+				153A449F246D27CA007D8DC7 /* MXZHomeFourthSectionCell.m */,
+				153A44A0246D27CA007D8DC7 /* MXZHomeFourthSectionCell.xib */,
+				153A44A8246D3290007D8DC7 /* MXZHomeFourthCollectionCell.h */,
+				153A44A9246D3290007D8DC7 /* MXZHomeFourthCollectionCell.m */,
+				153A44A5246D3082007D8DC7 /* MXZHomeFourthCollectionCell.xib */,
+				1526366B246E266500D01BE0 /* MXZHomeFifthSectionCell.h */,
+				1526366C246E266500D01BE0 /* MXZHomeFifthSectionCell.m */,
+				1526366D246E266500D01BE0 /* MXZHomeFifthSectionCell.xib */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		15263673246E2FEA00D01BE0 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
 		154DFC572468F4AE0098498C = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +196,7 @@
 		154DFC622468F4AE0098498C /* futures */ = {
 			isa = PBXGroup;
 			children = (
+				15263670246E2FC900D01BE0 /* Home */,
 				18590131246921A100CA7A68 /* M */,
 				18590132246921B100CA7A68 /* V */,
 				18590133246921B800CA7A68 /* C */,
@@ -157,27 +234,6 @@
 			children = (
 				181F5034246B908500CCCBDB /* CustomTBC.h */,
 				181F5035246B908500CCCBDB /* CustomTBC.m */,
-				185901342469221400CA7A68 /* HomeVC.h */,
-				185901352469221400CA7A68 /* HomeVC.m */,
-				185901362469221400CA7A68 /* HomeVC.xib */,
-				157B556E246BCE5400223176 /* HomeQuoteSecondSectionCell.h */,
-				157B556F246BCE5400223176 /* HomeQuoteSecondSectionCell.m */,
-				157B5570246BCE5400223176 /* HomeQuoteSecondSectionCell.xib */,
-				157B559A246CE71500223176 /* HomeQuoteSecondSectionFoot.xib */,
-				157B559F246CF20C00223176 /* HomeQuoteThirdSectionHead.xib */,
-				157B55A4246D0E3C00223176 /* HomeQuoteFourthSectionHead.xib */,
-				155F34F8246A962F00CC2C34 /* HomeCalendarVC.h */,
-				155F34F9246A962F00CC2C34 /* HomeCalendarVC.m */,
-				155F34FA246A962F00CC2C34 /* HomeCalendarVC.xib */,
-				155F34FD246A964A00CC2C34 /* HomeIndustryVC.h */,
-				155F34FE246A964A00CC2C34 /* HomeIndustryVC.m */,
-				155F34FF246A964A00CC2C34 /* HomeIndustryVC.xib */,
-				155F3502246A968800CC2C34 /* HomeExpressVC.h */,
-				155F3503246A968800CC2C34 /* HomeExpressVC.m */,
-				155F3504246A968800CC2C34 /* HomeExpressVC.xib */,
-				155F3507246A96D600CC2C34 /* HomeQuoteVC.h */,
-				155F3508246A96D600CC2C34 /* HomeQuoteVC.m */,
-				155F3509246A96D600CC2C34 /* HomeQuoteVC.xib */,
 				1859013924692D6B00CA7A68 /* CommunityVC.h */,
 				1859013A24692D6B00CA7A68 /* CommunityVC.m */,
 				1859013B24692D6B00CA7A68 /* CommunityVC.xib */,
@@ -251,21 +307,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				155F350B246A96D600CC2C34 /* HomeQuoteVC.xib in Resources */,
-				157B55A6246D0E3C00223176 /* HomeQuoteFourthSectionHead.xib in Resources */,
+				155F350B246A96D600CC2C34 /* MXZHomeQuoteVC.xib in Resources */,
+				153A44A2246D27CA007D8DC7 /* MXZHomeFourthSectionCell.xib in Resources */,
 				1859014224692D8B00CA7A68 /* ReleaseVC.xib in Resources */,
 				154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */,
-				155F34FC246A962F00CC2C34 /* HomeCalendarVC.xib in Resources */,
-				155F3501246A964A00CC2C34 /* HomeIndustryVC.xib in Resources */,
-				185901382469221400CA7A68 /* HomeVC.xib in Resources */,
+				155F34FC246A962F00CC2C34 /* MXZHomeCalendarVC.xib in Resources */,
+				155F3501246A964A00CC2C34 /* MXZHomeIndustryVC.xib in Resources */,
+				185901382469221400CA7A68 /* MXZHomeVC.xib in Resources */,
 				154DFC702468F4B00098498C /* Assets.xcassets in Resources */,
+				1526366A246D4D5B00D01BE0 /* MXZHomeFourthSectionHeadView.xib in Resources */,
+				153A44A7246D3082007D8DC7 /* MXZHomeFourthCollectionCell.xib in Resources */,
 				154DFC6E2468F4AE0098498C /* Main.storyboard in Resources */,
 				1859014C246933DB00CA7A68 /* MineVC.xib in Resources */,
-				157B559C246CE71500223176 /* HomeQuoteSecondSectionFoot.xib in Resources */,
-				157B55A1246CF20C00223176 /* HomeQuoteThirdSectionHead.xib in Resources */,
+				157B559C246CE71500223176 /* MXZHomeSecondSectionFootView.xib in Resources */,
+				157B55A1246CF20C00223176 /* MXZHomeThirdSectionHeadView.xib in Resources */,
 				1859014724692F3800CA7A68 /* QuoteVC.xib in Resources */,
-				157B5572246BCE5400223176 /* HomeQuoteSecondSectionCell.xib in Resources */,
-				155F3506246A968800CC2C34 /* HomeExpressVC.xib in Resources */,
+				157B5572246BCE5400223176 /* MXZHomeSecondSectionCell.xib in Resources */,
+				1526366F246E266500D01BE0 /* MXZHomeFifthSectionCell.xib in Resources */,
+				155F3506246A968800CC2C34 /* MXZHomeExpressVC.xib in Resources */,
 				1859013D24692D6B00CA7A68 /* CommunityVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,17 +339,20 @@
 				181F5036246B908500CCCBDB /* CustomTBC.m in Sources */,
 				1859013C24692D6B00CA7A68 /* CommunityVC.m in Sources */,
 				154DFC6B2468F4AE0098498C /* ViewController.m in Sources */,
-				185901372469221400CA7A68 /* HomeVC.m in Sources */,
+				185901372469221400CA7A68 /* MXZHomeVC.m in Sources */,
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
 				1859014124692D8B00CA7A68 /* ReleaseVC.m in Sources */,
 				1859014B246933DB00CA7A68 /* MineVC.m in Sources */,
-				155F350A246A96D600CC2C34 /* HomeQuoteVC.m in Sources */,
-				155F3500246A964A00CC2C34 /* HomeIndustryVC.m in Sources */,
+				155F350A246A96D600CC2C34 /* MXZHomeQuoteVC.m in Sources */,
+				155F3500246A964A00CC2C34 /* MXZHomeIndustryVC.m in Sources */,
 				154DFC762468F4B00098498C /* main.m in Sources */,
-				155F34FB246A962F00CC2C34 /* HomeCalendarVC.m in Sources */,
+				155F34FB246A962F00CC2C34 /* MXZHomeCalendarVC.m in Sources */,
+				153A44A1246D27CA007D8DC7 /* MXZHomeFourthSectionCell.m in Sources */,
+				1526366E246E266500D01BE0 /* MXZHomeFifthSectionCell.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,
-				157B5571246BCE5400223176 /* HomeQuoteSecondSectionCell.m in Sources */,
-				155F3505246A968800CC2C34 /* HomeExpressVC.m in Sources */,
+				153A44AA246D3291007D8DC7 /* MXZHomeFourthCollectionCell.m in Sources */,
+				157B5571246BCE5400223176 /* MXZHomeSecondSectionCell.m in Sources */,
+				155F3505246A968800CC2C34 /* MXZHomeExpressVC.m in Sources */,
 				1859014624692F3800CA7A68 /* QuotesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

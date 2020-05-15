@@ -1,8 +1,8 @@
 //
-//  HomeQuoteTableViewCell.h
+//  HomeCalendarVC.h
 //  futures
 //
-//  Created by Francis on 2020/5/13.
+//  Created by Francis on 2020/5/12.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeQuoteSecondSectionCell : UITableViewCell
+@interface MXZHomeCalendarVC : UIViewController
 
 @end
 

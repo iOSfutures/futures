@@ -1,8 +1,8 @@
 //
-//  HomeCalendarVC.h
+//  HomeVC.h
 //  futures
 //
-//  Created by Francis on 2020/5/12.
+//  Created by Ssiswent on 2020/5/11.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeCalendarVC : UIViewController
+@interface MXZHomeVC : UIViewController
 
 @end
 

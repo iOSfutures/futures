@@ -1,8 +1,8 @@
 //
-//  HomeVC.h
+//  HomeQuoteTableViewCell.h
 //  futures
 //
-//  Created by Ssiswent on 2020/5/11.
+//  Created by Francis on 2020/5/13.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeVC : UIViewController
+@interface MXZHomeSecondSectionCell : UITableViewCell
 
 @end
 

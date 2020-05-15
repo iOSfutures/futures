@@ -1,22 +1,22 @@
 //
-//  HomeIndustryVC.m
+//  HomeCalendarVC.m
 //  futures
 //
 //  Created by Francis on 2020/5/12.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
-#import "HomeIndustryVC.h"
+#import "MXZHomeCalendarVC.h"
 
-@interface HomeIndustryVC ()
+@interface MXZHomeCalendarVC ()
 
 @end
 
-@implementation HomeIndustryVC
+@implementation MXZHomeCalendarVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"行业风暴";
+    self.navigationItem.title = @"日历数据";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 

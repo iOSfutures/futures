@@ -1,5 +1,5 @@
 //
-//  HomeIndustryVC.h
+//  HomeExpressVC.h
 //  futures
 //
 //  Created by Francis on 2020/5/12.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeIndustryVC : UIViewController
+@interface MXZHomeExpressVC : UIViewController
 
 @end
 

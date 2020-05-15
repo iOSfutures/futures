@@ -1,22 +1,22 @@
 //
-//  HomeExpressVC.m
+//  HomeQuoteVC.m
 //  futures
 //
 //  Created by Francis on 2020/5/12.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
-#import "HomeExpressVC.h"
+#import "MXZHomeQuoteVC.h"
 
-@interface HomeExpressVC ()
+@interface MXZHomeQuoteVC ()
 
 @end
 
-@implementation HomeExpressVC
+@implementation MXZHomeQuoteVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"7X24快讯";
+    self.navigationItem.title = @"行情数据";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 

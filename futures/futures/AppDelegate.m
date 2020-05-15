@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "HomeVC.h"
+#import "MXZHomeVC.h"
 #import "CommunityVC.h"
 #import "ReleaseVC.h"
 #import "QuotesVC.h"
@@ -34,7 +34,7 @@
     CustomTBC *customTBC = CustomTBC.new;
     self.customTBC = customTBC;
     
-    HomeVC *homeVC = [[HomeVC alloc]init];
+    MXZHomeVC *homeVC = [[MXZHomeVC alloc]init];
     UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:homeVC];
     [self addChildVC:homeNav title:@"首页" imgName:@"ic_home_tob" selectedImgName:@"ic_home_sstate"];
     

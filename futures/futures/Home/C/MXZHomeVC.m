@@ -56,6 +56,9 @@
     [self.homeTableView registerNib:[UINib nibWithNibName:@"MXZHomeSecondSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZHomeSecondSectionCell"];
     [self.homeTableView registerNib:[UINib nibWithNibName:@"MXZHomeFourthSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZHomeFourthSectionCell"];
     [self.homeTableView registerNib:[UINib nibWithNibName:@"MXZHomeFifthSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZHomeFifthSectionCell"];
+    
+    //去掉tableView的分割线
+    self.homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 -(void)getBackView:(UIView*)superView getViewBlock:(void(^)(UIView *view))Blcok
@@ -140,6 +143,7 @@
 
 //设置4个跳转界面按钮
 -(void)setButton:(UIView *)fView{
+    CGFloat spaceW = (SCREEN_WIDTH - 2*26 - 55*4)/3;
     UIButton *calendarBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     calendarBtn.frame = CGRectMake(26, 296-64, 55, 54);
     [calendarBtn setImage:[UIImage imageNamed:@"ic_calendar data_home"] forState:UIControlStateNormal];
@@ -147,19 +151,19 @@
     [calendarBtn addTarget:self action:@selector(calendarBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *industryBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    industryBtn.frame = CGRectMake(113.5, 296-64, 55, 54);
+    industryBtn.frame = CGRectMake(26+55+spaceW, 296-64, 55, 54);
     [industryBtn setImage:[UIImage imageNamed:@"ic_industry storm_home"] forState:UIControlStateNormal];
     [fView addSubview:industryBtn];
     [industryBtn addTarget:self action:@selector(industryBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *expressBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    expressBtn.frame = CGRectMake(204, 296-64, 55, 54);
+    expressBtn.frame = CGRectMake(26+(55+spaceW)*2, 296-64, 55, 54);
     [expressBtn setImage:[UIImage imageNamed:@"ic_7X24 express_home"] forState:UIControlStateNormal];
     [fView addSubview:expressBtn];
     [expressBtn addTarget:self action:@selector(expressBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *quoteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    quoteBtn.frame = CGRectMake(294, 296-64, 55, 54);
+    quoteBtn.frame = CGRectMake(SCREEN_WIDTH-26-55, 296-64, 55, 54);
     [quoteBtn setImage:[UIImage imageNamed:@"ic_quote data_home"] forState:UIControlStateNormal];
     [fView addSubview:quoteBtn];
     [quoteBtn addTarget:self action:@selector(quoteBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -189,7 +193,7 @@
 
 -(void)setQiandaoBtn:(UIView *)fView{
     UIButton *qianBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    qianBtn.frame = CGRectMake(15.5, 386-64, 338.5, 101);
+    qianBtn.frame = CGRectMake(SCREEN_WIDTH/2 - 338/2, 366-64, 338, 100);
     [qianBtn setImage:[UIImage imageNamed:@"qiandao_banner02_home"] forState:UIControlStateNormal];
     [fView addSubview:qianBtn];
 }
@@ -274,10 +278,10 @@
         return headerView;
     }
     else if (section == 1){
-        UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 24)];
+        UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 44)];
         UIImageView *quoteImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"quick quotes_title_home"]];
         //headerView里x,y,w无效;只有h有效
-        quoteImageView.frame = CGRectMake(100, 0, 176, 24);
+        quoteImageView.frame = CGRectMake(SCREEN_WIDTH/2 - 176/2, 0, 176, 24);
         [headerView addSubview:quoteImageView];
         return headerView;
     }
@@ -296,10 +300,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (section == 0) {
-        return 450;
+        return 430;
     }
     else if (section == 1){
-        return 24;
+        return 44;
     }
     else if (section == 2){
         return 57;
@@ -320,6 +324,11 @@
         UIView *footerView = [[NSBundle mainBundle] loadNibNamed:@"MXZHomeSecondSectionFootView" owner:self options:nil].firstObject;
         return footerView;
     }
+    else if (section == 2){
+        UIView *footerView = [[UIView alloc]init];
+        footerView.frame = CGRectMake(0, 0, 0, 15);
+        return footerView;
+    }
     else{
         return nil;
     }
@@ -329,6 +338,9 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     if(section == 1){
         return 44;
+    }
+    else if (section == 2){
+        return 15;
     }
     else{
         return 0.01;

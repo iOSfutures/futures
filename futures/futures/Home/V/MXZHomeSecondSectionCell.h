@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MXZHomeSecondSectionCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIView *cellView;
 
 @end
 

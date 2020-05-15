@@ -745,7 +745,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A84QXBXH2V;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = futures/LYGTool/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = futures/SupportFile/PrefixHeader.pch;
 				INFOPLIST_FILE = futures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -765,7 +765,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A84QXBXH2V;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = futures/LYGTool/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = futures/SupportFile/PrefixHeader.pch;
 				INFOPLIST_FILE = futures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

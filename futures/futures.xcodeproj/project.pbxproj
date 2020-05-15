@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,12 @@
 		1859014B246933DB00CA7A68 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18590149246933DB00CA7A68 /* MineVC.m */; };
 		1859014C246933DB00CA7A68 /* MineVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859014A246933DB00CA7A68 /* MineVC.xib */; };
 		185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 185901512469462800CA7A68 /* UIImage+OriginalImage.m */; };
+		189BD81C246D1B9400490E35 /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BD81B246D1B9400490E35 /* MineModel.m */; };
+		189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BD81E246D45C300490E35 /* CommunityChildAVC.m */; };
+		189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189BD81F246D45C300490E35 /* CommunityChildAVC.xib */; };
+		18AA2BC2246E23B1000801B1 /* CommunityChildBVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AA2BC0246E23B1000801B1 /* CommunityChildBVC.m */; };
+		18AA2BC3246E23B1000801B1 /* CommunityChildBVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AA2BC1246E23B1000801B1 /* CommunityChildBVC.xib */; };
+		43596A819B66D10178A0882C /* Pods_futures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66967DA234F0732F071AFCD /* Pods_futures.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,7 +78,18 @@
 		1859014A246933DB00CA7A68 /* MineVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineVC.xib; sourceTree = "<group>"; };
 		185901502469462800CA7A68 /* UIImage+OriginalImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+OriginalImage.h"; sourceTree = "<group>"; };
 		185901512469462800CA7A68 /* UIImage+OriginalImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OriginalImage.m"; sourceTree = "<group>"; };
+		189BD81A246D1B9400490E35 /* MineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
+		189BD81B246D1B9400490E35 /* MineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineModel.m; sourceTree = "<group>"; };
+		189BD81D246D45C300490E35 /* CommunityChildAVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityChildAVC.h; sourceTree = "<group>"; };
+		189BD81E246D45C300490E35 /* CommunityChildAVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityChildAVC.m; sourceTree = "<group>"; };
+		189BD81F246D45C300490E35 /* CommunityChildAVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityChildAVC.xib; sourceTree = "<group>"; };
+		18AA2BBF246E23B1000801B1 /* CommunityChildBVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityChildBVC.h; sourceTree = "<group>"; };
+		18AA2BC0246E23B1000801B1 /* CommunityChildBVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityChildBVC.m; sourceTree = "<group>"; };
+		18AA2BC1246E23B1000801B1 /* CommunityChildBVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityChildBVC.xib; sourceTree = "<group>"; };
 		18B55136246BCCDA00E80DEB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1E8A6C0CB72502A19B418054 /* Pods-futures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-futures.release.xcconfig"; path = "Target Support Files/Pods-futures/Pods-futures.release.xcconfig"; sourceTree = "<group>"; };
+		2918599DF26764A44CB6CA12 /* Pods-futures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-futures.debug.xcconfig"; path = "Target Support Files/Pods-futures/Pods-futures.debug.xcconfig"; sourceTree = "<group>"; };
+		C66967DA234F0732F071AFCD /* Pods_futures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_futures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43596A819B66D10178A0882C /* Pods_futures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +109,8 @@
 			children = (
 				154DFC622468F4AE0098498C /* futures */,
 				154DFC612468F4AE0098498C /* Products */,
+				62A21DB450DE57663C7C6D12 /* Pods */,
+				242461AB158F913307225D7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,7 +134,7 @@
 				154DFC712468F4B00098498C /* LaunchScreen.storyboard */,
 				154DFC742468F4B00098498C /* Info.plist */,
 				154DFC752468F4B00098498C /* main.m */,
-				18B55133246BCBF500E80DEB /* SupportFiles */,
+				18B55133246BCBF500E80DEB /* LYGTool */,
 			);
 			path = futures;
 			sourceTree = "<group>";
@@ -151,23 +171,31 @@
 				18590148246933DB00CA7A68 /* MineVC.h */,
 				18590149246933DB00CA7A68 /* MineVC.m */,
 				1859014A246933DB00CA7A68 /* MineVC.xib */,
+				189BD81D246D45C300490E35 /* CommunityChildAVC.h */,
+				189BD81E246D45C300490E35 /* CommunityChildAVC.m */,
+				189BD81F246D45C300490E35 /* CommunityChildAVC.xib */,
+				18AA2BBF246E23B1000801B1 /* CommunityChildBVC.h */,
+				18AA2BC0246E23B1000801B1 /* CommunityChildBVC.m */,
+				18AA2BC1246E23B1000801B1 /* CommunityChildBVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
 		};
-		18B55133246BCBF500E80DEB /* SupportFiles */ = {
+		18B55133246BCBF500E80DEB /* LYGTool */ = {
 			isa = PBXGroup;
 			children = (
 				18B55136246BCCDA00E80DEB /* PrefixHeader.pch */,
 				185901502469462800CA7A68 /* UIImage+OriginalImage.h */,
 				185901512469462800CA7A68 /* UIImage+OriginalImage.m */,
 			);
-			path = SupportFiles;
+			path = LYGTool;
 			sourceTree = "<group>";
 		};
 		18B55134246BCC3900E80DEB /* M */ = {
 			isa = PBXGroup;
 			children = (
+				189BD81A246D1B9400490E35 /* MineModel.h */,
+				189BD81B246D1B9400490E35 /* MineModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -179,6 +207,23 @@
 			path = V;
 			sourceTree = "<group>";
 		};
+		242461AB158F913307225D7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C66967DA234F0732F071AFCD /* Pods_futures.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62A21DB450DE57663C7C6D12 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2918599DF26764A44CB6CA12 /* Pods-futures.debug.xcconfig */,
+				1E8A6C0CB72502A19B418054 /* Pods-futures.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 154DFC792468F4B00098498C /* Build configuration list for PBXNativeTarget "futures" */;
 			buildPhases = (
+				00824A09F8DCC2EDC56D4EAC /* [CP] Check Pods Manifest.lock */,
 				154DFC5C2468F4AE0098498C /* Sources */,
 				154DFC5D2468F4AE0098498C /* Frameworks */,
 				154DFC5E2468F4AE0098498C /* Resources */,
+				D0751562B90231514DA1FD82 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				155F350B246A96D600CC2C34 /* HomeQuoteVC.xib in Resources */,
+				189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */,
 				1859014224692D8B00CA7A68 /* ReleaseVC.xib in Resources */,
 				154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */,
 				155F34FC246A962F00CC2C34 /* HomeCalendarVC.xib in Resources */,
@@ -244,6 +292,7 @@
 				185901382469221400CA7A68 /* HomeVC.xib in Resources */,
 				154DFC702468F4B00098498C /* Assets.xcassets in Resources */,
 				1859014C246933DB00CA7A68 /* MineVC.xib in Resources */,
+				18AA2BC3246E23B1000801B1 /* CommunityChildBVC.xib in Resources */,
 				1859014724692F3800CA7A68 /* QuoteVC.xib in Resources */,
 				155F3506246A968800CC2C34 /* HomeExpressVC.xib in Resources */,
 				1859013D24692D6B00CA7A68 /* CommunityVC.xib in Resources */,
@@ -252,13 +301,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00824A09F8DCC2EDC56D4EAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-futures-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0751562B90231514DA1FD82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-futures/Pods-futures-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-futures/Pods-futures-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-futures/Pods-futures-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		154DFC5C2468F4AE0098498C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */,
 				181F5036246B908500CCCBDB /* CustomTBC.m in Sources */,
+				18AA2BC2246E23B1000801B1 /* CommunityChildBVC.m in Sources */,
 				1859013C24692D6B00CA7A68 /* CommunityVC.m in Sources */,
+				189BD81C246D1B9400490E35 /* MineModel.m in Sources */,
 				185901372469221400CA7A68 /* HomeVC.m in Sources */,
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
 				1859014124692D8B00CA7A68 /* ReleaseVC.m in Sources */,
@@ -399,12 +493,13 @@
 		};
 		154DFC7A2468F4B00098498C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2918599DF26764A44CB6CA12 /* Pods-futures.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A84QXBXH2V;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = futures/SupportFiles/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = futures/LYGTool/PrefixHeader.pch;
 				INFOPLIST_FILE = futures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,12 +513,13 @@
 		};
 		154DFC7B2468F4B00098498C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E8A6C0CB72502A19B418054 /* Pods-futures.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A84QXBXH2V;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = futures/SupportFiles/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = futures/LYGTool/PrefixHeader.pch;
 				INFOPLIST_FILE = futures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

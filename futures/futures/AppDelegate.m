@@ -10,8 +10,10 @@
 #import "MXZHomeVC.h"
 #import "CommunityVC.h"
 #import "ReleaseVC.h"
-#import "QuotesVC.h"
+#import "ZZHQuotesVC.h"
 #import "MineVC.h"
+
+#import "UIColor+Hex.h"
 
 #import "CustomTBC.h"
 
@@ -32,8 +34,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor systemBackgroundColor];
     
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    
     CustomTBC *customTBC = CustomTBC.new;
     self.customTBC = customTBC;
     
@@ -51,7 +51,7 @@
     releaseNav.tabBarItem.image = [UIImage originalImageWithName:@"ic_release"];
     [self.customTBC addChildViewController:releaseNav];
     
-    QuotesVC *quoteVC = [[QuotesVC alloc]init];
+    ZZHQuotesVC *quoteVC = [[ZZHQuotesVC alloc]init];
     UINavigationController *quoteNav = [[UINavigationController alloc] initWithRootViewController:quoteVC];
     [self addChildVC:quoteNav title:@"行情" imgName:@"ic_quotes_tob" selectedImgName:@"ic_quotes_sstate_tob"];
     
@@ -61,6 +61,22 @@
     
     self.window.rootViewController = customTBC;
     [self.window makeKeyAndVisible];
+    if (@available(iOS 13.0, *)) {// iOS 13 不能直接获取到statusbar 手动添加个view到window上当做statusbar背景
+              if (!self.customizedStatusBar) {
+                  //获取最底层Window
+                  NSArray *array = [UIApplication sharedApplication].windows;
+                  UIWindow *keyWindow = [array objectAtIndex:0];
+                  self.customizedStatusBar = [[UIView alloc] initWithFrame:keyWindow.windowScene.statusBarManager.statusBarFrame];
+                      [keyWindow addSubview:self.customizedStatusBar];
+              }
+          }
+    else {
+            self.customizedStatusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+         }
+     
+          if ([self.customizedStatusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+              self.customizedStatusBar.backgroundColor = [UIColor colorWithHexString:@"#FEA203"];
+          }
     return YES;
 }
 

@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04DAD50245703290BBD88EB315021625 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		18F02348F0D59BE70339E8BCB8B8B494 /* ZJTitleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C07DC1A835A23CB4361910B4C2B75D4 /* ZJTitleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24E2122E1C320F942861B42F44183B4B /* ZJTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE449967930CF6E04D9C09ED60F4D88E /* ZJTitleView.m */; };
+		29040AF86AA55F32B0555404281940CA /* UIView+ZJFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 143E6741A7362595B312ADD162CBF7B8 /* UIView+ZJFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C28DAAFB84FDD27FE6FC45D5C015A14 /* UIView+ZJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AF987789D5E0D68EAAA585C55570B5 /* UIView+ZJFrame.m */; };
+		5564EB1FE130E60D73DBDDB4B42C557B /* ZJContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B105A02DB3A219445BCD69EA2A87C01 /* ZJContentView.m */; };
+		599101B59371ED29E2E03B1535A27609 /* ZJSegmentStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D3082FC337C2830980C3CC3FC955E9 /* ZJSegmentStyle.m */; };
+		5BC778E1936BB0F255DAD20645A2A55E /* ZJScrollPageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA21E38E0B497B4677273BCB2DCDF03F /* ZJScrollPageView-dummy.m */; };
+		61F6FAABF53F32E3E44E2D12812535AB /* Pods-futures-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1C8E2FB09F17AB5F3A757481D59C13C /* Pods-futures-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62D8711595B982068D826A5C6E53B92B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		7B09ED3D3A8D3F6A2F96E4951977F040 /* ZJSegmentStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A708AD67A07947B70BBAD0AC602EE71 /* ZJSegmentStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B454B25B3AA6CFBB358DCE51A92A5C3 /* Pods-futures-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 629325927E2453CD7D11D1D47C0E736E /* Pods-futures-dummy.m */; };
+		7C0177EA275F95CCC1FCABCC2D191103 /* ZJScrollPageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C755F7B25106F350B7B28211BE389DEE /* ZJScrollPageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8672F790C03E1A0A4E5E59906C9613C5 /* ZJScrollSegmentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 830974F0CCB90ED93DE8241C9ED6A9E8 /* ZJScrollSegmentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C14159ABD4DE0A44321AD96C516F549 /* ZJScrollPageViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A1C5CA1BA0A4C296193A45933F6515E /* ZJScrollPageViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F0E898B77925ADD101EBD7C4844CA96 /* UIViewController+ZJScrollPageController.h in Headers */ = {isa = PBXBuildFile; fileRef = CCF8742392C75BA8D42519767BC69F59 /* UIViewController+ZJScrollPageController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE868E510E899EB8B1C12DED19C95F0B /* UIViewController+ZJScrollPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = C212D5230E9555A378C7BA2A4F13B07F /* UIViewController+ZJScrollPageController.m */; };
+		E904C2D80C386F8D2C0B3E27A711281B /* ZJScrollPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9653594C2C14FEAB762E0B7F821FFD /* ZJScrollPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC07310DE9229E7B70B57D2A170CEB06 /* ZJContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D1757DE8EAAE61BDA250515FE3D6AC /* ZJContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED45AFE038A1AB994E54DC69E53B8799 /* ZJScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51E0B6FCE595A74193FF1BDC1229082 /* ZJScrollPageView.m */; };
+		F31BFB76F4DA4A7693DA16D924AA580B /* ZJScrollSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAEE34277A650ADFDF229959E84C977 /* ZJScrollSegmentView.m */; };
+		F4F52B6C2E36B0C4C6EB46555E27B1C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B4AE75E5621ABFBFD096EA4127E1E3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1104BD00237FB8326B67F8B4C9E0E7C7;
+			remoteInfo = ZJScrollPageView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D8EB96AAAFBDF87ED2548A27AF1C815 /* ZJScrollPageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZJScrollPageView.modulemap; sourceTree = "<group>"; };
+		143E6741A7362595B312ADD162CBF7B8 /* UIView+ZJFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ZJFrame.h"; path = "ZJScrollPageView/ZJScrollPageView/UIView+ZJFrame.h"; sourceTree = "<group>"; };
+		17297F5C1AEEF07D9702D54CC44B91F8 /* ZJScrollPageView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZJScrollPageView-Info.plist"; sourceTree = "<group>"; };
+		1D9653594C2C14FEAB762E0B7F821FFD /* ZJScrollPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJScrollPageView.h; path = ZJScrollPageView/ZJScrollPageView/ZJScrollPageView.h; sourceTree = "<group>"; };
+		2A708AD67A07947B70BBAD0AC602EE71 /* ZJSegmentStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJSegmentStyle.h; path = ZJScrollPageView/ZJScrollPageView/ZJSegmentStyle.h; sourceTree = "<group>"; };
+		2C07DC1A835A23CB4361910B4C2B75D4 /* ZJTitleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJTitleView.h; path = ZJScrollPageView/ZJScrollPageView/ZJTitleView.h; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		313215156C02808D7227EFF4DD4FF6DC /* Pods-futures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-futures.debug.xcconfig"; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		58CDED4959B805196DE3C97975012FD2 /* Pods-futures-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-futures-acknowledgements.markdown"; sourceTree = "<group>"; };
+		608132496E7B5E9F9CA40F1C248E04E5 /* ZJScrollPageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZJScrollPageView.debug.xcconfig; sourceTree = "<group>"; };
+		629325927E2453CD7D11D1D47C0E736E /* Pods-futures-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-futures-dummy.m"; sourceTree = "<group>"; };
+		6A1C5CA1BA0A4C296193A45933F6515E /* ZJScrollPageViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJScrollPageViewDelegate.h; path = ZJScrollPageView/ZJScrollPageView/ZJScrollPageViewDelegate.h; sourceTree = "<group>"; };
+		6B105A02DB3A219445BCD69EA2A87C01 /* ZJContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJContentView.m; path = ZJScrollPageView/ZJScrollPageView/ZJContentView.m; sourceTree = "<group>"; };
+		8010C880EAEC09FDBEF62A7828563F04 /* ZJScrollPageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZJScrollPageView.release.xcconfig; sourceTree = "<group>"; };
+		830974F0CCB90ED93DE8241C9ED6A9E8 /* ZJScrollSegmentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJScrollSegmentView.h; path = ZJScrollPageView/ZJScrollPageView/ZJScrollSegmentView.h; sourceTree = "<group>"; };
+		96D1DB53CDC57C66E4E0AC53C2FB0AD8 /* ZJScrollPageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZJScrollPageView.framework; path = ZJScrollPageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A123E50D1F77A67618AD25C6A907261F /* Pods-futures-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-futures-acknowledgements.plist"; sourceTree = "<group>"; };
+		A8D3082FC337C2830980C3CC3FC955E9 /* ZJSegmentStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJSegmentStyle.m; path = ZJScrollPageView/ZJScrollPageView/ZJSegmentStyle.m; sourceTree = "<group>"; };
+		AEAEE34277A650ADFDF229959E84C977 /* ZJScrollSegmentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJScrollSegmentView.m; path = ZJScrollPageView/ZJScrollPageView/ZJScrollSegmentView.m; sourceTree = "<group>"; };
+		B51E0B6FCE595A74193FF1BDC1229082 /* ZJScrollPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJScrollPageView.m; path = ZJScrollPageView/ZJScrollPageView/ZJScrollPageView.m; sourceTree = "<group>"; };
+		BE449967930CF6E04D9C09ED60F4D88E /* ZJTitleView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZJTitleView.m; path = ZJScrollPageView/ZJScrollPageView/ZJTitleView.m; sourceTree = "<group>"; };
+		C212D5230E9555A378C7BA2A4F13B07F /* UIViewController+ZJScrollPageController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ZJScrollPageController.m"; path = "ZJScrollPageView/ZJScrollPageView/UIViewController+ZJScrollPageController.m"; sourceTree = "<group>"; };
+		C755F7B25106F350B7B28211BE389DEE /* ZJScrollPageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZJScrollPageView-umbrella.h"; sourceTree = "<group>"; };
+		CCF8742392C75BA8D42519767BC69F59 /* UIViewController+ZJScrollPageController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ZJScrollPageController.h"; path = "ZJScrollPageView/ZJScrollPageView/UIViewController+ZJScrollPageController.h"; sourceTree = "<group>"; };
+		CE559012989FE20521724532B97C484D /* Pods-futures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-futures.release.xcconfig"; sourceTree = "<group>"; };
+		D245523997350B743028C081C1556B14 /* Pods-futures.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-futures.modulemap"; sourceTree = "<group>"; };
+		D3AF987789D5E0D68EAAA585C55570B5 /* UIView+ZJFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ZJFrame.m"; path = "ZJScrollPageView/ZJScrollPageView/UIView+ZJFrame.m"; sourceTree = "<group>"; };
+		D6645D108B585B9C1598D9BC7A1B0ADA /* Pods_futures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_futures.framework; path = "Pods-futures.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9E51B8B3347D3AB64FFEF1C6894B0FD /* Pods-futures-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-futures-Info.plist"; sourceTree = "<group>"; };
+		DE44F7E0BC24619BC3AAC6597284A06E /* Pods-futures-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-futures-frameworks.sh"; sourceTree = "<group>"; };
+		E727CCBB2CB3C5A4FFF5280603BD417B /* ZJScrollPageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZJScrollPageView-prefix.pch"; sourceTree = "<group>"; };
+		F1C8E2FB09F17AB5F3A757481D59C13C /* Pods-futures-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-futures-umbrella.h"; sourceTree = "<group>"; };
+		F1D1757DE8EAAE61BDA250515FE3D6AC /* ZJContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZJContentView.h; path = ZJScrollPageView/ZJScrollPageView/ZJContentView.h; sourceTree = "<group>"; };
+		FA21E38E0B497B4677273BCB2DCDF03F /* ZJScrollPageView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZJScrollPageView-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B4C4CF35D658333315D92DDFAA529A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DAD50245703290BBD88EB315021625 /* Foundation.framework in Frameworks */,
+				62D8711595B982068D826A5C6E53B92B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		798920A7FC713EF908C74546A6B458C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4F52B6C2E36B0C4C6EB46555E27B1C1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		044735E1C4B9233580732A4C2AE3E742 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6645D108B585B9C1598D9BC7A1B0ADA /* Pods_futures.framework */,
+				96D1DB53CDC57C66E4E0AC53C2FB0AD8 /* ZJScrollPageView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52FF8DA8177690D03C82857C63DEBBC8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8EF1FDB51AEFB8859537B46F2C1AF44 /* Pods-futures */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6B3CF1C9B3FCB22D4252C86FAC5BE327 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDB938A27AE231B161D0A767DB8BB261 /* ZJScrollPageView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B8EF1FDB51AEFB8859537B46F2C1AF44 /* Pods-futures */ = {
+			isa = PBXGroup;
+			children = (
+				D245523997350B743028C081C1556B14 /* Pods-futures.modulemap */,
+				58CDED4959B805196DE3C97975012FD2 /* Pods-futures-acknowledgements.markdown */,
+				A123E50D1F77A67618AD25C6A907261F /* Pods-futures-acknowledgements.plist */,
+				629325927E2453CD7D11D1D47C0E736E /* Pods-futures-dummy.m */,
+				DE44F7E0BC24619BC3AAC6597284A06E /* Pods-futures-frameworks.sh */,
+				D9E51B8B3347D3AB64FFEF1C6894B0FD /* Pods-futures-Info.plist */,
+				F1C8E2FB09F17AB5F3A757481D59C13C /* Pods-futures-umbrella.h */,
+				313215156C02808D7227EFF4DD4FF6DC /* Pods-futures.debug.xcconfig */,
+				CE559012989FE20521724532B97C484D /* Pods-futures.release.xcconfig */,
+			);
+			name = "Pods-futures";
+			path = "Target Support Files/Pods-futures";
+			sourceTree = "<group>";
+		};
+		BBE33D06159F8BF1542174A2081F0DD4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0D8EB96AAAFBDF87ED2548A27AF1C815 /* ZJScrollPageView.modulemap */,
+				FA21E38E0B497B4677273BCB2DCDF03F /* ZJScrollPageView-dummy.m */,
+				17297F5C1AEEF07D9702D54CC44B91F8 /* ZJScrollPageView-Info.plist */,
+				E727CCBB2CB3C5A4FFF5280603BD417B /* ZJScrollPageView-prefix.pch */,
+				C755F7B25106F350B7B28211BE389DEE /* ZJScrollPageView-umbrella.h */,
+				608132496E7B5E9F9CA40F1C248E04E5 /* ZJScrollPageView.debug.xcconfig */,
+				8010C880EAEC09FDBEF62A7828563F04 /* ZJScrollPageView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ZJScrollPageView";
+			sourceTree = "<group>";
+		};
+		CDB938A27AE231B161D0A767DB8BB261 /* ZJScrollPageView */ = {
+			isa = PBXGroup;
+			children = (
+				143E6741A7362595B312ADD162CBF7B8 /* UIView+ZJFrame.h */,
+				D3AF987789D5E0D68EAAA585C55570B5 /* UIView+ZJFrame.m */,
+				CCF8742392C75BA8D42519767BC69F59 /* UIViewController+ZJScrollPageController.h */,
+				C212D5230E9555A378C7BA2A4F13B07F /* UIViewController+ZJScrollPageController.m */,
+				F1D1757DE8EAAE61BDA250515FE3D6AC /* ZJContentView.h */,
+				6B105A02DB3A219445BCD69EA2A87C01 /* ZJContentView.m */,
+				1D9653594C2C14FEAB762E0B7F821FFD /* ZJScrollPageView.h */,
+				B51E0B6FCE595A74193FF1BDC1229082 /* ZJScrollPageView.m */,
+				6A1C5CA1BA0A4C296193A45933F6515E /* ZJScrollPageViewDelegate.h */,
+				830974F0CCB90ED93DE8241C9ED6A9E8 /* ZJScrollSegmentView.h */,
+				AEAEE34277A650ADFDF229959E84C977 /* ZJScrollSegmentView.m */,
+				2A708AD67A07947B70BBAD0AC602EE71 /* ZJSegmentStyle.h */,
+				A8D3082FC337C2830980C3CC3FC955E9 /* ZJSegmentStyle.m */,
+				2C07DC1A835A23CB4361910B4C2B75D4 /* ZJTitleView.h */,
+				BE449967930CF6E04D9C09ED60F4D88E /* ZJTitleView.m */,
+				BBE33D06159F8BF1542174A2081F0DD4 /* Support Files */,
+			);
+			name = ZJScrollPageView;
+			path = ZJScrollPageView;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				6B3CF1C9B3FCB22D4252C86FAC5BE327 /* Pods */,
+				044735E1C4B9233580732A4C2AE3E742 /* Products */,
+				52FF8DA8177690D03C82857C63DEBBC8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		11E4932FF9AE177C5D32445D2E2121C5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61F6FAABF53F32E3E44E2D12812535AB /* Pods-futures-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B12153E22E2F1431EBB01E4D335A2F28 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29040AF86AA55F32B0555404281940CA /* UIView+ZJFrame.h in Headers */,
+				9F0E898B77925ADD101EBD7C4844CA96 /* UIViewController+ZJScrollPageController.h in Headers */,
+				EC07310DE9229E7B70B57D2A170CEB06 /* ZJContentView.h in Headers */,
+				7C0177EA275F95CCC1FCABCC2D191103 /* ZJScrollPageView-umbrella.h in Headers */,
+				E904C2D80C386F8D2C0B3E27A711281B /* ZJScrollPageView.h in Headers */,
+				8C14159ABD4DE0A44321AD96C516F549 /* ZJScrollPageViewDelegate.h in Headers */,
+				8672F790C03E1A0A4E5E59906C9613C5 /* ZJScrollSegmentView.h in Headers */,
+				7B09ED3D3A8D3F6A2F96E4951977F040 /* ZJSegmentStyle.h in Headers */,
+				18F02348F0D59BE70339E8BCB8B8B494 /* ZJTitleView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1104BD00237FB8326B67F8B4C9E0E7C7 /* ZJScrollPageView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D342B243A981FF28A503E361A7E548DB /* Build configuration list for PBXNativeTarget "ZJScrollPageView" */;
+			buildPhases = (
+				B12153E22E2F1431EBB01E4D335A2F28 /* Headers */,
+				36C082BACEC5322B90F9EA2B128B3069 /* Sources */,
+				3B4C4CF35D658333315D92DDFAA529A7 /* Frameworks */,
+				D63ACA2EC72E7D339A8280DCB44FB6CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZJScrollPageView;
+			productName = ZJScrollPageView;
+			productReference = 96D1DB53CDC57C66E4E0AC53C2FB0AD8 /* ZJScrollPageView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8D33AA613C6C3DC9341E215C29B6B648 /* Pods-futures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1BFA9CBE6DE5C12F42E1C93C0B53566 /* Build configuration list for PBXNativeTarget "Pods-futures" */;
+			buildPhases = (
+				11E4932FF9AE177C5D32445D2E2121C5 /* Headers */,
+				0A82E1F9CD8F60D043D24B390FCF1F68 /* Sources */,
+				798920A7FC713EF908C74546A6B458C3 /* Frameworks */,
+				BBCA45D9DA92C328BBF53B32E7DFE0EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDFEB01D04BF06B1EC4C1924ECDAB5C4 /* PBXTargetDependency */,
+			);
+			name = "Pods-futures";
+			productName = "Pods-futures";
+			productReference = D6645D108B585B9C1598D9BC7A1B0ADA /* Pods_futures.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 044735E1C4B9233580732A4C2AE3E742 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D33AA613C6C3DC9341E215C29B6B648 /* Pods-futures */,
+				1104BD00237FB8326B67F8B4C9E0E7C7 /* ZJScrollPageView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBCA45D9DA92C328BBF53B32E7DFE0EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D63ACA2EC72E7D339A8280DCB44FB6CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A82E1F9CD8F60D043D24B390FCF1F68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B454B25B3AA6CFBB358DCE51A92A5C3 /* Pods-futures-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36C082BACEC5322B90F9EA2B128B3069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C28DAAFB84FDD27FE6FC45D5C015A14 /* UIView+ZJFrame.m in Sources */,
+				BE868E510E899EB8B1C12DED19C95F0B /* UIViewController+ZJScrollPageController.m in Sources */,
+				5564EB1FE130E60D73DBDDB4B42C557B /* ZJContentView.m in Sources */,
+				5BC778E1936BB0F255DAD20645A2A55E /* ZJScrollPageView-dummy.m in Sources */,
+				ED45AFE038A1AB994E54DC69E53B8799 /* ZJScrollPageView.m in Sources */,
+				F31BFB76F4DA4A7693DA16D924AA580B /* ZJScrollSegmentView.m in Sources */,
+				599101B59371ED29E2E03B1535A27609 /* ZJSegmentStyle.m in Sources */,
+				24E2122E1C320F942861B42F44183B4B /* ZJTitleView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDFEB01D04BF06B1EC4C1924ECDAB5C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZJScrollPageView;
+			target = 1104BD00237FB8326B67F8B4C9E0E7C7 /* ZJScrollPageView */;
+			targetProxy = 0B4AE75E5621ABFBFD096EA4127E1E3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		357F9B1867E0D2200AA1D5981082E86F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8010C880EAEC09FDBEF62A7828563F04 /* ZJScrollPageView.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZJScrollPageView/ZJScrollPageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZJScrollPageView/ZJScrollPageView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ZJScrollPageView/ZJScrollPageView.modulemap";
+				PRODUCT_MODULE_NAME = ZJScrollPageView;
+				PRODUCT_NAME = ZJScrollPageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5D84C631050BF9304190E3295C03B3B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 608132496E7B5E9F9CA40F1C248E04E5 /* ZJScrollPageView.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZJScrollPageView/ZJScrollPageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZJScrollPageView/ZJScrollPageView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ZJScrollPageView/ZJScrollPageView.modulemap";
+				PRODUCT_MODULE_NAME = ZJScrollPageView;
+				PRODUCT_NAME = ZJScrollPageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		745938EA31B824F529E1DCFFDA74B3AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE559012989FE20521724532B97C484D /* Pods-futures.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-futures/Pods-futures-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-futures/Pods-futures.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		902CA731F6204F49AC35597046130883 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 313215156C02808D7227EFF4DD4FF6DC /* Pods-futures.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-futures/Pods-futures-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-futures/Pods-futures.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1BFA9CBE6DE5C12F42E1C93C0B53566 /* Build configuration list for PBXNativeTarget "Pods-futures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				902CA731F6204F49AC35597046130883 /* Debug */,
+				745938EA31B824F529E1DCFFDA74B3AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D342B243A981FF28A503E361A7E548DB /* Build configuration list for PBXNativeTarget "ZJScrollPageView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D84C631050BF9304190E3295C03B3B7 /* Debug */,
+				357F9B1867E0D2200AA1D5981082E86F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

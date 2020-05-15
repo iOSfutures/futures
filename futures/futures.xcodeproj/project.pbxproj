@@ -38,11 +38,22 @@
 		1859013D24692D6B00CA7A68 /* CommunityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859013B24692D6B00CA7A68 /* CommunityVC.xib */; };
 		1859014124692D8B00CA7A68 /* ReleaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859013F24692D8B00CA7A68 /* ReleaseVC.m */; };
 		1859014224692D8B00CA7A68 /* ReleaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859014024692D8B00CA7A68 /* ReleaseVC.xib */; };
-		1859014624692F3800CA7A68 /* QuotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859014424692F3800CA7A68 /* QuotesVC.m */; };
-		1859014724692F3800CA7A68 /* QuoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859014524692F3800CA7A68 /* QuoteVC.xib */; };
 		1859014B246933DB00CA7A68 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18590149246933DB00CA7A68 /* MineVC.m */; };
 		1859014C246933DB00CA7A68 /* MineVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859014A246933DB00CA7A68 /* MineVC.xib */; };
 		185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 185901512469462800CA7A68 /* UIImage+OriginalImage.m */; };
+		185AC290246E8791006EC3E6 /* ZZHSlideHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AC28D246E8791006EC3E6 /* ZZHSlideHeadView.m */; };
+		185AC291246E8791006EC3E6 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AC28E246E8791006EC3E6 /* UIView+Extension.m */; };
+		185AC2A1246E87A7006EC3E6 /* ZZHQuoteTimeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185AC293246E87A5006EC3E6 /* ZZHQuoteTimeVC.xib */; };
+		185AC2A2246E87A7006EC3E6 /* ZZHQuoteCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AC295246E87A5006EC3E6 /* ZZHQuoteCalendarVC.m */; };
+		185AC2A3246E87A7006EC3E6 /* ZZHQuotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AC297246E87A5006EC3E6 /* ZZHQuotesVC.m */; };
+		185AC2A4246E87A7006EC3E6 /* ZZHQuoteTimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AC298246E87A5006EC3E6 /* ZZHQuoteTimeVC.m */; };
+		185AC2A5246E87A7006EC3E6 /* ZZHQuoteNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AC299246E87A6006EC3E6 /* ZZHQuoteNewsVC.m */; };
+		185AC2A6246E87A7006EC3E6 /* ZZHQuoteNewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185AC29A246E87A6006EC3E6 /* ZZHQuoteNewsVC.xib */; };
+		185AC2A7246E87A7006EC3E6 /* ZZHQuoteIndustryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AC29B246E87A6006EC3E6 /* ZZHQuoteIndustryVC.m */; };
+		185AC2A8246E87A7006EC3E6 /* ZZHQuoteIndustryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185AC29C246E87A6006EC3E6 /* ZZHQuoteIndustryVC.xib */; };
+		185AC2A9246E87A7006EC3E6 /* ZZHQuotesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185AC29D246E87A6006EC3E6 /* ZZHQuotesVC.xib */; };
+		185AC2AA246E87A7006EC3E6 /* ZZHQuoteCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185AC2A0246E87A7006EC3E6 /* ZZHQuoteCalendarVC.xib */; };
+		185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AC2AC246E899D006EC3E6 /* UIColor+Hex.m */; };
 		189BD81C246D1B9400490E35 /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BD81B246D1B9400490E35 /* MineModel.m */; };
 		189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BD81E246D45C300490E35 /* CommunityChildAVC.m */; };
 		189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189BD81F246D45C300490E35 /* CommunityChildAVC.xib */; };
@@ -98,14 +109,32 @@
 		1859013E24692D8B00CA7A68 /* ReleaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseVC.h; sourceTree = "<group>"; };
 		1859013F24692D8B00CA7A68 /* ReleaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseVC.m; sourceTree = "<group>"; };
 		1859014024692D8B00CA7A68 /* ReleaseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReleaseVC.xib; sourceTree = "<group>"; };
-		1859014324692F3800CA7A68 /* QuotesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuotesVC.h; sourceTree = "<group>"; };
-		1859014424692F3800CA7A68 /* QuotesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuotesVC.m; sourceTree = "<group>"; };
-		1859014524692F3800CA7A68 /* QuoteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteVC.xib; sourceTree = "<group>"; };
 		18590148246933DB00CA7A68 /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
 		18590149246933DB00CA7A68 /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
 		1859014A246933DB00CA7A68 /* MineVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineVC.xib; sourceTree = "<group>"; };
 		185901502469462800CA7A68 /* UIImage+OriginalImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+OriginalImage.h"; sourceTree = "<group>"; };
 		185901512469462800CA7A68 /* UIImage+OriginalImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OriginalImage.m"; sourceTree = "<group>"; };
+		185AC28C246E8791006EC3E6 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		185AC28D246E8791006EC3E6 /* ZZHSlideHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHSlideHeadView.m; sourceTree = "<group>"; };
+		185AC28E246E8791006EC3E6 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		185AC28F246E8791006EC3E6 /* ZZHSlideHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHSlideHeadView.h; sourceTree = "<group>"; };
+		185AC292246E87A5006EC3E6 /* ZZHQuoteTimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteTimeVC.h; sourceTree = "<group>"; };
+		185AC293246E87A5006EC3E6 /* ZZHQuoteTimeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteTimeVC.xib; sourceTree = "<group>"; };
+		185AC294246E87A5006EC3E6 /* ZZHQuotesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuotesVC.h; sourceTree = "<group>"; };
+		185AC295246E87A5006EC3E6 /* ZZHQuoteCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteCalendarVC.m; sourceTree = "<group>"; };
+		185AC296246E87A5006EC3E6 /* ZZHQuoteIndustryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteIndustryVC.h; sourceTree = "<group>"; };
+		185AC297246E87A5006EC3E6 /* ZZHQuotesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuotesVC.m; sourceTree = "<group>"; };
+		185AC298246E87A5006EC3E6 /* ZZHQuoteTimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteTimeVC.m; sourceTree = "<group>"; };
+		185AC299246E87A6006EC3E6 /* ZZHQuoteNewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteNewsVC.m; sourceTree = "<group>"; };
+		185AC29A246E87A6006EC3E6 /* ZZHQuoteNewsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteNewsVC.xib; sourceTree = "<group>"; };
+		185AC29B246E87A6006EC3E6 /* ZZHQuoteIndustryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteIndustryVC.m; sourceTree = "<group>"; };
+		185AC29C246E87A6006EC3E6 /* ZZHQuoteIndustryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteIndustryVC.xib; sourceTree = "<group>"; };
+		185AC29D246E87A6006EC3E6 /* ZZHQuotesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuotesVC.xib; sourceTree = "<group>"; };
+		185AC29E246E87A6006EC3E6 /* ZZHQuoteNewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteNewsVC.h; sourceTree = "<group>"; };
+		185AC29F246E87A6006EC3E6 /* ZZHQuoteCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteCalendarVC.h; sourceTree = "<group>"; };
+		185AC2A0246E87A7006EC3E6 /* ZZHQuoteCalendarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteCalendarVC.xib; sourceTree = "<group>"; };
+		185AC2AB246E899D006EC3E6 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		185AC2AC246E899D006EC3E6 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		189BD81A246D1B9400490E35 /* MineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
 		189BD81B246D1B9400490E35 /* MineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineModel.m; sourceTree = "<group>"; };
 		189BD81D246D45C300490E35 /* CommunityChildAVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityChildAVC.h; sourceTree = "<group>"; };
@@ -215,56 +244,185 @@
 		154DFC622468F4AE0098498C /* futures */ = {
 			isa = PBXGroup;
 			children = (
+				185AC2BA246E8C76006EC3E6 /* Publish */,
+				185AC2B9246E8C6A006EC3E6 /* Mine */,
+				185AC2B6246E8C20006EC3E6 /* Community */,
+				185AC2AE246E8B60006EC3E6 /* Quote */,
 				15263674246E771D00D01BE0 /* Home */,
-				18B55134246BCC3900E80DEB /* M */,
-				18B55135246BCC3F00E80DEB /* V */,
-				18590133246921B800CA7A68 /* C */,
 				154DFC632468F4AE0098498C /* AppDelegate.h */,
 				154DFC642468F4AE0098498C /* AppDelegate.m */,
 				154DFC6F2468F4B00098498C /* Assets.xcassets */,
 				154DFC712468F4B00098498C /* LaunchScreen.storyboard */,
 				154DFC742468F4B00098498C /* Info.plist */,
 				154DFC752468F4B00098498C /* main.m */,
-				18B55133246BCBF500E80DEB /* LYGTool */,
+				18B55133246BCBF500E80DEB /* SupportFile */,
 			);
 			path = futures;
 			sourceTree = "<group>";
 		};
-		18590133246921B800CA7A68 /* C */ = {
+		185AC28B246E8791006EC3E6 /* ZZHQuotesSlideNavView */ = {
 			isa = PBXGroup;
 			children = (
-				181F5034246B908500CCCBDB /* CustomTBC.h */,
-				181F5035246B908500CCCBDB /* CustomTBC.m */,
-				1859013924692D6B00CA7A68 /* CommunityVC.h */,
-				1859013A24692D6B00CA7A68 /* CommunityVC.m */,
-				1859013B24692D6B00CA7A68 /* CommunityVC.xib */,
-				1859013E24692D8B00CA7A68 /* ReleaseVC.h */,
-				1859013F24692D8B00CA7A68 /* ReleaseVC.m */,
-				1859014024692D8B00CA7A68 /* ReleaseVC.xib */,
-				1859014324692F3800CA7A68 /* QuotesVC.h */,
-				1859014424692F3800CA7A68 /* QuotesVC.m */,
-				1859014524692F3800CA7A68 /* QuoteVC.xib */,
-				18590148246933DB00CA7A68 /* MineVC.h */,
-				18590149246933DB00CA7A68 /* MineVC.m */,
-				1859014A246933DB00CA7A68 /* MineVC.xib */,
+				185AC28C246E8791006EC3E6 /* UIView+Extension.h */,
+				185AC28D246E8791006EC3E6 /* ZZHSlideHeadView.m */,
+				185AC28E246E8791006EC3E6 /* UIView+Extension.m */,
+				185AC28F246E8791006EC3E6 /* ZZHSlideHeadView.h */,
+			);
+			path = ZZHQuotesSlideNavView;
+			sourceTree = "<group>";
+		};
+		185AC2AE246E8B60006EC3E6 /* Quote */ = {
+			isa = PBXGroup;
+			children = (
+				185AC2B1246E8B78006EC3E6 /* C */,
+				185AC2B0246E8B73006EC3E6 /* V */,
+				185AC2AF246E8B6F006EC3E6 /* M */,
+			);
+			path = Quote;
+			sourceTree = "<group>";
+		};
+		185AC2AF246E8B6F006EC3E6 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		185AC2B0246E8B73006EC3E6 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		185AC2B1246E8B78006EC3E6 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				185AC29F246E87A6006EC3E6 /* ZZHQuoteCalendarVC.h */,
+				185AC295246E87A5006EC3E6 /* ZZHQuoteCalendarVC.m */,
+				185AC2A0246E87A7006EC3E6 /* ZZHQuoteCalendarVC.xib */,
+				185AC296246E87A5006EC3E6 /* ZZHQuoteIndustryVC.h */,
+				185AC29B246E87A6006EC3E6 /* ZZHQuoteIndustryVC.m */,
+				185AC29C246E87A6006EC3E6 /* ZZHQuoteIndustryVC.xib */,
+				185AC29E246E87A6006EC3E6 /* ZZHQuoteNewsVC.h */,
+				185AC299246E87A6006EC3E6 /* ZZHQuoteNewsVC.m */,
+				185AC29A246E87A6006EC3E6 /* ZZHQuoteNewsVC.xib */,
+				185AC294246E87A5006EC3E6 /* ZZHQuotesVC.h */,
+				185AC297246E87A5006EC3E6 /* ZZHQuotesVC.m */,
+				185AC29D246E87A6006EC3E6 /* ZZHQuotesVC.xib */,
+				185AC292246E87A5006EC3E6 /* ZZHQuoteTimeVC.h */,
+				185AC298246E87A5006EC3E6 /* ZZHQuoteTimeVC.m */,
+				185AC293246E87A5006EC3E6 /* ZZHQuoteTimeVC.xib */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		185AC2B4246E8BBF006EC3E6 /* ThirdSDK */ = {
+			isa = PBXGroup;
+			children = (
+				185AC28B246E8791006EC3E6 /* ZZHQuotesSlideNavView */,
+			);
+			path = ThirdSDK;
+			sourceTree = "<group>";
+		};
+		185AC2B5246E8BE8006EC3E6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				185901502469462800CA7A68 /* UIImage+OriginalImage.h */,
+				185901512469462800CA7A68 /* UIImage+OriginalImage.m */,
+				185AC2AB246E899D006EC3E6 /* UIColor+Hex.h */,
+				185AC2AC246E899D006EC3E6 /* UIColor+Hex.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		185AC2B6246E8C20006EC3E6 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				185AC2B8246E8C3F006EC3E6 /* C */,
+				185AC2B7246E8C35006EC3E6 /* V */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		185AC2B7246E8C35006EC3E6 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		185AC2B8246E8C3F006EC3E6 /* C */ = {
+			isa = PBXGroup;
+			children = (
 				189BD81D246D45C300490E35 /* CommunityChildAVC.h */,
 				189BD81E246D45C300490E35 /* CommunityChildAVC.m */,
 				189BD81F246D45C300490E35 /* CommunityChildAVC.xib */,
 				18AA2BBF246E23B1000801B1 /* CommunityChildBVC.h */,
 				18AA2BC0246E23B1000801B1 /* CommunityChildBVC.m */,
 				18AA2BC1246E23B1000801B1 /* CommunityChildBVC.xib */,
+				1859013924692D6B00CA7A68 /* CommunityVC.h */,
+				1859013A24692D6B00CA7A68 /* CommunityVC.m */,
+				1859013B24692D6B00CA7A68 /* CommunityVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
 		};
-		18B55133246BCBF500E80DEB /* LYGTool */ = {
+		185AC2B9246E8C6A006EC3E6 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				18B55136246BCCDA00E80DEB /* PrefixHeader.pch */,
-				185901502469462800CA7A68 /* UIImage+OriginalImage.h */,
-				185901512469462800CA7A68 /* UIImage+OriginalImage.m */,
+				18B55134246BCC3900E80DEB /* M */,
+				185AC2BC246E8C88006EC3E6 /* C */,
 			);
-			path = LYGTool;
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		185AC2BA246E8C76006EC3E6 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				185AC2BB246E8C7F006EC3E6 /* C */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		185AC2BB246E8C7F006EC3E6 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				1859013E24692D8B00CA7A68 /* ReleaseVC.h */,
+				1859013F24692D8B00CA7A68 /* ReleaseVC.m */,
+				1859014024692D8B00CA7A68 /* ReleaseVC.xib */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		185AC2BC246E8C88006EC3E6 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				18590148246933DB00CA7A68 /* MineVC.h */,
+				18590149246933DB00CA7A68 /* MineVC.m */,
+				1859014A246933DB00CA7A68 /* MineVC.xib */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		185AC2BD246E8C98006EC3E6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				181F5034246B908500CCCBDB /* CustomTBC.h */,
+				181F5035246B908500CCCBDB /* CustomTBC.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		18B55133246BCBF500E80DEB /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				185AC2BD246E8C98006EC3E6 /* Common */,
+				185AC2B5246E8BE8006EC3E6 /* Category */,
+				185AC2B4246E8BBF006EC3E6 /* ThirdSDK */,
+				18B55136246BCCDA00E80DEB /* PrefixHeader.pch */,
+			);
+			path = SupportFile;
 			sourceTree = "<group>";
 		};
 		18B55134246BCC3900E80DEB /* M */ = {
@@ -274,13 +432,6 @@
 				189BD81B246D1B9400490E35 /* MineModel.m */,
 			);
 			path = M;
-			sourceTree = "<group>";
-		};
-		18B55135246BCC3F00E80DEB /* V */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = V;
 			sourceTree = "<group>";
 		};
 		242461AB158F913307225D7E /* Frameworks */ = {
@@ -361,7 +512,10 @@
 			files = (
 				152636A3246E771D00D01BE0 /* MXZHomeThirdSectionHeadView.xib in Resources */,
 				152636A9246E771D00D01BE0 /* MXZHomeSecondSectionFootView.xib in Resources */,
+				185AC2A8246E87A7006EC3E6 /* ZZHQuoteIndustryVC.xib in Resources */,
+				185AC2A1246E87A7006EC3E6 /* ZZHQuoteTimeVC.xib in Resources */,
 				15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */,
+				185AC2AA246E87A7006EC3E6 /* ZZHQuoteCalendarVC.xib in Resources */,
 				189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */,
 				152636A4246E771D00D01BE0 /* MXZHomeFourthCollectionCell.xib in Resources */,
 				152636AC246E7E6900D01BE0 /* MXZHomeNavSearchView.xib in Resources */,
@@ -372,14 +526,15 @@
 				152636A0246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib in Resources */,
 				1526369F246E771D00D01BE0 /* MXZHomeIndustryVC.xib in Resources */,
 				152636A6246E771D00D01BE0 /* MXZHomeFourthSectionHeadView.xib in Resources */,
+				185AC2A9246E87A7006EC3E6 /* ZZHQuotesVC.xib in Resources */,
 				154DFC702468F4B00098498C /* Assets.xcassets in Resources */,
 				15263696246E771D00D01BE0 /* MXZHomeQuoteVC.xib in Resources */,
 				1859014C246933DB00CA7A68 /* MineVC.xib in Resources */,
 				18AA2BC3246E23B1000801B1 /* CommunityChildBVC.xib in Resources */,
-				1859014724692F3800CA7A68 /* QuoteVC.xib in Resources */,
 				1859013D24692D6B00CA7A68 /* CommunityVC.xib in Resources */,
 				152636AA246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib in Resources */,
 				1526369D246E771D00D01BE0 /* MXZHomeVC.xib in Resources */,
+				185AC2A6246E87A7006EC3E6 /* ZZHQuoteNewsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,26 +587,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185AC2A4246E87A7006EC3E6 /* ZZHQuoteTimeVC.m in Sources */,
 				189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */,
 				181F5036246B908500CCCBDB /* CustomTBC.m in Sources */,
+				185AC291246E8791006EC3E6 /* UIView+Extension.m in Sources */,
 				152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */,
 				18AA2BC2246E23B1000801B1 /* CommunityChildBVC.m in Sources */,
 				1859013C24692D6B00CA7A68 /* CommunityVC.m in Sources */,
 				189BD81C246D1B9400490E35 /* MineModel.m in Sources */,
+				185AC2A7246E87A7006EC3E6 /* ZZHQuoteIndustryVC.m in Sources */,
 				15263699246E771D00D01BE0 /* MXZHomeQuoteVC.m in Sources */,
 				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
 				152636A7246E771D00D01BE0 /* MXZHomeFifthSectionCell.m in Sources */,
+				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
 				152636A2246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m in Sources */,
 				1526369C246E771D00D01BE0 /* MXZHomeExpressVC.m in Sources */,
+				185AC2A2246E87A7006EC3E6 /* ZZHQuoteCalendarVC.m in Sources */,
 				1859014124692D8B00CA7A68 /* ReleaseVC.m in Sources */,
 				1859014B246933DB00CA7A68 /* MineVC.m in Sources */,
 				1526369A246E771D00D01BE0 /* MXZHomeVC.m in Sources */,
+				185AC290246E8791006EC3E6 /* ZZHSlideHeadView.m in Sources */,
+				185AC2A5246E87A7006EC3E6 /* ZZHQuoteNewsVC.m in Sources */,
 				154DFC762468F4B00098498C /* main.m in Sources */,
 				152636A5246E771D00D01BE0 /* MXZHomeFourthSectionCell.m in Sources */,
 				1526369B246E771D00D01BE0 /* MXZHomeIndustryVC.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,
-				1859014624692F3800CA7A68 /* QuotesVC.m in Sources */,
+				185AC2A3246E87A7006EC3E6 /* ZZHQuotesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +749,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A84QXBXH2V;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = futures/LYGTool/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = futures/SupportFile/PrefixHeader.pch;
 				INFOPLIST_FILE = futures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -607,7 +769,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A84QXBXH2V;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = futures/LYGTool/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = futures/SupportFile/PrefixHeader.pch;
 				INFOPLIST_FILE = futures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

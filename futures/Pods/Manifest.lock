@@ -1,0 +1,16 @@
+PODS:
+  - ZJScrollPageView (0.4.0)
+
+DEPENDENCIES:
+  - ZJScrollPageView
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - ZJScrollPageView
+
+SPEC CHECKSUMS:
+  ZJScrollPageView: dd8778909cb2413782616ab156e873956f6b0682
+
+PODFILE CHECKSUM: 0de894406662a0ca86a2c08c0dc7062114a77490
+
+COCOAPODS: 1.9.1

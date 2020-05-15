@@ -21,15 +21,18 @@
 
 @property(nonatomic, strong)CustomTBC *customTBC;
 
+@property (nonatomic, strong) UIView *customizedStatusBar;
+
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor systemBackgroundColor];
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
     CustomTBC *customTBC = CustomTBC.new;
     self.customTBC = customTBC;
@@ -44,7 +47,9 @@
     
     ReleaseVC *releaseVC = [[ReleaseVC alloc]init];
     UINavigationController *releaseNav = [[UINavigationController alloc] initWithRootViewController:releaseVC];
-    [self addChildVC:releaseNav title:@"发布" imgName:@"ic_release" selectedImgName:@"ic_release"];
+    releaseNav.tabBarItem.title = @"发布";
+    releaseNav.tabBarItem.image = [UIImage originalImageWithName:@"ic_release"];
+    [self.customTBC addChildViewController:releaseNav];
     
     QuotesVC *quoteVC = [[QuotesVC alloc]init];
     UINavigationController *quoteNav = [[UINavigationController alloc] initWithRootViewController:quoteVC];
@@ -62,10 +67,8 @@
 - (void)addChildVC:(UINavigationController *)nav title:(NSString *)title imgName:(NSString *)imageName selectedImgName:(NSString *)selectedImgName
 {
     nav.tabBarItem.title = title;
-    nav.tabBarItem.image = [UIImage originalImageWithName:imageName];
-    nav.tabBarItem.selectedImage = [UIImage originalImageWithName:selectedImgName];
+    nav.tabBarItem.image = [UIImage imageNamed:imageName];
     [self.customTBC addChildViewController:nav];
 }
-
 
 @end

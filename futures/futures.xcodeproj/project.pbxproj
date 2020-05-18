@@ -303,13 +303,6 @@
 			path = C;
 			sourceTree = "<group>";
 		};
-		185AC2B4246E8BBF006EC3E6 /* ThirdSDK */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ThirdSDK;
-			sourceTree = "<group>";
-		};
 		185AC2B5246E8BE8006EC3E6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,12 +396,19 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		18A5848C2472552A00C0437F /* ThirdSDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdSDK;
+			sourceTree = "<group>";
+		};
 		18B55133246BCBF500E80DEB /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				18A5848C2472552A00C0437F /* ThirdSDK */,
 				185AC2BD246E8C98006EC3E6 /* Common */,
 				185AC2B5246E8BE8006EC3E6 /* Category */,
-				185AC2B4246E8BBF006EC3E6 /* ThirdSDK */,
 				18B55136246BCCDA00E80DEB /* PrefixHeader.pch */,
 			);
 			path = SupportFile;

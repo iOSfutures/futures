@@ -20,6 +20,9 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+-(UIView *)listView{
+    return self.view;
+}
 /*
 #pragma mark - Navigation
 

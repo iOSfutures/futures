@@ -7,7 +7,7 @@
 //
 
 #import "ZZHQuotesVC.h"
-#import "ZZHSlideHeadView.h"
+//#import "ZZHSlideHeadView.h"
 #import "ZZHQuoteTimeVC.h"
 #import "ZZHQuoteCalendarVC.h"
 #import "ZZHQuoteIndustryVC.h"
@@ -23,30 +23,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //1. 初始化SliderHeadView ,加进View
-    ZZHSlideHeadView *slideVC = [[ZZHSlideHeadView alloc] init];
-    [self.view addSubview:slideVC];
-    
-    //titleArr:实时行情 日历数据 行业风暴 7x24快讯
-    NSArray *titleArr = @[@"实时行情",@"日历数据",@"行业风暴",@"7x24快讯"];
-    slideVC.titlesArr = titleArr;
-    
-    //2. 初始化子控制器
-    ZZHQuoteTimeVC *quoteTimeVC = [[ZZHQuoteTimeVC alloc] init];
-    [slideVC addChildViewController:quoteTimeVC title:titleArr[0]];
-    
-    ZZHQuoteCalendarVC *quoteCalendarVC = [[ZZHQuoteCalendarVC alloc] init];
-    [slideVC addChildViewController:quoteCalendarVC title:titleArr[1]];
-    
-    ZZHQuoteIndustryVC *quoteIndustryVC = [[ZZHQuoteIndustryVC alloc] init];
-    [slideVC addChildViewController:quoteIndustryVC title:titleArr[2]];
-    
-    ZZHQuoteNewsVC *quoteNewsVC = [[ZZHQuoteNewsVC alloc] init];
-    [slideVC addChildViewController:quoteNewsVC title:titleArr[3]];
-    
-    
-    //3. 调用setSlideHeadView
-    [slideVC setSlideHeadView];
+//    //1. 初始化SliderHeadView ,加进View
+//    ZZHSlideHeadView *slideVC = [[ZZHSlideHeadView alloc] init];
+//    [self.view addSubview:slideVC];
+//    
+//    //titleArr:实时行情 日历数据 行业风暴 7x24快讯
+//    NSArray *titleArr = @[@"实时行情",@"日历数据",@"行业风暴",@"7x24快讯"];
+//    slideVC.titlesArr = titleArr;
+//    
+//    //2. 初始化子控制器
+//    ZZHQuoteTimeVC *quoteTimeVC = [[ZZHQuoteTimeVC alloc] init];
+//    [slideVC addChildViewController:quoteTimeVC title:titleArr[0]];
+//    
+//    ZZHQuoteCalendarVC *quoteCalendarVC = [[ZZHQuoteCalendarVC alloc] init];
+//    [slideVC addChildViewController:quoteCalendarVC title:titleArr[1]];
+//    
+//    ZZHQuoteIndustryVC *quoteIndustryVC = [[ZZHQuoteIndustryVC alloc] init];
+//    [slideVC addChildViewController:quoteIndustryVC title:titleArr[2]];
+//    
+//    ZZHQuoteNewsVC *quoteNewsVC = [[ZZHQuoteNewsVC alloc] init];
+//    [slideVC addChildViewController:quoteNewsVC title:titleArr[3]];
+//    
+//    
+//    //3. 调用setSlideHeadView
+//    [slideVC setSlideHeadView];
 }
 
 //修改状态栏颜色

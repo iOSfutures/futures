@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ContentBaseViewController.h"
+#import "ZJScrollPageViewDelegate.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CommunityChildAVC : ContentBaseViewController<JXCategoryListContentViewDelegate>
+@interface CommunityChildAVC : UIViewController<ZJScrollPageViewChildVcDelegate>
 
 @end
 

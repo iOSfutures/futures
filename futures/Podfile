@@ -7,6 +7,6 @@ target 'futures' do
   use_frameworks!
 
   # Pods for futures
-pod 'ZJScrollPageView'
+pod 'JXCategoryView'
 
 end

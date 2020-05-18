@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ContentBaseViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CommunityChildBVC : UIViewController
+
+@interface CommunityChildBVC : ContentBaseViewController<JXCategoryListContentViewDelegate>
 
 @end
 

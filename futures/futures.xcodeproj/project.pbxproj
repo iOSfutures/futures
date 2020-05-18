@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151AC18724722B8C00EAE0BD /* ZKCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 151AC18424722B8C00EAE0BD /* ZKCycleScrollView.m */; };
+		151AC18824722B8C00EAE0BD /* ZKCycleScrollViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 151AC18624722B8C00EAE0BD /* ZKCycleScrollViewFlowLayout.m */; };
+		151AC18C2472326B00EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 151AC18A2472326B00EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m */; };
+		151AC18D2472326B00EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151AC18B2472326B00EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib */; };
 		15263696246E771D00D01BE0 /* MXZHomeQuoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263677246E771D00D01BE0 /* MXZHomeQuoteVC.xib */; };
 		15263697246E771D00D01BE0 /* MXZHomeExpressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263678246E771D00D01BE0 /* MXZHomeExpressVC.xib */; };
 		15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526367A246E771D00D01BE0 /* MXZHomeCalendarVC.xib */; };
@@ -63,6 +67,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		151AC18324722B8C00EAE0BD /* ZKCycleScrollViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKCycleScrollViewFlowLayout.h; sourceTree = "<group>"; };
+		151AC18424722B8C00EAE0BD /* ZKCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKCycleScrollView.m; sourceTree = "<group>"; };
+		151AC18524722B8C00EAE0BD /* ZKCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKCycleScrollView.h; sourceTree = "<group>"; };
+		151AC18624722B8C00EAE0BD /* ZKCycleScrollViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKCycleScrollViewFlowLayout.m; sourceTree = "<group>"; };
+		151AC1892472326B00EAE0BD /* MXZHomeFirstSectionCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeFirstSectionCollectionViewCell.h; sourceTree = "<group>"; };
+		151AC18A2472326B00EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeFirstSectionCollectionViewCell.m; sourceTree = "<group>"; };
+		151AC18B2472326B00EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZHomeFirstSectionCollectionViewCell.xib; sourceTree = "<group>"; };
 		15263677246E771D00D01BE0 /* MXZHomeQuoteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeQuoteVC.xib; sourceTree = "<group>"; };
 		15263678246E771D00D01BE0 /* MXZHomeExpressVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeExpressVC.xib; sourceTree = "<group>"; };
 		15263679246E771D00D01BE0 /* MXZHomeIndustryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeIndustryVC.h; sourceTree = "<group>"; };
@@ -161,6 +172,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		151AC18224722B8C00EAE0BD /* ZKCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				151AC18324722B8C00EAE0BD /* ZKCycleScrollViewFlowLayout.h */,
+				151AC18424722B8C00EAE0BD /* ZKCycleScrollView.m */,
+				151AC18524722B8C00EAE0BD /* ZKCycleScrollView.h */,
+				151AC18624722B8C00EAE0BD /* ZKCycleScrollViewFlowLayout.m */,
+			);
+			path = ZKCycleScrollView;
+			sourceTree = "<group>";
+		};
 		15263674246E771D00D01BE0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +226,9 @@
 			isa = PBXGroup;
 			children = (
 				152636AB246E7E6900D01BE0 /* MXZHomeNavSearchView.xib */,
+				151AC1892472326B00EAE0BD /* MXZHomeFirstSectionCollectionViewCell.h */,
+				151AC18A2472326B00EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m */,
+				151AC18B2472326B00EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib */,
 				15263693246E771D00D01BE0 /* MXZHomeSecondSectionCell.h */,
 				15263689246E771D00D01BE0 /* MXZHomeSecondSectionCell.m */,
 				15263694246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib */,
@@ -320,6 +345,7 @@
 		185AC2B4246E8BBF006EC3E6 /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				151AC18224722B8C00EAE0BD /* ZKCycleScrollView */,
 				185AC28B246E8791006EC3E6 /* ZZHQuotesSlideNavView */,
 			);
 			path = ThirdSDK;
@@ -512,6 +538,7 @@
 			files = (
 				152636A3246E771D00D01BE0 /* MXZHomeThirdSectionHeadView.xib in Resources */,
 				152636A9246E771D00D01BE0 /* MXZHomeSecondSectionFootView.xib in Resources */,
+				151AC18D2472326B00EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib in Resources */,
 				185AC2A8246E87A7006EC3E6 /* ZZHQuoteIndustryVC.xib in Resources */,
 				185AC2A1246E87A7006EC3E6 /* ZZHQuoteTimeVC.xib in Resources */,
 				15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */,
@@ -596,12 +623,14 @@
 				1859013C24692D6B00CA7A68 /* CommunityVC.m in Sources */,
 				189BD81C246D1B9400490E35 /* MineModel.m in Sources */,
 				185AC2A7246E87A7006EC3E6 /* ZZHQuoteIndustryVC.m in Sources */,
+				151AC18824722B8C00EAE0BD /* ZKCycleScrollViewFlowLayout.m in Sources */,
 				15263699246E771D00D01BE0 /* MXZHomeQuoteVC.m in Sources */,
 				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
 				152636A7246E771D00D01BE0 /* MXZHomeFifthSectionCell.m in Sources */,
 				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
 				152636A2246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m in Sources */,
+				151AC18C2472326B00EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m in Sources */,
 				1526369C246E771D00D01BE0 /* MXZHomeExpressVC.m in Sources */,
 				185AC2A2246E87A7006EC3E6 /* ZZHQuoteCalendarVC.m in Sources */,
 				1859014124692D8B00CA7A68 /* ReleaseVC.m in Sources */,
@@ -612,6 +641,7 @@
 				154DFC762468F4B00098498C /* main.m in Sources */,
 				152636A5246E771D00D01BE0 /* MXZHomeFourthSectionCell.m in Sources */,
 				1526369B246E771D00D01BE0 /* MXZHomeIndustryVC.m in Sources */,
+				151AC18724722B8C00EAE0BD /* ZKCycleScrollView.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,
 				185AC2A3246E87A7006EC3E6 /* ZZHQuotesVC.m in Sources */,
 			);

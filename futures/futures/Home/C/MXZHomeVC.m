@@ -15,10 +15,12 @@
 #import "MXZHomeFourthSectionCell.h"
 #import "MXZHomeFifthSectionCell.h"
 #import "UIImage+OriginalImage.h"
+#import "ZKCycleScrollView.h"
+#import "MXZHomeFirstSectionCollectionViewCell.h"
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
 #define kScaleFrom_iPhone6_Desgin(_X_) (_X_ * (SCREEN_WIDTH/375))
 
-@interface MXZHomeVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface MXZHomeVC ()<UITableViewDelegate, UITableViewDataSource, ZKCycleScrollViewDelegate, ZKCycleScrollViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 
 @end
@@ -90,12 +92,14 @@
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:254/255.0 green:162/255.0 blue:3/255.0 alpha:1.0];
     
     //导航栏搜索框
-    UIView *searchView = [[NSBundle mainBundle] loadNibNamed:@"MXZHomeNavSearchView" owner:nil options:nil].firstObject;
-    searchView.subviews.firstObject.layer.cornerRadius = 20;
-    NSLog(@"%@", searchView.subviews.firstObject.subviews);
+    UIView *searchView = [[NSBundle mainBundle]loadNibNamed:@"MXZHomeNavSearchView" owner:self options:nil].firstObject;
+    //参数x, y, w无效
+//    searchView.frame = CGRectMake(0,9,300,27);
+    searchView.subviews.firstObject.layer.cornerRadius = 12;
+    searchView.subviews.firstObject.subviews.firstObject.layer.cornerRadius = 12;
     self.navigationItem.titleView = searchView;
     
-    
+    //设置首页导航栏右边的签到按钮
     UIBarButtonItem *qiandaoBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_qiandao"] style:UIBarButtonItemStylePlain target:self action:nil];
     
     self.navigationItem.rightBarButtonItem = qiandaoBtn;
@@ -133,6 +137,36 @@
     //    pageControl.numberOfPages = bannerCount;
     
 }
+
+//用collectionView设置轮播图
+-(void)creatCyclView:(UIView *)fView{
+    UIView *tableHeaderBackView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 190)];
+    ZKCycleScrollView *cycleScrollView = [[ZKCycleScrollView alloc] initWithFrame:CGRectMake(0.f, 13, SCREEN_WIDTH, 190.f)];
+    cycleScrollView.delegate = self;
+    cycleScrollView.dataSource = self;
+    cycleScrollView.hidesPageControl = NO;
+    //banner之间的间距
+    cycleScrollView.itemSpacing = ((SCREEN_WIDTH - 345.f)/2)*0.4f;
+    //缩放
+    cycleScrollView.itemZoomScale = 1.0;
+    cycleScrollView.itemSize = CGSizeMake(345.f, cycleScrollView.bounds.size.height);
+    //注册
+    [cycleScrollView registerCellNib:[UINib nibWithNibName:@"MXZHomeFirstSectionCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"MXZHomeFirstSectionCollectionViewCell"];
+    [tableHeaderBackView addSubview:cycleScrollView];
+    [fView addSubview:tableHeaderBackView];
+}
+
+- (NSInteger)numberOfItemsInCycleScrollView:(ZKCycleScrollView *)cycleScrollView
+{
+    return 3;
+}
+
+- (__kindof UICollectionViewCell *)cycleScrollView:(ZKCycleScrollView *)cycleScrollView cellForItemAtIndex:(NSInteger)index
+{
+    MXZHomeFirstSectionCollectionViewCell *cell = [cycleScrollView dequeueReusableCellWithReuseIdentifier:@"MXZHomeFirstSectionCollectionViewCell" forIndex:index];
+    return cell;
+}
+
 
 //设置4个跳转界面按钮
 -(void)setButton:(UIView *)fView{
@@ -265,7 +299,8 @@
 {
     if (section == 0) {
         UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 450)];
-        [self setBannerView:headerView];
+//        [self setBannerView:headerView];
+        [self creatCyclView:headerView];
         [self setButton:headerView];
         [self setQiandaoBtn:headerView];
         return headerView;

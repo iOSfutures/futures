@@ -12,6 +12,8 @@
 		151AC199247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 151AC195247259A400EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m */; };
 		151AC19A247259A500EAE0BD /* MXZHomeNavSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151AC196247259A400EAE0BD /* MXZHomeNavSearchView.xib */; };
 		151AC19B247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151AC197247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib */; };
+		151AC19F24726AAF00EAE0BD /* MXZIndustryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 151AC19D24726AAF00EAE0BD /* MXZIndustryTableViewCell.m */; };
+		151AC1A024726AAF00EAE0BD /* MXZIndustryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151AC19E24726AAF00EAE0BD /* MXZIndustryTableViewCell.xib */; };
 		15263696246E771D00D01BE0 /* MXZHomeQuoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263677246E771D00D01BE0 /* MXZHomeQuoteVC.xib */; };
 		15263697246E771D00D01BE0 /* MXZHomeExpressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263678246E771D00D01BE0 /* MXZHomeExpressVC.xib */; };
 		15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526367A246E771D00D01BE0 /* MXZHomeCalendarVC.xib */; };
@@ -75,6 +77,9 @@
 		151AC196247259A400EAE0BD /* MXZHomeNavSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeNavSearchView.xib; sourceTree = "<group>"; };
 		151AC197247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeFirstSectionCollectionViewCell.xib; sourceTree = "<group>"; };
 		151AC198247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeFirstSectionCollectionViewCell.h; sourceTree = "<group>"; };
+		151AC19C24726AAF00EAE0BD /* MXZIndustryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZIndustryTableViewCell.h; sourceTree = "<group>"; };
+		151AC19D24726AAF00EAE0BD /* MXZIndustryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZIndustryTableViewCell.m; sourceTree = "<group>"; };
+		151AC19E24726AAF00EAE0BD /* MXZIndustryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZIndustryTableViewCell.xib; sourceTree = "<group>"; };
 		15263677246E771D00D01BE0 /* MXZHomeQuoteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeQuoteVC.xib; sourceTree = "<group>"; };
 		15263678246E771D00D01BE0 /* MXZHomeExpressVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeExpressVC.xib; sourceTree = "<group>"; };
 		15263679246E771D00D01BE0 /* MXZHomeIndustryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeIndustryVC.h; sourceTree = "<group>"; };
@@ -203,6 +208,9 @@
 		15263676246E771D00D01BE0 /* C */ = {
 			isa = PBXGroup;
 			children = (
+				15263682246E771D00D01BE0 /* MXZHomeVC.h */,
+				1526367E246E771D00D01BE0 /* MXZHomeVC.m */,
+				15263681246E771D00D01BE0 /* MXZHomeVC.xib */,
 				1526367D246E771D00D01BE0 /* MXZHomeCalendarVC.h */,
 				15263683246E771D00D01BE0 /* MXZHomeCalendarVC.m */,
 				1526367A246E771D00D01BE0 /* MXZHomeCalendarVC.xib */,
@@ -215,9 +223,6 @@
 				15263685246E771D00D01BE0 /* MXZHomeQuoteVC.h */,
 				1526367C246E771D00D01BE0 /* MXZHomeQuoteVC.m */,
 				15263677246E771D00D01BE0 /* MXZHomeQuoteVC.xib */,
-				15263682246E771D00D01BE0 /* MXZHomeVC.h */,
-				1526367E246E771D00D01BE0 /* MXZHomeVC.m */,
-				15263681246E771D00D01BE0 /* MXZHomeVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -225,25 +230,28 @@
 		15263686246E771D00D01BE0 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				151AC196247259A400EAE0BD /* MXZHomeNavSearchView.xib */,
 				151AC198247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.h */,
 				151AC195247259A400EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m */,
 				151AC197247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib */,
-				151AC196247259A400EAE0BD /* MXZHomeNavSearchView.xib */,
-				15263688246E771D00D01BE0 /* MXZHomeFifthSectionCell.h */,
-				1526368F246E771D00D01BE0 /* MXZHomeFifthSectionCell.m */,
-				15263690246E771D00D01BE0 /* MXZHomeFifthSectionCell.xib */,
-				15263692246E771D00D01BE0 /* MXZHomeFourthCollectionCell.h */,
-				1526368A246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m */,
-				1526368C246E771D00D01BE0 /* MXZHomeFourthCollectionCell.xib */,
-				15263695246E771D00D01BE0 /* MXZHomeFourthSectionCell.h */,
-				1526368D246E771D00D01BE0 /* MXZHomeFourthSectionCell.m */,
-				15263687246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib */,
-				1526368E246E771D00D01BE0 /* MXZHomeFourthSectionHeadView.xib */,
 				15263693246E771D00D01BE0 /* MXZHomeSecondSectionCell.h */,
 				15263689246E771D00D01BE0 /* MXZHomeSecondSectionCell.m */,
 				15263694246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib */,
 				15263691246E771D00D01BE0 /* MXZHomeSecondSectionFootView.xib */,
 				1526368B246E771D00D01BE0 /* MXZHomeThirdSectionHeadView.xib */,
+				1526368E246E771D00D01BE0 /* MXZHomeFourthSectionHeadView.xib */,
+				15263695246E771D00D01BE0 /* MXZHomeFourthSectionCell.h */,
+				1526368D246E771D00D01BE0 /* MXZHomeFourthSectionCell.m */,
+				15263687246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib */,
+				15263692246E771D00D01BE0 /* MXZHomeFourthCollectionCell.h */,
+				1526368A246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m */,
+				1526368C246E771D00D01BE0 /* MXZHomeFourthCollectionCell.xib */,
+				15263688246E771D00D01BE0 /* MXZHomeFifthSectionCell.h */,
+				1526368F246E771D00D01BE0 /* MXZHomeFifthSectionCell.m */,
+				15263690246E771D00D01BE0 /* MXZHomeFifthSectionCell.xib */,
+				151AC19C24726AAF00EAE0BD /* MXZIndustryTableViewCell.h */,
+				151AC19D24726AAF00EAE0BD /* MXZIndustryTableViewCell.m */,
+				151AC19E24726AAF00EAE0BD /* MXZIndustryTableViewCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -534,6 +542,7 @@
 				185AC2A8246E87A7006EC3E6 /* ZZHQuoteIndustryVC.xib in Resources */,
 				185AC2A1246E87A7006EC3E6 /* ZZHQuoteTimeVC.xib in Resources */,
 				15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */,
+				151AC1A024726AAF00EAE0BD /* MXZIndustryTableViewCell.xib in Resources */,
 				185AC2AA246E87A7006EC3E6 /* ZZHQuoteCalendarVC.xib in Resources */,
 				189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */,
 				151AC19A247259A500EAE0BD /* MXZHomeNavSearchView.xib in Resources */,
@@ -620,6 +629,7 @@
 				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
 				152636A7246E771D00D01BE0 /* MXZHomeFifthSectionCell.m in Sources */,
+				151AC19F24726AAF00EAE0BD /* MXZIndustryTableViewCell.m in Sources */,
 				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
 				152636A2246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m in Sources */,
 				151AC199247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m in Sources */,

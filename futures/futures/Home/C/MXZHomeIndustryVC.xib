@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MXZHomeIndustryVC">
             <connections>
+                <outlet property="tableView" destination="B9e-bC-ADJ" id="IpN-cM-5u7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,9 +17,25 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="B9e-bC-ADJ">
+                    <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dac-MN-7QX"/>
+                        <outlet property="delegate" destination="-1" id="QEb-FN-meG"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="B9e-bC-ADJ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="gyq-bW-7fE"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="B9e-bC-ADJ" secondAttribute="bottom" id="hhr-el-nLt"/>
+                <constraint firstItem="B9e-bC-ADJ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="4" id="itm-hP-O6c"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="B9e-bC-ADJ" secondAttribute="trailing" id="jTr-wo-Jsi"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="139" y="131"/>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </view>
     </objects>
 </document>

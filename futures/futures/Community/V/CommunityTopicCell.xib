@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommunityTopicCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="412" id="KGk-i7-Jjw" customClass="CommunityTopicCell">
+            <rect key="frame" x="0.0" y="0.0" width="466" height="412"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="466" height="412"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRu-lF-rYz" userLabel="TitleView">
+                        <rect key="frame" x="0.0" y="0.0" width="466" height="40"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SubtitleElement" translatesAutoresizingMaskIntoConstraints="NO" id="eGD-dg-3Jn">
+                                <rect key="frame" x="0.0" y="0.0" width="7" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="7" id="7Kc-Kj-5RF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybv-lt-4w8" userLabel="TitleLabel">
+                                <rect key="frame" x="15" y="11" width="80" height="18.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18.5" id="bAE-5d-xk3"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="今日">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="PingFangSC-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="话题">
+                                        <attributes>
+                                            <color key="NSColor" red="0.91095882650000004" green="0.59642809630000004" blue="0.22872382399999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="20" name="PingFangSC-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="股神再现“江湖”，又将是一场腥风血雨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlo-QM-UO1">
+                                <rect key="frame" x="103.5" y="16.5" width="225" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" id="3Z5-KM-nNZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.6247445345" green="0.62866049999999996" blue="0.63229727749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ybv-lt-4w8" firstAttribute="centerY" secondItem="DRu-lF-rYz" secondAttribute="centerY" id="CwH-d3-vWI"/>
+                            <constraint firstAttribute="height" constant="40" id="NAa-Od-8rP"/>
+                            <constraint firstAttribute="bottom" secondItem="eGD-dg-3Jn" secondAttribute="bottom" id="P7Y-NO-JeL"/>
+                            <constraint firstItem="xlo-QM-UO1" firstAttribute="bottom" secondItem="ybv-lt-4w8" secondAttribute="bottom" id="WPZ-Hm-cWe"/>
+                            <constraint firstItem="eGD-dg-3Jn" firstAttribute="top" secondItem="DRu-lF-rYz" secondAttribute="top" id="a3S-a6-OEm"/>
+                            <constraint firstItem="xlo-QM-UO1" firstAttribute="leading" secondItem="DRu-lF-rYz" secondAttribute="leading" constant="103.5" id="heO-Ll-Lei"/>
+                            <constraint firstItem="ybv-lt-4w8" firstAttribute="leading" secondItem="DRu-lF-rYz" secondAttribute="leading" constant="15" id="hgb-aJ-xOU"/>
+                            <constraint firstItem="eGD-dg-3Jn" firstAttribute="leading" secondItem="DRu-lF-rYz" secondAttribute="leading" id="xoe-Su-KkS"/>
+                        </constraints>
+                    </view>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uNz-Ua-DrP" userLabel="TopicTableView">
+                        <rect key="frame" x="0.0" y="40" width="466" height="372"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </tableView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="uNz-Ua-DrP" secondAttribute="trailing" id="4ix-UJ-1xS"/>
+                    <constraint firstAttribute="trailing" secondItem="DRu-lF-rYz" secondAttribute="trailing" id="EYf-uO-9NX"/>
+                    <constraint firstItem="DRu-lF-rYz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Gbo-NN-I2r"/>
+                    <constraint firstItem="DRu-lF-rYz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PEs-hj-utO"/>
+                    <constraint firstItem="uNz-Ua-DrP" firstAttribute="top" secondItem="DRu-lF-rYz" secondAttribute="bottom" id="lOW-TG-jzp"/>
+                    <constraint firstAttribute="bottom" secondItem="uNz-Ua-DrP" secondAttribute="bottom" id="u2Q-AE-dwk"/>
+                    <constraint firstItem="uNz-Ua-DrP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="y54-rA-hGK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="titleLable" destination="ybv-lt-4w8" id="h2e-0W-uoG"/>
+                <outlet property="topicTableView" destination="uNz-Ua-DrP" id="8bY-Xm-Cok"/>
+            </connections>
+            <point key="canvasLocation" x="-51" y="76"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="SubtitleElement" width="7" height="40"/>
+    </resources>
+</document>

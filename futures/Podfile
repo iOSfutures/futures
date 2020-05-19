@@ -8,5 +8,6 @@ target 'futures' do
 
   # Pods for futures
 pod 'JXCategoryView'
+pod 'TYCyclePagerView'
 
 end

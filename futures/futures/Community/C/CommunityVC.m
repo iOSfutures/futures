@@ -23,7 +23,7 @@
 @implementation CommunityVC
 
 - (void)viewDidLoad {
-    self.titles = @[@"社交", @"关注" ];
+    self.titles = @[@"社区", @"关注" ];
     
     //设置导航条的背景图片不为空，就可以隐藏背景
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
@@ -32,6 +32,7 @@
     
     [super viewDidLoad];
     
+    
     self.myCategoryView.frame = CGRectMake(0, 0, 120, 30);
     self.myCategoryView.titles = self.titles;
     self.myCategoryView.cellSpacing = 0;
@@ -39,7 +40,7 @@
     self.myCategoryView.titleFont = [UIFont systemFontOfSize:18];
     self.myCategoryView.titleColor = UIColorWithRGBA(255, 255, 255, 0.6);
     self.myCategoryView.titleSelectedColor = UIColorWithRGBA(255, 255, 255, 1);
-    
+    self.myCategoryView.listContainer.contentScrollView.scrollEnabled = NO;
     JXCategoryIndicatorLineView *lineView = [[JXCategoryIndicatorLineView alloc] init];
     lineView.indicatorWidth = 10;
     lineView.indicatorHeight = 2;

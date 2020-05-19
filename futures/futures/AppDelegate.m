@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "MXZHomeVC.h"
 #import "CommunityVC.h"
-#import "ReleaseVC.h"
+#import "PublishVC.h"
 #import "ZZHQuotesVC.h"
 #import "MineVC.h"
 
@@ -45,7 +45,7 @@
     UINavigationController *communityNav = [[UINavigationController alloc] initWithRootViewController:communityVC];
     [self addChildVC:communityNav title: @"社区" imgName:@"ic_community_tob" selectedImgName:@"ic_community_sstate_tob"];
     
-    ReleaseVC *releaseVC = [[ReleaseVC alloc]init];
+    PublishVC *releaseVC = [[PublishVC alloc]init];
     UINavigationController *releaseNav = [[UINavigationController alloc] initWithRootViewController:releaseVC];
     releaseNav.tabBarItem.title = @"发布";
     releaseNav.tabBarItem.image = [UIImage originalImageWithName:@"ic_release"];

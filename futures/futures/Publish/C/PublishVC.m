@@ -6,13 +6,13 @@
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
-#import "ReleaseVC.h"
+#import "PublishVC.h"
 
-@interface ReleaseVC ()
+@interface PublishVC ()
 
 @end
 
-@implementation ReleaseVC
+@implementation PublishVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

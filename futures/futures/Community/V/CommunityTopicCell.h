@@ -1,8 +1,8 @@
 //
-//  PublishVC.h
+//  CommunityTopicCell.h
 //  futures
 //
-//  Created by Ssiswent on 2020/5/11.
+//  Created by Ssiswent on 2020/5/19.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ReleaseVC : UIViewController
+@interface CommunityTopicCell : UITableViewCell
 
 @end
 

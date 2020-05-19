@@ -39,6 +39,7 @@
 		154DFC702468F4B00098498C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154DFC6F2468F4B00098498C /* Assets.xcassets */; };
 		154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154DFC712468F4B00098498C /* LaunchScreen.storyboard */; };
 		154DFC762468F4B00098498C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 154DFC752468F4B00098498C /* main.m */; };
+		15CDF74F2473BAFD00B2811F /* MXZTtileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CDF74E2473BAFD00B2811F /* MXZTtileVC.m */; };
 		181F5036246B908500CCCBDB /* CustomTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F5035246B908500CCCBDB /* CustomTBC.m */; };
 		1859013C24692D6B00CA7A68 /* CommunityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859013A24692D6B00CA7A68 /* CommunityVC.m */; };
 		1859013D24692D6B00CA7A68 /* CommunityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859013B24692D6B00CA7A68 /* CommunityVC.xib */; };
@@ -117,6 +118,8 @@
 		154DFC722468F4B00098498C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		154DFC742468F4B00098498C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		154DFC752468F4B00098498C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15CDF74D2473BAFD00B2811F /* MXZTtileVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZTtileVC.h; sourceTree = "<group>"; };
+		15CDF74E2473BAFD00B2811F /* MXZTtileVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZTtileVC.m; sourceTree = "<group>"; };
 		181F5034246B908500CCCBDB /* CustomTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTBC.h; sourceTree = "<group>"; };
 		181F5035246B908500CCCBDB /* CustomTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTBC.m; sourceTree = "<group>"; };
 		1859013924692D6B00CA7A68 /* CommunityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityVC.h; sourceTree = "<group>"; };
@@ -223,6 +226,8 @@
 				15263685246E771D00D01BE0 /* MXZHomeQuoteVC.h */,
 				1526367C246E771D00D01BE0 /* MXZHomeQuoteVC.m */,
 				15263677246E771D00D01BE0 /* MXZHomeQuoteVC.xib */,
+				15CDF74D2473BAFD00B2811F /* MXZTtileVC.h */,
+				15CDF74E2473BAFD00B2811F /* MXZTtileVC.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -616,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				185AC2A4246E87A7006EC3E6 /* ZZHQuoteTimeVC.m in Sources */,
+				15CDF74F2473BAFD00B2811F /* MXZTtileVC.m in Sources */,
 				189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */,
 				18A584882472544400C0437F /* ListViewController.m in Sources */,
 				181F5036246B908500CCCBDB /* CustomTBC.m in Sources */,

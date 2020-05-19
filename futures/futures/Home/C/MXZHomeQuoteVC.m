@@ -7,17 +7,32 @@
 //
 
 #import "MXZHomeQuoteVC.h"
+#import "JXCategoryTitleView.h"
+#import "MXZTtileVC.h"
 
 @interface MXZHomeQuoteVC ()
-
+@property (nonatomic, strong) JXCategoryTitleView *myCategoryView;
 @end
 
 @implementation MXZHomeQuoteVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"行情数据";
+    self.navigationItem.title = @"实时行情";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [self.navigationController popViewControllerAnimated:YES];
+    [self setTitleView];
+    
+}
+
+-(void)setTitleView{
+    MXZTtileVC *titleVC = [[MXZTtileVC alloc] init];
+    
+    JXCategoryTitleView *titleCategoryView = (JXCategoryTitleView *)titleVC.categoryView;
+    titleCategoryView.titleColorGradientEnabled = YES;
+    titleVC.isNeedIndicatorPositionChangeItem = YES;
+    [self.navigationController pushViewController:titleVC animated:YES];
+    
 }
 
 /*

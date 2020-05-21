@@ -39,7 +39,24 @@
 		154DFC702468F4B00098498C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154DFC6F2468F4B00098498C /* Assets.xcassets */; };
 		154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154DFC712468F4B00098498C /* LaunchScreen.storyboard */; };
 		154DFC762468F4B00098498C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 154DFC752468F4B00098498C /* main.m */; };
+		15593DFC2476123B007B3141 /* MXZHomeNavSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15593DFB2476123B007B3141 /* MXZHomeNavSearchView.m */; };
+		15A6F1BD2475083A002C0930 /* MXZFullDisplay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6F1BC2475083A002C0930 /* MXZFullDisplay.xib */; };
+		15A6F1C0247513F7002C0930 /* MXZFullThirdSectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6F1BF247513F7002C0930 /* MXZFullThirdSectionHeadView.m */; };
+		15A6F1C4247524E2002C0930 /* MXZFullThirdSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6F1C2247524E2002C0930 /* MXZFullThirdSectionCell.m */; };
+		15A6F1C5247524E2002C0930 /* MXZFullThirdSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6F1C3247524E2002C0930 /* MXZFullThirdSectionCell.xib */; };
+		15A6F1C92475276E002C0930 /* MXZFullThirdCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6F1C72475276E002C0930 /* MXZFullThirdCollectionCell.m */; };
+		15A6F1CA2475276E002C0930 /* MXZFullThirdCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6F1C82475276E002C0930 /* MXZFullThirdCollectionCell.xib */; };
+		15A6F1CE24752C15002C0930 /* MXZFullFourthSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6F1CC24752C15002C0930 /* MXZFullFourthSectionCell.m */; };
+		15A6F1CF24752C15002C0930 /* MXZFullFourthSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6F1CD24752C15002C0930 /* MXZFullFourthSectionCell.xib */; };
+		15A6F1D124753351002C0930 /* MXZFullFourthSectionFootVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6F1D024753351002C0930 /* MXZFullFourthSectionFootVIew.xib */; };
 		15CDF74F2473BAFD00B2811F /* MXZTtileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CDF74E2473BAFD00B2811F /* MXZTtileVC.m */; };
+		15CDFAD12474C2FB00B2811F /* MXZFullDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CDFACF2474C2FB00B2811F /* MXZFullDisplay.m */; };
+		15CDFAD62474C95900B2811F /* MXZFullFirstSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CDFAD42474C95900B2811F /* MXZFullFirstSectionCell.m */; };
+		15CDFAD72474C95900B2811F /* MXZFullFirstSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CDFAD52474C95900B2811F /* MXZFullFirstSectionCell.xib */; };
+		15CDFADB2474D49800B2811F /* MXZFullSecondSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CDFAD92474D49800B2811F /* MXZFullSecondSectionCell.m */; };
+		15CDFADC2474D49800B2811F /* MXZFullSecondSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CDFADA2474D49800B2811F /* MXZFullSecondSectionCell.xib */; };
+		15CDFADE2474F83800B2811F /* MXZFullSecondSectionFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CDFADD2474F83800B2811F /* MXZFullSecondSectionFootView.xib */; };
+		15CDFAE32475036200B2811F /* MXZFullThirdSectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CDFAE12475036200B2811F /* MXZFullThirdSectionHeadView.xib */; };
 		181F5036246B908500CCCBDB /* CustomTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F5035246B908500CCCBDB /* CustomTBC.m */; };
 		1859014124692D8B00CA7A68 /* PublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859013F24692D8B00CA7A68 /* PublishVC.m */; };
 		1859014224692D8B00CA7A68 /* PublishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859014024692D8B00CA7A68 /* PublishVC.xib */; };
@@ -126,8 +143,33 @@
 		154DFC722468F4B00098498C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		154DFC742468F4B00098498C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		154DFC752468F4B00098498C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15593DFA2476123B007B3141 /* MXZHomeNavSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeNavSearchView.h; sourceTree = "<group>"; };
+		15593DFB2476123B007B3141 /* MXZHomeNavSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeNavSearchView.m; sourceTree = "<group>"; };
+		15A6F1BC2475083A002C0930 /* MXZFullDisplay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullDisplay.xib; sourceTree = "<group>"; };
+		15A6F1BE247513F7002C0930 /* MXZFullThirdSectionHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFullThirdSectionHeadView.h; sourceTree = "<group>"; };
+		15A6F1BF247513F7002C0930 /* MXZFullThirdSectionHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFullThirdSectionHeadView.m; sourceTree = "<group>"; };
+		15A6F1C1247524E2002C0930 /* MXZFullThirdSectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFullThirdSectionCell.h; sourceTree = "<group>"; };
+		15A6F1C2247524E2002C0930 /* MXZFullThirdSectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFullThirdSectionCell.m; sourceTree = "<group>"; };
+		15A6F1C3247524E2002C0930 /* MXZFullThirdSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullThirdSectionCell.xib; sourceTree = "<group>"; };
+		15A6F1C62475276E002C0930 /* MXZFullThirdCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFullThirdCollectionCell.h; sourceTree = "<group>"; };
+		15A6F1C72475276E002C0930 /* MXZFullThirdCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFullThirdCollectionCell.m; sourceTree = "<group>"; };
+		15A6F1C82475276E002C0930 /* MXZFullThirdCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullThirdCollectionCell.xib; sourceTree = "<group>"; };
+		15A6F1CB24752C15002C0930 /* MXZFullFourthSectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFullFourthSectionCell.h; sourceTree = "<group>"; };
+		15A6F1CC24752C15002C0930 /* MXZFullFourthSectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFullFourthSectionCell.m; sourceTree = "<group>"; };
+		15A6F1CD24752C15002C0930 /* MXZFullFourthSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullFourthSectionCell.xib; sourceTree = "<group>"; };
+		15A6F1D024753351002C0930 /* MXZFullFourthSectionFootVIew.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullFourthSectionFootVIew.xib; sourceTree = "<group>"; };
 		15CDF74D2473BAFD00B2811F /* MXZTtileVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZTtileVC.h; sourceTree = "<group>"; };
 		15CDF74E2473BAFD00B2811F /* MXZTtileVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZTtileVC.m; sourceTree = "<group>"; };
+		15CDFACE2474C2FB00B2811F /* MXZFullDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFullDisplay.h; sourceTree = "<group>"; };
+		15CDFACF2474C2FB00B2811F /* MXZFullDisplay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFullDisplay.m; sourceTree = "<group>"; };
+		15CDFAD32474C95900B2811F /* MXZFullFirstSectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFullFirstSectionCell.h; sourceTree = "<group>"; };
+		15CDFAD42474C95900B2811F /* MXZFullFirstSectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFullFirstSectionCell.m; sourceTree = "<group>"; };
+		15CDFAD52474C95900B2811F /* MXZFullFirstSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullFirstSectionCell.xib; sourceTree = "<group>"; };
+		15CDFAD82474D49800B2811F /* MXZFullSecondSectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFullSecondSectionCell.h; sourceTree = "<group>"; };
+		15CDFAD92474D49800B2811F /* MXZFullSecondSectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFullSecondSectionCell.m; sourceTree = "<group>"; };
+		15CDFADA2474D49800B2811F /* MXZFullSecondSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullSecondSectionCell.xib; sourceTree = "<group>"; };
+		15CDFADD2474F83800B2811F /* MXZFullSecondSectionFootView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullSecondSectionFootView.xib; sourceTree = "<group>"; };
+		15CDFAE12475036200B2811F /* MXZFullThirdSectionHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullThirdSectionHeadView.xib; sourceTree = "<group>"; };
 		181F5034246B908500CCCBDB /* CustomTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTBC.h; sourceTree = "<group>"; };
 		181F5035246B908500CCCBDB /* CustomTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTBC.m; sourceTree = "<group>"; };
 		1859013E24692D8B00CA7A68 /* PublishVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishVC.h; sourceTree = "<group>"; };
@@ -249,6 +291,9 @@
 				15263677246E771D00D01BE0 /* MXZHomeQuoteVC.xib */,
 				15CDF74D2473BAFD00B2811F /* MXZTtileVC.h */,
 				15CDF74E2473BAFD00B2811F /* MXZTtileVC.m */,
+				15CDFACE2474C2FB00B2811F /* MXZFullDisplay.h */,
+				15CDFACF2474C2FB00B2811F /* MXZFullDisplay.m */,
+				15A6F1BC2475083A002C0930 /* MXZFullDisplay.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -256,6 +301,8 @@
 		15263686246E771D00D01BE0 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				15593DFA2476123B007B3141 /* MXZHomeNavSearchView.h */,
+				15593DFB2476123B007B3141 /* MXZHomeNavSearchView.m */,
 				151AC196247259A400EAE0BD /* MXZHomeNavSearchView.xib */,
 				151AC198247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.h */,
 				151AC195247259A400EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m */,
@@ -278,6 +325,26 @@
 				151AC19C24726AAF00EAE0BD /* MXZIndustryTableViewCell.h */,
 				151AC19D24726AAF00EAE0BD /* MXZIndustryTableViewCell.m */,
 				151AC19E24726AAF00EAE0BD /* MXZIndustryTableViewCell.xib */,
+				15CDFAD32474C95900B2811F /* MXZFullFirstSectionCell.h */,
+				15CDFAD42474C95900B2811F /* MXZFullFirstSectionCell.m */,
+				15CDFAD52474C95900B2811F /* MXZFullFirstSectionCell.xib */,
+				15CDFAD82474D49800B2811F /* MXZFullSecondSectionCell.h */,
+				15CDFAD92474D49800B2811F /* MXZFullSecondSectionCell.m */,
+				15CDFADA2474D49800B2811F /* MXZFullSecondSectionCell.xib */,
+				15CDFADD2474F83800B2811F /* MXZFullSecondSectionFootView.xib */,
+				15A6F1BE247513F7002C0930 /* MXZFullThirdSectionHeadView.h */,
+				15A6F1BF247513F7002C0930 /* MXZFullThirdSectionHeadView.m */,
+				15CDFAE12475036200B2811F /* MXZFullThirdSectionHeadView.xib */,
+				15A6F1C1247524E2002C0930 /* MXZFullThirdSectionCell.h */,
+				15A6F1C2247524E2002C0930 /* MXZFullThirdSectionCell.m */,
+				15A6F1C3247524E2002C0930 /* MXZFullThirdSectionCell.xib */,
+				15A6F1C62475276E002C0930 /* MXZFullThirdCollectionCell.h */,
+				15A6F1C72475276E002C0930 /* MXZFullThirdCollectionCell.m */,
+				15A6F1C82475276E002C0930 /* MXZFullThirdCollectionCell.xib */,
+				15A6F1CB24752C15002C0930 /* MXZFullFourthSectionCell.h */,
+				15A6F1CC24752C15002C0930 /* MXZFullFourthSectionCell.m */,
+				15A6F1CD24752C15002C0930 /* MXZFullFourthSectionCell.xib */,
+				15A6F1D024753351002C0930 /* MXZFullFourthSectionFootVIew.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -591,25 +658,34 @@
 				15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */,
 				151AC1A024726AAF00EAE0BD /* MXZIndustryTableViewCell.xib in Resources */,
 				185AC2AA246E87A7006EC3E6 /* ZZHQuoteCalendarVC.xib in Resources */,
+				15A6F1BD2475083A002C0930 /* MXZFullDisplay.xib in Resources */,
 				189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */,
+				15A6F1C5247524E2002C0930 /* MXZFullThirdSectionCell.xib in Resources */,
 				151AC19A247259A500EAE0BD /* MXZHomeNavSearchView.xib in Resources */,
 				152636A4246E771D00D01BE0 /* MXZHomeFourthCollectionCell.xib in Resources */,
 				152636A8246E771D00D01BE0 /* MXZHomeFifthSectionCell.xib in Resources */,
+				15A6F1CA2475276E002C0930 /* MXZFullThirdCollectionCell.xib in Resources */,
 				18C2DE232473BB1C00116E2E /* CommunityTopicViewCell.xib in Resources */,
 				1859014224692D8B00CA7A68 /* PublishVC.xib in Resources */,
 				15263697246E771D00D01BE0 /* MXZHomeExpressVC.xib in Resources */,
 				18C2DE192473788900116E2E /* CommunityBannerViewCell.xib in Resources */,
 				18BD94F6247290D5005A84B5 /* CommunityVC.xib in Resources */,
 				154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */,
+				15CDFADC2474D49800B2811F /* MXZFullSecondSectionCell.xib in Resources */,
 				152636A0246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib in Resources */,
+				15CDFAE32475036200B2811F /* MXZFullThirdSectionHeadView.xib in Resources */,
 				1526369F246E771D00D01BE0 /* MXZHomeIndustryVC.xib in Resources */,
 				152636A6246E771D00D01BE0 /* MXZHomeFourthSectionHeadView.xib in Resources */,
+				15A6F1CF24752C15002C0930 /* MXZFullFourthSectionCell.xib in Resources */,
 				18C2DE1E2473892E00116E2E /* CommunityTopicCell.xib in Resources */,
 				185AC2A9246E87A7006EC3E6 /* ZZHQuotesVC.xib in Resources */,
 				154DFC702468F4B00098498C /* Assets.xcassets in Resources */,
 				15263696246E771D00D01BE0 /* MXZHomeQuoteVC.xib in Resources */,
+				15A6F1D124753351002C0930 /* MXZFullFourthSectionFootVIew.xib in Resources */,
 				1859014C246933DB00CA7A68 /* MineVC.xib in Resources */,
+				15CDFAD72474C95900B2811F /* MXZFullFirstSectionCell.xib in Resources */,
 				18AA2BC3246E23B1000801B1 /* CommunityChildBVC.xib in Resources */,
+				15CDFADE2474F83800B2811F /* MXZFullSecondSectionFootView.xib in Resources */,
 				152636AA246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib in Resources */,
 				1526369D246E771D00D01BE0 /* MXZHomeVC.xib in Resources */,
 				185AC2A6246E87A7006EC3E6 /* ZZHQuoteNewsVC.xib in Resources */,
@@ -668,6 +744,8 @@
 				185AC2A4246E87A7006EC3E6 /* ZZHQuoteTimeVC.m in Sources */,
 				15CDF74F2473BAFD00B2811F /* MXZTtileVC.m in Sources */,
 				189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */,
+				15CDFAD62474C95900B2811F /* MXZFullFirstSectionCell.m in Sources */,
+				15A6F1C4247524E2002C0930 /* MXZFullThirdSectionCell.m in Sources */,
 				18A584882472544400C0437F /* ListViewController.m in Sources */,
 				181F5036246B908500CCCBDB /* CustomTBC.m in Sources */,
 				18C2DE222473BB1C00116E2E /* CommunityTopicViewCell.m in Sources */,
@@ -682,11 +760,14 @@
 				18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */,
 				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
+				15CDFAD12474C2FB00B2811F /* MXZFullDisplay.m in Sources */,
 				152636A7246E771D00D01BE0 /* MXZHomeFifthSectionCell.m in Sources */,
 				151AC19F24726AAF00EAE0BD /* MXZIndustryTableViewCell.m in Sources */,
 				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
+				15A6F1C0247513F7002C0930 /* MXZFullThirdSectionHeadView.m in Sources */,
 				152636A2246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m in Sources */,
 				151AC199247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m in Sources */,
+				15CDFADB2474D49800B2811F /* MXZFullSecondSectionCell.m in Sources */,
 				1526369C246E771D00D01BE0 /* MXZHomeExpressVC.m in Sources */,
 				185AC2A2246E87A7006EC3E6 /* ZZHQuoteCalendarVC.m in Sources */,
 				1859014124692D8B00CA7A68 /* PublishVC.m in Sources */,
@@ -695,9 +776,12 @@
 				18A584872472544400C0437F /* ContentBaseViewController.m in Sources */,
 				185AC2A5246E87A7006EC3E6 /* ZZHQuoteNewsVC.m in Sources */,
 				154DFC762468F4B00098498C /* main.m in Sources */,
+				15A6F1C92475276E002C0930 /* MXZFullThirdCollectionCell.m in Sources */,
+				15A6F1CE24752C15002C0930 /* MXZFullFourthSectionCell.m in Sources */,
 				152636A5246E771D00D01BE0 /* MXZHomeFourthSectionCell.m in Sources */,
 				1526369B246E771D00D01BE0 /* MXZHomeIndustryVC.m in Sources */,
 				151AC1932472595D00EAE0BD /* ZKCycleScrollView.m in Sources */,
+				15593DFC2476123B007B3141 /* MXZHomeNavSearchView.m in Sources */,
 				18C2DE1D2473892E00116E2E /* CommunityTopicCell.m in Sources */,
 				18A5849324726CDB00C0437F /* CommunityBannerCell.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,

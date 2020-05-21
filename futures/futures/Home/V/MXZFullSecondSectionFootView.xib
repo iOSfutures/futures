@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLk-4p-h7S">
+                    <rect key="frame" x="15" y="25" width="48" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Kxh-sr-meU"/>
+                        <constraint firstAttribute="width" constant="48" id="Oea-45-VCw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                    <state key="normal" title="  分享" image="share it_Popular property">
+                        <color key="titleColor" red="0.96078431372549022" green="0.71764705882352942" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j82-QY-vUV">
+                    <rect key="frame" x="183" y="25" width="48" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="ICT-bz-RXq"/>
+                        <constraint firstAttribute="width" constant="48" id="vIZ-7w-p1H"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                    <state key="normal" title="  评论" image="ic_comment_default state">
+                        <color key="titleColor" red="0.96078431369999995" green="0.71764705880000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xy-Ws-OvM">
+                    <rect key="frame" x="351" y="25" width="48" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="6Q9-FD-3ac"/>
+                        <constraint firstAttribute="height" constant="20" id="oTA-Lc-Ewj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                    <state key="normal" title="  点赞" image="ic_like">
+                        <color key="titleColor" red="0.96078431369999995" green="0.71764705880000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56A-qR-WKR">
+                    <rect key="frame" x="0.0" y="64" width="414" height="6"/>
+                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="6" id="Pma-CO-s2S"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2Xy-Ws-OvM" secondAttribute="trailing" constant="15" id="Ckt-ri-7Sq"/>
+                <constraint firstItem="dLk-4p-h7S" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="E66-oa-p5L"/>
+                <constraint firstItem="dLk-4p-h7S" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Jkx-Se-NUA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="56A-qR-WKR" secondAttribute="trailing" id="TxP-9L-wZy"/>
+                <constraint firstItem="j82-QY-vUV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Z9D-do-XDZ"/>
+                <constraint firstItem="56A-qR-WKR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jsA-1j-b49"/>
+                <constraint firstItem="j82-QY-vUV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lKT-TH-9pH"/>
+                <constraint firstItem="2Xy-Ws-OvM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lup-4b-at2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="56A-qR-WKR" secondAttribute="bottom" id="yBN-yU-Mdh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_comment_default state" width="13" height="13"/>
+        <image name="ic_like" width="13.5" height="16"/>
+        <image name="share it_Popular property" width="14" height="14"/>
+    </resources>
+</document>

@@ -17,6 +17,10 @@
 #import "UIImage+OriginalImage.h"
 #import "ZKCycleScrollView.h"
 #import "MXZHomeFirstSectionCollectionViewCell.h"
+#import "MXZFullDisplay.h"
+#import <Masonry/Masonry.h>
+
+#import "MXZHomeNavSearchView.h"
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
 #define kScaleFrom_iPhone6_Desgin(_X_) (_X_ * (SCREEN_WIDTH/375))
 
@@ -52,7 +56,7 @@
             }];
         }
     }];
-    
+    [self setNavBarView];
 
     //为homeTableView注册cell
     [self.homeTableView registerNib:[UINib nibWithNibName:@"MXZHomeSecondSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZHomeSecondSectionCell"];
@@ -78,7 +82,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    [self setNavBarView];
+    [super viewWillAppear:animated];
 }
 
 //设置navigationBar
@@ -92,13 +96,24 @@
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:254/255.0 green:162/255.0 blue:3/255.0 alpha:1.0];
     
     //导航栏搜索框
-    UIView *searchView = [[NSBundle mainBundle]loadNibNamed:@"MXZHomeNavSearchView" owner:self options:nil].firstObject;
+    MXZHomeNavSearchView *searchView = [[NSBundle mainBundle]loadNibNamed:@"MXZHomeNavSearchView" owner:self options:nil].firstObject;
     //参数x, y, w无效
-//    searchView.frame = CGRectMake(0,9,300,27);
+//    searchView.frame = CGRectMake(0,9,100,27);
     searchView.subviews.firstObject.layer.cornerRadius = 12;
     searchView.subviews.firstObject.subviews.firstObject.layer.cornerRadius = 12;
-    self.navigationItem.titleView = searchView;
     
+    UIView *testView = [UIView new];
+    //宽度无效
+    testView.frame = CGRectMake(0, 0, SCREEN_WIDTH , 27);
+    [testView addSubview:searchView];
+    searchView.frame = CGRectMake((SCREEN_WIDTH - 300)/2 - 28, 0, SCREEN_WIDTH - 75, 27);
+//    [searchView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.mas_equalTo(testView.mas_centerX);
+//        make.centerY.mas_equalTo(testView.mas_centerY);
+//        make.size.mas_equalTo(CGSizeMake(250, 27));
+//    }];
+    self.navigationItem.titleView = testView;
+        
     //设置首页导航栏右边的签到按钮
     UIBarButtonItem *qiandaoBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_qiandao"] style:UIBarButtonItemStylePlain target:self action:nil];
     
@@ -375,14 +390,12 @@
     }
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 4) {
+        MXZFullDisplay *titleVC = [[MXZFullDisplay alloc]init];
+        [self.navigationController pushViewController:titleVC animated:YES];
+    }
+}
 
 @end

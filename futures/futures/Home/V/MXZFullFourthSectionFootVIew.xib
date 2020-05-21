@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYa-HW-sR4">
+                    <rect key="frame" x="16" y="19" width="124.5" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="P3v-CZ-kcE"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="yTN-2W-KpJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="  留下你精彩评论..." image="ic_pen">
+                        <color key="titleColor" red="0.96078431369999995" green="0.63137254899999995" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KM9-PY-5IH">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="r44-e3-jvv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fYa-HW-sR4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5yT-Br-M42"/>
+                <constraint firstItem="fYa-HW-sR4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="IL3-sC-YIC"/>
+                <constraint firstItem="KM9-PY-5IH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RHs-N7-GE0"/>
+                <constraint firstItem="fYa-HW-sR4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="19" id="SxE-u3-QQq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KM9-PY-5IH" secondAttribute="trailing" id="XrQ-f8-CG9"/>
+                <constraint firstItem="KM9-PY-5IH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nNv-7e-JeF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fYa-HW-sR4" secondAttribute="bottom" constant="19" id="xrk-Wa-IMN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="95"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_pen" width="12.5" height="12.5"/>
+    </resources>
+</document>

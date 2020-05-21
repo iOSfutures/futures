@@ -14,8 +14,7 @@
 
 @interface CommunityBannerCell ()<TYCyclePagerViewDataSource, TYCyclePagerViewDelegate>
 
-@property (nonatomic, strong) TYCyclePagerView *pagerView;
-@property (nonatomic, strong) NSArray *datas;
+@property (weak, nonatomic) IBOutlet TYCyclePagerView *tyPagerView;
 
 @property (nonatomic, strong) NSArray *bannerImgs;
 
@@ -35,19 +34,16 @@
 
 NSString *BannerCellID = @"BannerCell";
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (void)awakeFromNib
 {
-    if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
-    {
-        [self addPagerView];
-    }
-    return self;
+    [super awakeFromNib];
+    [self addPagerView];
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    _pagerView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+    _tyPagerView.frame = CGRectMake(3, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
 }
 
 - (void)addPagerView {
@@ -58,10 +54,11 @@ NSString *BannerCellID = @"BannerCell";
     pagerView.delegate = self;
     // registerClass or registerNib
 //    [pagerView registerClass:[TYCyclePagerViewCell class] forCellWithReuseIdentifier:@"cellId"];
-    [pagerView registerNib:[UINib nibWithNibName:@"CommunityBannerViewCell" bundle:nil] forCellWithReuseIdentifier:BannerCellID];
+    [pagerView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityBannerViewCell class])bundle:nil] forCellWithReuseIdentifier:BannerCellID];
 //    pagerView.contentOffset = UIEdgeInsetsMake(10, 15, 10, 15);
     [self addSubview:pagerView];
-    _pagerView = pagerView;
+//    _pagerView = pagerView;
+    _tyPagerView = pagerView;
 }
 
 #pragma mark - TYCyclePagerViewDataSource

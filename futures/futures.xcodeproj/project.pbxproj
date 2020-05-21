@@ -68,11 +68,20 @@
 		18BD94F6247290D5005A84B5 /* CommunityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BD94F3247290D4005A84B5 /* CommunityVC.xib */; };
 		18C2DE182473788900116E2E /* CommunityBannerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE162473788900116E2E /* CommunityBannerViewCell.m */; };
 		18C2DE192473788900116E2E /* CommunityBannerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2DE172473788900116E2E /* CommunityBannerViewCell.xib */; };
-		18C2DE1D2473892E00116E2E /* CommunityTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE1B2473892E00116E2E /* CommunityTopicCell.m */; };
-		18C2DE1E2473892E00116E2E /* CommunityTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2DE1C2473892E00116E2E /* CommunityTopicCell.xib */; };
-		18C2DE222473BB1C00116E2E /* CommunityTopicViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE202473BB1C00116E2E /* CommunityTopicViewCell.m */; };
-		18C2DE232473BB1C00116E2E /* CommunityTopicViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2DE212473BB1C00116E2E /* CommunityTopicViewCell.xib */; };
+		18C2DE222473BB1C00116E2E /* CommunityTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE202473BB1C00116E2E /* CommunityTopicCell.m */; };
+		18C2DE232473BB1C00116E2E /* CommunityTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2DE212473BB1C00116E2E /* CommunityTopicCell.xib */; };
 		18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE262473C97300116E2E /* CommunityTopicModel.m */; };
+		18C2DE2B2473DD9700116E2E /* CommunityFiendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE292473DD9700116E2E /* CommunityFiendCell.m */; };
+		18C2DE2C2473DD9700116E2E /* CommunityFiendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2DE2A2473DD9700116E2E /* CommunityFiendCell.xib */; };
+		18E8AC752474BDA300E3D7C4 /* CommunityFriendViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8AC732474BDA300E3D7C4 /* CommunityFriendViewCell.m */; };
+		18E8AC762474BDA300E3D7C4 /* CommunityFriendViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E8AC742474BDA300E3D7C4 /* CommunityFriendViewCell.xib */; };
+		18E8AC792474C60E00E3D7C4 /* CommunityFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8AC782474C60E00E3D7C4 /* CommunityFriendModel.m */; };
+		18E8AC7D2474D2A800E3D7C4 /* CommunityDynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8AC7B2474D2A800E3D7C4 /* CommunityDynamicCell.m */; };
+		18E8AC7E2474D2A800E3D7C4 /* CommunityDynamicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E8AC7C2474D2A800E3D7C4 /* CommunityDynamicCell.xib */; };
+		18E8AC822474D51D00E3D7C4 /* CommunityBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E8AC812474D51D00E3D7C4 /* CommunityBannerCell.xib */; };
+		18E8AC842474E90A00E3D7C4 /* CommunityTopicHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E8AC832474E90A00E3D7C4 /* CommunityTopicHeaderView.xib */; };
+		18E8AC872474F4CC00E3D7C4 /* CommunityTopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8AC862474F4CC00E3D7C4 /* CommunityTopicHeaderView.m */; };
+		18E8AC8A247519D100E3D7C4 /* CommunityDynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8AC89247519D000E3D7C4 /* CommunityDynamicModel.m */; };
 		43596A819B66D10178A0882C /* Pods_futures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66967DA234F0732F071AFCD /* Pods_futures.framework */; };
 /* End PBXBuildFile section */
 
@@ -173,14 +182,28 @@
 		18C2DE152473788900116E2E /* CommunityBannerViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityBannerViewCell.h; sourceTree = "<group>"; };
 		18C2DE162473788900116E2E /* CommunityBannerViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityBannerViewCell.m; sourceTree = "<group>"; };
 		18C2DE172473788900116E2E /* CommunityBannerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityBannerViewCell.xib; sourceTree = "<group>"; };
-		18C2DE1A2473892E00116E2E /* CommunityTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityTopicCell.h; sourceTree = "<group>"; };
-		18C2DE1B2473892E00116E2E /* CommunityTopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityTopicCell.m; sourceTree = "<group>"; };
-		18C2DE1C2473892E00116E2E /* CommunityTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityTopicCell.xib; sourceTree = "<group>"; };
-		18C2DE1F2473BB1C00116E2E /* CommunityTopicViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityTopicViewCell.h; sourceTree = "<group>"; };
-		18C2DE202473BB1C00116E2E /* CommunityTopicViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityTopicViewCell.m; sourceTree = "<group>"; };
-		18C2DE212473BB1C00116E2E /* CommunityTopicViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityTopicViewCell.xib; sourceTree = "<group>"; };
+		18C2DE1F2473BB1C00116E2E /* CommunityTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityTopicCell.h; sourceTree = "<group>"; };
+		18C2DE202473BB1C00116E2E /* CommunityTopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityTopicCell.m; sourceTree = "<group>"; };
+		18C2DE212473BB1C00116E2E /* CommunityTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityTopicCell.xib; sourceTree = "<group>"; };
 		18C2DE252473C97300116E2E /* CommunityTopicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityTopicModel.h; sourceTree = "<group>"; };
 		18C2DE262473C97300116E2E /* CommunityTopicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityTopicModel.m; sourceTree = "<group>"; };
+		18C2DE282473DD9700116E2E /* CommunityFiendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityFiendCell.h; sourceTree = "<group>"; };
+		18C2DE292473DD9700116E2E /* CommunityFiendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityFiendCell.m; sourceTree = "<group>"; };
+		18C2DE2A2473DD9700116E2E /* CommunityFiendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityFiendCell.xib; sourceTree = "<group>"; };
+		18E8AC722474BDA300E3D7C4 /* CommunityFriendViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityFriendViewCell.h; sourceTree = "<group>"; };
+		18E8AC732474BDA300E3D7C4 /* CommunityFriendViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityFriendViewCell.m; sourceTree = "<group>"; };
+		18E8AC742474BDA300E3D7C4 /* CommunityFriendViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityFriendViewCell.xib; sourceTree = "<group>"; };
+		18E8AC772474C60E00E3D7C4 /* CommunityFriendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityFriendModel.h; sourceTree = "<group>"; };
+		18E8AC782474C60E00E3D7C4 /* CommunityFriendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityFriendModel.m; sourceTree = "<group>"; };
+		18E8AC7A2474D2A800E3D7C4 /* CommunityDynamicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityDynamicCell.h; sourceTree = "<group>"; };
+		18E8AC7B2474D2A800E3D7C4 /* CommunityDynamicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityDynamicCell.m; sourceTree = "<group>"; };
+		18E8AC7C2474D2A800E3D7C4 /* CommunityDynamicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityDynamicCell.xib; sourceTree = "<group>"; };
+		18E8AC812474D51D00E3D7C4 /* CommunityBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityBannerCell.xib; sourceTree = "<group>"; };
+		18E8AC832474E90A00E3D7C4 /* CommunityTopicHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityTopicHeaderView.xib; sourceTree = "<group>"; };
+		18E8AC852474F4CC00E3D7C4 /* CommunityTopicHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityTopicHeaderView.h; sourceTree = "<group>"; };
+		18E8AC862474F4CC00E3D7C4 /* CommunityTopicHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityTopicHeaderView.m; sourceTree = "<group>"; };
+		18E8AC88247519D000E3D7C4 /* CommunityDynamicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityDynamicModel.h; sourceTree = "<group>"; };
+		18E8AC89247519D000E3D7C4 /* CommunityDynamicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityDynamicModel.m; sourceTree = "<group>"; };
 		1E8A6C0CB72502A19B418054 /* Pods-futures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-futures.release.xcconfig"; path = "Target Support Files/Pods-futures/Pods-futures.release.xcconfig"; sourceTree = "<group>"; };
 		2918599DF26764A44CB6CA12 /* Pods-futures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-futures.debug.xcconfig"; path = "Target Support Files/Pods-futures/Pods-futures.debug.xcconfig"; sourceTree = "<group>"; };
 		C66967DA234F0732F071AFCD /* Pods_futures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_futures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -460,15 +483,25 @@
 			children = (
 				18A5849124726CDB00C0437F /* CommunityBannerCell.h */,
 				18A5849224726CDB00C0437F /* CommunityBannerCell.m */,
+				18E8AC812474D51D00E3D7C4 /* CommunityBannerCell.xib */,
 				18C2DE152473788900116E2E /* CommunityBannerViewCell.h */,
 				18C2DE162473788900116E2E /* CommunityBannerViewCell.m */,
 				18C2DE172473788900116E2E /* CommunityBannerViewCell.xib */,
-				18C2DE1A2473892E00116E2E /* CommunityTopicCell.h */,
-				18C2DE1B2473892E00116E2E /* CommunityTopicCell.m */,
-				18C2DE1C2473892E00116E2E /* CommunityTopicCell.xib */,
-				18C2DE1F2473BB1C00116E2E /* CommunityTopicViewCell.h */,
-				18C2DE202473BB1C00116E2E /* CommunityTopicViewCell.m */,
-				18C2DE212473BB1C00116E2E /* CommunityTopicViewCell.xib */,
+				18C2DE1F2473BB1C00116E2E /* CommunityTopicCell.h */,
+				18C2DE202473BB1C00116E2E /* CommunityTopicCell.m */,
+				18C2DE212473BB1C00116E2E /* CommunityTopicCell.xib */,
+				18C2DE282473DD9700116E2E /* CommunityFiendCell.h */,
+				18C2DE292473DD9700116E2E /* CommunityFiendCell.m */,
+				18C2DE2A2473DD9700116E2E /* CommunityFiendCell.xib */,
+				18E8AC722474BDA300E3D7C4 /* CommunityFriendViewCell.h */,
+				18E8AC732474BDA300E3D7C4 /* CommunityFriendViewCell.m */,
+				18E8AC742474BDA300E3D7C4 /* CommunityFriendViewCell.xib */,
+				18E8AC7A2474D2A800E3D7C4 /* CommunityDynamicCell.h */,
+				18E8AC7B2474D2A800E3D7C4 /* CommunityDynamicCell.m */,
+				18E8AC7C2474D2A800E3D7C4 /* CommunityDynamicCell.xib */,
+				18E8AC852474F4CC00E3D7C4 /* CommunityTopicHeaderView.h */,
+				18E8AC862474F4CC00E3D7C4 /* CommunityTopicHeaderView.m */,
+				18E8AC832474E90A00E3D7C4 /* CommunityTopicHeaderView.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -498,6 +531,10 @@
 			children = (
 				18C2DE252473C97300116E2E /* CommunityTopicModel.h */,
 				18C2DE262473C97300116E2E /* CommunityTopicModel.m */,
+				18E8AC772474C60E00E3D7C4 /* CommunityFriendModel.h */,
+				18E8AC782474C60E00E3D7C4 /* CommunityFriendModel.m */,
+				18E8AC88247519D000E3D7C4 /* CommunityDynamicModel.h */,
+				18E8AC89247519D000E3D7C4 /* CommunityDynamicModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -582,24 +619,27 @@
 				152636A9246E771D00D01BE0 /* MXZHomeSecondSectionFootView.xib in Resources */,
 				151AC19B247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib in Resources */,
 				185AC2A8246E87A7006EC3E6 /* ZZHQuoteIndustryVC.xib in Resources */,
+				18E8AC762474BDA300E3D7C4 /* CommunityFriendViewCell.xib in Resources */,
 				185AC2A1246E87A7006EC3E6 /* ZZHQuoteTimeVC.xib in Resources */,
 				15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */,
 				151AC1A024726AAF00EAE0BD /* MXZIndustryTableViewCell.xib in Resources */,
 				185AC2AA246E87A7006EC3E6 /* ZZHQuoteCalendarVC.xib in Resources */,
+				18E8AC7E2474D2A800E3D7C4 /* CommunityDynamicCell.xib in Resources */,
 				189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */,
 				151AC19A247259A500EAE0BD /* MXZHomeNavSearchView.xib in Resources */,
 				152636A4246E771D00D01BE0 /* MXZHomeFourthCollectionCell.xib in Resources */,
 				152636A8246E771D00D01BE0 /* MXZHomeFifthSectionCell.xib in Resources */,
-				18C2DE232473BB1C00116E2E /* CommunityTopicViewCell.xib in Resources */,
+				18C2DE232473BB1C00116E2E /* CommunityTopicCell.xib in Resources */,
+				18E8AC822474D51D00E3D7C4 /* CommunityBannerCell.xib in Resources */,
 				1859014224692D8B00CA7A68 /* PublishVC.xib in Resources */,
 				15263697246E771D00D01BE0 /* MXZHomeExpressVC.xib in Resources */,
 				18C2DE192473788900116E2E /* CommunityBannerViewCell.xib in Resources */,
+				18C2DE2C2473DD9700116E2E /* CommunityFiendCell.xib in Resources */,
 				18BD94F6247290D5005A84B5 /* CommunityVC.xib in Resources */,
 				154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */,
 				152636A0246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib in Resources */,
 				1526369F246E771D00D01BE0 /* MXZHomeIndustryVC.xib in Resources */,
 				152636A6246E771D00D01BE0 /* MXZHomeFourthSectionHeadView.xib in Resources */,
-				18C2DE1E2473892E00116E2E /* CommunityTopicCell.xib in Resources */,
 				185AC2A9246E87A7006EC3E6 /* ZZHQuotesVC.xib in Resources */,
 				154DFC702468F4B00098498C /* Assets.xcassets in Resources */,
 				15263696246E771D00D01BE0 /* MXZHomeQuoteVC.xib in Resources */,
@@ -607,6 +647,7 @@
 				18AA2BC3246E23B1000801B1 /* CommunityChildBVC.xib in Resources */,
 				152636AA246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib in Resources */,
 				1526369D246E771D00D01BE0 /* MXZHomeVC.xib in Resources */,
+				18E8AC842474E90A00E3D7C4 /* CommunityTopicHeaderView.xib in Resources */,
 				185AC2A6246E87A7006EC3E6 /* ZZHQuoteNewsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,14 +705,17 @@
 				189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */,
 				18A584882472544400C0437F /* ListViewController.m in Sources */,
 				181F5036246B908500CCCBDB /* CustomTBC.m in Sources */,
-				18C2DE222473BB1C00116E2E /* CommunityTopicViewCell.m in Sources */,
+				18C2DE222473BB1C00116E2E /* CommunityTopicCell.m in Sources */,
 				152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */,
+				18E8AC752474BDA300E3D7C4 /* CommunityFriendViewCell.m in Sources */,
 				18AA2BC2246E23B1000801B1 /* CommunityChildBVC.m in Sources */,
 				189BD81C246D1B9400490E35 /* MineModel.m in Sources */,
 				18C2DE182473788900116E2E /* CommunityBannerViewCell.m in Sources */,
+				18E8AC8A247519D100E3D7C4 /* CommunityDynamicModel.m in Sources */,
 				185AC2A7246E87A7006EC3E6 /* ZZHQuoteIndustryVC.m in Sources */,
 				18BD94F5247290D5005A84B5 /* CommunityVC.m in Sources */,
 				151AC1942472595D00EAE0BD /* ZKCycleScrollViewFlowLayout.m in Sources */,
+				18E8AC792474C60E00E3D7C4 /* CommunityFriendModel.m in Sources */,
 				15263699246E771D00D01BE0 /* MXZHomeQuoteVC.m in Sources */,
 				18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */,
 				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,
@@ -691,9 +735,11 @@
 				154DFC762468F4B00098498C /* main.m in Sources */,
 				152636A5246E771D00D01BE0 /* MXZHomeFourthSectionCell.m in Sources */,
 				1526369B246E771D00D01BE0 /* MXZHomeIndustryVC.m in Sources */,
+				18C2DE2B2473DD9700116E2E /* CommunityFiendCell.m in Sources */,
 				151AC1932472595D00EAE0BD /* ZKCycleScrollView.m in Sources */,
-				18C2DE1D2473892E00116E2E /* CommunityTopicCell.m in Sources */,
+				18E8AC7D2474D2A800E3D7C4 /* CommunityDynamicCell.m in Sources */,
 				18A5849324726CDB00C0437F /* CommunityBannerCell.m in Sources */,
+				18E8AC872474F4CC00E3D7C4 /* CommunityTopicHeaderView.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,
 				185AC2A3246E87A7006EC3E6 /* ZZHQuotesVC.m in Sources */,
 			);

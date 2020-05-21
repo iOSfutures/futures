@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ContentBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZZHQuoteTimeVC : UIViewController
+@interface ZZHQuoteTimeVC : ContentBaseViewController<JXCategoryListContentViewDelegate>
 
 @end
 

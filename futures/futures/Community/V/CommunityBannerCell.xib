@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="api-A4-Poi" customClass="CommunityBannerCell">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="api-A4-Poi" id="Xjm-5i-cRH">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9SA-Fq-l5T" customClass="TYCyclePagerView">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="150"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="eN7-KA-QFA"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9SA-Fq-l5T" firstAttribute="leading" secondItem="Xjm-5i-cRH" secondAttribute="leading" id="4hs-6H-FnZ"/>
+                    <constraint firstItem="9SA-Fq-l5T" firstAttribute="top" secondItem="Xjm-5i-cRH" secondAttribute="top" id="5ct-KY-Xke"/>
+                    <constraint firstAttribute="trailing" secondItem="9SA-Fq-l5T" secondAttribute="trailing" id="Hhp-r9-HyO"/>
+                    <constraint firstAttribute="bottom" secondItem="9SA-Fq-l5T" secondAttribute="bottom" id="hSo-dO-fRZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="tyPagerView" destination="9SA-Fq-l5T" id="oUN-gf-T06"/>
+            </connections>
+            <point key="canvasLocation" x="-307.24637681159425" y="2.6785714285714284"/>
+        </tableViewCell>
+    </objects>
+</document>

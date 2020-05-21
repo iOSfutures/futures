@@ -1,23 +1,18 @@
 //
-//  CommunityTopicViewCell.m
+//  ZZHDateTableViewCell.m
 //  futures
 //
-//  Created by Ssiswent on 2020/5/19.
+//  Created by apple on 2020/5/19.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
-#import "CommunityTopicViewCell.h"
+#import "ZZHDateTableViewCell.h"
 
-@interface CommunityTopicViewCell()
-
-@end
-
-@implementation CommunityTopicViewCell
+@implementation ZZHDateTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    _tagView.layer.cornerRadius = 8;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

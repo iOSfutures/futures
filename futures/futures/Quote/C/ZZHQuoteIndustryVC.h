@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ContentBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZZHQuoteIndustryVC : UIViewController
+@interface ZZHQuoteIndustryVC : ContentBaseViewController<JXCategoryListContentViewDelegate>
 
 @end
 

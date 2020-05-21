@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "botton_weigongbubg(2).png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "botton_weigongbubg@2x(2).png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "botton_weigongbubg@3x(2).png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -19,6 +19,7 @@
 #import "MXZHomeFirstSectionCollectionViewCell.h"
 #import "MXZFullDisplay.h"
 #import <Masonry/Masonry.h>
+#import "MXZSignVC.h"
 
 #import "MXZHomeNavSearchView.h"
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
@@ -107,17 +108,16 @@
     testView.frame = CGRectMake(0, 0, SCREEN_WIDTH , 27);
     [testView addSubview:searchView];
     searchView.frame = CGRectMake((SCREEN_WIDTH - 300)/2 - 28, 0, SCREEN_WIDTH - 75, 27);
-//    [searchView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerX.mas_equalTo(testView.mas_centerX);
-//        make.centerY.mas_equalTo(testView.mas_centerY);
-//        make.size.mas_equalTo(CGSizeMake(250, 27));
-//    }];
     self.navigationItem.titleView = testView;
         
     //设置首页导航栏右边的签到按钮
     UIBarButtonItem *qiandaoBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_qiandao"] style:UIBarButtonItemStylePlain target:self action:nil];
     
     self.navigationItem.rightBarButtonItem = qiandaoBtn;
+    //UIBarButtonItem无法调用addTarget: action: forControlEvents:这个方法
+    qiandaoBtn.target = self;
+    qiandaoBtn.action = @selector(qiandaoBtnClick);
+//    [self.navigationItem.rightBarButtonItem addTarget:self action:@selector(qiandaoBtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 //设置轮播图
@@ -233,11 +233,17 @@
     [self.navigationController pushViewController:quoteVC animated:YES];
 }
 
+-(void)qiandaoBtnClick{
+    MXZSignVC *signVC = [[MXZSignVC alloc]init];
+    [self.navigationController pushViewController:signVC animated:YES];
+}
+
 -(void)setQiandaoBtn:(UIView *)fView{
     UIButton *qianBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     qianBtn.frame = CGRectMake(SCREEN_WIDTH/2 - 338/2, 366-64, 338, 100);
     [qianBtn setImage:[UIImage imageNamed:@"qiandao_banner02_home"] forState:UIControlStateNormal];
     [fView addSubview:qianBtn];
+    [qianBtn addTarget:self action:@selector(qiandaoBtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 

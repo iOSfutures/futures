@@ -20,6 +20,7 @@
 #import "MXZFullDisplay.h"
 #import <Masonry/Masonry.h>
 #import "MXZSignVC.h"
+#import "MXZAnswerVC.h"
 
 #import "MXZHomeNavSearchView.h"
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
@@ -243,7 +244,12 @@
     qianBtn.frame = CGRectMake(SCREEN_WIDTH/2 - 338/2, 366-64, 338, 100);
     [qianBtn setImage:[UIImage imageNamed:@"qiandao_banner02_home"] forState:UIControlStateNormal];
     [fView addSubview:qianBtn];
-    [qianBtn addTarget:self action:@selector(qiandaoBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [qianBtn addTarget:self action:@selector(answerBtnClick) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)answerBtnClick{
+    MXZAnswerVC *answerVC = [[MXZAnswerVC alloc]init];
+    [self.navigationController pushViewController:answerVC animated:YES];
 }
 
 

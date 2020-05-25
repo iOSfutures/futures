@@ -35,6 +35,8 @@
 		152636A8246E771D00D01BE0 /* MXZHomeFifthSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263690246E771D00D01BE0 /* MXZHomeFifthSectionCell.xib */; };
 		152636A9246E771D00D01BE0 /* MXZHomeSecondSectionFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263691246E771D00D01BE0 /* MXZHomeSecondSectionFootView.xib */; };
 		152636AA246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263694246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib */; };
+		154C26B7247B8CEF00A9162D /* MXZAnswerTomorrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 154C26B5247B8CEF00A9162D /* MXZAnswerTomorrowItem.m */; };
+		154C26B8247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154C26B6247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib */; };
 		154DFC652468F4AE0098498C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 154DFC642468F4AE0098498C /* AppDelegate.m */; };
 		154DFC702468F4B00098498C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154DFC6F2468F4B00098498C /* Assets.xcassets */; };
 		154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154DFC712468F4B00098498C /* LaunchScreen.storyboard */; };
@@ -42,8 +44,17 @@
 		15593DFC2476123B007B3141 /* MXZHomeNavSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15593DFB2476123B007B3141 /* MXZHomeNavSearchView.m */; };
 		15593E00247622FA007B3141 /* MXZSignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15593DFE247622FA007B3141 /* MXZSignVC.m */; };
 		15593E01247622FA007B3141 /* MXZSignVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15593DFF247622FA007B3141 /* MXZSignVC.xib */; };
+		1564961E2477CA56006745E8 /* MXZQuestionWeekItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1564961C2477CA56006745E8 /* MXZQuestionWeekItem.m */; };
+		1564961F2477CA56006745E8 /* MXZQuestionWeekItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1564961D2477CA56006745E8 /* MXZQuestionWeekItem.xib */; };
+		156496222477D1D6006745E8 /* MXZAnswerABCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 156496212477D1D6006745E8 /* MXZAnswerABCButton.m */; };
 		157A7163247676CE003D0081 /* MXZSignPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 157A7161247676CE003D0081 /* MXZSignPopView.m */; };
 		157A7164247676CE003D0081 /* MXZSignPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157A7162247676CE003D0081 /* MXZSignPopView.xib */; };
+		157A716B2477A282003D0081 /* MXZAnswerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 157A71692477A282003D0081 /* MXZAnswerVC.m */; };
+		157A716C2477A282003D0081 /* MXZAnswerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157A716A2477A282003D0081 /* MXZAnswerVC.xib */; };
+		157A71702477A526003D0081 /* MXZAnswerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 157A716E2477A526003D0081 /* MXZAnswerCell.m */; };
+		157A71712477A526003D0081 /* MXZAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157A716F2477A526003D0081 /* MXZAnswerCell.xib */; };
+		157A71732477B14F003D0081 /* MXZAnswerWeekItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157A71722477B14F003D0081 /* MXZAnswerWeekItem.xib */; };
+		157A71762477B393003D0081 /* MXZAnswerWeekItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 157A71752477B393003D0081 /* MXZAnswerWeekItem.m */; };
 		15A6F1BD2475083A002C0930 /* MXZFullDisplay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6F1BC2475083A002C0930 /* MXZFullDisplay.xib */; };
 		15A6F1C0247513F7002C0930 /* MXZFullThirdSectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6F1BF247513F7002C0930 /* MXZFullThirdSectionHeadView.m */; };
 		15A6F1C4247524E2002C0930 /* MXZFullThirdSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6F1C2247524E2002C0930 /* MXZFullThirdSectionCell.m */; };
@@ -153,6 +164,9 @@
 		15263693246E771D00D01BE0 /* MXZHomeSecondSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeSecondSectionCell.h; sourceTree = "<group>"; };
 		15263694246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeSecondSectionCell.xib; sourceTree = "<group>"; };
 		15263695246E771D00D01BE0 /* MXZHomeFourthSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeFourthSectionCell.h; sourceTree = "<group>"; };
+		154C26B4247B8CEF00A9162D /* MXZAnswerTomorrowItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZAnswerTomorrowItem.h; sourceTree = "<group>"; };
+		154C26B5247B8CEF00A9162D /* MXZAnswerTomorrowItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZAnswerTomorrowItem.m; sourceTree = "<group>"; };
+		154C26B6247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZAnswerTomorrowItem.xib; sourceTree = "<group>"; };
 		154DFC602468F4AE0098498C /* futures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = futures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		154DFC632468F4AE0098498C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		154DFC642468F4AE0098498C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -165,9 +179,23 @@
 		15593DFD247622FA007B3141 /* MXZSignVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZSignVC.h; sourceTree = "<group>"; };
 		15593DFE247622FA007B3141 /* MXZSignVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZSignVC.m; sourceTree = "<group>"; };
 		15593DFF247622FA007B3141 /* MXZSignVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZSignVC.xib; sourceTree = "<group>"; };
+		1564961B2477CA56006745E8 /* MXZQuestionWeekItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZQuestionWeekItem.h; sourceTree = "<group>"; };
+		1564961C2477CA56006745E8 /* MXZQuestionWeekItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZQuestionWeekItem.m; sourceTree = "<group>"; };
+		1564961D2477CA56006745E8 /* MXZQuestionWeekItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZQuestionWeekItem.xib; sourceTree = "<group>"; };
+		156496202477D1D6006745E8 /* MXZAnswerABCButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZAnswerABCButton.h; sourceTree = "<group>"; };
+		156496212477D1D6006745E8 /* MXZAnswerABCButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZAnswerABCButton.m; sourceTree = "<group>"; };
 		157A7160247676CE003D0081 /* MXZSignPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZSignPopView.h; sourceTree = "<group>"; };
 		157A7161247676CE003D0081 /* MXZSignPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZSignPopView.m; sourceTree = "<group>"; };
 		157A7162247676CE003D0081 /* MXZSignPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZSignPopView.xib; sourceTree = "<group>"; };
+		157A71682477A282003D0081 /* MXZAnswerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZAnswerVC.h; sourceTree = "<group>"; };
+		157A71692477A282003D0081 /* MXZAnswerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZAnswerVC.m; sourceTree = "<group>"; };
+		157A716A2477A282003D0081 /* MXZAnswerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZAnswerVC.xib; sourceTree = "<group>"; };
+		157A716D2477A526003D0081 /* MXZAnswerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZAnswerCell.h; sourceTree = "<group>"; };
+		157A716E2477A526003D0081 /* MXZAnswerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZAnswerCell.m; sourceTree = "<group>"; };
+		157A716F2477A526003D0081 /* MXZAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZAnswerCell.xib; sourceTree = "<group>"; };
+		157A71722477B14F003D0081 /* MXZAnswerWeekItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZAnswerWeekItem.xib; sourceTree = "<group>"; };
+		157A71742477B393003D0081 /* MXZAnswerWeekItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZAnswerWeekItem.h; sourceTree = "<group>"; };
+		157A71752477B393003D0081 /* MXZAnswerWeekItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZAnswerWeekItem.m; sourceTree = "<group>"; };
 		15A6F1BC2475083A002C0930 /* MXZFullDisplay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullDisplay.xib; sourceTree = "<group>"; };
 		15A6F1BE247513F7002C0930 /* MXZFullThirdSectionHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFullThirdSectionHeadView.h; sourceTree = "<group>"; };
 		15A6F1BF247513F7002C0930 /* MXZFullThirdSectionHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFullThirdSectionHeadView.m; sourceTree = "<group>"; };
@@ -340,6 +368,9 @@
 				15593DFD247622FA007B3141 /* MXZSignVC.h */,
 				15593DFE247622FA007B3141 /* MXZSignVC.m */,
 				15593DFF247622FA007B3141 /* MXZSignVC.xib */,
+				157A71682477A282003D0081 /* MXZAnswerVC.h */,
+				157A71692477A282003D0081 /* MXZAnswerVC.m */,
+				157A716A2477A282003D0081 /* MXZAnswerVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -394,6 +425,20 @@
 				157A7160247676CE003D0081 /* MXZSignPopView.h */,
 				157A7161247676CE003D0081 /* MXZSignPopView.m */,
 				157A7162247676CE003D0081 /* MXZSignPopView.xib */,
+				157A716D2477A526003D0081 /* MXZAnswerCell.h */,
+				157A716E2477A526003D0081 /* MXZAnswerCell.m */,
+				157A716F2477A526003D0081 /* MXZAnswerCell.xib */,
+				157A71742477B393003D0081 /* MXZAnswerWeekItem.h */,
+				157A71752477B393003D0081 /* MXZAnswerWeekItem.m */,
+				157A71722477B14F003D0081 /* MXZAnswerWeekItem.xib */,
+				1564961B2477CA56006745E8 /* MXZQuestionWeekItem.h */,
+				1564961C2477CA56006745E8 /* MXZQuestionWeekItem.m */,
+				1564961D2477CA56006745E8 /* MXZQuestionWeekItem.xib */,
+				156496202477D1D6006745E8 /* MXZAnswerABCButton.h */,
+				156496212477D1D6006745E8 /* MXZAnswerABCButton.m */,
+				154C26B4247B8CEF00A9162D /* MXZAnswerTomorrowItem.h */,
+				154C26B5247B8CEF00A9162D /* MXZAnswerTomorrowItem.m */,
+				154C26B6247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -727,13 +772,16 @@
 				18E8AC762474BDA300E3D7C4 /* CommunityFriendViewCell.xib in Resources */,
 				15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */,
 				151AC1A024726AAF00EAE0BD /* MXZIndustryTableViewCell.xib in Resources */,
+				157A716C2477A282003D0081 /* MXZAnswerVC.xib in Resources */,
 				15A6F1BD2475083A002C0930 /* MXZFullDisplay.xib in Resources */,
 				18E8AC7E2474D2A800E3D7C4 /* CommunityDynamicCell.xib in Resources */,
 				189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */,
 				15A6F1C5247524E2002C0930 /* MXZFullThirdSectionCell.xib in Resources */,
 				18C5816A2476164900DC41EA /* ZZHQuotesVC.xib in Resources */,
 				151AC19A247259A500EAE0BD /* MXZHomeNavSearchView.xib in Resources */,
+				1564961F2477CA56006745E8 /* MXZQuestionWeekItem.xib in Resources */,
 				152636A4246E771D00D01BE0 /* MXZHomeFourthCollectionCell.xib in Resources */,
+				157A71712477A526003D0081 /* MXZAnswerCell.xib in Resources */,
 				152636A8246E771D00D01BE0 /* MXZHomeFifthSectionCell.xib in Resources */,
 				15A6F1CA2475276E002C0930 /* MXZFullThirdCollectionCell.xib in Resources */,
 				15593E01247622FA007B3141 /* MXZSignVC.xib in Resources */,
@@ -745,6 +793,7 @@
 				18C2DE192473788900116E2E /* CommunityBannerViewCell.xib in Resources */,
 				18C2DE2C2473DD9700116E2E /* CommunityFiendCell.xib in Resources */,
 				18C581732476164900DC41EA /* ZZHQuoteIndustryVC.xib in Resources */,
+				154C26B8247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib in Resources */,
 				18BD94F6247290D5005A84B5 /* CommunityVC.xib in Resources */,
 				154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */,
 				15CDFADC2474D49800B2811F /* MXZFullSecondSectionCell.xib in Resources */,
@@ -759,6 +808,7 @@
 				15263696246E771D00D01BE0 /* MXZHomeQuoteVC.xib in Resources */,
 				15A6F1D124753351002C0930 /* MXZFullFourthSectionFootVIew.xib in Resources */,
 				18C5817C2476164D00DC41EA /* ZZHDateTableViewCell.xib in Resources */,
+				157A71732477B14F003D0081 /* MXZAnswerWeekItem.xib in Resources */,
 				1859014C246933DB00CA7A68 /* MineVC.xib in Resources */,
 				15CDFAD72474C95900B2811F /* MXZFullFirstSectionCell.xib in Resources */,
 				18AA2BC3246E23B1000801B1 /* CommunityChildBVC.xib in Resources */,
@@ -826,7 +876,9 @@
 				18A584882472544400C0437F /* ListViewController.m in Sources */,
 				18C5816E2476164900DC41EA /* ZZHQuotesVC.m in Sources */,
 				181F5036246B908500CCCBDB /* CustomTBC.m in Sources */,
+				1564961E2477CA56006745E8 /* MXZQuestionWeekItem.m in Sources */,
 				18C2DE222473BB1C00116E2E /* CommunityTopicCell.m in Sources */,
+				157A716B2477A282003D0081 /* MXZAnswerVC.m in Sources */,
 				18C581702476164900DC41EA /* ZZHQuoteTimeVC.m in Sources */,
 				18C5817B2476164D00DC41EA /* ZZHDateTableViewCell.m in Sources */,
 				152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */,
@@ -849,6 +901,8 @@
 				15A6F1C0247513F7002C0930 /* MXZFullThirdSectionHeadView.m in Sources */,
 				152636A2246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m in Sources */,
 				151AC199247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m in Sources */,
+				156496222477D1D6006745E8 /* MXZAnswerABCButton.m in Sources */,
+				157A71762477B393003D0081 /* MXZAnswerWeekItem.m in Sources */,
 				157A7163247676CE003D0081 /* MXZSignPopView.m in Sources */,
 				15CDFADB2474D49800B2811F /* MXZFullSecondSectionCell.m in Sources */,
 				1526369C246E771D00D01BE0 /* MXZHomeExpressVC.m in Sources */,
@@ -866,10 +920,12 @@
 				1526369B246E771D00D01BE0 /* MXZHomeIndustryVC.m in Sources */,
 				18C2DE2B2473DD9700116E2E /* CommunityFiendCell.m in Sources */,
 				151AC1932472595D00EAE0BD /* ZKCycleScrollView.m in Sources */,
+				157A71702477A526003D0081 /* MXZAnswerCell.m in Sources */,
 				15593DFC2476123B007B3141 /* MXZHomeNavSearchView.m in Sources */,
 				18E8AC7D2474D2A800E3D7C4 /* CommunityDynamicCell.m in Sources */,
 				18A5849324726CDB00C0437F /* CommunityBannerCell.m in Sources */,
 				18E8AC872474F4CC00E3D7C4 /* CommunityTopicHeaderView.m in Sources */,
+				154C26B7247B8CEF00A9162D /* MXZAnswerTomorrowItem.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,
 				18C5816D2476164900DC41EA /* ZZHQuoteCalendarVC.m in Sources */,
 			);

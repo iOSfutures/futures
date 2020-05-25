@@ -20,9 +20,20 @@
     [super viewDidLoad];
     self.navigationItem.title = @"实时行情";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    [self.navigationController popViewControllerAnimated:YES];
-    [self setTitleView];
+//    [self.navigationController popViewControllerAnimated:YES];
+//    [self setTitleView];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = YES;
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 -(void)setTitleView{

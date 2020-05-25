@@ -8,6 +8,8 @@
 
 #import "MineVC.h"
 #import "MineModel.h"
+#import "MXZSettingCenterVC.h"
+#import "MXZMessageCenterVC.h"
 
 @interface MineVC ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -180,6 +182,18 @@
         _AttentionLabelRight.constant = 10;
         _FanImgViewLeft.constant = 11;
         _FanLabelRight.constant = 11;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        MXZSettingCenterVC *settingVC = [[MXZSettingCenterVC alloc]init];
+        [self.navigationController pushViewController:settingVC animated:YES];
+    }
+    else if (indexPath.item == 1){
+        MXZMessageCenterVC *messageVC = [[MXZMessageCenterVC alloc]init];
+        [self.navigationController pushViewController:messageVC animated:YES];
     }
 }
 

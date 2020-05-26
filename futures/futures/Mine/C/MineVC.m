@@ -223,6 +223,7 @@
         bgColor = [UIColor colorWithHexString:@"#F0F0F0"];
     }
     self.bottomView.backgroundColor = bgColor;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

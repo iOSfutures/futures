@@ -78,7 +78,7 @@
                                 <state key="normal" title="提醒我答题" backgroundImage="ButtonAnswer"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NFW-7N-Txw" firstAttribute="top" secondItem="4Q7-6b-j0h" secondAttribute="bottom" constant="9" id="7wl-UE-OGj"/>
                             <constraint firstItem="itj-hJ-Vxo" firstAttribute="leading" secondItem="ag5-cr-7pm" secondAttribute="leading" constant="30" id="BMn-dV-PO5"/>

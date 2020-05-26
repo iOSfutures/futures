@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1517AC6C247CA579007BC789 /* MXZFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517AC6A247CA579007BC789 /* MXZFeedbackVC.m */; };
+		1517AC6D247CA579007BC789 /* MXZFeedbackVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1517AC6B247CA579007BC789 /* MXZFeedbackVC.xib */; };
 		151A95AA247BA995007F3AAB /* MXZSettingCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 151A95A8247BA995007F3AAB /* MXZSettingCenterVC.m */; };
 		151A95AB247BA995007F3AAB /* MXZSettingCenterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151A95A9247BA995007F3AAB /* MXZSettingCenterVC.xib */; };
 		151A95AF247BB82F007F3AAB /* MXZMessageCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 151A95AD247BB82F007F3AAB /* MXZMessageCenterVC.m */; };
@@ -129,6 +131,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1517AC69247CA579007BC789 /* MXZFeedbackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFeedbackVC.h; sourceTree = "<group>"; };
+		1517AC6A247CA579007BC789 /* MXZFeedbackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFeedbackVC.m; sourceTree = "<group>"; };
+		1517AC6B247CA579007BC789 /* MXZFeedbackVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFeedbackVC.xib; sourceTree = "<group>"; };
 		151A95A7247BA995007F3AAB /* MXZSettingCenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZSettingCenterVC.h; sourceTree = "<group>"; };
 		151A95A8247BA995007F3AAB /* MXZSettingCenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZSettingCenterVC.m; sourceTree = "<group>"; };
 		151A95A9247BA995007F3AAB /* MXZSettingCenterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZSettingCenterVC.xib; sourceTree = "<group>"; };
@@ -395,6 +400,9 @@
 				151A95B1247BBA3B007F3AAB /* MXZAboutUsVC.h */,
 				151A95B2247BBA3B007F3AAB /* MXZAboutUsVC.m */,
 				151A95B3247BBA3B007F3AAB /* MXZAboutUsVC.xib */,
+				1517AC69247CA579007BC789 /* MXZFeedbackVC.h */,
+				1517AC6A247CA579007BC789 /* MXZFeedbackVC.m */,
+				1517AC6B247CA579007BC789 /* MXZFeedbackVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -811,6 +819,7 @@
 				152636A8246E771D00D01BE0 /* MXZHomeFifthSectionCell.xib in Resources */,
 				15A6F1CA2475276E002C0930 /* MXZFullThirdCollectionCell.xib in Resources */,
 				15593E01247622FA007B3141 /* MXZSignVC.xib in Resources */,
+				1517AC6D247CA579007BC789 /* MXZFeedbackVC.xib in Resources */,
 				18C2DE232473BB1C00116E2E /* CommunityTopicCell.xib in Resources */,
 				157A7164247676CE003D0081 /* MXZSignPopView.xib in Resources */,
 				18E8AC822474D51D00E3D7C4 /* CommunityBannerCell.xib in Resources */,
@@ -902,6 +911,7 @@
 				15A6F1C4247524E2002C0930 /* MXZFullThirdSectionCell.m in Sources */,
 				18A584882472544400C0437F /* ListViewController.m in Sources */,
 				18C5816E2476164900DC41EA /* ZZHQuotesVC.m in Sources */,
+				1517AC6C247CA579007BC789 /* MXZFeedbackVC.m in Sources */,
 				181F5036246B908500CCCBDB /* CustomTBC.m in Sources */,
 				1564961E2477CA56006745E8 /* MXZQuestionWeekItem.m in Sources */,
 				18C2DE222473BB1C00116E2E /* CommunityTopicCell.m in Sources */,

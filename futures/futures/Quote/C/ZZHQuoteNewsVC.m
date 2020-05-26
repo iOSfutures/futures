@@ -7,30 +7,71 @@
 //
 
 #import "ZZHQuoteNewsVC.h"
+#import "ZZHTimeLineTableViewCell.h"
+#import "ZZHImageTableViewCell.h"
 
-@interface ZZHQuoteNewsVC ()
+@interface ZZHQuoteNewsVC () <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataArr;
+
 
 @end
 
 @implementation ZZHQuoteNewsVC
 
+NSString *ZZHCollectionCellID = @"ZZHCollectionCell";
+NSString *ZZHImageCellID = @"ZZHImageCell";
+NSString *ID = @"TimeLine";
+
+
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    //隐藏分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //自适应高度
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 152;
+    //注册头部轮播图cell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZZHImageTableViewCell class]) bundle:nil] forCellReuseIdentifier:ZZHImageCellID];
+    //注册时间线轮播图cell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZZHTimeLineTableViewCell class]) bundle:nil] forCellReuseIdentifier:ID];
 }
 
 -(UIView *)listView{
     return self.view;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UITableViewViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if(indexPath.row == 0)
+    {
+        ZZHImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ZZHImageCellID];
+        return cell;
+    }else {
+        ZZHTimeLineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+
+        if (indexPath.row == 1) {
+               cell.topLine.hidden = YES;
+           }
+        return cell;
+    }
+}
+
+//禁止下拉,允许上拉
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.tableView.contentOffset.y > 0) {
+        self.tableView.bounces = YES;
+    } else if (self.tableView.contentOffset.y < 0) {
+        self.tableView.bounces = NO;
+    }
+}
 
 @end

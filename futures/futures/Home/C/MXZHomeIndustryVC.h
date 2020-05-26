@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ContentBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MXZHomeIndustryVC : UIViewController
+@interface MXZHomeIndustryVC : ContentBaseViewController <JXCategoryListContentViewDelegate>
+
+@property (nonatomic, assign, getter=isTabBarHidden)BOOL tabBarHidden;
 
 @end
 

@@ -26,12 +26,9 @@
 		15263697246E771D00D01BE0 /* MXZHomeExpressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263678246E771D00D01BE0 /* MXZHomeExpressVC.xib */; };
 		15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526367A246E771D00D01BE0 /* MXZHomeCalendarVC.xib */; };
 		15263699246E771D00D01BE0 /* MXZHomeQuoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526367C246E771D00D01BE0 /* MXZHomeQuoteVC.m */; };
-		1526369A246E771D00D01BE0 /* MXZHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526367E246E771D00D01BE0 /* MXZHomeVC.m */; };
-		1526369B246E771D00D01BE0 /* MXZHomeIndustryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526367F246E771D00D01BE0 /* MXZHomeIndustryVC.m */; };
 		1526369C246E771D00D01BE0 /* MXZHomeExpressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15263680246E771D00D01BE0 /* MXZHomeExpressVC.m */; };
 		1526369D246E771D00D01BE0 /* MXZHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263681246E771D00D01BE0 /* MXZHomeVC.xib */; };
 		1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15263683246E771D00D01BE0 /* MXZHomeCalendarVC.m */; };
-		1526369F246E771D00D01BE0 /* MXZHomeIndustryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263684246E771D00D01BE0 /* MXZHomeIndustryVC.xib */; };
 		152636A0246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263687246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib */; };
 		152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15263689246E771D00D01BE0 /* MXZHomeSecondSectionCell.m */; };
 		152636A2246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526368A246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m */; };
@@ -81,22 +78,51 @@
 		15CDFADE2474F83800B2811F /* MXZFullSecondSectionFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CDFADD2474F83800B2811F /* MXZFullSecondSectionFootView.xib */; };
 		15CDFAE32475036200B2811F /* MXZFullThirdSectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CDFAE12475036200B2811F /* MXZFullThirdSectionHeadView.xib */; };
 		181F5036246B908500CCCBDB /* CustomTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F5035246B908500CCCBDB /* CustomTBC.m */; };
+		18468762247D1CF2007BC2FC /* ZZHQuoteIndustryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468754247D1CF0007BC2FC /* ZZHQuoteIndustryVC.m */; };
+		18468763247D1CF2007BC2FC /* ZZHQuoteTimeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18468755247D1CF0007BC2FC /* ZZHQuoteTimeVC.xib */; };
+		18468764247D1CF2007BC2FC /* ZZHQuotesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18468756247D1CF1007BC2FC /* ZZHQuotesVC.xib */; };
+		18468765247D1CF2007BC2FC /* ZZHQuoteCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18468757247D1CF1007BC2FC /* ZZHQuoteCalendarVC.xib */; };
+		18468766247D1CF2007BC2FC /* ZZHQuotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468758247D1CF1007BC2FC /* ZZHQuotesVC.m */; };
+		18468767247D1CF2007BC2FC /* ZZHQuoteTimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468759247D1CF1007BC2FC /* ZZHQuoteTimeVC.m */; };
+		18468768247D1CF2007BC2FC /* ZZHQuoteCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846875C247D1CF2007BC2FC /* ZZHQuoteCalendarVC.m */; };
+		18468769247D1CF2007BC2FC /* ZZHQuoteIndustryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1846875E247D1CF2007BC2FC /* ZZHQuoteIndustryVC.xib */; };
+		1846876A247D1CF2007BC2FC /* ZZHQuoteNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846875F247D1CF2007BC2FC /* ZZHQuoteNewsVC.m */; };
+		1846876B247D1CF2007BC2FC /* ZZHQuoteNewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18468761247D1CF2007BC2FC /* ZZHQuoteNewsVC.xib */; };
+		1846877B247D1D06007BC2FC /* ZZHCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846876C247D1D04007BC2FC /* ZZHCollectionViewCell.m */; };
+		1846877C247D1D06007BC2FC /* ZZHImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1846876D247D1D04007BC2FC /* ZZHImageTableViewCell.xib */; };
+		1846877D247D1D06007BC2FC /* ZZHDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1846876E247D1D04007BC2FC /* ZZHDateTableViewCell.xib */; };
+		1846877E247D1D06007BC2FC /* ZZHTimeLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468770247D1D05007BC2FC /* ZZHTimeLineTableViewCell.m */; };
+		1846877F247D1D06007BC2FC /* ZZHDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468771247D1D05007BC2FC /* ZZHDateTableViewCell.m */; };
+		18468780247D1D06007BC2FC /* ZZHDateCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468774247D1D05007BC2FC /* ZZHDateCollectionViewCell.m */; };
+		18468781247D1D06007BC2FC /* ZZHImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468776247D1D05007BC2FC /* ZZHImageTableViewCell.m */; };
+		18468782247D1D06007BC2FC /* ZZHTimeLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18468777247D1D06007BC2FC /* ZZHTimeLineTableViewCell.xib */; };
+		18468783247D1D06007BC2FC /* ZZHDateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18468779247D1D06007BC2FC /* ZZHDateCollectionViewCell.xib */; };
+		18468784247D1D06007BC2FC /* ZZHCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1846877A247D1D06007BC2FC /* ZZHCollectionViewCell.xib */; };
+		18468789247D1D0D007BC2FC /* ZZHNewsImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468786247D1D0D007BC2FC /* ZZHNewsImageModel.m */; };
+		1846878A247D1D0D007BC2FC /* ZZHQuoteDateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468787247D1D0D007BC2FC /* ZZHQuoteDateModel.m */; };
+		1846879A247D1D2C007BC2FC /* AttentionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1846878C247D1D2A007BC2FC /* AttentionVC.xib */; };
+		1846879B247D1D2C007BC2FC /* AttentionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1846878D247D1D2A007BC2FC /* AttentionTableViewCell.xib */; };
+		1846879C247D1D2C007BC2FC /* AttentionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846878E247D1D2B007BC2FC /* AttentionTableViewCell.m */; };
+		1846879D247D1D2C007BC2FC /* AttentionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846878F247D1D2B007BC2FC /* AttentionVC.m */; };
+		1846879E247D1D2C007BC2FC /* MineEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18468790247D1D2B007BC2FC /* MineEditVC.xib */; };
+		1846879F247D1D2C007BC2FC /* MineDynamicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18468791247D1D2B007BC2FC /* MineDynamicVC.xib */; };
+		184687A0247D1D2C007BC2FC /* MineVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18468792247D1D2B007BC2FC /* MineVC.xib */; };
+		184687A1247D1D2C007BC2FC /* MineDynamicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468793247D1D2B007BC2FC /* MineDynamicVC.m */; };
+		184687A2247D1D2C007BC2FC /* MineEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468796247D1D2C007BC2FC /* MineEditVC.m */; };
+		184687A3247D1D2C007BC2FC /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468799247D1D2C007BC2FC /* MineVC.m */; };
+		184687A7247D1D53007BC2FC /* MXZHomeIndustryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 184687A4247D1D53007BC2FC /* MXZHomeIndustryVC.m */; };
+		184687A8247D1D53007BC2FC /* MXZHomeIndustryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184687A6247D1D53007BC2FC /* MXZHomeIndustryVC.xib */; };
+		184687AA247D1D98007BC2FC /* MXZHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 184687A9247D1D98007BC2FC /* MXZHomeVC.m */; };
 		1859014124692D8B00CA7A68 /* PublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859013F24692D8B00CA7A68 /* PublishVC.m */; };
 		1859014224692D8B00CA7A68 /* PublishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859014024692D8B00CA7A68 /* PublishVC.xib */; };
-		1859014B246933DB00CA7A68 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18590149246933DB00CA7A68 /* MineVC.m */; };
-		1859014C246933DB00CA7A68 /* MineVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859014A246933DB00CA7A68 /* MineVC.xib */; };
 		185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 185901512469462800CA7A68 /* UIImage+OriginalImage.m */; };
 		185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AC2AC246E899D006EC3E6 /* UIColor+Hex.m */; };
 		18699CFD247B544F000A1022 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699CFC247B544F000A1022 /* UIImage+Image.m */; };
-		18699D01247B5B7E000A1022 /* MineEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699CFF247B5B7E000A1022 /* MineEditVC.m */; };
-		18699D02247B5B7E000A1022 /* MineEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18699D00247B5B7E000A1022 /* MineEditVC.xib */; };
 		18699D05247B729C000A1022 /* MineInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D04247B729C000A1022 /* MineInformationModel.m */; };
 		18699D0B247B90F1000A1022 /* MineInformationNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18699D09247B90F1000A1022 /* MineInformationNameView.xib */; };
 		18699D0E247B998A000A1022 /* MineInformationNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D0D247B998A000A1022 /* MineInformationNameView.m */; };
 		18699D16247BB55E000A1022 /* MineInformationSexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D15247BB55E000A1022 /* MineInformationSexView.m */; };
 		18699D18247BB56A000A1022 /* MineInformationSexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18699D17247BB56A000A1022 /* MineInformationSexView.xib */; };
-		186AF24A247631AD00D5B14B /* MineDynamicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AF248247631AD00D5B14B /* MineDynamicVC.m */; };
-		186AF24B247631AD00D5B14B /* MineDynamicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186AF249247631AD00D5B14B /* MineDynamicVC.xib */; };
 		189BD81C246D1B9400490E35 /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BD81B246D1B9400490E35 /* MineModel.m */; };
 		189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BD81E246D45C300490E35 /* CommunityChildAVC.m */; };
 		189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189BD81F246D45C300490E35 /* CommunityChildAVC.xib */; };
@@ -114,20 +140,6 @@
 		18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE262473C97300116E2E /* CommunityTopicModel.m */; };
 		18C2DE2B2473DD9700116E2E /* CommunityFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE292473DD9700116E2E /* CommunityFriendCell.m */; };
 		18C2DE2C2473DD9700116E2E /* CommunityFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2DE2A2473DD9700116E2E /* CommunityFriendCell.xib */; };
-		18C5816A2476164900DC41EA /* ZZHQuotesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C5815B2476164600DC41EA /* ZZHQuotesVC.xib */; };
-		18C5816B2476164900DC41EA /* ZZHQuoteCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C5815C2476164700DC41EA /* ZZHQuoteCalendarVC.xib */; };
-		18C5816C2476164900DC41EA /* ZZHQuoteNewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C5815F2476164700DC41EA /* ZZHQuoteNewsVC.xib */; };
-		18C5816D2476164900DC41EA /* ZZHQuoteCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C581602476164700DC41EA /* ZZHQuoteCalendarVC.m */; };
-		18C5816E2476164900DC41EA /* ZZHQuotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C581612476164700DC41EA /* ZZHQuotesVC.m */; };
-		18C5816F2476164900DC41EA /* ZZHQuoteIndustryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C581652476164800DC41EA /* ZZHQuoteIndustryVC.m */; };
-		18C581702476164900DC41EA /* ZZHQuoteTimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C581662476164800DC41EA /* ZZHQuoteTimeVC.m */; };
-		18C581712476164900DC41EA /* ZZHQuoteNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C581672476164800DC41EA /* ZZHQuoteNewsVC.m */; };
-		18C581722476164900DC41EA /* ZZHQuoteTimeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C581682476164900DC41EA /* ZZHQuoteTimeVC.xib */; };
-		18C581732476164900DC41EA /* ZZHQuoteIndustryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C581692476164900DC41EA /* ZZHQuoteIndustryVC.xib */; };
-		18C5817A2476164D00DC41EA /* ZZHDateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C581742476164C00DC41EA /* ZZHDateCollectionViewCell.xib */; };
-		18C5817B2476164D00DC41EA /* ZZHDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C581752476164C00DC41EA /* ZZHDateTableViewCell.m */; };
-		18C5817C2476164D00DC41EA /* ZZHDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C581772476164C00DC41EA /* ZZHDateTableViewCell.xib */; };
-		18C5817D2476164D00DC41EA /* ZZHDateCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C581792476164D00DC41EA /* ZZHDateCollectionViewCell.m */; };
 		18E8AC752474BDA300E3D7C4 /* CommunityFriendViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8AC732474BDA300E3D7C4 /* CommunityFriendViewCell.m */; };
 		18E8AC762474BDA300E3D7C4 /* CommunityFriendViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E8AC742474BDA300E3D7C4 /* CommunityFriendViewCell.xib */; };
 		18E8AC792474C60E00E3D7C4 /* CommunityFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8AC782474C60E00E3D7C4 /* CommunityFriendModel.m */; };
@@ -166,18 +178,14 @@
 		151AC19E24726AAF00EAE0BD /* MXZIndustryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZIndustryTableViewCell.xib; sourceTree = "<group>"; };
 		15263677246E771D00D01BE0 /* MXZHomeQuoteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeQuoteVC.xib; sourceTree = "<group>"; };
 		15263678246E771D00D01BE0 /* MXZHomeExpressVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeExpressVC.xib; sourceTree = "<group>"; };
-		15263679246E771D00D01BE0 /* MXZHomeIndustryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeIndustryVC.h; sourceTree = "<group>"; };
 		1526367A246E771D00D01BE0 /* MXZHomeCalendarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeCalendarVC.xib; sourceTree = "<group>"; };
 		1526367B246E771D00D01BE0 /* MXZHomeExpressVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeExpressVC.h; sourceTree = "<group>"; };
 		1526367C246E771D00D01BE0 /* MXZHomeQuoteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXZHomeQuoteVC.m; sourceTree = "<group>"; };
 		1526367D246E771D00D01BE0 /* MXZHomeCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeCalendarVC.h; sourceTree = "<group>"; };
-		1526367E246E771D00D01BE0 /* MXZHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXZHomeVC.m; sourceTree = "<group>"; };
-		1526367F246E771D00D01BE0 /* MXZHomeIndustryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXZHomeIndustryVC.m; sourceTree = "<group>"; };
 		15263680246E771D00D01BE0 /* MXZHomeExpressVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXZHomeExpressVC.m; sourceTree = "<group>"; };
 		15263681246E771D00D01BE0 /* MXZHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeVC.xib; sourceTree = "<group>"; };
 		15263682246E771D00D01BE0 /* MXZHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeVC.h; sourceTree = "<group>"; };
 		15263683246E771D00D01BE0 /* MXZHomeCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXZHomeCalendarVC.m; sourceTree = "<group>"; };
-		15263684246E771D00D01BE0 /* MXZHomeIndustryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeIndustryVC.xib; sourceTree = "<group>"; };
 		15263685246E771D00D01BE0 /* MXZHomeQuoteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeQuoteVC.h; sourceTree = "<group>"; };
 		15263687246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeFourthSectionCell.xib; sourceTree = "<group>"; };
 		15263688246E771D00D01BE0 /* MXZHomeFifthSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeFifthSectionCell.h; sourceTree = "<group>"; };
@@ -253,21 +261,68 @@
 		15CDFAE12475036200B2811F /* MXZFullThirdSectionHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullThirdSectionHeadView.xib; sourceTree = "<group>"; };
 		181F5034246B908500CCCBDB /* CustomTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTBC.h; sourceTree = "<group>"; };
 		181F5035246B908500CCCBDB /* CustomTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTBC.m; sourceTree = "<group>"; };
+		18468753247D1CF0007BC2FC /* ZZHQuoteNewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteNewsVC.h; sourceTree = "<group>"; };
+		18468754247D1CF0007BC2FC /* ZZHQuoteIndustryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteIndustryVC.m; sourceTree = "<group>"; };
+		18468755247D1CF0007BC2FC /* ZZHQuoteTimeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteTimeVC.xib; sourceTree = "<group>"; };
+		18468756247D1CF1007BC2FC /* ZZHQuotesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuotesVC.xib; sourceTree = "<group>"; };
+		18468757247D1CF1007BC2FC /* ZZHQuoteCalendarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteCalendarVC.xib; sourceTree = "<group>"; };
+		18468758247D1CF1007BC2FC /* ZZHQuotesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuotesVC.m; sourceTree = "<group>"; };
+		18468759247D1CF1007BC2FC /* ZZHQuoteTimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteTimeVC.m; sourceTree = "<group>"; };
+		1846875A247D1CF1007BC2FC /* ZZHQuoteTimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteTimeVC.h; sourceTree = "<group>"; };
+		1846875B247D1CF1007BC2FC /* ZZHQuotesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuotesVC.h; sourceTree = "<group>"; };
+		1846875C247D1CF2007BC2FC /* ZZHQuoteCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteCalendarVC.m; sourceTree = "<group>"; };
+		1846875D247D1CF2007BC2FC /* ZZHQuoteCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteCalendarVC.h; sourceTree = "<group>"; };
+		1846875E247D1CF2007BC2FC /* ZZHQuoteIndustryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteIndustryVC.xib; sourceTree = "<group>"; };
+		1846875F247D1CF2007BC2FC /* ZZHQuoteNewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteNewsVC.m; sourceTree = "<group>"; };
+		18468760247D1CF2007BC2FC /* ZZHQuoteIndustryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteIndustryVC.h; sourceTree = "<group>"; };
+		18468761247D1CF2007BC2FC /* ZZHQuoteNewsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteNewsVC.xib; sourceTree = "<group>"; };
+		1846876C247D1D04007BC2FC /* ZZHCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHCollectionViewCell.m; sourceTree = "<group>"; };
+		1846876D247D1D04007BC2FC /* ZZHImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHImageTableViewCell.xib; sourceTree = "<group>"; };
+		1846876E247D1D04007BC2FC /* ZZHDateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHDateTableViewCell.xib; sourceTree = "<group>"; };
+		1846876F247D1D04007BC2FC /* ZZHImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHImageTableViewCell.h; sourceTree = "<group>"; };
+		18468770247D1D05007BC2FC /* ZZHTimeLineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHTimeLineTableViewCell.m; sourceTree = "<group>"; };
+		18468771247D1D05007BC2FC /* ZZHDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHDateTableViewCell.m; sourceTree = "<group>"; };
+		18468772247D1D05007BC2FC /* ZZHDateCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHDateCollectionViewCell.h; sourceTree = "<group>"; };
+		18468773247D1D05007BC2FC /* ZZHTimeLineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHTimeLineTableViewCell.h; sourceTree = "<group>"; };
+		18468774247D1D05007BC2FC /* ZZHDateCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHDateCollectionViewCell.m; sourceTree = "<group>"; };
+		18468775247D1D05007BC2FC /* ZZHDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHDateTableViewCell.h; sourceTree = "<group>"; };
+		18468776247D1D05007BC2FC /* ZZHImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHImageTableViewCell.m; sourceTree = "<group>"; };
+		18468777247D1D06007BC2FC /* ZZHTimeLineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHTimeLineTableViewCell.xib; sourceTree = "<group>"; };
+		18468778247D1D06007BC2FC /* ZZHCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHCollectionViewCell.h; sourceTree = "<group>"; };
+		18468779247D1D06007BC2FC /* ZZHDateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHDateCollectionViewCell.xib; sourceTree = "<group>"; };
+		1846877A247D1D06007BC2FC /* ZZHCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHCollectionViewCell.xib; sourceTree = "<group>"; };
+		18468785247D1D0D007BC2FC /* ZZHNewsImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHNewsImageModel.h; sourceTree = "<group>"; };
+		18468786247D1D0D007BC2FC /* ZZHNewsImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHNewsImageModel.m; sourceTree = "<group>"; };
+		18468787247D1D0D007BC2FC /* ZZHQuoteDateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteDateModel.m; sourceTree = "<group>"; };
+		18468788247D1D0D007BC2FC /* ZZHQuoteDateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteDateModel.h; sourceTree = "<group>"; };
+		1846878B247D1D2A007BC2FC /* AttentionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionVC.h; sourceTree = "<group>"; };
+		1846878C247D1D2A007BC2FC /* AttentionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttentionVC.xib; sourceTree = "<group>"; };
+		1846878D247D1D2A007BC2FC /* AttentionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttentionTableViewCell.xib; sourceTree = "<group>"; };
+		1846878E247D1D2B007BC2FC /* AttentionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttentionTableViewCell.m; sourceTree = "<group>"; };
+		1846878F247D1D2B007BC2FC /* AttentionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttentionVC.m; sourceTree = "<group>"; };
+		18468790247D1D2B007BC2FC /* MineEditVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineEditVC.xib; sourceTree = "<group>"; };
+		18468791247D1D2B007BC2FC /* MineDynamicVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineDynamicVC.xib; sourceTree = "<group>"; };
+		18468792247D1D2B007BC2FC /* MineVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineVC.xib; sourceTree = "<group>"; };
+		18468793247D1D2B007BC2FC /* MineDynamicVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineDynamicVC.m; sourceTree = "<group>"; };
+		18468794247D1D2B007BC2FC /* MineEditVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineEditVC.h; sourceTree = "<group>"; };
+		18468795247D1D2C007BC2FC /* AttentionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionTableViewCell.h; sourceTree = "<group>"; };
+		18468796247D1D2C007BC2FC /* MineEditVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineEditVC.m; sourceTree = "<group>"; };
+		18468797247D1D2C007BC2FC /* MineDynamicVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineDynamicVC.h; sourceTree = "<group>"; };
+		18468798247D1D2C007BC2FC /* MineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
+		18468799247D1D2C007BC2FC /* MineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
+		184687A4247D1D53007BC2FC /* MXZHomeIndustryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXZHomeIndustryVC.m; sourceTree = "<group>"; };
+		184687A5247D1D53007BC2FC /* MXZHomeIndustryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeIndustryVC.h; sourceTree = "<group>"; };
+		184687A6247D1D53007BC2FC /* MXZHomeIndustryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeIndustryVC.xib; sourceTree = "<group>"; };
+		184687A9247D1D98007BC2FC /* MXZHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXZHomeVC.m; sourceTree = "<group>"; };
 		1859013E24692D8B00CA7A68 /* PublishVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishVC.h; sourceTree = "<group>"; };
 		1859013F24692D8B00CA7A68 /* PublishVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishVC.m; sourceTree = "<group>"; };
 		1859014024692D8B00CA7A68 /* PublishVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublishVC.xib; sourceTree = "<group>"; };
-		18590148246933DB00CA7A68 /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
-		18590149246933DB00CA7A68 /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
-		1859014A246933DB00CA7A68 /* MineVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineVC.xib; sourceTree = "<group>"; };
 		185901502469462800CA7A68 /* UIImage+OriginalImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+OriginalImage.h"; sourceTree = "<group>"; };
 		185901512469462800CA7A68 /* UIImage+OriginalImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OriginalImage.m"; sourceTree = "<group>"; };
 		185AC2AB246E899D006EC3E6 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		185AC2AC246E899D006EC3E6 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		18699CFB247B544F000A1022 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		18699CFC247B544F000A1022 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
-		18699CFE247B5B7E000A1022 /* MineEditVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineEditVC.h; sourceTree = "<group>"; };
-		18699CFF247B5B7E000A1022 /* MineEditVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineEditVC.m; sourceTree = "<group>"; };
-		18699D00247B5B7E000A1022 /* MineEditVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineEditVC.xib; sourceTree = "<group>"; };
 		18699D03247B729C000A1022 /* MineInformationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInformationModel.h; sourceTree = "<group>"; };
 		18699D04247B729C000A1022 /* MineInformationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineInformationModel.m; sourceTree = "<group>"; };
 		18699D09247B90F1000A1022 /* MineInformationNameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineInformationNameView.xib; sourceTree = "<group>"; };
@@ -276,9 +331,6 @@
 		18699D14247BB55E000A1022 /* MineInformationSexView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInformationSexView.h; sourceTree = "<group>"; };
 		18699D15247BB55E000A1022 /* MineInformationSexView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineInformationSexView.m; sourceTree = "<group>"; };
 		18699D17247BB56A000A1022 /* MineInformationSexView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineInformationSexView.xib; sourceTree = "<group>"; };
-		186AF247247631AD00D5B14B /* MineDynamicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineDynamicVC.h; sourceTree = "<group>"; };
-		186AF248247631AD00D5B14B /* MineDynamicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineDynamicVC.m; sourceTree = "<group>"; };
-		186AF249247631AD00D5B14B /* MineDynamicVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineDynamicVC.xib; sourceTree = "<group>"; };
 		189BD81A246D1B9400490E35 /* MineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
 		189BD81B246D1B9400490E35 /* MineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineModel.m; sourceTree = "<group>"; };
 		189BD81D246D45C300490E35 /* CommunityChildAVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityChildAVC.h; sourceTree = "<group>"; };
@@ -308,27 +360,6 @@
 		18C2DE282473DD9700116E2E /* CommunityFriendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityFriendCell.h; sourceTree = "<group>"; };
 		18C2DE292473DD9700116E2E /* CommunityFriendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityFriendCell.m; sourceTree = "<group>"; };
 		18C2DE2A2473DD9700116E2E /* CommunityFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityFriendCell.xib; sourceTree = "<group>"; };
-		18C5815B2476164600DC41EA /* ZZHQuotesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuotesVC.xib; sourceTree = "<group>"; };
-		18C5815C2476164700DC41EA /* ZZHQuoteCalendarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteCalendarVC.xib; sourceTree = "<group>"; };
-		18C5815D2476164700DC41EA /* ZZHQuoteCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteCalendarVC.h; sourceTree = "<group>"; };
-		18C5815E2476164700DC41EA /* ZZHQuoteNewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteNewsVC.h; sourceTree = "<group>"; };
-		18C5815F2476164700DC41EA /* ZZHQuoteNewsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteNewsVC.xib; sourceTree = "<group>"; };
-		18C581602476164700DC41EA /* ZZHQuoteCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteCalendarVC.m; sourceTree = "<group>"; };
-		18C581612476164700DC41EA /* ZZHQuotesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuotesVC.m; sourceTree = "<group>"; };
-		18C581622476164700DC41EA /* ZZHQuoteIndustryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteIndustryVC.h; sourceTree = "<group>"; };
-		18C581632476164700DC41EA /* ZZHQuoteTimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteTimeVC.h; sourceTree = "<group>"; };
-		18C581642476164800DC41EA /* ZZHQuotesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuotesVC.h; sourceTree = "<group>"; };
-		18C581652476164800DC41EA /* ZZHQuoteIndustryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteIndustryVC.m; sourceTree = "<group>"; };
-		18C581662476164800DC41EA /* ZZHQuoteTimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteTimeVC.m; sourceTree = "<group>"; };
-		18C581672476164800DC41EA /* ZZHQuoteNewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteNewsVC.m; sourceTree = "<group>"; };
-		18C581682476164900DC41EA /* ZZHQuoteTimeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteTimeVC.xib; sourceTree = "<group>"; };
-		18C581692476164900DC41EA /* ZZHQuoteIndustryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteIndustryVC.xib; sourceTree = "<group>"; };
-		18C581742476164C00DC41EA /* ZZHDateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHDateCollectionViewCell.xib; sourceTree = "<group>"; };
-		18C581752476164C00DC41EA /* ZZHDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHDateTableViewCell.m; sourceTree = "<group>"; };
-		18C581762476164C00DC41EA /* ZZHDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHDateTableViewCell.h; sourceTree = "<group>"; };
-		18C581772476164C00DC41EA /* ZZHDateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHDateTableViewCell.xib; sourceTree = "<group>"; };
-		18C581782476164D00DC41EA /* ZZHDateCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHDateCollectionViewCell.h; sourceTree = "<group>"; };
-		18C581792476164D00DC41EA /* ZZHDateCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHDateCollectionViewCell.m; sourceTree = "<group>"; };
 		18E8AC722474BDA300E3D7C4 /* CommunityFriendViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityFriendViewCell.h; sourceTree = "<group>"; };
 		18E8AC732474BDA300E3D7C4 /* CommunityFriendViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityFriendViewCell.m; sourceTree = "<group>"; };
 		18E8AC742474BDA300E3D7C4 /* CommunityFriendViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityFriendViewCell.xib; sourceTree = "<group>"; };
@@ -392,7 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				15263682246E771D00D01BE0 /* MXZHomeVC.h */,
-				1526367E246E771D00D01BE0 /* MXZHomeVC.m */,
+				184687A9247D1D98007BC2FC /* MXZHomeVC.m */,
 				15263681246E771D00D01BE0 /* MXZHomeVC.xib */,
 				1526367D246E771D00D01BE0 /* MXZHomeCalendarVC.h */,
 				15263683246E771D00D01BE0 /* MXZHomeCalendarVC.m */,
@@ -400,11 +431,11 @@
 				1526367B246E771D00D01BE0 /* MXZHomeExpressVC.h */,
 				15263680246E771D00D01BE0 /* MXZHomeExpressVC.m */,
 				15263678246E771D00D01BE0 /* MXZHomeExpressVC.xib */,
-				15263679246E771D00D01BE0 /* MXZHomeIndustryVC.h */,
-				1526367F246E771D00D01BE0 /* MXZHomeIndustryVC.m */,
-				15263684246E771D00D01BE0 /* MXZHomeIndustryVC.xib */,
 				15263685246E771D00D01BE0 /* MXZHomeQuoteVC.h */,
 				1526367C246E771D00D01BE0 /* MXZHomeQuoteVC.m */,
+				184687A5247D1D53007BC2FC /* MXZHomeIndustryVC.h */,
+				184687A4247D1D53007BC2FC /* MXZHomeIndustryVC.m */,
+				184687A6247D1D53007BC2FC /* MXZHomeIndustryVC.xib */,
 				15263677246E771D00D01BE0 /* MXZHomeQuoteVC.xib */,
 				15CDF74D2473BAFD00B2811F /* MXZTtileVC.h */,
 				15CDF74E2473BAFD00B2811F /* MXZTtileVC.m */,
@@ -551,6 +582,10 @@
 		185AC2AF246E8B6F006EC3E6 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				18468785247D1D0D007BC2FC /* ZZHNewsImageModel.h */,
+				18468786247D1D0D007BC2FC /* ZZHNewsImageModel.m */,
+				18468788247D1D0D007BC2FC /* ZZHQuoteDateModel.h */,
+				18468787247D1D0D007BC2FC /* ZZHQuoteDateModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -558,12 +593,21 @@
 		185AC2B0246E8B73006EC3E6 /* V */ = {
 			isa = PBXGroup;
 			children = (
-				18C581782476164D00DC41EA /* ZZHDateCollectionViewCell.h */,
-				18C581792476164D00DC41EA /* ZZHDateCollectionViewCell.m */,
-				18C581742476164C00DC41EA /* ZZHDateCollectionViewCell.xib */,
-				18C581762476164C00DC41EA /* ZZHDateTableViewCell.h */,
-				18C581752476164C00DC41EA /* ZZHDateTableViewCell.m */,
-				18C581772476164C00DC41EA /* ZZHDateTableViewCell.xib */,
+				18468778247D1D06007BC2FC /* ZZHCollectionViewCell.h */,
+				1846876C247D1D04007BC2FC /* ZZHCollectionViewCell.m */,
+				1846877A247D1D06007BC2FC /* ZZHCollectionViewCell.xib */,
+				18468772247D1D05007BC2FC /* ZZHDateCollectionViewCell.h */,
+				18468774247D1D05007BC2FC /* ZZHDateCollectionViewCell.m */,
+				18468779247D1D06007BC2FC /* ZZHDateCollectionViewCell.xib */,
+				18468775247D1D05007BC2FC /* ZZHDateTableViewCell.h */,
+				18468771247D1D05007BC2FC /* ZZHDateTableViewCell.m */,
+				1846876E247D1D04007BC2FC /* ZZHDateTableViewCell.xib */,
+				1846876F247D1D04007BC2FC /* ZZHImageTableViewCell.h */,
+				18468776247D1D05007BC2FC /* ZZHImageTableViewCell.m */,
+				1846876D247D1D04007BC2FC /* ZZHImageTableViewCell.xib */,
+				18468773247D1D05007BC2FC /* ZZHTimeLineTableViewCell.h */,
+				18468770247D1D05007BC2FC /* ZZHTimeLineTableViewCell.m */,
+				18468777247D1D06007BC2FC /* ZZHTimeLineTableViewCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -571,21 +615,21 @@
 		185AC2B1246E8B78006EC3E6 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				18C5815D2476164700DC41EA /* ZZHQuoteCalendarVC.h */,
-				18C581602476164700DC41EA /* ZZHQuoteCalendarVC.m */,
-				18C5815C2476164700DC41EA /* ZZHQuoteCalendarVC.xib */,
-				18C581622476164700DC41EA /* ZZHQuoteIndustryVC.h */,
-				18C581652476164800DC41EA /* ZZHQuoteIndustryVC.m */,
-				18C581692476164900DC41EA /* ZZHQuoteIndustryVC.xib */,
-				18C5815E2476164700DC41EA /* ZZHQuoteNewsVC.h */,
-				18C581672476164800DC41EA /* ZZHQuoteNewsVC.m */,
-				18C5815F2476164700DC41EA /* ZZHQuoteNewsVC.xib */,
-				18C581642476164800DC41EA /* ZZHQuotesVC.h */,
-				18C581612476164700DC41EA /* ZZHQuotesVC.m */,
-				18C5815B2476164600DC41EA /* ZZHQuotesVC.xib */,
-				18C581632476164700DC41EA /* ZZHQuoteTimeVC.h */,
-				18C581662476164800DC41EA /* ZZHQuoteTimeVC.m */,
-				18C581682476164900DC41EA /* ZZHQuoteTimeVC.xib */,
+				1846875D247D1CF2007BC2FC /* ZZHQuoteCalendarVC.h */,
+				1846875C247D1CF2007BC2FC /* ZZHQuoteCalendarVC.m */,
+				18468757247D1CF1007BC2FC /* ZZHQuoteCalendarVC.xib */,
+				18468760247D1CF2007BC2FC /* ZZHQuoteIndustryVC.h */,
+				18468754247D1CF0007BC2FC /* ZZHQuoteIndustryVC.m */,
+				1846875E247D1CF2007BC2FC /* ZZHQuoteIndustryVC.xib */,
+				18468753247D1CF0007BC2FC /* ZZHQuoteNewsVC.h */,
+				1846875F247D1CF2007BC2FC /* ZZHQuoteNewsVC.m */,
+				18468761247D1CF2007BC2FC /* ZZHQuoteNewsVC.xib */,
+				1846875B247D1CF1007BC2FC /* ZZHQuotesVC.h */,
+				18468758247D1CF1007BC2FC /* ZZHQuotesVC.m */,
+				18468756247D1CF1007BC2FC /* ZZHQuotesVC.xib */,
+				1846875A247D1CF1007BC2FC /* ZZHQuoteTimeVC.h */,
+				18468759247D1CF1007BC2FC /* ZZHQuoteTimeVC.m */,
+				18468755247D1CF0007BC2FC /* ZZHQuoteTimeVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -660,15 +704,21 @@
 		185AC2BC246E8C88006EC3E6 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				18590148246933DB00CA7A68 /* MineVC.h */,
-				18590149246933DB00CA7A68 /* MineVC.m */,
-				1859014A246933DB00CA7A68 /* MineVC.xib */,
-				186AF247247631AD00D5B14B /* MineDynamicVC.h */,
-				186AF248247631AD00D5B14B /* MineDynamicVC.m */,
-				186AF249247631AD00D5B14B /* MineDynamicVC.xib */,
-				18699CFE247B5B7E000A1022 /* MineEditVC.h */,
-				18699CFF247B5B7E000A1022 /* MineEditVC.m */,
-				18699D00247B5B7E000A1022 /* MineEditVC.xib */,
+				18468795247D1D2C007BC2FC /* AttentionTableViewCell.h */,
+				1846878E247D1D2B007BC2FC /* AttentionTableViewCell.m */,
+				1846878D247D1D2A007BC2FC /* AttentionTableViewCell.xib */,
+				1846878B247D1D2A007BC2FC /* AttentionVC.h */,
+				1846878F247D1D2B007BC2FC /* AttentionVC.m */,
+				1846878C247D1D2A007BC2FC /* AttentionVC.xib */,
+				18468797247D1D2C007BC2FC /* MineDynamicVC.h */,
+				18468793247D1D2B007BC2FC /* MineDynamicVC.m */,
+				18468791247D1D2B007BC2FC /* MineDynamicVC.xib */,
+				18468794247D1D2B007BC2FC /* MineEditVC.h */,
+				18468796247D1D2C007BC2FC /* MineEditVC.m */,
+				18468790247D1D2B007BC2FC /* MineEditVC.xib */,
+				18468798247D1D2C007BC2FC /* MineVC.h */,
+				18468799247D1D2C007BC2FC /* MineVC.m */,
+				18468792247D1D2B007BC2FC /* MineVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -848,9 +898,7 @@
 			files = (
 				152636A3246E771D00D01BE0 /* MXZHomeThirdSectionHeadView.xib in Resources */,
 				152636A9246E771D00D01BE0 /* MXZHomeSecondSectionFootView.xib in Resources */,
-				18C581722476164900DC41EA /* ZZHQuoteTimeVC.xib in Resources */,
 				151AC19B247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib in Resources */,
-				18C5816C2476164900DC41EA /* ZZHQuoteNewsVC.xib in Resources */,
 				18E8AC762474BDA300E3D7C4 /* CommunityFriendViewCell.xib in Resources */,
 				151A95AB247BA995007F3AAB /* MXZSettingCenterVC.xib in Resources */,
 				15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */,
@@ -861,9 +909,9 @@
 				189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */,
 				151A95B5247BBA3B007F3AAB /* MXZAboutUsVC.xib in Resources */,
 				15A6F1C5247524E2002C0930 /* MXZFullThirdSectionCell.xib in Resources */,
-				18C5816A2476164900DC41EA /* ZZHQuotesVC.xib in Resources */,
 				151AC19A247259A500EAE0BD /* MXZHomeNavSearchView.xib in Resources */,
 				1564961F2477CA56006745E8 /* MXZQuestionWeekItem.xib in Resources */,
+				18468783247D1D06007BC2FC /* ZZHDateCollectionViewCell.xib in Resources */,
 				152636A4246E771D00D01BE0 /* MXZHomeFourthCollectionCell.xib in Resources */,
 				157A71712477A526003D0081 /* MXZAnswerCell.xib in Resources */,
 				152636A8246E771D00D01BE0 /* MXZHomeFifthSectionCell.xib in Resources */,
@@ -872,34 +920,41 @@
 				1517AC6D247CA579007BC789 /* MXZFeedbackVC.xib in Resources */,
 				18C2DE232473BB1C00116E2E /* CommunityTopicCell.xib in Resources */,
 				157A7164247676CE003D0081 /* MXZSignPopView.xib in Resources */,
+				1846877C247D1D06007BC2FC /* ZZHImageTableViewCell.xib in Resources */,
+				1846876B247D1CF2007BC2FC /* ZZHQuoteNewsVC.xib in Resources */,
 				18E8AC822474D51D00E3D7C4 /* CommunityBannerCell.xib in Resources */,
 				1859014224692D8B00CA7A68 /* PublishVC.xib in Resources */,
 				15263697246E771D00D01BE0 /* MXZHomeExpressVC.xib in Resources */,
 				18C2DE192473788900116E2E /* CommunityBannerViewCell.xib in Resources */,
 				18C2DE2C2473DD9700116E2E /* CommunityFriendCell.xib in Resources */,
 				151A95B0247BB82F007F3AAB /* MXZMessageCenterVC.xib in Resources */,
-				18C581732476164900DC41EA /* ZZHQuoteIndustryVC.xib in Resources */,
+				18468764247D1CF2007BC2FC /* ZZHQuotesVC.xib in Resources */,
 				154C26B8247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib in Resources */,
 				18BD94F6247290D5005A84B5 /* CommunityVC.xib in Resources */,
 				154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */,
 				15CDFADC2474D49800B2811F /* MXZFullSecondSectionCell.xib in Resources */,
+				18468765247D1CF2007BC2FC /* ZZHQuoteCalendarVC.xib in Resources */,
+				18468784247D1D06007BC2FC /* ZZHCollectionViewCell.xib in Resources */,
 				152636A0246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib in Resources */,
+				1846879A247D1D2C007BC2FC /* AttentionVC.xib in Resources */,
+				1846879F247D1D2C007BC2FC /* MineDynamicVC.xib in Resources */,
 				15CDFAE32475036200B2811F /* MXZFullThirdSectionHeadView.xib in Resources */,
-				18C5817A2476164D00DC41EA /* ZZHDateCollectionViewCell.xib in Resources */,
-				1526369F246E771D00D01BE0 /* MXZHomeIndustryVC.xib in Resources */,
-				18C5816B2476164900DC41EA /* ZZHQuoteCalendarVC.xib in Resources */,
+				184687A0247D1D2C007BC2FC /* MineVC.xib in Resources */,
+				18468763247D1CF2007BC2FC /* ZZHQuoteTimeVC.xib in Resources */,
+				1846879E247D1D2C007BC2FC /* MineEditVC.xib in Resources */,
 				152636A6246E771D00D01BE0 /* MXZHomeFourthSectionHeadView.xib in Resources */,
+				184687A8247D1D53007BC2FC /* MXZHomeIndustryVC.xib in Resources */,
+				1846877D247D1D06007BC2FC /* ZZHDateTableViewCell.xib in Resources */,
+				1846879B247D1D2C007BC2FC /* AttentionTableViewCell.xib in Resources */,
 				15A6F1CF24752C15002C0930 /* MXZFullFourthSectionCell.xib in Resources */,
 				154DFC702468F4B00098498C /* Assets.xcassets in Resources */,
+				18468769247D1CF2007BC2FC /* ZZHQuoteIndustryVC.xib in Resources */,
 				15263696246E771D00D01BE0 /* MXZHomeQuoteVC.xib in Resources */,
 				15A6F1D124753351002C0930 /* MXZFullFourthSectionFootVIew.xib in Resources */,
-				18C5817C2476164D00DC41EA /* ZZHDateTableViewCell.xib in Resources */,
 				157A71732477B14F003D0081 /* MXZAnswerWeekItem.xib in Resources */,
-				1859014C246933DB00CA7A68 /* MineVC.xib in Resources */,
 				15CDFAD72474C95900B2811F /* MXZFullFirstSectionCell.xib in Resources */,
-				18699D02247B5B7E000A1022 /* MineEditVC.xib in Resources */,
 				18AA2BC3246E23B1000801B1 /* CommunityChildBVC.xib in Resources */,
-				186AF24B247631AD00D5B14B /* MineDynamicVC.xib in Resources */,
+				18468782247D1D06007BC2FC /* ZZHTimeLineTableViewCell.xib in Resources */,
 				15CDFADE2474F83800B2811F /* MXZFullSecondSectionFootView.xib in Resources */,
 				152636AA246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib in Resources */,
 				1526369D246E771D00D01BE0 /* MXZHomeVC.xib in Resources */,
@@ -963,16 +1018,20 @@
 				189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */,
 				18699D0E247B998A000A1022 /* MineInformationNameView.m in Sources */,
 				15CDFAD62474C95900B2811F /* MXZFullFirstSectionCell.m in Sources */,
+				184687AA247D1D98007BC2FC /* MXZHomeVC.m in Sources */,
 				15A6F1C4247524E2002C0930 /* MXZFullThirdSectionCell.m in Sources */,
 				18A584882472544400C0437F /* ListViewController.m in Sources */,
-				18C5816E2476164900DC41EA /* ZZHQuotesVC.m in Sources */,
+				18468780247D1D06007BC2FC /* ZZHDateCollectionViewCell.m in Sources */,
 				1517AC6C247CA579007BC789 /* MXZFeedbackVC.m in Sources */,
+				18468762247D1CF2007BC2FC /* ZZHQuoteIndustryVC.m in Sources */,
 				181F5036246B908500CCCBDB /* CustomTBC.m in Sources */,
+				18468781247D1D06007BC2FC /* ZZHImageTableViewCell.m in Sources */,
 				1564961E2477CA56006745E8 /* MXZQuestionWeekItem.m in Sources */,
 				18C2DE222473BB1C00116E2E /* CommunityTopicCell.m in Sources */,
 				157A716B2477A282003D0081 /* MXZAnswerVC.m in Sources */,
-				18C581702476164900DC41EA /* ZZHQuoteTimeVC.m in Sources */,
-				18C5817B2476164D00DC41EA /* ZZHDateTableViewCell.m in Sources */,
+				1846879D247D1D2C007BC2FC /* AttentionVC.m in Sources */,
+				1846877B247D1D06007BC2FC /* ZZHCollectionViewCell.m in Sources */,
+				18468768247D1CF2007BC2FC /* ZZHQuoteCalendarVC.m in Sources */,
 				152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */,
 				18E8AC752474BDA300E3D7C4 /* CommunityFriendViewCell.m in Sources */,
 				151A95AF247BB82F007F3AAB /* MXZMessageCenterVC.m in Sources */,
@@ -987,47 +1046,50 @@
 				18699D05247B729C000A1022 /* MineInformationModel.m in Sources */,
 				18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */,
 				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,
+				1846876A247D1CF2007BC2FC /* ZZHQuoteNewsVC.m in Sources */,
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
+				18468767247D1CF2007BC2FC /* ZZHQuoteTimeVC.m in Sources */,
 				15CDFAD12474C2FB00B2811F /* MXZFullDisplay.m in Sources */,
 				152636A7246E771D00D01BE0 /* MXZHomeFifthSectionCell.m in Sources */,
-				18699D01247B5B7E000A1022 /* MineEditVC.m in Sources */,
+				18468789247D1D0D007BC2FC /* ZZHNewsImageModel.m in Sources */,
+				1846879C247D1D2C007BC2FC /* AttentionTableViewCell.m in Sources */,
 				151AC19F24726AAF00EAE0BD /* MXZIndustryTableViewCell.m in Sources */,
+				184687A3247D1D2C007BC2FC /* MineVC.m in Sources */,
 				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
 				15A6F1C0247513F7002C0930 /* MXZFullThirdSectionHeadView.m in Sources */,
 				152636A2246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m in Sources */,
+				184687A2247D1D2C007BC2FC /* MineEditVC.m in Sources */,
 				151AC199247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m in Sources */,
 				156496222477D1D6006745E8 /* MXZAnswerABCButton.m in Sources */,
 				157A71762477B393003D0081 /* MXZAnswerWeekItem.m in Sources */,
 				151A95B4247BBA3B007F3AAB /* MXZAboutUsVC.m in Sources */,
 				157A7163247676CE003D0081 /* MXZSignPopView.m in Sources */,
 				15CDFADB2474D49800B2811F /* MXZFullSecondSectionCell.m in Sources */,
+				1846878A247D1D0D007BC2FC /* ZZHQuoteDateModel.m in Sources */,
+				184687A1247D1D2C007BC2FC /* MineDynamicVC.m in Sources */,
 				1526369C246E771D00D01BE0 /* MXZHomeExpressVC.m in Sources */,
-				18C581712476164900DC41EA /* ZZHQuoteNewsVC.m in Sources */,
-				18C5817D2476164D00DC41EA /* ZZHDateCollectionViewCell.m in Sources */,
 				1859014124692D8B00CA7A68 /* PublishVC.m in Sources */,
-				1859014B246933DB00CA7A68 /* MineVC.m in Sources */,
 				18699D16247BB55E000A1022 /* MineInformationSexView.m in Sources */,
-				1526369A246E771D00D01BE0 /* MXZHomeVC.m in Sources */,
 				18A584872472544400C0437F /* ContentBaseViewController.m in Sources */,
 				154DFC762468F4B00098498C /* main.m in Sources */,
+				184687A7247D1D53007BC2FC /* MXZHomeIndustryVC.m in Sources */,
 				18699CFD247B544F000A1022 /* UIImage+Image.m in Sources */,
 				15A6F1C92475276E002C0930 /* MXZFullThirdCollectionCell.m in Sources */,
 				151A95AA247BA995007F3AAB /* MXZSettingCenterVC.m in Sources */,
+				1846877E247D1D06007BC2FC /* ZZHTimeLineTableViewCell.m in Sources */,
 				15A6F1CE24752C15002C0930 /* MXZFullFourthSectionCell.m in Sources */,
-				18C5816F2476164900DC41EA /* ZZHQuoteIndustryVC.m in Sources */,
 				152636A5246E771D00D01BE0 /* MXZHomeFourthSectionCell.m in Sources */,
-				1526369B246E771D00D01BE0 /* MXZHomeIndustryVC.m in Sources */,
+				18468766247D1CF2007BC2FC /* ZZHQuotesVC.m in Sources */,
 				18C2DE2B2473DD9700116E2E /* CommunityFriendCell.m in Sources */,
 				151AC1932472595D00EAE0BD /* ZKCycleScrollView.m in Sources */,
 				157A71702477A526003D0081 /* MXZAnswerCell.m in Sources */,
+				1846877F247D1D06007BC2FC /* ZZHDateTableViewCell.m in Sources */,
 				15593DFC2476123B007B3141 /* MXZHomeNavSearchView.m in Sources */,
 				18E8AC7D2474D2A800E3D7C4 /* CommunityDynamicCell.m in Sources */,
-				186AF24A247631AD00D5B14B /* MineDynamicVC.m in Sources */,
 				18A5849324726CDB00C0437F /* CommunityBannerCell.m in Sources */,
 				18E8AC872474F4CC00E3D7C4 /* CommunityTopicHeaderView.m in Sources */,
 				154C26B7247B8CEF00A9162D /* MXZAnswerTomorrowItem.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,
-				18C5816D2476164900DC41EA /* ZZHQuoteCalendarVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

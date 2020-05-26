@@ -11,6 +11,8 @@
 #import "MXZSettingCenterVC.h"
 #import "MXZMessageCenterVC.h"
 
+#import "AttentionVC.h"
+
 #import "MineDynamicVC.h"
 
 @interface MineVC ()<UITableViewDataSource, UITableViewDelegate>
@@ -45,6 +47,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *mineTableView;
 
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
+
+@property (weak, nonatomic) IBOutlet UIView *AttentionView;
 
 @property (nonatomic, strong)NSArray *mineArray;
 
@@ -106,6 +110,22 @@
     _alertView.layer.masksToBounds = YES;
     
     self.view.backgroundColor = UIColorWithRGBA(240, 240, 240, 1);
+    
+    self.AttentionView.userInteractionEnabled = YES;
+    [self clickGes];
+}
+
+- (void)clickGes {
+    //添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickGes:)];
+    [self.AttentionView addGestureRecognizer:tap];
+}
+
+- (void)clickGes: (UITapGestureRecognizer *)tap {
+    AttentionVC *attentionVC = [[AttentionVC alloc] init];
+    if (tap > 0) {
+        [self.navigationController pushViewController:attentionVC animated:YES];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

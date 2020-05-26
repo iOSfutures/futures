@@ -18,7 +18,6 @@
 @implementation MXZHomeIndustryVC
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
     self.navigationItem.title = @"行业风暴";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
@@ -28,9 +27,14 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
 }
 
+- (UIView *)listView
+{
+    return self.view;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.tabBarController.tabBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = self.isTabBarHidden;
 }
 
 

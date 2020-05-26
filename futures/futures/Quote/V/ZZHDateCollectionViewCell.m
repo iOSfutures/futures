@@ -7,6 +7,7 @@
 //
 
 #import "ZZHDateCollectionViewCell.h"
+#import "ZZHQuoteCalendarVC.h"
 
 @implementation ZZHDateCollectionViewCell
 
@@ -24,5 +25,26 @@
         self.numLabel.text = @"01";
     }
     return self;
+}
+
+-(void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    if (selected) {
+        self.contentView.backgroundColor = [UIColor colorWithHexString:@"#FEF7E7"];
+        self.dateLabel.textColor = [UIColor colorWithHexString:@"#FEA203"];
+        self.numLabel.textColor = [UIColor colorWithHexString:@"#FEA203"];
+        UIView *pointView = [UIView new];
+        pointView.backgroundColor = [UIColor colorWithHexString:@"#FEA203"];
+        pointView.frame = CGRectMake(12.5, 66, 3, 3);
+        [self.contentView addSubview:pointView];
+    } else {
+        self.contentView.backgroundColor = UIColorWithRGBA(255, 255, 255,0);
+        self.dateLabel.textColor = UIColor.blackColor;
+        self.numLabel.textColor = UIColor.blackColor;
+        UIView *pointView = [UIView new];
+        pointView.backgroundColor = UIColorWithRGBA(255, 255, 255, 0);
+        
+        
+    }
 }
 @end

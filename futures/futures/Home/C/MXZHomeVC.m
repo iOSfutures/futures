@@ -249,6 +249,7 @@
 
 -(void)industryBtnClick{
     MXZHomeIndustryVC *industryVC = [[MXZHomeIndustryVC alloc]init];
+    industryVC.tabBarHidden = YES;
     [self.navigationController pushViewController:industryVC animated:YES];
 }
 

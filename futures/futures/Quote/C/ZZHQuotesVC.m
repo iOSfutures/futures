@@ -11,6 +11,7 @@
 #import "ZZHQuoteCalendarVC.h"
 #import "ZZHQuoteIndustryVC.h"
 #import "ZZHQuoteNewsVC.h"
+#import "MXZHomeIndustryVC.h"
 
 #import "UIColor+Hex.h"
 #import "JXCategoryTitleView.h"
@@ -70,7 +71,7 @@
 
 
 -(NSInteger)numberOfListsInlistContainerView:(JXCategoryListContainerView *)listContainerView{
-    return  2;
+    return  4;
 }
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
     if (index == 0)
@@ -83,10 +84,11 @@
         ZZHQuoteCalendarVC *quoteCalendarVC = [ZZHQuoteCalendarVC new];
         return quoteCalendarVC;
     }
-    else if(index == 1)
+    else if(index == 2)
     {
-        ZZHQuoteIndustryVC *quoteIndustryVC = [ZZHQuoteIndustryVC new];
-        return quoteIndustryVC;
+        MXZHomeIndustryVC *industryVC = [[MXZHomeIndustryVC alloc]init];
+        industryVC.tabBarHidden = NO;
+        return industryVC;
     }
     else
     {

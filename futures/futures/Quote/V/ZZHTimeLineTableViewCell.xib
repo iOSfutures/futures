@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="127" id="KGk-i7-Jjw" customClass="ZZHTimeLineTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCz-Bc-hIt">
+                        <rect key="frame" x="75" y="10" width="230" height="107"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="NYMEX纽约原油6月期货受移仓换月影响，5月22日凌晨2:30完成场内最后交易，请留意交易场所到期换月公告控制风险。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RI6-ll-JT0">
+                                <rect key="frame" x="20" y="23" width="190" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOj-Kf-Ef1">
+                                <rect key="frame" x="211" y="75" width="9" height="22"/>
+                                <state key="normal" image="ic_delete_qoutation"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.63529411759999999" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="RI6-ll-JT0" secondAttribute="bottom" constant="38" id="FFV-58-Dgi"/>
+                            <constraint firstAttribute="bottom" secondItem="aOj-Kf-Ef1" secondAttribute="bottom" constant="10" id="IzM-Bb-Nt7"/>
+                            <constraint firstAttribute="trailing" secondItem="aOj-Kf-Ef1" secondAttribute="trailing" constant="10" id="JjC-uX-dLx"/>
+                            <constraint firstItem="RI6-ll-JT0" firstAttribute="top" secondItem="YCz-Bc-hIt" secondAttribute="top" constant="23" id="RhB-UP-03E"/>
+                            <constraint firstAttribute="trailing" secondItem="RI6-ll-JT0" secondAttribute="trailing" constant="20" id="dN8-tN-ukL"/>
+                            <constraint firstItem="RI6-ll-JT0" firstAttribute="leading" secondItem="YCz-Bc-hIt" secondAttribute="leading" constant="20" id="si0-tF-Ho7"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TimelinePoint_qoutation" translatesAutoresizingMaskIntoConstraints="NO" id="BYR-xb-uVA">
+                        <rect key="frame" x="50.5" y="8" width="12" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="11" id="Aa8-cV-AYv"/>
+                            <constraint firstAttribute="width" constant="12" id="qxD-8G-GBr"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsk-SD-MPI">
+                        <rect key="frame" x="56" y="19" width="1" height="108"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="Vtn-Wd-JCg"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wX0-AH-qkg">
+                        <rect key="frame" x="56" y="0.0" width="1" height="8"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="Bea-sP-hye"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5f-fZ-YgB">
+                        <rect key="frame" x="16" y="8" width="19" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH6-CF-XZc">
+                        <rect key="frame" x="9.5" y="52" width="32" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gsk-SD-MPI" firstAttribute="top" secondItem="BYR-xb-uVA" secondAttribute="bottom" id="5ed-11-R4y"/>
+                    <constraint firstAttribute="trailing" secondItem="YCz-Bc-hIt" secondAttribute="trailing" constant="15" id="H4g-e1-eP9"/>
+                    <constraint firstItem="YCz-Bc-hIt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="I03-V2-EXV"/>
+                    <constraint firstItem="LH6-CF-XZc" firstAttribute="top" secondItem="m5f-fZ-YgB" secondAttribute="bottom" constant="8" id="IO4-3K-PAN"/>
+                    <constraint firstItem="BYR-xb-uVA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="IkO-7M-I49"/>
+                    <constraint firstItem="m5f-fZ-YgB" firstAttribute="top" secondItem="BYR-xb-uVA" secondAttribute="top" id="KOO-go-GwN"/>
+                    <constraint firstItem="gsk-SD-MPI" firstAttribute="top" secondItem="wX0-AH-qkg" secondAttribute="bottom" constant="11" id="Ta4-W7-fzt"/>
+                    <constraint firstItem="YCz-Bc-hIt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="75" id="UWz-mv-rCF"/>
+                    <constraint firstItem="wX0-AH-qkg" firstAttribute="leading" secondItem="gsk-SD-MPI" secondAttribute="leading" id="Ve7-gg-op5"/>
+                    <constraint firstItem="m5f-fZ-YgB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Wl3-Wx-JLY"/>
+                    <constraint firstAttribute="bottom" secondItem="YCz-Bc-hIt" secondAttribute="bottom" constant="10" id="hEL-qd-bTu"/>
+                    <constraint firstItem="YCz-Bc-hIt" firstAttribute="leading" secondItem="gsk-SD-MPI" secondAttribute="trailing" constant="18" id="jeU-m2-mT6"/>
+                    <constraint firstItem="BYR-xb-uVA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50.5" id="m1e-aT-gR7"/>
+                    <constraint firstItem="wX0-AH-qkg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oW3-Wd-Yjx"/>
+                    <constraint firstItem="LH6-CF-XZc" firstAttribute="centerX" secondItem="m5f-fZ-YgB" secondAttribute="centerX" id="u8Q-Ic-Qch"/>
+                    <constraint firstAttribute="bottom" secondItem="gsk-SD-MPI" secondAttribute="bottom" id="xNF-dI-1TO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="bottomLine" destination="gsk-SD-MPI" id="Gj7-rL-cWK"/>
+                <outlet property="newsLabel" destination="RI6-ll-JT0" id="eKJ-qq-MhS"/>
+                <outlet property="topLine" destination="wX0-AH-qkg" id="aJy-KY-njh"/>
+            </connections>
+            <point key="canvasLocation" x="166.66666666666669" y="143.63839285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="TimelinePoint_qoutation" width="11" height="11"/>
+        <image name="ic_delete_qoutation" width="8.5" height="8.5"/>
+    </resources>
+</document>

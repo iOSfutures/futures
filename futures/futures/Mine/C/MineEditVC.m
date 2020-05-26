@@ -13,6 +13,8 @@
 #import "MineInformationNameView.h"
 #import "MineInformationSexView.h"
 
+#import <BRPickerView.h>
+
 @interface MineEditVC ()<UITableViewDataSource, UITableViewDelegate, MineInformationNameViewDelegate, MineInformationSexViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImgView;
 
@@ -164,18 +166,58 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == 0 && indexPath.row == 0)
+    if(indexPath.section == 0)
     {
-        MineInformationNameView *mineInformationNameView = [[NSBundle mainBundle]loadNibNamed:@"MineInformationNameView" owner:nil options:nil].firstObject;
-        mineInformationNameView.delegate = self;
-        [self addCoverView:mineInformationNameView];
+        if(indexPath.row == 0)
+        {
+            MineInformationNameView *mineInformationNameView = [[NSBundle mainBundle]loadNibNamed:@"MineInformationNameView" owner:nil options:nil].firstObject;
+            mineInformationNameView.delegate = self;
+            [self addCoverView:mineInformationNameView];
+        }
+        else if(indexPath.row == 1)
+        {
+            MineInformationSexView *mineInformationSexView = [[NSBundle mainBundle]loadNibNamed:@"MineInformationSexView" owner:nil options:nil].firstObject;
+            mineInformationSexView.delegate = self;
+            [self addCoverView:mineInformationSexView];
+        }
+        else if (indexPath.row == 2)
+        {
+            // 1.创建日期选择器
+            BRDatePickerView *datePickerView = [[BRDatePickerView alloc]init];
+            // 2.设置属性
+            datePickerView.pickerMode = BRDatePickerModeYMD;
+            datePickerView.title = @"选择生日";
+//            datePickerView.selectValue = @"1996-06-12";
+//            datePickerView.selectDate = [NSDate br_setYear:1996 month:6 day:12];
+            datePickerView.minDate = [NSDate br_setYear:1900 month:1 day:1];
+            datePickerView.maxDate = [NSDate date];
+            datePickerView.isAutoSelect = YES;
+            datePickerView.resultBlock = ^(NSDate *selectDate, NSString *selectValue) {
+                NSLog(@"选择的值：%@", selectValue);
+                MineInformationModel *mineInformationModel = self.informationArray[0];
+                mineInformationModel.birthday = selectValue;
+                NSArray *indexPaths = @[[NSIndexPath indexPathForRow:2 inSection:0]];
+                [self.mineEditTableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+            };
+            // 设置自定义样式
+            BRPickerStyle *customStyle = [[BRPickerStyle alloc]init];
+            customStyle.maskColor = UIColorWithRGBA(0, 0, 0, 0.6);
+            customStyle.pickerColor = [UIColor whiteColor];
+            customStyle.pickerTextColor = [UIColor colorWithHexString:@"#FCBD26"];
+//            customStyle.selectRowTextColor = [UIColor colorWithHexString:@"#FCBD26"];
+            customStyle.separatorColor = [UIColor colorWithHexString:@"#FDF0DA"];
+            customStyle.titleTextColor = [UIColor colorWithHexString:@"#333333"];
+            customStyle.cancelTextColor = [UIColor colorWithHexString:@"#CCCCCC"];
+            customStyle.doneTextColor = [UIColor colorWithHexString:@"#FCBD26"];
+            customStyle.hiddenTitleLine = YES;
+            datePickerView.pickerStyle = customStyle;
+
+            // 3.显示
+            [datePickerView show];
+        }
     }
-    else if(indexPath.section == 0 && indexPath.row == 1)
-    {
-        MineInformationSexView *mineInformationSexView = [[NSBundle mainBundle]loadNibNamed:@"MineInformationSexView" owner:nil options:nil].firstObject;
-        mineInformationSexView.delegate = self;
-        [self addCoverView:mineInformationSexView];
-    }
+    
+    
 }
 
 - (void)mineInformationNameViewDidClickCancelBtn:(MineInformationNameView *)mineInformationNameView

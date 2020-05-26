@@ -7,6 +7,7 @@
 //
 
 #import "MXZAboutUsVC.h"
+#import "UIImage+OriginalImage.h"
 
 @interface MXZAboutUsVC ()
 @property (weak, nonatomic) IBOutlet UIView *checkView;
@@ -21,6 +22,7 @@
     self.navigationItem.title = @"关于我们";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
     
     //设置checkView阴影
 //    self.checkView.backgroundColor = [UIColor colorWithRed:35/255.0 green:33/255.0 blue:56/255.0 alpha:1.0];
@@ -42,6 +44,9 @@
     self.tabBarController.tabBar.hidden = NO;
 }
 
+-(void)backPreView{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 /*
 #pragma mark - Navigation
 

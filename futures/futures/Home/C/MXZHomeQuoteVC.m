@@ -9,6 +9,7 @@
 #import "MXZHomeQuoteVC.h"
 #import "JXCategoryTitleView.h"
 #import "MXZTtileVC.h"
+#import "UIImage+OriginalImage.h"
 
 @interface MXZHomeQuoteVC ()
 @property (nonatomic, strong) JXCategoryTitleView *myCategoryView;
@@ -22,7 +23,7 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
 //    [self.navigationController popViewControllerAnimated:YES];
 //    [self setTitleView];
-    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -34,6 +35,10 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = NO;
+}
+
+-(void)backPreView{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)setTitleView{

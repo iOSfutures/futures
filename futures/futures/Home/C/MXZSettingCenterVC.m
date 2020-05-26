@@ -8,6 +8,7 @@
 
 #import "MXZSettingCenterVC.h"
 #import "MXZAboutUsVC.h"
+#import "UIImage+OriginalImage.h"
 
 @interface MXZSettingCenterVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -31,6 +32,7 @@
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithHexString:@"#FEA203"];
     self.tableView.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -42,6 +44,10 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = NO;
+}
+
+-(void)backPreView{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

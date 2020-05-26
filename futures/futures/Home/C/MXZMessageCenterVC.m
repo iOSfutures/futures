@@ -7,6 +7,7 @@
 //
 
 #import "MXZMessageCenterVC.h"
+#import "UIImage+OriginalImage.h"
 
 @interface MXZMessageCenterVC ()
 
@@ -20,6 +21,7 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithHexString:@"#FEA203"];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -31,6 +33,10 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = NO;
+}
+
+-(void)backPreView{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

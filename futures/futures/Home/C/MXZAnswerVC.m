@@ -8,6 +8,7 @@
 
 #import "MXZAnswerVC.h"
 #import "MXZAnswerCell.h"
+#import "UIImage+OriginalImage.h"
 
 @interface MXZAnswerVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -18,7 +19,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"答题中心";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.tableView registerNib:[UINib nibWithNibName:@"MXZAnswerCell" bundle:nil] forCellReuseIdentifier:@"MXZAnswerCell"];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = YES;
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = NO;
+}
+
+-(void)backPreView{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -35,15 +54,6 @@
     return cell;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    self.tabBarController.tabBar.hidden = YES;
-}
 
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    self.tabBarController.tabBar.hidden = NO;
-}
 
 @end

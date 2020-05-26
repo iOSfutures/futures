@@ -8,6 +8,7 @@
 
 #import "MXZSignVC.h"
 #import "MXZSignPopView.h"
+#import "UIImage+OriginalImage.h"
 
 @interface MXZSignVC ()
 @property (weak, nonatomic) IBOutlet UIView *titleView;
@@ -27,6 +28,7 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     self.titleView.layer.cornerRadius = 14;
     [self.signBtn addTarget:self action:@selector(popCoverview) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -35,6 +37,10 @@
 
 - (void)viewWillDisappear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = NO;
+}
+
+-(void)backPreView{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)popCoverview{

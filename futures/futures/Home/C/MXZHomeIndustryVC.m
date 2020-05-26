@@ -8,6 +8,7 @@
 
 #import "MXZHomeIndustryVC.h"
 #import "MXZIndustryTableViewCell.h"
+#import "UIImage+OriginalImage.h"
 
 @interface MXZHomeIndustryVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -24,6 +25,7 @@
     //注册
     [self.tableView registerNib:[UINib nibWithNibName:@"MXZIndustryTableViewCell" bundle:nil] forCellReuseIdentifier:@"MXZIndustryTableViewCell"];
 //    self.tableView.estimatedRowHeight = 171;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -35,6 +37,10 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = NO;
+}
+
+-(void)backPreView{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

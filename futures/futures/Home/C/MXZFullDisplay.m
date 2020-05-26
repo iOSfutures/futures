@@ -12,6 +12,7 @@
 #import "MXZFullThirdSectionHeadView.h"
 #import "MXZFullThirdSectionCell.h"
 #import "MXZFullFourthSectionCell.h"
+#import "UIImage+OriginalImage.h"
 
 @interface MXZFullDisplay ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *displayTableview;
@@ -27,7 +28,7 @@
     [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullSecondSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullSecondSectionCell"];
     [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullThirdSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullThirdSectionCell"];
     [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullFourthSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullFourthSectionCell"];
-    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -39,6 +40,10 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = NO;
+}
+
+-(void)backPreView{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

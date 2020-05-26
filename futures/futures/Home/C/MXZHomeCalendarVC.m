@@ -7,6 +7,7 @@
 //
 
 #import "MXZHomeCalendarVC.h"
+#import "UIImage+OriginalImage.h"
 
 @interface MXZHomeCalendarVC ()
 
@@ -18,6 +19,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"日历数据";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -31,6 +33,9 @@
     self.tabBarController.tabBar.hidden = NO;
 }
 
+-(void)backPreView{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 /*
 #pragma mark - Navigation
 

@@ -29,6 +29,7 @@
                 <outlet property="avatarImgView" destination="50f-Kf-0zO" id="5iZ-pJ-u69"/>
                 <outlet property="avatarLeft" destination="aOS-kK-G4l" id="d4l-9Q-miz"/>
                 <outlet property="avatarTop" destination="mlq-m3-sLO" id="b8e-XI-iiP"/>
+                <outlet property="bottomView" destination="Sm6-gs-UGS" id="Cwu-7s-LaC"/>
                 <outlet property="fanViewRight" destination="X4d-TW-kB6" id="K4k-dr-fme"/>
                 <outlet property="favoriteViewBottom" destination="E77-o5-uex" id="i5P-7u-Pos"/>
                 <outlet property="favoriteViewLeft" destination="sNC-US-Xi8" id="p2q-Jc-h8N"/>
@@ -46,7 +47,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tSv-1A-fWM" userLabel="HeaderView">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="393.5"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallhaven-oxv6gl" translatesAutoresizingMaskIntoConstraints="NO" id="50f-Kf-0zO" userLabel="AvatarImgView">
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallhaven-oxv6gl" translatesAutoresizingMaskIntoConstraints="NO" id="50f-Kf-0zO" userLabel="AvatarImgView">
                             <rect key="frame" x="15" y="53.5" width="60.5" height="60.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="50f-Kf-0zO" secondAttribute="height" id="86H-bJ-Q1U"/>
@@ -279,14 +280,14 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XhN-0d-BZ5" userLabel="MineTableView">
-                    <rect key="frame" x="0.0" y="393.5" width="414" height="502.5"/>
+                    <rect key="frame" x="0.0" y="393.5" width="414" height="482.5"/>
                     <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="0.0" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="lVk-OG-FFQ"/>
                         <outlet property="delegate" destination="-1" id="lNp-7h-Wib"/>
                     </connections>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sm6-gs-UGS">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sm6-gs-UGS" userLabel="BottomView">
                     <rect key="frame" x="0.0" y="876" width="414" height="20"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -304,7 +305,7 @@
                 <constraint firstItem="XhN-0d-BZ5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aGb-rM-QTl"/>
                 <constraint firstAttribute="trailing" secondItem="XhN-0d-BZ5" secondAttribute="trailing" id="aqB-M3-usH"/>
                 <constraint firstAttribute="trailing" secondItem="Sm6-gs-UGS" secondAttribute="trailing" id="cGU-cC-vbh"/>
-                <constraint firstItem="XhN-0d-BZ5" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="dth-0B-awO"/>
+                <constraint firstItem="Sm6-gs-UGS" firstAttribute="top" secondItem="XhN-0d-BZ5" secondAttribute="bottom" id="slX-xx-d5Z"/>
                 <constraint firstAttribute="bottom" secondItem="Sm6-gs-UGS" secondAttribute="bottom" id="tEN-6o-gPF"/>
                 <constraint firstItem="Sm6-gs-UGS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tvq-h1-JGC"/>
             </constraints>

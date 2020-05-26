@@ -7,7 +7,7 @@
 //
 
 #import "CommunityChildBVC.h"
-#import "CommunityFiendCell.h"
+#import "CommunityFriendCell.h"
 #import "CommunityDynamicCell.h"
 
 #import "CommunityDynamicModel.h"
@@ -60,7 +60,7 @@ NSString *FriendID2 = @"Friend2";
 
 - (void)viewDidLoad {
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityDynamicCell class]) bundle:nil]forCellReuseIdentifier:DynamicCell2];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityFiendCell class]) bundle:nil] forCellReuseIdentifier:FriendID2];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityFriendCell class]) bundle:nil] forCellReuseIdentifier:FriendID2];
 }
 
 -(UIView *)listView{
@@ -78,7 +78,7 @@ NSString *FriendID2 = @"Friend2";
 {
     if(indexPath.row == 2)
     {
-        CommunityFiendCell *cell = [tableView dequeueReusableCellWithIdentifier:FriendID2];
+        CommunityFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:FriendID2];
         return cell;
     }
     else if(indexPath.row < 2)

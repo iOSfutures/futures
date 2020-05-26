@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MineInformationSexView">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="166"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqd-eK-PNR" userLabel="ConfirmBtn">
+                    <rect key="frame" x="170" y="126" width="170" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="JhD-6y-8E8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="确定"/>
+                    <connections>
+                        <action selector="confirmBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="3G5-3b-V9J"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abE-Fv-mgy" userLabel="CancelBtn">
+                    <rect key="frame" x="0.0" y="126" width="170" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="P2Y-VQ-HbQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="取消"/>
+                    <connections>
+                        <action selector="cancelBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="IbW-T2-E3o"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择你的性别" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIs-T7-e2f">
+                    <rect key="frame" x="120" y="25" width="100" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="W4C-ag-GIX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.20069780949999999" green="0.20068871969999999" blue="0.2006948888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYU-jS-MZE" userLabel="ManBtn">
+                    <rect key="frame" x="40" y="53" width="90" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="xEH-3N-Roc"/>
+                        <constraint firstAttribute="height" constant="60" id="xEe-ef-Cdz"/>
+                    </constraints>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-25" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="-16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="男" image="ic_white">
+                        <color key="titleColor" red="0.20069780949999999" green="0.20068871969999999" blue="0.2006948888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <state key="selected" image="ic_yellow"/>
+                    <state key="highlighted" image="ic_yellow"/>
+                    <connections>
+                        <action selector="manBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Cu9-wk-RB5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43r-uP-9Hw" userLabel="WomanBtn">
+                    <rect key="frame" x="210" y="53" width="90" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="3l1-gH-4xg"/>
+                        <constraint firstAttribute="height" constant="60" id="pod-HN-TDD"/>
+                    </constraints>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-25" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="-16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="女" image="ic_white">
+                        <color key="titleColor" red="0.20069780949999999" green="0.20068871969999999" blue="0.2006948888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <state key="selected" image="ic_yellow"/>
+                    <state key="highlighted" image="ic_yellow"/>
+                    <connections>
+                        <action selector="womanBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="gSq-fJ-JZi"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="abE-Fv-mgy" firstAttribute="top" secondItem="TYU-jS-MZE" secondAttribute="bottom" constant="13" id="3Qa-4l-QCN"/>
+                <constraint firstItem="tIs-T7-e2f" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3Xf-Sf-xvY"/>
+                <constraint firstItem="abE-Fv-mgy" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="7bb-yC-oQM"/>
+                <constraint firstAttribute="bottom" secondItem="Fqd-eK-PNR" secondAttribute="bottom" id="P1B-Nx-SpP"/>
+                <constraint firstItem="TYU-jS-MZE" firstAttribute="centerX" secondItem="abE-Fv-mgy" secondAttribute="centerX" id="Tqs-XE-gue"/>
+                <constraint firstItem="TYU-jS-MZE" firstAttribute="top" secondItem="tIs-T7-e2f" secondAttribute="bottom" constant="15" id="WQt-Y5-hXf"/>
+                <constraint firstItem="Fqd-eK-PNR" firstAttribute="top" secondItem="abE-Fv-mgy" secondAttribute="top" id="XTY-yL-M2K"/>
+                <constraint firstAttribute="bottom" secondItem="abE-Fv-mgy" secondAttribute="bottom" id="cgW-AV-iv0"/>
+                <constraint firstItem="43r-uP-9Hw" firstAttribute="centerX" secondItem="Fqd-eK-PNR" secondAttribute="centerX" id="lLk-ON-3u3"/>
+                <constraint firstAttribute="trailing" secondItem="Fqd-eK-PNR" secondAttribute="trailing" id="p3L-Ve-Ia0"/>
+                <constraint firstItem="abE-Fv-mgy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tge-fi-Aez"/>
+                <constraint firstItem="Fqd-eK-PNR" firstAttribute="leading" secondItem="abE-Fv-mgy" secondAttribute="trailing" id="uPJ-U7-I1Z"/>
+                <constraint firstItem="43r-uP-9Hw" firstAttribute="top" secondItem="TYU-jS-MZE" secondAttribute="top" id="wPY-p4-OmR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="cancelBtn" destination="abE-Fv-mgy" id="VnY-0N-pYf"/>
+                <outlet property="confirmBtn" destination="Fqd-eK-PNR" id="huA-xu-xqY"/>
+                <outlet property="manBtn" destination="TYU-jS-MZE" id="M7F-Zf-h04"/>
+                <outlet property="womanBtn" destination="43r-uP-9Hw" id="CKJ-7g-d0P"/>
+            </connections>
+            <point key="canvasLocation" x="386.95652173913044" y="150"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_white" width="10" height="10"/>
+        <image name="ic_yellow" width="10" height="10"/>
+    </resources>
+</document>

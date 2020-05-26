@@ -6,14 +6,14 @@
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
-#import "CommunityFiendCell.h"
+#import "CommunityFriendCell.h"
 
 #import "TYCyclePagerView.h"
 #import "CommunityFriendViewCell.h"
 
 #import "CommunityFriendModel.h"
 
-@interface CommunityFiendCell()<TYCyclePagerViewDataSource, TYCyclePagerViewDelegate, CommunityFriendViewCellDelegate>
+@interface CommunityFriendCell()<TYCyclePagerViewDataSource, TYCyclePagerViewDelegate, CommunityFriendViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIView *titleView;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation CommunityFiendCell
+@implementation CommunityFriendCell
 
 - (NSArray *)friendsArray
 {

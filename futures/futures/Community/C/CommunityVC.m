@@ -9,7 +9,6 @@
 #import "CommunityVC.h"
 #import "CommunityChildAVC.h"
 #import "CommunityChildBVC.h"
-#import "UIColor+Hex.h"
 #import "UIImage+OriginalImage.h"
 
 #import "JXCategoryTitleView.h"

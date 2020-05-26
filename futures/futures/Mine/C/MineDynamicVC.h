@@ -1,8 +1,8 @@
 //
-//  CommunityFiendCell.h
+//  MineDynamicVC.h
 //  futures
 //
-//  Created by Ssiswent on 2020/5/19.
+//  Created by Ssiswent on 2020/5/21.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CommunityFiendCell : UITableViewCell
+@interface MineDynamicVC : UIViewController
 
 @end
 

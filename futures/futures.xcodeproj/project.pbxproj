@@ -64,6 +64,16 @@
 		1859014C246933DB00CA7A68 /* MineVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859014A246933DB00CA7A68 /* MineVC.xib */; };
 		185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 185901512469462800CA7A68 /* UIImage+OriginalImage.m */; };
 		185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AC2AC246E899D006EC3E6 /* UIColor+Hex.m */; };
+		18699CFD247B544F000A1022 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699CFC247B544F000A1022 /* UIImage+Image.m */; };
+		18699D01247B5B7E000A1022 /* MineEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699CFF247B5B7E000A1022 /* MineEditVC.m */; };
+		18699D02247B5B7E000A1022 /* MineEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18699D00247B5B7E000A1022 /* MineEditVC.xib */; };
+		18699D05247B729C000A1022 /* MineInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D04247B729C000A1022 /* MineInformationModel.m */; };
+		18699D0B247B90F1000A1022 /* MineInformationNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18699D09247B90F1000A1022 /* MineInformationNameView.xib */; };
+		18699D0E247B998A000A1022 /* MineInformationNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D0D247B998A000A1022 /* MineInformationNameView.m */; };
+		18699D16247BB55E000A1022 /* MineInformationSexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D15247BB55E000A1022 /* MineInformationSexView.m */; };
+		18699D18247BB56A000A1022 /* MineInformationSexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18699D17247BB56A000A1022 /* MineInformationSexView.xib */; };
+		186AF24A247631AD00D5B14B /* MineDynamicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 186AF248247631AD00D5B14B /* MineDynamicVC.m */; };
+		186AF24B247631AD00D5B14B /* MineDynamicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186AF249247631AD00D5B14B /* MineDynamicVC.xib */; };
 		189BD81C246D1B9400490E35 /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BD81B246D1B9400490E35 /* MineModel.m */; };
 		189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BD81E246D45C300490E35 /* CommunityChildAVC.m */; };
 		189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189BD81F246D45C300490E35 /* CommunityChildAVC.xib */; };
@@ -79,8 +89,8 @@
 		18C2DE222473BB1C00116E2E /* CommunityTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE202473BB1C00116E2E /* CommunityTopicCell.m */; };
 		18C2DE232473BB1C00116E2E /* CommunityTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2DE212473BB1C00116E2E /* CommunityTopicCell.xib */; };
 		18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE262473C97300116E2E /* CommunityTopicModel.m */; };
-		18C2DE2B2473DD9700116E2E /* CommunityFiendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE292473DD9700116E2E /* CommunityFiendCell.m */; };
-		18C2DE2C2473DD9700116E2E /* CommunityFiendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2DE2A2473DD9700116E2E /* CommunityFiendCell.xib */; };
+		18C2DE2B2473DD9700116E2E /* CommunityFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE292473DD9700116E2E /* CommunityFriendCell.m */; };
+		18C2DE2C2473DD9700116E2E /* CommunityFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2DE2A2473DD9700116E2E /* CommunityFriendCell.xib */; };
 		18C5816A2476164900DC41EA /* ZZHQuotesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C5815B2476164600DC41EA /* ZZHQuotesVC.xib */; };
 		18C5816B2476164900DC41EA /* ZZHQuoteCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C5815C2476164700DC41EA /* ZZHQuoteCalendarVC.xib */; };
 		18C5816C2476164900DC41EA /* ZZHQuoteNewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C5815F2476164700DC41EA /* ZZHQuoteNewsVC.xib */; };
@@ -195,6 +205,22 @@
 		185901512469462800CA7A68 /* UIImage+OriginalImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OriginalImage.m"; sourceTree = "<group>"; };
 		185AC2AB246E899D006EC3E6 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		185AC2AC246E899D006EC3E6 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		18699CFB247B544F000A1022 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		18699CFC247B544F000A1022 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		18699CFE247B5B7E000A1022 /* MineEditVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineEditVC.h; sourceTree = "<group>"; };
+		18699CFF247B5B7E000A1022 /* MineEditVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineEditVC.m; sourceTree = "<group>"; };
+		18699D00247B5B7E000A1022 /* MineEditVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineEditVC.xib; sourceTree = "<group>"; };
+		18699D03247B729C000A1022 /* MineInformationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInformationModel.h; sourceTree = "<group>"; };
+		18699D04247B729C000A1022 /* MineInformationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineInformationModel.m; sourceTree = "<group>"; };
+		18699D09247B90F1000A1022 /* MineInformationNameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineInformationNameView.xib; sourceTree = "<group>"; };
+		18699D0C247B998A000A1022 /* MineInformationNameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInformationNameView.h; sourceTree = "<group>"; };
+		18699D0D247B998A000A1022 /* MineInformationNameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineInformationNameView.m; sourceTree = "<group>"; };
+		18699D14247BB55E000A1022 /* MineInformationSexView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInformationSexView.h; sourceTree = "<group>"; };
+		18699D15247BB55E000A1022 /* MineInformationSexView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineInformationSexView.m; sourceTree = "<group>"; };
+		18699D17247BB56A000A1022 /* MineInformationSexView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineInformationSexView.xib; sourceTree = "<group>"; };
+		186AF247247631AD00D5B14B /* MineDynamicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineDynamicVC.h; sourceTree = "<group>"; };
+		186AF248247631AD00D5B14B /* MineDynamicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineDynamicVC.m; sourceTree = "<group>"; };
+		186AF249247631AD00D5B14B /* MineDynamicVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineDynamicVC.xib; sourceTree = "<group>"; };
 		189BD81A246D1B9400490E35 /* MineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
 		189BD81B246D1B9400490E35 /* MineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineModel.m; sourceTree = "<group>"; };
 		189BD81D246D45C300490E35 /* CommunityChildAVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityChildAVC.h; sourceTree = "<group>"; };
@@ -221,9 +247,9 @@
 		18C2DE212473BB1C00116E2E /* CommunityTopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityTopicCell.xib; sourceTree = "<group>"; };
 		18C2DE252473C97300116E2E /* CommunityTopicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityTopicModel.h; sourceTree = "<group>"; };
 		18C2DE262473C97300116E2E /* CommunityTopicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityTopicModel.m; sourceTree = "<group>"; };
-		18C2DE282473DD9700116E2E /* CommunityFiendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityFiendCell.h; sourceTree = "<group>"; };
-		18C2DE292473DD9700116E2E /* CommunityFiendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityFiendCell.m; sourceTree = "<group>"; };
-		18C2DE2A2473DD9700116E2E /* CommunityFiendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityFiendCell.xib; sourceTree = "<group>"; };
+		18C2DE282473DD9700116E2E /* CommunityFriendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityFriendCell.h; sourceTree = "<group>"; };
+		18C2DE292473DD9700116E2E /* CommunityFriendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityFriendCell.m; sourceTree = "<group>"; };
+		18C2DE2A2473DD9700116E2E /* CommunityFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityFriendCell.xib; sourceTree = "<group>"; };
 		18C5815B2476164600DC41EA /* ZZHQuotesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuotesVC.xib; sourceTree = "<group>"; };
 		18C5815C2476164700DC41EA /* ZZHQuoteCalendarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteCalendarVC.xib; sourceTree = "<group>"; };
 		18C5815D2476164700DC41EA /* ZZHQuoteCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteCalendarVC.h; sourceTree = "<group>"; };
@@ -474,6 +500,8 @@
 		185AC2B5246E8BE8006EC3E6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				18699CFB247B544F000A1022 /* UIImage+Image.h */,
+				18699CFC247B544F000A1022 /* UIImage+Image.m */,
 				185901502469462800CA7A68 /* UIImage+OriginalImage.h */,
 				185901512469462800CA7A68 /* UIImage+OriginalImage.m */,
 				185AC2AB246E899D006EC3E6 /* UIColor+Hex.h */,
@@ -511,6 +539,7 @@
 		185AC2B9246E8C6A006EC3E6 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				18699D06247B908E000A1022 /* V */,
 				18B55134246BCC3900E80DEB /* M */,
 				185AC2BC246E8C88006EC3E6 /* C */,
 			);
@@ -541,6 +570,12 @@
 				18590148246933DB00CA7A68 /* MineVC.h */,
 				18590149246933DB00CA7A68 /* MineVC.m */,
 				1859014A246933DB00CA7A68 /* MineVC.xib */,
+				186AF247247631AD00D5B14B /* MineDynamicVC.h */,
+				186AF248247631AD00D5B14B /* MineDynamicVC.m */,
+				186AF249247631AD00D5B14B /* MineDynamicVC.xib */,
+				18699CFE247B5B7E000A1022 /* MineEditVC.h */,
+				18699CFF247B5B7E000A1022 /* MineEditVC.m */,
+				18699D00247B5B7E000A1022 /* MineEditVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -556,6 +591,19 @@
 				181F5035246B908500CCCBDB /* CustomTBC.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		18699D06247B908E000A1022 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				18699D0C247B998A000A1022 /* MineInformationNameView.h */,
+				18699D0D247B998A000A1022 /* MineInformationNameView.m */,
+				18699D09247B90F1000A1022 /* MineInformationNameView.xib */,
+				18699D14247BB55E000A1022 /* MineInformationSexView.h */,
+				18699D15247BB55E000A1022 /* MineInformationSexView.m */,
+				18699D17247BB56A000A1022 /* MineInformationSexView.xib */,
+			);
+			path = V;
 			sourceTree = "<group>";
 		};
 		18A5848C2472552A00C0437F /* ThirdSDK */ = {
@@ -578,9 +626,9 @@
 				18C2DE1F2473BB1C00116E2E /* CommunityTopicCell.h */,
 				18C2DE202473BB1C00116E2E /* CommunityTopicCell.m */,
 				18C2DE212473BB1C00116E2E /* CommunityTopicCell.xib */,
-				18C2DE282473DD9700116E2E /* CommunityFiendCell.h */,
-				18C2DE292473DD9700116E2E /* CommunityFiendCell.m */,
-				18C2DE2A2473DD9700116E2E /* CommunityFiendCell.xib */,
+				18C2DE282473DD9700116E2E /* CommunityFriendCell.h */,
+				18C2DE292473DD9700116E2E /* CommunityFriendCell.m */,
+				18C2DE2A2473DD9700116E2E /* CommunityFriendCell.xib */,
 				18E8AC722474BDA300E3D7C4 /* CommunityFriendViewCell.h */,
 				18E8AC732474BDA300E3D7C4 /* CommunityFriendViewCell.m */,
 				18E8AC742474BDA300E3D7C4 /* CommunityFriendViewCell.xib */,
@@ -610,6 +658,8 @@
 			children = (
 				189BD81A246D1B9400490E35 /* MineModel.h */,
 				189BD81B246D1B9400490E35 /* MineModel.m */,
+				18699D03247B729C000A1022 /* MineInformationModel.h */,
+				18699D04247B729C000A1022 /* MineInformationModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -711,7 +761,6 @@
 				18E8AC762474BDA300E3D7C4 /* CommunityFriendViewCell.xib in Resources */,
 				15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */,
 				151AC1A024726AAF00EAE0BD /* MXZIndustryTableViewCell.xib in Resources */,
-				185AC2AA246E87A7006EC3E6 /* ZZHQuoteCalendarVC.xib in Resources */,
 				15A6F1BD2475083A002C0930 /* MXZFullDisplay.xib in Resources */,
 				18E8AC7E2474D2A800E3D7C4 /* CommunityDynamicCell.xib in Resources */,
 				189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */,
@@ -726,7 +775,7 @@
 				1859014224692D8B00CA7A68 /* PublishVC.xib in Resources */,
 				15263697246E771D00D01BE0 /* MXZHomeExpressVC.xib in Resources */,
 				18C2DE192473788900116E2E /* CommunityBannerViewCell.xib in Resources */,
-				18C2DE2C2473DD9700116E2E /* CommunityFiendCell.xib in Resources */,
+				18C2DE2C2473DD9700116E2E /* CommunityFriendCell.xib in Resources */,
 				18C581732476164900DC41EA /* ZZHQuoteIndustryVC.xib in Resources */,
 				18BD94F6247290D5005A84B5 /* CommunityVC.xib in Resources */,
 				154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */,
@@ -738,18 +787,20 @@
 				18C5816B2476164900DC41EA /* ZZHQuoteCalendarVC.xib in Resources */,
 				152636A6246E771D00D01BE0 /* MXZHomeFourthSectionHeadView.xib in Resources */,
 				15A6F1CF24752C15002C0930 /* MXZFullFourthSectionCell.xib in Resources */,
-				18C2DE1E2473892E00116E2E /* CommunityTopicCell.xib in Resources */,
-				185AC2A9246E87A7006EC3E6 /* ZZHQuotesVC.xib in Resources */,
 				154DFC702468F4B00098498C /* Assets.xcassets in Resources */,
 				15263696246E771D00D01BE0 /* MXZHomeQuoteVC.xib in Resources */,
 				15A6F1D124753351002C0930 /* MXZFullFourthSectionFootVIew.xib in Resources */,
 				18C5817C2476164D00DC41EA /* ZZHDateTableViewCell.xib in Resources */,
 				1859014C246933DB00CA7A68 /* MineVC.xib in Resources */,
 				15CDFAD72474C95900B2811F /* MXZFullFirstSectionCell.xib in Resources */,
+				18699D02247B5B7E000A1022 /* MineEditVC.xib in Resources */,
 				18AA2BC3246E23B1000801B1 /* CommunityChildBVC.xib in Resources */,
+				186AF24B247631AD00D5B14B /* MineDynamicVC.xib in Resources */,
 				15CDFADE2474F83800B2811F /* MXZFullSecondSectionFootView.xib in Resources */,
 				152636AA246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib in Resources */,
 				1526369D246E771D00D01BE0 /* MXZHomeVC.xib in Resources */,
+				18699D0B247B90F1000A1022 /* MineInformationNameView.xib in Resources */,
+				18699D18247BB56A000A1022 /* MineInformationSexView.xib in Resources */,
 				18E8AC842474E90A00E3D7C4 /* CommunityTopicHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -803,9 +854,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185AC2A4246E87A7006EC3E6 /* ZZHQuoteTimeVC.m in Sources */,
 				15CDF74F2473BAFD00B2811F /* MXZTtileVC.m in Sources */,
 				189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */,
+				18699D0E247B998A000A1022 /* MineInformationNameView.m in Sources */,
 				15CDFAD62474C95900B2811F /* MXZFullFirstSectionCell.m in Sources */,
 				15A6F1C4247524E2002C0930 /* MXZFullThirdSectionCell.m in Sources */,
 				18A584882472544400C0437F /* ListViewController.m in Sources */,
@@ -824,11 +875,13 @@
 				151AC1942472595D00EAE0BD /* ZKCycleScrollViewFlowLayout.m in Sources */,
 				18E8AC792474C60E00E3D7C4 /* CommunityFriendModel.m in Sources */,
 				15263699246E771D00D01BE0 /* MXZHomeQuoteVC.m in Sources */,
+				18699D05247B729C000A1022 /* MineInformationModel.m in Sources */,
 				18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */,
 				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
 				15CDFAD12474C2FB00B2811F /* MXZFullDisplay.m in Sources */,
 				152636A7246E771D00D01BE0 /* MXZHomeFifthSectionCell.m in Sources */,
+				18699D01247B5B7E000A1022 /* MineEditVC.m in Sources */,
 				151AC19F24726AAF00EAE0BD /* MXZIndustryTableViewCell.m in Sources */,
 				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
 				15A6F1C0247513F7002C0930 /* MXZFullThirdSectionHeadView.m in Sources */,
@@ -840,19 +893,21 @@
 				18C5817D2476164D00DC41EA /* ZZHDateCollectionViewCell.m in Sources */,
 				1859014124692D8B00CA7A68 /* PublishVC.m in Sources */,
 				1859014B246933DB00CA7A68 /* MineVC.m in Sources */,
+				18699D16247BB55E000A1022 /* MineInformationSexView.m in Sources */,
 				1526369A246E771D00D01BE0 /* MXZHomeVC.m in Sources */,
 				18A584872472544400C0437F /* ContentBaseViewController.m in Sources */,
 				154DFC762468F4B00098498C /* main.m in Sources */,
+				18699CFD247B544F000A1022 /* UIImage+Image.m in Sources */,
 				15A6F1C92475276E002C0930 /* MXZFullThirdCollectionCell.m in Sources */,
 				15A6F1CE24752C15002C0930 /* MXZFullFourthSectionCell.m in Sources */,
 				18C5816F2476164900DC41EA /* ZZHQuoteIndustryVC.m in Sources */,
 				152636A5246E771D00D01BE0 /* MXZHomeFourthSectionCell.m in Sources */,
 				1526369B246E771D00D01BE0 /* MXZHomeIndustryVC.m in Sources */,
-				18C2DE2B2473DD9700116E2E /* CommunityFiendCell.m in Sources */,
+				18C2DE2B2473DD9700116E2E /* CommunityFriendCell.m in Sources */,
 				151AC1932472595D00EAE0BD /* ZKCycleScrollView.m in Sources */,
 				15593DFC2476123B007B3141 /* MXZHomeNavSearchView.m in Sources */,
-				18C2DE1D2473892E00116E2E /* CommunityTopicCell.m in Sources */,
 				18E8AC7D2474D2A800E3D7C4 /* CommunityDynamicCell.m in Sources */,
+				186AF24A247631AD00D5B14B /* MineDynamicVC.m in Sources */,
 				18A5849324726CDB00C0437F /* CommunityBannerCell.m in Sources */,
 				18E8AC872474F4CC00E3D7C4 /* CommunityTopicHeaderView.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,

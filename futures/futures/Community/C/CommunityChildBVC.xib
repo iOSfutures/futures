@@ -19,23 +19,33 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kcq-eg-9Jb">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="SP4-K5-Chr"/>
                         <outlet property="delegate" destination="-1" id="F2k-ot-44l"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mo7-Zu-NQI" userLabel="BottomView">
+                    <rect key="frame" x="0.0" y="876" width="414" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="j2Q-rV-d0W"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Kcq-eg-9Jb" secondAttribute="bottom" id="3pJ-DN-j0z"/>
+                <constraint firstItem="mo7-Zu-NQI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1Hg-8B-jrg"/>
                 <constraint firstAttribute="trailing" secondItem="Kcq-eg-9Jb" secondAttribute="trailing" id="4tl-nX-wlK"/>
                 <constraint firstItem="Kcq-eg-9Jb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9FF-4e-wju"/>
+                <constraint firstAttribute="bottom" secondItem="mo7-Zu-NQI" secondAttribute="bottom" id="UwQ-E5-SNO"/>
+                <constraint firstItem="mo7-Zu-NQI" firstAttribute="top" secondItem="Kcq-eg-9Jb" secondAttribute="bottom" id="Yeh-BV-lHr"/>
                 <constraint firstItem="Kcq-eg-9Jb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bEO-GS-tte"/>
+                <constraint firstAttribute="trailing" secondItem="mo7-Zu-NQI" secondAttribute="trailing" id="pA3-gF-Cyc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="23" y="14"/>
+            <point key="canvasLocation" x="21.739130434782609" y="13.392857142857142"/>
         </view>
     </objects>
 </document>

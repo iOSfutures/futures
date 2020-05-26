@@ -9,6 +9,8 @@
 #import "MineVC.h"
 #import "MineModel.h"
 
+#import "MineDynamicVC.h"
+
 @interface MineVC ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *avatarLeft;
@@ -39,6 +41,8 @@
 @property (weak, nonatomic) IBOutlet UIView *alertView;
 
 @property (weak, nonatomic) IBOutlet UITableView *mineTableView;
+
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
 
 @property (nonatomic, strong)NSArray *mineArray;
 
@@ -87,12 +91,17 @@
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
     [self setConstant];
+    [self changeBottomViewBg];
     
     CGFloat avatarImgViewHeight = kScaleFrom_iPhone8_Height(45);
     _avatarImgView.layer.cornerRadius = avatarImgViewHeight/2;
+    _avatarImgView.layer.masksToBounds = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(avatarImgViewClicked)];
+    [_avatarImgView addGestureRecognizer:tap];
     
     CGFloat alertViewHeight = kScaleFrom_iPhone8_Height(24);
     _alertView.layer.cornerRadius = alertViewHeight/2;
+    _alertView.layer.masksToBounds = YES;
     
     self.view.backgroundColor = UIColorWithRGBA(240, 240, 240, 1);
 }
@@ -181,6 +190,37 @@
         _FanImgViewLeft.constant = 11;
         _FanLabelRight.constant = 11;
     }
+}
+
+- (void)avatarImgViewClicked
+{
+    MineDynamicVC *mineDynamicVC = MineDynamicVC.new;
+    [self.navigationController pushViewController:mineDynamicVC animated:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        CGRect frame = self.tabBarController.tabBar.frame;
+        frame.origin.y = 593;
+        self.tabBarController.tabBar.frame = frame;
+        self.navigationController.navigationBar.backgroundColor = UIColorWithRGBA(254, 162, 3, 0);
+        self.tabBarController.tabBar.hidden = NO;
+    }];
+}
+
+- (void)changeBottomViewBg
+{
+    UIColor *bgColor = UIColor.new;
+    if(SCREEN_WIDTH == 414)
+    {
+        bgColor = [UIColor colorWithHexString:@"#FFFFFF"];
+    }
+    else if(SCREEN_WIDTH == 375)
+    {
+        bgColor = [UIColor colorWithHexString:@"#F0F0F0"];
+    }
+    self.bottomView.backgroundColor = bgColor;
 }
 
 @end

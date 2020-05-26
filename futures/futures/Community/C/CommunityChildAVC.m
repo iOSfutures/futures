@@ -10,7 +10,7 @@
 
 #import "CommunityBannerCell.h"
 #import "CommunityTopicCell.h"
-#import "CommunityFiendCell.h"
+#import "CommunityFriendCell.h"
 #import "CommunityDynamicCell.h"
 
 #import "CommunityTopicModel.h"
@@ -91,7 +91,7 @@ NSString *DynamicCell = @"DynamicCell";
     //    [self.view bringSubviewToFront:self.tableView];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityBannerCell class]) bundle:nil] forCellReuseIdentifier:BannerID];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityFiendCell class]) bundle:nil] forCellReuseIdentifier:FriendID];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityFriendCell class]) bundle:nil] forCellReuseIdentifier:FriendID];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityTopicCell class]) bundle:nil] forCellReuseIdentifier:TopicCellID];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityDynamicCell class]) bundle:nil]forCellReuseIdentifier:DynamicCell];
     
@@ -159,7 +159,7 @@ NSString *DynamicCell = @"DynamicCell";
     }
     else if(indexPath.section == 2)
     {
-        CommunityFiendCell *cell = [tableView dequeueReusableCellWithIdentifier:FriendID];
+        CommunityFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:FriendID];
         return cell;
     }
     else

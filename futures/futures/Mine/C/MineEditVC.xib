@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MineEditVC">
+            <connections>
+                <outlet property="avatarImgView" destination="0gV-NU-mGu" id="YxW-G9-tGd"/>
+                <outlet property="mineEditTableView" destination="e4c-Vq-nDY" id="ilW-bC-GxN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kew-0l-E7t" userLabel="HeaderView">
+                    <rect key="frame" x="0.0" y="64" width="414" height="198"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallhaven-oxv6gl" translatesAutoresizingMaskIntoConstraints="NO" id="0gV-NU-mGu" userLabel="AvatarImgView">
+                            <rect key="frame" x="152.5" y="44.5" width="109.5" height="109.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="109.5" id="KEU-Rb-6FR"/>
+                                <constraint firstAttribute="height" constant="109.5" id="b7K-YV-bz4"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJa-7U-ei2" userLabel="CameraBtn">
+                            <rect key="frame" x="233" y="125" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="GKY-6r-NYg"/>
+                                <constraint firstAttribute="height" constant="40" id="n9j-fm-li6"/>
+                            </constraints>
+                            <state key="normal" image="camera_personal center"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="0gV-NU-mGu" firstAttribute="centerY" secondItem="Kew-0l-E7t" secondAttribute="centerY" id="HTU-OR-FcO"/>
+                        <constraint firstAttribute="height" constant="198" id="MXP-5U-BIy"/>
+                        <constraint firstItem="HJa-7U-ei2" firstAttribute="trailing" secondItem="0gV-NU-mGu" secondAttribute="trailing" constant="11" id="XWt-dy-RRJ"/>
+                        <constraint firstItem="0gV-NU-mGu" firstAttribute="centerX" secondItem="Kew-0l-E7t" secondAttribute="centerX" id="k2H-CE-yId"/>
+                        <constraint firstItem="HJa-7U-ei2" firstAttribute="bottom" secondItem="0gV-NU-mGu" secondAttribute="bottom" constant="11" id="yvc-rW-hPq"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e4c-Vq-nDY" userLabel="MineEditTableView">
+                    <rect key="frame" x="0.0" y="262" width="414" height="634"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kbg-L5-NZ0"/>
+                        <outlet property="delegate" destination="-1" id="LG4-xI-53E"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="e4c-Vq-nDY" firstAttribute="top" secondItem="Kew-0l-E7t" secondAttribute="bottom" id="M2G-ep-GpN"/>
+                <constraint firstItem="Kew-0l-E7t" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wid-Hx-R8a"/>
+                <constraint firstAttribute="trailing" secondItem="e4c-Vq-nDY" secondAttribute="trailing" id="hLP-BX-qrS"/>
+                <constraint firstAttribute="trailing" secondItem="Kew-0l-E7t" secondAttribute="trailing" id="iUC-3T-hec"/>
+                <constraint firstItem="e4c-Vq-nDY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kIr-FS-LYX"/>
+                <constraint firstAttribute="bottom" secondItem="e4c-Vq-nDY" secondAttribute="bottom" id="s6z-Nv-Fos"/>
+                <constraint firstItem="Kew-0l-E7t" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="tnQ-sT-d39"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="139" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera_personal center" width="40" height="40"/>
+        <image name="wallhaven-oxv6gl" width="3840" height="2160"/>
+    </resources>
+</document>

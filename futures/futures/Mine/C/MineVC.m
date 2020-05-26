@@ -8,6 +8,8 @@
 
 #import "MineVC.h"
 #import "MineModel.h"
+#import "MXZSettingCenterVC.h"
+#import "MXZMessageCenterVC.h"
 
 #import "MineDynamicVC.h"
 
@@ -221,6 +223,17 @@
         bgColor = [UIColor colorWithHexString:@"#F0F0F0"];
     }
     self.bottomView.backgroundColor = bgColor;
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        MXZSettingCenterVC *settingVC = [[MXZSettingCenterVC alloc]init];
+        [self.navigationController pushViewController:settingVC animated:YES];
+    }
+    else if (indexPath.item == 1){
+        MXZMessageCenterVC *messageVC = [[MXZMessageCenterVC alloc]init];
+        [self.navigationController pushViewController:messageVC animated:YES];
+    }
 }
 
 @end

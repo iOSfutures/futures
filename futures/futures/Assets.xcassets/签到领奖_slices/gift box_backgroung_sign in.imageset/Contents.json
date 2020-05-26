@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "gift box_backgroung_sign in.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "gift box_backgroung_sign in@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "gift box_backgroung_sign in@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

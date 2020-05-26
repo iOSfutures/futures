@@ -85,6 +85,7 @@
     UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 60)];
     
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(16, 25, 70, 15)];
+    //设置字体大小和字重
     titleLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightBold];
     if(section == 0){
         titleLabel.text = @"分类标签";

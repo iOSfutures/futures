@@ -193,23 +193,51 @@
     [fView addSubview:calendarBtn];
     [calendarBtn addTarget:self action:@selector(calendarBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
+    UILabel *calendarLabel = [[UILabel alloc] init];
+    calendarLabel.frame = CGRectMake(CGRectGetMinX(calendarBtn.frame), CGRectGetMaxY(calendarBtn.frame)+1, 55, 12);
+    calendarLabel.text = @"日历数据";
+    calendarLabel.font = [UIFont systemFontOfSize:12];
+    calendarLabel.textAlignment = NSTextAlignmentCenter;
+    [fView addSubview:calendarLabel];
+    
     UIButton *industryBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     industryBtn.frame = CGRectMake(26+55+spaceW, 296-64, 55, 54);
     [industryBtn setImage:[UIImage imageNamed:@"ic_industry storm_home"] forState:UIControlStateNormal];
     [fView addSubview:industryBtn];
     [industryBtn addTarget:self action:@selector(industryBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
+    UILabel *industryLabel = [[UILabel alloc] init];
+    industryLabel.frame = CGRectMake(CGRectGetMinX(industryBtn.frame), CGRectGetMaxY(industryBtn.frame)+1, 55, 12);
+    industryLabel.text = @"行业风暴";
+    industryLabel.font = [UIFont systemFontOfSize:12];
+    industryLabel.textAlignment = NSTextAlignmentCenter;
+    [fView addSubview:industryLabel];
+
     UIButton *expressBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     expressBtn.frame = CGRectMake(26+(55+spaceW)*2, 296-64, 55, 54);
     [expressBtn setImage:[UIImage imageNamed:@"ic_7X24 express_home"] forState:UIControlStateNormal];
     [fView addSubview:expressBtn];
     [expressBtn addTarget:self action:@selector(expressBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
+    UILabel *expressLabel = [[UILabel alloc] init];
+    expressLabel.frame = CGRectMake(CGRectGetMinX(expressBtn.frame), CGRectGetMaxY(expressBtn.frame)+1, 55, 12);
+    expressLabel.text = @"7X24快讯";
+    expressLabel.font = [UIFont systemFontOfSize:12];
+    expressLabel.textAlignment = NSTextAlignmentCenter;
+    [fView addSubview:expressLabel];
+    
     UIButton *quoteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     quoteBtn.frame = CGRectMake(SCREEN_WIDTH-26-55, 296-64, 55, 54);
     [quoteBtn setImage:[UIImage imageNamed:@"ic_quote data_home"] forState:UIControlStateNormal];
     [fView addSubview:quoteBtn];
     [quoteBtn addTarget:self action:@selector(quoteBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UILabel *quoteLabel = [[UILabel alloc] init];
+    quoteLabel.frame = CGRectMake(CGRectGetMinX(quoteBtn.frame), CGRectGetMaxY(quoteBtn.frame)+1, 55, 12);
+    quoteLabel.text = @"行情数据";
+    quoteLabel.font = [UIFont systemFontOfSize:12];
+    quoteLabel.textAlignment = NSTextAlignmentCenter;
+    [fView addSubview:quoteLabel];
     
 }
 

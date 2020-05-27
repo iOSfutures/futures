@@ -81,7 +81,9 @@
     }
     return YES;
 }
-
+-(void)testFunction{
+    NSLog(@"dd");
+}
 - (void)addChildVC:(UINavigationController *)nav title:(NSString *)title imgName:(NSString *)imageName selectedImgName:(NSString *)selectedImgName
 {
     nav.tabBarItem.title = title;

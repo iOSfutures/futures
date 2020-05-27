@@ -225,6 +225,8 @@ NSString *DynamicCell = @"DynamicCell";
     } Failure:^(BOOL failuer, NSError *error) {
         [Toast makeText:self.view Message:@"请求热门比赛失败" afterHideTime:DELAYTiME];
     }];
+    
+    NSLog(@"gulugulu");
 }
 
 @end

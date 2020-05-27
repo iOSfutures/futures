@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MXZFeedbackSecondCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="245"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="245"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8D-vM-wuE">
+                        <rect key="frame" x="15" y="0.0" width="345" height="160"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="fz7-fh-Ivy"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNn-fD-vn2">
+                        <rect key="frame" x="15" y="180" width="65" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="Fkx-Wh-AsE"/>
+                            <constraint firstAttribute="height" constant="65" id="yPm-71-ykx"/>
+                        </constraints>
+                        <state key="normal" image="ic_photo_gray"/>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="142701" translatesAutoresizingMaskIntoConstraints="NO" id="ffD-p2-bmX">
+                        <rect key="frame" x="90" y="180" width="65" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="65" id="DtX-hE-jv9"/>
+                            <constraint firstAttribute="width" constant="65" id="rsC-DS-FAx"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUc-nG-LzZ">
+                        <rect key="frame" x="147.5" y="173" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="91f-ca-JqP"/>
+                            <constraint firstAttribute="width" constant="15" id="LDN-Di-IlQ"/>
+                        </constraints>
+                        <state key="normal" image="ic_delete"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="r8D-vM-wuE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="24z-XI-rrU"/>
+                    <constraint firstItem="UNn-fD-vn2" firstAttribute="top" secondItem="r8D-vM-wuE" secondAttribute="bottom" constant="20" id="DHR-rI-Qzr"/>
+                    <constraint firstItem="ffD-p2-bmX" firstAttribute="top" secondItem="r8D-vM-wuE" secondAttribute="bottom" constant="20" id="PFa-0S-W6r"/>
+                    <constraint firstItem="ffD-p2-bmX" firstAttribute="leading" secondItem="UNn-fD-vn2" secondAttribute="trailing" constant="10" id="VK7-P1-AeA"/>
+                    <constraint firstAttribute="trailing" secondItem="r8D-vM-wuE" secondAttribute="trailing" constant="15" id="fXf-pU-cOY"/>
+                    <constraint firstItem="uUc-nG-LzZ" firstAttribute="trailing" secondItem="ffD-p2-bmX" secondAttribute="trailing" constant="7.5" id="g9N-Dh-t96"/>
+                    <constraint firstAttribute="bottom" secondItem="UNn-fD-vn2" secondAttribute="bottom" id="h0z-el-AFI"/>
+                    <constraint firstItem="r8D-vM-wuE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="kTV-Oe-MHB"/>
+                    <constraint firstItem="uUc-nG-LzZ" firstAttribute="top" secondItem="r8D-vM-wuE" secondAttribute="bottom" constant="13" id="tin-EE-3iY"/>
+                    <constraint firstItem="UNn-fD-vn2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="zwX-ee-8ix"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="addPicBtn" destination="UNn-fD-vn2" id="Dy4-7y-yFC"/>
+            </connections>
+            <point key="canvasLocation" x="138.40579710144928" y="125.55803571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="142701" width="115" height="84"/>
+        <image name="ic_delete" width="15" height="15"/>
+        <image name="ic_photo_gray" width="34.5" height="31.5"/>
+    </resources>
+</document>

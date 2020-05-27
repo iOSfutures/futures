@@ -9,6 +9,7 @@
 #import "MXZSettingCenterVC.h"
 #import "MXZAboutUsVC.h"
 #import "UIImage+OriginalImage.h"
+#import "MXZFeedbackVC.h"
 
 @interface MXZSettingCenterVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -103,6 +104,8 @@
 {
     if (indexPath.section == 0 && indexPath.row == 2) {
         //跳转到意见反馈界面
+        MXZFeedbackVC *feedbackVC = [[MXZFeedbackVC alloc]init];
+        [self.navigationController pushViewController:feedbackVC animated:YES];
     }
     else if (indexPath.section == 1 && indexPath.row == 0){
         MXZAboutUsVC *aboutVC = [[MXZAboutUsVC alloc]init];

@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		1517AC6C247CA579007BC789 /* MXZFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517AC6A247CA579007BC789 /* MXZFeedbackVC.m */; };
 		1517AC6D247CA579007BC789 /* MXZFeedbackVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1517AC6B247CA579007BC789 /* MXZFeedbackVC.xib */; };
+		1517AC70247CB83E007BC789 /* MXZFeedbackBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517AC6F247CB83E007BC789 /* MXZFeedbackBtn.m */; };
+		1517AC72247CBC3A007BC789 /* MXZFeedbackBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1517AC71247CBC3A007BC789 /* MXZFeedbackBtn.xib */; };
+		1517AC75247CC7D2007BC789 /* MXZFeedbackFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517AC74247CC7D2007BC789 /* MXZFeedbackFirstCell.m */; };
+		1517AC79247D0497007BC789 /* MXZFeedbackSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517AC77247D0497007BC789 /* MXZFeedbackSecondCell.m */; };
+		1517AC7A247D0497007BC789 /* MXZFeedbackSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1517AC78247D0497007BC789 /* MXZFeedbackSecondCell.xib */; };
+		1517AC7E247D108C007BC789 /* MXZFeedbackThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517AC7C247D108C007BC789 /* MXZFeedbackThirdCell.m */; };
+		1517AC7F247D108C007BC789 /* MXZFeedbackThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1517AC7D247D108C007BC789 /* MXZFeedbackThirdCell.xib */; };
+		1517AC83247D1360007BC789 /* MXZFeedbackFourthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517AC81247D1360007BC789 /* MXZFeedbackFourthCell.m */; };
+		1517AC84247D1360007BC789 /* MXZFeedbackFourthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1517AC82247D1360007BC789 /* MXZFeedbackFourthCell.xib */; };
 		151A95AA247BA995007F3AAB /* MXZSettingCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 151A95A8247BA995007F3AAB /* MXZSettingCenterVC.m */; };
 		151A95AB247BA995007F3AAB /* MXZSettingCenterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151A95A9247BA995007F3AAB /* MXZSettingCenterVC.xib */; };
 		151A95AF247BB82F007F3AAB /* MXZMessageCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 151A95AD247BB82F007F3AAB /* MXZMessageCenterVC.m */; };
@@ -158,6 +167,20 @@
 		1517AC69247CA579007BC789 /* MXZFeedbackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFeedbackVC.h; sourceTree = "<group>"; };
 		1517AC6A247CA579007BC789 /* MXZFeedbackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFeedbackVC.m; sourceTree = "<group>"; };
 		1517AC6B247CA579007BC789 /* MXZFeedbackVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFeedbackVC.xib; sourceTree = "<group>"; };
+		1517AC6E247CB83E007BC789 /* MXZFeedbackBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFeedbackBtn.h; sourceTree = "<group>"; };
+		1517AC6F247CB83E007BC789 /* MXZFeedbackBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFeedbackBtn.m; sourceTree = "<group>"; };
+		1517AC71247CBC3A007BC789 /* MXZFeedbackBtn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFeedbackBtn.xib; sourceTree = "<group>"; };
+		1517AC73247CC7D2007BC789 /* MXZFeedbackFirstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFeedbackFirstCell.h; sourceTree = "<group>"; };
+		1517AC74247CC7D2007BC789 /* MXZFeedbackFirstCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFeedbackFirstCell.m; sourceTree = "<group>"; };
+		1517AC76247D0497007BC789 /* MXZFeedbackSecondCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFeedbackSecondCell.h; sourceTree = "<group>"; };
+		1517AC77247D0497007BC789 /* MXZFeedbackSecondCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFeedbackSecondCell.m; sourceTree = "<group>"; };
+		1517AC78247D0497007BC789 /* MXZFeedbackSecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFeedbackSecondCell.xib; sourceTree = "<group>"; };
+		1517AC7B247D108C007BC789 /* MXZFeedbackThirdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFeedbackThirdCell.h; sourceTree = "<group>"; };
+		1517AC7C247D108C007BC789 /* MXZFeedbackThirdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFeedbackThirdCell.m; sourceTree = "<group>"; };
+		1517AC7D247D108C007BC789 /* MXZFeedbackThirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFeedbackThirdCell.xib; sourceTree = "<group>"; };
+		1517AC80247D1360007BC789 /* MXZFeedbackFourthCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFeedbackFourthCell.h; sourceTree = "<group>"; };
+		1517AC81247D1360007BC789 /* MXZFeedbackFourthCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFeedbackFourthCell.m; sourceTree = "<group>"; };
+		1517AC82247D1360007BC789 /* MXZFeedbackFourthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFeedbackFourthCell.xib; sourceTree = "<group>"; };
 		151A95A7247BA995007F3AAB /* MXZSettingCenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZSettingCenterVC.h; sourceTree = "<group>"; };
 		151A95A8247BA995007F3AAB /* MXZSettingCenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZSettingCenterVC.m; sourceTree = "<group>"; };
 		151A95A9247BA995007F3AAB /* MXZSettingCenterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZSettingCenterVC.xib; sourceTree = "<group>"; };
@@ -533,6 +556,20 @@
 				154C26B4247B8CEF00A9162D /* MXZAnswerTomorrowItem.h */,
 				154C26B5247B8CEF00A9162D /* MXZAnswerTomorrowItem.m */,
 				154C26B6247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib */,
+				1517AC6E247CB83E007BC789 /* MXZFeedbackBtn.h */,
+				1517AC6F247CB83E007BC789 /* MXZFeedbackBtn.m */,
+				1517AC71247CBC3A007BC789 /* MXZFeedbackBtn.xib */,
+				1517AC73247CC7D2007BC789 /* MXZFeedbackFirstCell.h */,
+				1517AC74247CC7D2007BC789 /* MXZFeedbackFirstCell.m */,
+				1517AC76247D0497007BC789 /* MXZFeedbackSecondCell.h */,
+				1517AC77247D0497007BC789 /* MXZFeedbackSecondCell.m */,
+				1517AC78247D0497007BC789 /* MXZFeedbackSecondCell.xib */,
+				1517AC7B247D108C007BC789 /* MXZFeedbackThirdCell.h */,
+				1517AC7C247D108C007BC789 /* MXZFeedbackThirdCell.m */,
+				1517AC7D247D108C007BC789 /* MXZFeedbackThirdCell.xib */,
+				1517AC80247D1360007BC789 /* MXZFeedbackFourthCell.h */,
+				1517AC81247D1360007BC789 /* MXZFeedbackFourthCell.m */,
+				1517AC82247D1360007BC789 /* MXZFeedbackFourthCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -908,6 +945,7 @@
 				152636A9246E771D00D01BE0 /* MXZHomeSecondSectionFootView.xib in Resources */,
 				151AC19B247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib in Resources */,
 				18E8AC762474BDA300E3D7C4 /* CommunityFriendViewCell.xib in Resources */,
+				1517AC84247D1360007BC789 /* MXZFeedbackFourthCell.xib in Resources */,
 				151A95AB247BA995007F3AAB /* MXZSettingCenterVC.xib in Resources */,
 				15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */,
 				151AC1A024726AAF00EAE0BD /* MXZIndustryTableViewCell.xib in Resources */,
@@ -937,8 +975,11 @@
 				18C2DE192473788900116E2E /* CommunityBannerViewCell.xib in Resources */,
 				18C2DE2C2473DD9700116E2E /* CommunityFriendCell.xib in Resources */,
 				151A95B0247BB82F007F3AAB /* MXZMessageCenterVC.xib in Resources */,
+				1517AC72247CBC3A007BC789 /* MXZFeedbackBtn.xib in Resources */,
+				18C581732476164900DC41EA /* ZZHQuoteIndustryVC.xib in Resources */,
 				18468764247D1CF2007BC2FC /* ZZHQuotesVC.xib in Resources */,
 				154C26B8247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib in Resources */,
+				1517AC7F247D108C007BC789 /* MXZFeedbackThirdCell.xib in Resources */,
 				18BD94F6247290D5005A84B5 /* CommunityVC.xib in Resources */,
 				154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */,
 				15CDFADC2474D49800B2811F /* MXZFullSecondSectionCell.xib in Resources */,
@@ -963,6 +1004,8 @@
 				157A71732477B14F003D0081 /* MXZAnswerWeekItem.xib in Resources */,
 				15CDFAD72474C95900B2811F /* MXZFullFirstSectionCell.xib in Resources */,
 				18AA2BC3246E23B1000801B1 /* CommunityChildBVC.xib in Resources */,
+				1517AC7A247D0497007BC789 /* MXZFeedbackSecondCell.xib in Resources */,
+				186AF24B247631AD00D5B14B /* MineDynamicVC.xib in Resources */,
 				18468782247D1D06007BC2FC /* ZZHTimeLineTableViewCell.xib in Resources */,
 				15CDFADE2474F83800B2811F /* MXZFullSecondSectionFootView.xib in Resources */,
 				152636AA246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib in Resources */,
@@ -1029,6 +1072,7 @@
 				15CDFAD62474C95900B2811F /* MXZFullFirstSectionCell.m in Sources */,
 				184687AA247D1D98007BC2FC /* MXZHomeVC.m in Sources */,
 				15A6F1C4247524E2002C0930 /* MXZFullThirdSectionCell.m in Sources */,
+				1517AC83247D1360007BC789 /* MXZFeedbackFourthCell.m in Sources */,
 				18A584882472544400C0437F /* ListViewController.m in Sources */,
 				18468780247D1D06007BC2FC /* ZZHDateCollectionViewCell.m in Sources */,
 				1517AC6C247CA579007BC789 /* MXZFeedbackVC.m in Sources */,
@@ -1047,6 +1091,7 @@
 				1866EA03247DF89D002C0E05 /* MineEditProfileCell.m in Sources */,
 				18AA2BC2246E23B1000801B1 /* CommunityChildBVC.m in Sources */,
 				189BD81C246D1B9400490E35 /* MineModel.m in Sources */,
+				1517AC7E247D108C007BC789 /* MXZFeedbackThirdCell.m in Sources */,
 				18C2DE182473788900116E2E /* CommunityBannerViewCell.m in Sources */,
 				18E8AC8A247519D100E3D7C4 /* CommunityDynamicModel.m in Sources */,
 				18BD94F5247290D5005A84B5 /* CommunityVC.m in Sources */,
@@ -1064,10 +1109,12 @@
 				18468789247D1D0D007BC2FC /* ZZHNewsImageModel.m in Sources */,
 				1846879C247D1D2C007BC2FC /* AttentionTableViewCell.m in Sources */,
 				151AC19F24726AAF00EAE0BD /* MXZIndustryTableViewCell.m in Sources */,
+				1517AC79247D0497007BC789 /* MXZFeedbackSecondCell.m in Sources */,
 				184687A3247D1D2C007BC2FC /* MineVC.m in Sources */,
 				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
 				15A6F1C0247513F7002C0930 /* MXZFullThirdSectionHeadView.m in Sources */,
 				152636A2246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m in Sources */,
+				1517AC75247CC7D2007BC789 /* MXZFeedbackFirstCell.m in Sources */,
 				184687A2247D1D2C007BC2FC /* MineEditVC.m in Sources */,
 				151AC199247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m in Sources */,
 				156496222477D1D6006745E8 /* MXZAnswerABCButton.m in Sources */,
@@ -1082,6 +1129,7 @@
 				18699D16247BB55E000A1022 /* MineInformationSexView.m in Sources */,
 				18A584872472544400C0437F /* ContentBaseViewController.m in Sources */,
 				154DFC762468F4B00098498C /* main.m in Sources */,
+				1517AC70247CB83E007BC789 /* MXZFeedbackBtn.m in Sources */,
 				184687A7247D1D53007BC2FC /* MXZHomeIndustryVC.m in Sources */,
 				18699CFD247B544F000A1022 /* UIImage+Image.m in Sources */,
 				15A6F1C92475276E002C0930 /* MXZFullThirdCollectionCell.m in Sources */,

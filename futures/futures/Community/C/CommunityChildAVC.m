@@ -195,4 +195,36 @@ NSString *DynamicCell = @"DynamicCell";
     }
 }
 
++(void)getEventsListWihtParams:(NSDictionary *)parmas Success:(HTTPSuccessBlock)successBlock Failure:(HTTPFailureBlock)failureBlock{
+    [ENDNetWorkManager getWithPathUrl:EVENTSLIST_URL parameters:nil queryParams:parmas Header:nil success:^(BOOL success, id result) {
+        if (success) {
+            NSError *error;
+//            ENDEventListModel *model = [MTLJSONAdapter modelOfClass:[ENDEventListModel class] fromJSONDictionary:result[@"data"] error:&error];
+            if (!error) {
+                successBlock(YES,nil);
+            }else{
+                failureBlock(NO,nil);
+            }
+        }else{
+            failureBlock(NO,nil);
+        }
+    } failure:^(BOOL failuer, NSError *error) {
+        failureBlock(NO,nil);
+    }];
+}
+
+-(void)getEventsList{
+//    WEAKSELF
+    NSDictionary *dic = @{@"pageNum":@(1),@"pageSize":@(3)};
+    [CommunityChildAVC getEventsListWihtParams:dic Success:^(BOOL success, id result) {
+//        weakSelf.eventListModel = result;
+        [self.tableView reloadRowsAtIndexPaths:@[
+                                                 [NSIndexPath indexPathForRow:0 inSection:0],
+                                                 [NSIndexPath indexPathForRow:1 inSection:0],
+                                                 ] withRowAnimation:UITableViewRowAnimationFade];
+    } Failure:^(BOOL failuer, NSError *error) {
+        [Toast makeText:self.view Message:@"请求热门比赛失败" afterHideTime:DELAYTiME];
+    }];
+}
+
 @end

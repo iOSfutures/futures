@@ -26,9 +26,8 @@
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
 #define kScaleFrom_iPhone6_Desgin(_X_) (_X_ * (SCREEN_WIDTH/375))
 
-@interface MXZHomeVC ()<UITableViewDelegate, UITableViewDataSource, ZKCycleScrollViewDelegate, ZKCycleScrollViewDataSource>
+@interface MXZHomeVC ()<UITableViewDelegate, UITableViewDataSource, NSURLSessionDataDelegate, ZKCycleScrollViewDelegate, ZKCycleScrollViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
-
 @end
 
 @implementation MXZHomeVC
@@ -67,6 +66,9 @@
     
     //去掉tableView的分割线
     self.homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    NSString *port = [NSString stringWithFormat:@"/admin/getFinanceAffairs?date"];
+    [self getData:port];
 }
 
 -(void)getBackView:(UIView*)superView getViewBlock:(void(^)(UIView *view))Blcok
@@ -281,6 +283,20 @@
     [self.navigationController pushViewController:answerVC animated:YES];
 }
 
+
+#pragma mark - URLRequest
+-(void)getData:(NSString *)port{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.yysc.online/%@", port]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSLog(@"%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
+        id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    }];
+    
+    [dataTask resume];
+}
 
 #pragma mark - Table view data source
 

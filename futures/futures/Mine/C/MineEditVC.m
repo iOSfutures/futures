@@ -13,6 +13,8 @@
 #import "MineInformationNameView.h"
 #import "MineInformationSexView.h"
 
+#import "MineEditProfileCell.h"
+
 #import <BRPickerView.h>
 
 @interface MineEditVC ()<UITableViewDataSource, UITableViewDelegate, MineInformationNameViewDelegate, MineInformationSexViewDelegate>
@@ -46,6 +48,8 @@
     return _informationArray;
 }
 
+NSString *MineProfileCellID = @"MineProfileCell";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back "] style:0 target:self action:@selector(backBtnClicked)];
@@ -53,6 +57,8 @@
     self.tabBarController.tabBar.hidden = YES;
     self.view.backgroundColor = [UIColor colorWithHexString:@"#F0F0F0"];
     self.mineEditTableView.backgroundColor = [UIColor colorWithHexString:@"#F0F0F0"];
+    
+    [self.mineEditTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MineEditProfileCell class]) bundle:nil] forCellReuseIdentifier:MineProfileCellID];
 }
 
 - (void)backBtnClicked
@@ -81,6 +87,8 @@
 {
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    MineEditProfileCell *profileCell = [tableView dequeueReusableCellWithIdentifier:MineProfileCellID];
+    
     MineInformationModel *informationModel = self.informationArray[0];
     if(indexPath.section == 0)
     {
@@ -90,29 +98,31 @@
         {
             cell.textLabel.text = @"昵称";
             cell.detailTextLabel.text = informationModel.name;
+            return cell;
         }
         else if(indexPath.row == 1)
         {
             cell.textLabel.text = @"性别";
             cell.detailTextLabel.text = informationModel.sex;
+            return cell;
         }
         else if(indexPath.row == 2)
         {
             cell.textLabel.text = @"生日";
             cell.detailTextLabel.text = informationModel.birthday;
+            return cell;
         }
         else
         {
-            cell.textLabel.text = @"个人简介";
-            cell.accessoryType = UITableViewCellAccessoryNone;
+            return profileCell;
         }
     }
     else
     {
         cell.textLabel.textColor = [UIColor colorWithHexString:@"#F95529"];
         cell.textLabel.text = @"退出登录";
+        return cell;
     }
-    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)NSString *name;
 @property (nonatomic, copy)NSString *sex;
 @property (nonatomic, copy)NSString *birthday;
+@property (nonatomic, copy)NSString *profile;
 
 @end
 

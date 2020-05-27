@@ -117,6 +117,8 @@
 		1859014224692D8B00CA7A68 /* PublishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859014024692D8B00CA7A68 /* PublishVC.xib */; };
 		185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 185901512469462800CA7A68 /* UIImage+OriginalImage.m */; };
 		185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AC2AC246E899D006EC3E6 /* UIColor+Hex.m */; };
+		1866EA03247DF89D002C0E05 /* MineEditProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866EA01247DF89D002C0E05 /* MineEditProfileCell.m */; };
+		1866EA04247DF89D002C0E05 /* MineEditProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1866EA02247DF89D002C0E05 /* MineEditProfileCell.xib */; };
 		18699CFD247B544F000A1022 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699CFC247B544F000A1022 /* UIImage+Image.m */; };
 		18699D05247B729C000A1022 /* MineInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D04247B729C000A1022 /* MineInformationModel.m */; };
 		18699D0B247B90F1000A1022 /* MineInformationNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18699D09247B90F1000A1022 /* MineInformationNameView.xib */; };
@@ -321,6 +323,9 @@
 		185901512469462800CA7A68 /* UIImage+OriginalImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OriginalImage.m"; sourceTree = "<group>"; };
 		185AC2AB246E899D006EC3E6 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		185AC2AC246E899D006EC3E6 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		1866EA00247DF89D002C0E05 /* MineEditProfileCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineEditProfileCell.h; sourceTree = "<group>"; };
+		1866EA01247DF89D002C0E05 /* MineEditProfileCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineEditProfileCell.m; sourceTree = "<group>"; };
+		1866EA02247DF89D002C0E05 /* MineEditProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineEditProfileCell.xib; sourceTree = "<group>"; };
 		18699CFB247B544F000A1022 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		18699CFC247B544F000A1022 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		18699D03247B729C000A1022 /* MineInformationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInformationModel.h; sourceTree = "<group>"; };
@@ -704,21 +709,21 @@
 		185AC2BC246E8C88006EC3E6 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				18468795247D1D2C007BC2FC /* AttentionTableViewCell.h */,
-				1846878E247D1D2B007BC2FC /* AttentionTableViewCell.m */,
-				1846878D247D1D2A007BC2FC /* AttentionTableViewCell.xib */,
-				1846878B247D1D2A007BC2FC /* AttentionVC.h */,
-				1846878F247D1D2B007BC2FC /* AttentionVC.m */,
-				1846878C247D1D2A007BC2FC /* AttentionVC.xib */,
+				18468798247D1D2C007BC2FC /* MineVC.h */,
+				18468799247D1D2C007BC2FC /* MineVC.m */,
+				18468792247D1D2B007BC2FC /* MineVC.xib */,
 				18468797247D1D2C007BC2FC /* MineDynamicVC.h */,
 				18468793247D1D2B007BC2FC /* MineDynamicVC.m */,
 				18468791247D1D2B007BC2FC /* MineDynamicVC.xib */,
 				18468794247D1D2B007BC2FC /* MineEditVC.h */,
 				18468796247D1D2C007BC2FC /* MineEditVC.m */,
 				18468790247D1D2B007BC2FC /* MineEditVC.xib */,
-				18468798247D1D2C007BC2FC /* MineVC.h */,
-				18468799247D1D2C007BC2FC /* MineVC.m */,
-				18468792247D1D2B007BC2FC /* MineVC.xib */,
+				18468795247D1D2C007BC2FC /* AttentionTableViewCell.h */,
+				1846878E247D1D2B007BC2FC /* AttentionTableViewCell.m */,
+				1846878D247D1D2A007BC2FC /* AttentionTableViewCell.xib */,
+				1846878B247D1D2A007BC2FC /* AttentionVC.h */,
+				1846878F247D1D2B007BC2FC /* AttentionVC.m */,
+				1846878C247D1D2A007BC2FC /* AttentionVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -745,6 +750,9 @@
 				18699D14247BB55E000A1022 /* MineInformationSexView.h */,
 				18699D15247BB55E000A1022 /* MineInformationSexView.m */,
 				18699D17247BB56A000A1022 /* MineInformationSexView.xib */,
+				1866EA00247DF89D002C0E05 /* MineEditProfileCell.h */,
+				1866EA01247DF89D002C0E05 /* MineEditProfileCell.m */,
+				1866EA02247DF89D002C0E05 /* MineEditProfileCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -918,6 +926,7 @@
 				15A6F1CA2475276E002C0930 /* MXZFullThirdCollectionCell.xib in Resources */,
 				15593E01247622FA007B3141 /* MXZSignVC.xib in Resources */,
 				1517AC6D247CA579007BC789 /* MXZFeedbackVC.xib in Resources */,
+				1866EA04247DF89D002C0E05 /* MineEditProfileCell.xib in Resources */,
 				18C2DE232473BB1C00116E2E /* CommunityTopicCell.xib in Resources */,
 				157A7164247676CE003D0081 /* MXZSignPopView.xib in Resources */,
 				1846877C247D1D06007BC2FC /* ZZHImageTableViewCell.xib in Resources */,
@@ -1035,6 +1044,7 @@
 				152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */,
 				18E8AC752474BDA300E3D7C4 /* CommunityFriendViewCell.m in Sources */,
 				151A95AF247BB82F007F3AAB /* MXZMessageCenterVC.m in Sources */,
+				1866EA03247DF89D002C0E05 /* MineEditProfileCell.m in Sources */,
 				18AA2BC2246E23B1000801B1 /* CommunityChildBVC.m in Sources */,
 				189BD81C246D1B9400490E35 /* MineModel.m in Sources */,
 				18C2DE182473788900116E2E /* CommunityBannerViewCell.m in Sources */,

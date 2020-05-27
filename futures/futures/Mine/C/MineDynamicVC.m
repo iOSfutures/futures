@@ -150,7 +150,7 @@ NSString *DynamicCell3 = @"DynamicCell3";
 {
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         CGRect frame = self.tabBarController.tabBar.frame;
         frame.origin.y = 667;
         self.tabBarController.tabBar.frame = frame;

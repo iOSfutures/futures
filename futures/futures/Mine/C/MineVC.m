@@ -14,6 +14,7 @@
 #import "AttentionVC.h"
 
 #import "MineDynamicVC.h"
+#import "MineEditVC.h"
 
 @interface MineVC ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -222,7 +223,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         CGRect frame = self.tabBarController.tabBar.frame;
         frame.origin.y = 593;
         self.tabBarController.tabBar.frame = frame;
@@ -254,6 +255,10 @@
     else if (indexPath.item == 1){
         MXZMessageCenterVC *messageVC = [[MXZMessageCenterVC alloc]init];
         [self.navigationController pushViewController:messageVC animated:YES];
+    }
+    else if (indexPath.section == 1 && indexPath.row == 0) {
+        MineDynamicVC *mineDynamicVC = MineDynamicVC.new;
+        [self.navigationController pushViewController:mineDynamicVC animated:YES];
     }
 }
 

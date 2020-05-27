@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -22,7 +22,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="澳大利亚6月 AIG/CBA服务表现指数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmN-KV-Ijg">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="澳大利亚6月 AIG/CBA服务表现指数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmN-KV-Ijg">
                         <rect key="frame" x="53.5" y="16" width="241" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
@@ -60,7 +60,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公布:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wj6-ya-bAt">
-                        <rect key="frame" x="197.5" y="47" width="26" height="13.5"/>
+                        <rect key="frame" x="197.5" y="46.5" width="26" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -129,6 +129,7 @@
                     <constraint firstItem="eHj-2b-mg4" firstAttribute="leading" secondItem="5Py-nS-eOE" secondAttribute="trailing" constant="5" id="WoJ-vJ-G8P"/>
                     <constraint firstItem="wZq-id-9n5" firstAttribute="centerY" secondItem="Wj6-ya-bAt" secondAttribute="centerY" id="X7d-Cm-gVL"/>
                     <constraint firstItem="uBq-vo-sbt" firstAttribute="leading" secondItem="08k-EG-U3Z" secondAttribute="trailing" constant="5" id="Xzp-io-MMf"/>
+                    <constraint firstAttribute="bottom" secondItem="Wj6-ya-bAt" secondAttribute="bottom" constant="35.5" id="cEi-fH-wAC"/>
                     <constraint firstAttribute="trailing" secondItem="Ijo-zX-FOy" secondAttribute="trailing" constant="15" id="ecW-oP-FH0"/>
                     <constraint firstItem="nPb-DS-SFi" firstAttribute="centerY" secondItem="cFF-Ki-HBw" secondAttribute="centerY" id="ezI-4A-IFY"/>
                     <constraint firstItem="std-wi-rdo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="h31-8C-nPJ"/>
@@ -142,6 +143,7 @@
                     <constraint firstItem="xN6-Lo-ksn" firstAttribute="centerY" secondItem="nPb-DS-SFi" secondAttribute="centerY" id="p5E-Oi-kKc"/>
                     <constraint firstItem="I7d-R0-FbY" firstAttribute="top" secondItem="std-wi-rdo" secondAttribute="bottom" constant="10" id="sVa-pQ-fAs"/>
                     <constraint firstItem="wZq-id-9n5" firstAttribute="leading" secondItem="Wj6-ya-bAt" secondAttribute="trailing" constant="5" id="uXb-GT-WYl"/>
+                    <constraint firstItem="AmN-KV-Ijg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="wJL-xp-oFw"/>
                     <constraint firstItem="Wj6-ya-bAt" firstAttribute="centerY" secondItem="eHj-2b-mg4" secondAttribute="centerY" id="yj1-l7-y1l"/>
                     <constraint firstItem="AmN-KV-Ijg" firstAttribute="centerY" secondItem="std-wi-rdo" secondAttribute="centerY" id="z1B-sB-995"/>
                 </constraints>

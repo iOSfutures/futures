@@ -24,6 +24,12 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 
+*.xcworkspace 
+xcuserdata 
+*.lock 
+Pods
+
+
 ## Obj-C/Swift specific
 *.hmap
 

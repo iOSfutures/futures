@@ -19,9 +19,8 @@
 
 @implementation ZZHQuoteNewsVC
 
-NSString *ZZHCollectionCellID = @"ZZHCollectionCell";
 NSString *ZZHImageCellID = @"ZZHImageCell";
-NSString *ID = @"TimeLine";
+NSString *TimeLineID = @"TimeLine";
 
 
 - (void)viewDidLoad {
@@ -35,7 +34,7 @@ NSString *ID = @"TimeLine";
     //注册头部轮播图cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZZHImageTableViewCell class]) bundle:nil] forCellReuseIdentifier:ZZHImageCellID];
     //注册时间线轮播图cell
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZZHTimeLineTableViewCell class]) bundle:nil] forCellReuseIdentifier:ID];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZZHTimeLineTableViewCell class]) bundle:nil] forCellReuseIdentifier:TimeLineID];
 }
 
 -(UIView *)listView{
@@ -56,7 +55,7 @@ NSString *ID = @"TimeLine";
         ZZHImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ZZHImageCellID];
         return cell;
     }else {
-        ZZHTimeLineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+        ZZHTimeLineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TimeLineID];
 
         if (indexPath.row == 1) {
                cell.topLine.hidden = YES;

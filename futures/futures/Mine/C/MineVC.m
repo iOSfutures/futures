@@ -221,7 +221,7 @@
     [self.navigationController pushViewController:mineDynamicVC animated:YES];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
     [UIView animateWithDuration:0.2 animations:^{
         CGRect frame = self.tabBarController.tabBar.frame;

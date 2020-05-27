@@ -7,8 +7,12 @@
 //
 
 #import "PublishVC.h"
+#import "MXZFeedbackFirstCell.h"
+#import "MXZFeedbackSecondCell.h"
+#import "MXZFeedbackFourthCell.h"
 
-@interface PublishVC ()
+@interface PublishVC ()<UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -18,6 +22,8 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithHexString:@"#FEA203"];
+    
+    self.navigationItem.title = @"发布说说";
 }
 
 /*

@@ -15,3 +15,15 @@
 #define kScaleFrom_iPhone8_Height(x) (x * (SCREEN_HEIGHT/667))
 
 #define UIColorWithRGBA(r,g,b,a)        [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+
+#import "MacroHeader.h"
+
+//#import <Masonry.h>
+//#import <AFNetworking.h>
+//#import <MJRefresh/MJRefresh.h>
+//#import <SDWebImage.h>
+//#import "MJExtension.h"
+//
+//#import "Toast.h"
+//#import "EGHCodeTool.h"

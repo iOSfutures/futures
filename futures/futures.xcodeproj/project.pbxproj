@@ -49,6 +49,23 @@
 		152636A8246E771D00D01BE0 /* MXZHomeFifthSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263690246E771D00D01BE0 /* MXZHomeFifthSectionCell.xib */; };
 		152636A9246E771D00D01BE0 /* MXZHomeSecondSectionFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263691246E771D00D01BE0 /* MXZHomeSecondSectionFootView.xib */; };
 		152636AA246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263694246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib */; };
+		1526D6B3247E07E6006A2556 /* ENDLCPNetWorkGET.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6A7247E07E6006A2556 /* ENDLCPNetWorkGET.m */; };
+		1526D6B4247E07E6006A2556 /* ENDNetWorkPOST.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6AA247E07E6006A2556 /* ENDNetWorkPOST.m */; };
+		1526D6B5247E07E6006A2556 /* ENDNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6AC247E07E6006A2556 /* ENDNetWorkManager.m */; };
+		1526D6B6247E07E6006A2556 /* ENDNetWorkDELETE.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6AD247E07E6006A2556 /* ENDNetWorkDELETE.m */; };
+		1526D6B7247E07E6006A2556 /* ENDNetWorkPUT.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6B0247E07E6006A2556 /* ENDNetWorkPUT.m */; };
+		1526D6B8247E07E6006A2556 /* ENDLCPNetWorkERROR.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6B2247E07E6006A2556 /* ENDLCPNetWorkERROR.m */; };
+		1526D6D2247E0A7C006A2556 /* EGHImagePickerVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6C0247E0A7C006A2556 /* EGHImagePickerVCManager.m */; };
+		1526D6D3247E0A7C006A2556 /* TimerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6C1247E0A7C006A2556 /* TimerTool.m */; };
+		1526D6D4247E0A7C006A2556 /* ENDGradientLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6C2247E0A7C006A2556 /* ENDGradientLabel.m */; };
+		1526D6D5247E0A7C006A2556 /* EGHViewsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6C3247E0A7C006A2556 /* EGHViewsTool.m */; };
+		1526D6D6247E0A7C006A2556 /* StringAndLabelDealTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6C4247E0A7C006A2556 /* StringAndLabelDealTool.m */; };
+		1526D6D7247E0A7C006A2556 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6C8247E0A7C006A2556 /* Toast.m */; };
+		1526D6D8247E0A7C006A2556 /* UILabel+YBAttributeTextTapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6CB247E0A7C006A2556 /* UILabel+YBAttributeTextTapAction.m */; };
+		1526D6D9247E0A7C006A2556 /* NSString+DealError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6D0247E0A7C006A2556 /* NSString+DealError.m */; };
+		1526D6DA247E0A7C006A2556 /* EGHCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6D1247E0A7C006A2556 /* EGHCodeTool.m */; };
+		1526D6E0247E0E24006A2556 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6DC247E0E24006A2556 /* Reachability.m */; };
+		1526D6E1247E0E24006A2556 /* LCPReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6DF247E0E24006A2556 /* LCPReachability.m */; };
 		154C26B7247B8CEF00A9162D /* MXZAnswerTomorrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 154C26B5247B8CEF00A9162D /* MXZAnswerTomorrowItem.m */; };
 		154C26B8247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154C26B6247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib */; };
 		154DFC652468F4AE0098498C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 154DFC642468F4AE0098498C /* AppDelegate.m */; };
@@ -227,6 +244,45 @@
 		15263693246E771D00D01BE0 /* MXZHomeSecondSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeSecondSectionCell.h; sourceTree = "<group>"; };
 		15263694246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeSecondSectionCell.xib; sourceTree = "<group>"; };
 		15263695246E771D00D01BE0 /* MXZHomeFourthSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeFourthSectionCell.h; sourceTree = "<group>"; };
+		1526D6A7247E07E6006A2556 /* ENDLCPNetWorkGET.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENDLCPNetWorkGET.m; sourceTree = "<group>"; };
+		1526D6A8247E07E6006A2556 /* ENDNetWorkDELETE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENDNetWorkDELETE.h; sourceTree = "<group>"; };
+		1526D6A9247E07E6006A2556 /* ENDNetWorkPUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENDNetWorkPUT.h; sourceTree = "<group>"; };
+		1526D6AA247E07E6006A2556 /* ENDNetWorkPOST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENDNetWorkPOST.m; sourceTree = "<group>"; };
+		1526D6AB247E07E6006A2556 /* ENDLCPNetWorkERROR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENDLCPNetWorkERROR.h; sourceTree = "<group>"; };
+		1526D6AC247E07E6006A2556 /* ENDNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENDNetWorkManager.m; sourceTree = "<group>"; };
+		1526D6AD247E07E6006A2556 /* ENDNetWorkDELETE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENDNetWorkDELETE.m; sourceTree = "<group>"; };
+		1526D6AE247E07E6006A2556 /* ENDLCPNetWorkGET.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENDLCPNetWorkGET.h; sourceTree = "<group>"; };
+		1526D6AF247E07E6006A2556 /* ENDNetWorkPOST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENDNetWorkPOST.h; sourceTree = "<group>"; };
+		1526D6B0247E07E6006A2556 /* ENDNetWorkPUT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENDNetWorkPUT.m; sourceTree = "<group>"; };
+		1526D6B1247E07E6006A2556 /* ENDNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENDNetWorkManager.h; sourceTree = "<group>"; };
+		1526D6B2247E07E6006A2556 /* ENDLCPNetWorkERROR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENDLCPNetWorkERROR.m; sourceTree = "<group>"; };
+		1526D6BA247E07F7006A2556 /* MacroStringHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroStringHeader.h; sourceTree = "<group>"; };
+		1526D6BB247E07F7006A2556 /* MacroEnumHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroEnumHeader.h; sourceTree = "<group>"; };
+		1526D6BC247E07F7006A2556 /* MacroNetWorkHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroNetWorkHeader.h; sourceTree = "<group>"; };
+		1526D6BD247E07F7006A2556 /* MacroUrlHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroUrlHeader.h; sourceTree = "<group>"; };
+		1526D6BE247E07F7006A2556 /* MacroHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroHeader.h; sourceTree = "<group>"; };
+		1526D6C0247E0A7C006A2556 /* EGHImagePickerVCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGHImagePickerVCManager.m; sourceTree = "<group>"; };
+		1526D6C1247E0A7C006A2556 /* TimerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerTool.m; sourceTree = "<group>"; };
+		1526D6C2247E0A7C006A2556 /* ENDGradientLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENDGradientLabel.m; sourceTree = "<group>"; };
+		1526D6C3247E0A7C006A2556 /* EGHViewsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGHViewsTool.m; sourceTree = "<group>"; };
+		1526D6C4247E0A7C006A2556 /* StringAndLabelDealTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringAndLabelDealTool.m; sourceTree = "<group>"; };
+		1526D6C5247E0A7C006A2556 /* UILabel+YBAttributeTextTapAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YBAttributeTextTapAction.h"; sourceTree = "<group>"; };
+		1526D6C6247E0A7C006A2556 /* NSString+DealError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DealError.h"; sourceTree = "<group>"; };
+		1526D6C7247E0A7C006A2556 /* EGHCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGHCodeTool.h; sourceTree = "<group>"; };
+		1526D6C8247E0A7C006A2556 /* Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toast.m; sourceTree = "<group>"; };
+		1526D6C9247E0A7C006A2556 /* EGHImagePickerVCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGHImagePickerVCManager.h; sourceTree = "<group>"; };
+		1526D6CA247E0A7C006A2556 /* TimerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerTool.h; sourceTree = "<group>"; };
+		1526D6CB247E0A7C006A2556 /* UILabel+YBAttributeTextTapAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YBAttributeTextTapAction.m"; sourceTree = "<group>"; };
+		1526D6CC247E0A7C006A2556 /* EGHViewsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGHViewsTool.h; sourceTree = "<group>"; };
+		1526D6CD247E0A7C006A2556 /* StringAndLabelDealTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringAndLabelDealTool.h; sourceTree = "<group>"; };
+		1526D6CE247E0A7C006A2556 /* ENDGradientLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENDGradientLabel.h; sourceTree = "<group>"; };
+		1526D6CF247E0A7C006A2556 /* Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toast.h; sourceTree = "<group>"; };
+		1526D6D0247E0A7C006A2556 /* NSString+DealError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DealError.m"; sourceTree = "<group>"; };
+		1526D6D1247E0A7C006A2556 /* EGHCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGHCodeTool.m; sourceTree = "<group>"; };
+		1526D6DC247E0E24006A2556 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1526D6DD247E0E24006A2556 /* LCPReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCPReachability.h; sourceTree = "<group>"; };
+		1526D6DE247E0E24006A2556 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		1526D6DF247E0E24006A2556 /* LCPReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPReachability.m; sourceTree = "<group>"; };
 		154C26B4247B8CEF00A9162D /* MXZAnswerTomorrowItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZAnswerTomorrowItem.h; sourceTree = "<group>"; };
 		154C26B5247B8CEF00A9162D /* MXZAnswerTomorrowItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZAnswerTomorrowItem.m; sourceTree = "<group>"; };
 		154C26B6247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZAnswerTomorrowItem.xib; sourceTree = "<group>"; };
@@ -574,6 +630,73 @@
 			path = V;
 			sourceTree = "<group>";
 		};
+		1526D6A6247E07E6006A2556 /* NetWorkManager */ = {
+			isa = PBXGroup;
+			children = (
+				1526D6A7247E07E6006A2556 /* ENDLCPNetWorkGET.m */,
+				1526D6A8247E07E6006A2556 /* ENDNetWorkDELETE.h */,
+				1526D6A9247E07E6006A2556 /* ENDNetWorkPUT.h */,
+				1526D6AA247E07E6006A2556 /* ENDNetWorkPOST.m */,
+				1526D6AB247E07E6006A2556 /* ENDLCPNetWorkERROR.h */,
+				1526D6AC247E07E6006A2556 /* ENDNetWorkManager.m */,
+				1526D6AD247E07E6006A2556 /* ENDNetWorkDELETE.m */,
+				1526D6AE247E07E6006A2556 /* ENDLCPNetWorkGET.h */,
+				1526D6AF247E07E6006A2556 /* ENDNetWorkPOST.h */,
+				1526D6B0247E07E6006A2556 /* ENDNetWorkPUT.m */,
+				1526D6B1247E07E6006A2556 /* ENDNetWorkManager.h */,
+				1526D6B2247E07E6006A2556 /* ENDLCPNetWorkERROR.m */,
+			);
+			path = NetWorkManager;
+			sourceTree = "<group>";
+		};
+		1526D6B9247E07F7006A2556 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				1526D6BA247E07F7006A2556 /* MacroStringHeader.h */,
+				1526D6BB247E07F7006A2556 /* MacroEnumHeader.h */,
+				1526D6BC247E07F7006A2556 /* MacroNetWorkHeader.h */,
+				1526D6BD247E07F7006A2556 /* MacroUrlHeader.h */,
+				1526D6BE247E07F7006A2556 /* MacroHeader.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		1526D6BF247E0A7C006A2556 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				1526D6C7247E0A7C006A2556 /* EGHCodeTool.h */,
+				1526D6D1247E0A7C006A2556 /* EGHCodeTool.m */,
+				1526D6C9247E0A7C006A2556 /* EGHImagePickerVCManager.h */,
+				1526D6C0247E0A7C006A2556 /* EGHImagePickerVCManager.m */,
+				1526D6CC247E0A7C006A2556 /* EGHViewsTool.h */,
+				1526D6C3247E0A7C006A2556 /* EGHViewsTool.m */,
+				1526D6CE247E0A7C006A2556 /* ENDGradientLabel.h */,
+				1526D6C2247E0A7C006A2556 /* ENDGradientLabel.m */,
+				1526D6C6247E0A7C006A2556 /* NSString+DealError.h */,
+				1526D6D0247E0A7C006A2556 /* NSString+DealError.m */,
+				1526D6CD247E0A7C006A2556 /* StringAndLabelDealTool.h */,
+				1526D6C4247E0A7C006A2556 /* StringAndLabelDealTool.m */,
+				1526D6CA247E0A7C006A2556 /* TimerTool.h */,
+				1526D6C1247E0A7C006A2556 /* TimerTool.m */,
+				1526D6CF247E0A7C006A2556 /* Toast.h */,
+				1526D6C8247E0A7C006A2556 /* Toast.m */,
+				1526D6C5247E0A7C006A2556 /* UILabel+YBAttributeTextTapAction.h */,
+				1526D6CB247E0A7C006A2556 /* UILabel+YBAttributeTextTapAction.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		1526D6DB247E0E24006A2556 /* NetReachability */ = {
+			isa = PBXGroup;
+			children = (
+				1526D6DC247E0E24006A2556 /* Reachability.m */,
+				1526D6DD247E0E24006A2556 /* LCPReachability.h */,
+				1526D6DE247E0E24006A2556 /* Reachability.h */,
+				1526D6DF247E0E24006A2556 /* LCPReachability.m */,
+			);
+			path = NetReachability;
+			sourceTree = "<group>";
+		};
 		154DFC572468F4AE0098498C = {
 			isa = PBXGroup;
 			children = (
@@ -797,6 +920,7 @@
 		18A5848C2472552A00C0437F /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				1526D6DB247E0E24006A2556 /* NetReachability */,
 				151AC18E2472595D00EAE0BD /* ZKCycleScrollView */,
 			);
 			path = ThirdSDK;
@@ -833,6 +957,9 @@
 		18B55133246BCBF500E80DEB /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				1526D6BF247E0A7C006A2556 /* Tools */,
+				1526D6B9247E07F7006A2556 /* Macro */,
+				1526D6A6247E07E6006A2556 /* NetWorkManager */,
 				18A5848C2472552A00C0437F /* ThirdSDK */,
 				185AC2BD246E8C98006EC3E6 /* Common */,
 				185AC2B5246E8BE8006EC3E6 /* Category */,
@@ -976,7 +1103,6 @@
 				18C2DE2C2473DD9700116E2E /* CommunityFriendCell.xib in Resources */,
 				151A95B0247BB82F007F3AAB /* MXZMessageCenterVC.xib in Resources */,
 				1517AC72247CBC3A007BC789 /* MXZFeedbackBtn.xib in Resources */,
-				18C581732476164900DC41EA /* ZZHQuoteIndustryVC.xib in Resources */,
 				18468764247D1CF2007BC2FC /* ZZHQuotesVC.xib in Resources */,
 				154C26B8247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib in Resources */,
 				1517AC7F247D108C007BC789 /* MXZFeedbackThirdCell.xib in Resources */,
@@ -1005,7 +1131,6 @@
 				15CDFAD72474C95900B2811F /* MXZFullFirstSectionCell.xib in Resources */,
 				18AA2BC3246E23B1000801B1 /* CommunityChildBVC.xib in Resources */,
 				1517AC7A247D0497007BC789 /* MXZFeedbackSecondCell.xib in Resources */,
-				186AF24B247631AD00D5B14B /* MineDynamicVC.xib in Resources */,
 				18468782247D1D06007BC2FC /* ZZHTimeLineTableViewCell.xib in Resources */,
 				15CDFADE2474F83800B2811F /* MXZFullSecondSectionFootView.xib in Resources */,
 				152636AA246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib in Resources */,
@@ -1074,6 +1199,7 @@
 				15A6F1C4247524E2002C0930 /* MXZFullThirdSectionCell.m in Sources */,
 				1517AC83247D1360007BC789 /* MXZFeedbackFourthCell.m in Sources */,
 				18A584882472544400C0437F /* ListViewController.m in Sources */,
+				1526D6B3247E07E6006A2556 /* ENDLCPNetWorkGET.m in Sources */,
 				18468780247D1D06007BC2FC /* ZZHDateCollectionViewCell.m in Sources */,
 				1517AC6C247CA579007BC789 /* MXZFeedbackVC.m in Sources */,
 				18468762247D1CF2007BC2FC /* ZZHQuoteIndustryVC.m in Sources */,
@@ -1081,17 +1207,23 @@
 				18468781247D1D06007BC2FC /* ZZHImageTableViewCell.m in Sources */,
 				1564961E2477CA56006745E8 /* MXZQuestionWeekItem.m in Sources */,
 				18C2DE222473BB1C00116E2E /* CommunityTopicCell.m in Sources */,
+				1526D6B8247E07E6006A2556 /* ENDLCPNetWorkERROR.m in Sources */,
 				157A716B2477A282003D0081 /* MXZAnswerVC.m in Sources */,
 				1846879D247D1D2C007BC2FC /* AttentionVC.m in Sources */,
 				1846877B247D1D06007BC2FC /* ZZHCollectionViewCell.m in Sources */,
 				18468768247D1CF2007BC2FC /* ZZHQuoteCalendarVC.m in Sources */,
 				152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */,
 				18E8AC752474BDA300E3D7C4 /* CommunityFriendViewCell.m in Sources */,
+				1526D6B6247E07E6006A2556 /* ENDNetWorkDELETE.m in Sources */,
+				1526D6E0247E0E24006A2556 /* Reachability.m in Sources */,
 				151A95AF247BB82F007F3AAB /* MXZMessageCenterVC.m in Sources */,
 				1866EA03247DF89D002C0E05 /* MineEditProfileCell.m in Sources */,
+				1526D6B4247E07E6006A2556 /* ENDNetWorkPOST.m in Sources */,
 				18AA2BC2246E23B1000801B1 /* CommunityChildBVC.m in Sources */,
+				1526D6B7247E07E6006A2556 /* ENDNetWorkPUT.m in Sources */,
 				189BD81C246D1B9400490E35 /* MineModel.m in Sources */,
 				1517AC7E247D108C007BC789 /* MXZFeedbackThirdCell.m in Sources */,
+				1526D6D5247E0A7C006A2556 /* EGHViewsTool.m in Sources */,
 				18C2DE182473788900116E2E /* CommunityBannerViewCell.m in Sources */,
 				18E8AC8A247519D100E3D7C4 /* CommunityDynamicModel.m in Sources */,
 				18BD94F5247290D5005A84B5 /* CommunityVC.m in Sources */,
@@ -1101,6 +1233,8 @@
 				18699D05247B729C000A1022 /* MineInformationModel.m in Sources */,
 				18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */,
 				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,
+				1526D6D2247E0A7C006A2556 /* EGHImagePickerVCManager.m in Sources */,
+				1526D6D4247E0A7C006A2556 /* ENDGradientLabel.m in Sources */,
 				1846876A247D1CF2007BC2FC /* ZZHQuoteNewsVC.m in Sources */,
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
 				18468767247D1CF2007BC2FC /* ZZHQuoteTimeVC.m in Sources */,
@@ -1109,18 +1243,22 @@
 				18468789247D1D0D007BC2FC /* ZZHNewsImageModel.m in Sources */,
 				1846879C247D1D2C007BC2FC /* AttentionTableViewCell.m in Sources */,
 				151AC19F24726AAF00EAE0BD /* MXZIndustryTableViewCell.m in Sources */,
+				1526D6B5247E07E6006A2556 /* ENDNetWorkManager.m in Sources */,
 				1517AC79247D0497007BC789 /* MXZFeedbackSecondCell.m in Sources */,
 				184687A3247D1D2C007BC2FC /* MineVC.m in Sources */,
 				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
 				15A6F1C0247513F7002C0930 /* MXZFullThirdSectionHeadView.m in Sources */,
 				152636A2246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m in Sources */,
 				1517AC75247CC7D2007BC789 /* MXZFeedbackFirstCell.m in Sources */,
+				1526D6E1247E0E24006A2556 /* LCPReachability.m in Sources */,
+				1526D6DA247E0A7C006A2556 /* EGHCodeTool.m in Sources */,
 				184687A2247D1D2C007BC2FC /* MineEditVC.m in Sources */,
 				151AC199247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m in Sources */,
 				156496222477D1D6006745E8 /* MXZAnswerABCButton.m in Sources */,
 				157A71762477B393003D0081 /* MXZAnswerWeekItem.m in Sources */,
 				151A95B4247BBA3B007F3AAB /* MXZAboutUsVC.m in Sources */,
 				157A7163247676CE003D0081 /* MXZSignPopView.m in Sources */,
+				1526D6D7247E0A7C006A2556 /* Toast.m in Sources */,
 				15CDFADB2474D49800B2811F /* MXZFullSecondSectionCell.m in Sources */,
 				1846878A247D1D0D007BC2FC /* ZZHQuoteDateModel.m in Sources */,
 				184687A1247D1D2C007BC2FC /* MineDynamicVC.m in Sources */,
@@ -1130,13 +1268,16 @@
 				18A584872472544400C0437F /* ContentBaseViewController.m in Sources */,
 				154DFC762468F4B00098498C /* main.m in Sources */,
 				1517AC70247CB83E007BC789 /* MXZFeedbackBtn.m in Sources */,
+				1526D6D9247E0A7C006A2556 /* NSString+DealError.m in Sources */,
 				184687A7247D1D53007BC2FC /* MXZHomeIndustryVC.m in Sources */,
 				18699CFD247B544F000A1022 /* UIImage+Image.m in Sources */,
 				15A6F1C92475276E002C0930 /* MXZFullThirdCollectionCell.m in Sources */,
 				151A95AA247BA995007F3AAB /* MXZSettingCenterVC.m in Sources */,
 				1846877E247D1D06007BC2FC /* ZZHTimeLineTableViewCell.m in Sources */,
 				15A6F1CE24752C15002C0930 /* MXZFullFourthSectionCell.m in Sources */,
+				1526D6D8247E0A7C006A2556 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				152636A5246E771D00D01BE0 /* MXZHomeFourthSectionCell.m in Sources */,
+				1526D6D3247E0A7C006A2556 /* TimerTool.m in Sources */,
 				18468766247D1CF2007BC2FC /* ZZHQuotesVC.m in Sources */,
 				18C2DE2B2473DD9700116E2E /* CommunityFriendCell.m in Sources */,
 				151AC1932472595D00EAE0BD /* ZKCycleScrollView.m in Sources */,
@@ -1148,6 +1289,7 @@
 				18E8AC872474F4CC00E3D7C4 /* CommunityTopicHeaderView.m in Sources */,
 				154C26B7247B8CEF00A9162D /* MXZAnswerTomorrowItem.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,
+				1526D6D6247E0A7C006A2556 /* StringAndLabelDealTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

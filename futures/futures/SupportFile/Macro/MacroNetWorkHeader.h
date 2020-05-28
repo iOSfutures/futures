@@ -11,11 +11,11 @@
 
 
 #ifdef DEBUG //开发
-#define LCP_BASE_URL @"http://courage.cqscrb.top"
+#define LCP_BASE_URL @"http://api.yysc.online"
 
 #else  //生产
 
-#define LCP_BASE_URL @"http://courage.cqscrb.top"
+#define LCP_BASE_URL @"http://api.yysc.online"
 
 #endif
 

@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CommunityTopicModel : NSObject
+@interface CommunityTopicModel : BaseModel
 
 @property (nonatomic, copy)NSString *content;
-@property (nonatomic, copy)NSString *imageName;
 
 @end
 

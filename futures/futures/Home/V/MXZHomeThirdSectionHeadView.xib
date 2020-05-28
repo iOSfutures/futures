@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="EcU-Cz-Dle">
+        <view contentMode="scaleToFill" id="EcU-Cz-Dle" customClass="MXZHomeThirdSectionHeadView">
             <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联合国内多家机构,以丰富的行情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zd-jm-U4q">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联合国内多家机构,以丰富的行情" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zd-jm-U4q">
                     <rect key="frame" x="119.5" y="3.5" width="175.5" height="14.5"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="TSK-p4-9rM"/>
@@ -30,7 +30,7 @@
                         <constraint firstAttribute="height" constant="50" id="QZf-Dh-RBU"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联合国内多家机构,以丰富的行情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCT-Pi-ODv">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联合国内多家机构,以丰富的行情" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCT-Pi-ODv">
                     <rect key="frame" x="119.5" y="39" width="175.5" height="14.5"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="1Yq-ib-Jx0"/>
@@ -40,7 +40,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联合国内多家机构,以丰富的行情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2w-P6-x3f">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联合国内多家机构,以丰富的行情" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2w-P6-x3f">
                     <rect key="frame" x="119.5" y="21.5" width="175.5" height="14.5"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="5dK-l8-vIw"/>
@@ -94,6 +94,11 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="Bne-XJ-1nQ"/>
+            <connections>
+                <outlet property="affairLabel0" destination="4Zd-jm-U4q" id="9J0-Al-EXr"/>
+                <outlet property="affairLabel1" destination="U2w-P6-x3f" id="tkO-i2-L4U"/>
+                <outlet property="affairLabel2" destination="hCT-Pi-ODv" id="lhj-ys-qQk"/>
+            </connections>
             <point key="canvasLocation" x="170" y="26"/>
         </view>
     </objects>

@@ -95,6 +95,8 @@
 		15A6F1CE24752C15002C0930 /* MXZFullFourthSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6F1CC24752C15002C0930 /* MXZFullFourthSectionCell.m */; };
 		15A6F1CF24752C15002C0930 /* MXZFullFourthSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6F1CD24752C15002C0930 /* MXZFullFourthSectionCell.xib */; };
 		15A6F1D124753351002C0930 /* MXZFullFourthSectionFootVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6F1D024753351002C0930 /* MXZFullFourthSectionFootVIew.xib */; };
+		15AA6EF7247F459300F416CF /* MXZFinanceAffairModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA6EF6247F459300F416CF /* MXZFinanceAffairModel.m */; };
+		15AA6EFD247F4D7800F416CF /* MXZHomeThirdSectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA6EFC247F4D7800F416CF /* MXZHomeThirdSectionHeadView.m */; };
 		15CDF74F2473BAFD00B2811F /* MXZTtileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CDF74E2473BAFD00B2811F /* MXZTtileVC.m */; };
 		15CDFAD12474C2FB00B2811F /* MXZFullDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CDFACF2474C2FB00B2811F /* MXZFullDisplay.m */; };
 		15CDFAD62474C95900B2811F /* MXZFullFirstSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CDFAD42474C95900B2811F /* MXZFullFirstSectionCell.m */; };
@@ -330,6 +332,10 @@
 		15A6F1CC24752C15002C0930 /* MXZFullFourthSectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFullFourthSectionCell.m; sourceTree = "<group>"; };
 		15A6F1CD24752C15002C0930 /* MXZFullFourthSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullFourthSectionCell.xib; sourceTree = "<group>"; };
 		15A6F1D024753351002C0930 /* MXZFullFourthSectionFootVIew.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullFourthSectionFootVIew.xib; sourceTree = "<group>"; };
+		15AA6EF5247F459300F416CF /* MXZFinanceAffairModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFinanceAffairModel.h; sourceTree = "<group>"; };
+		15AA6EF6247F459300F416CF /* MXZFinanceAffairModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFinanceAffairModel.m; sourceTree = "<group>"; };
+		15AA6EFB247F4D7800F416CF /* MXZHomeThirdSectionHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeThirdSectionHeadView.h; sourceTree = "<group>"; };
+		15AA6EFC247F4D7800F416CF /* MXZHomeThirdSectionHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeThirdSectionHeadView.m; sourceTree = "<group>"; };
 		15CDF74D2473BAFD00B2811F /* MXZTtileVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZTtileVC.h; sourceTree = "<group>"; };
 		15CDF74E2473BAFD00B2811F /* MXZTtileVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZTtileVC.m; sourceTree = "<group>"; };
 		15CDFACE2474C2FB00B2811F /* MXZFullDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFullDisplay.h; sourceTree = "<group>"; };
@@ -504,6 +510,8 @@
 		15263675246E771D00D01BE0 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				15AA6EF5247F459300F416CF /* MXZFinanceAffairModel.h */,
+				15AA6EF6247F459300F416CF /* MXZFinanceAffairModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -566,6 +574,8 @@
 				15263689246E771D00D01BE0 /* MXZHomeSecondSectionCell.m */,
 				15263694246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib */,
 				15263691246E771D00D01BE0 /* MXZHomeSecondSectionFootView.xib */,
+				15AA6EFB247F4D7800F416CF /* MXZHomeThirdSectionHeadView.h */,
+				15AA6EFC247F4D7800F416CF /* MXZHomeThirdSectionHeadView.m */,
 				1526368B246E771D00D01BE0 /* MXZHomeThirdSectionHeadView.xib */,
 				1526368E246E771D00D01BE0 /* MXZHomeFourthSectionHeadView.xib */,
 				15263695246E771D00D01BE0 /* MXZHomeFourthSectionCell.h */,
@@ -1254,6 +1264,7 @@
 				1526D6B5247E07E6006A2556 /* ENDNetWorkManager.m in Sources */,
 				1517AC79247D0497007BC789 /* MXZFeedbackSecondCell.m in Sources */,
 				184687A3247D1D2C007BC2FC /* MineVC.m in Sources */,
+				15AA6EF7247F459300F416CF /* MXZFinanceAffairModel.m in Sources */,
 				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
 				15A6F1C0247513F7002C0930 /* MXZFullThirdSectionHeadView.m in Sources */,
 				183B78DD247E535300D23A59 /* ZZHImageTableViewCell.m in Sources */,
@@ -1285,6 +1296,7 @@
 				15A6F1C92475276E002C0930 /* MXZFullThirdCollectionCell.m in Sources */,
 				183B78E2247E535300D23A59 /* ZZHDateHeadCell.m in Sources */,
 				151A95AA247BA995007F3AAB /* MXZSettingCenterVC.m in Sources */,
+				15AA6EFD247F4D7800F416CF /* MXZHomeThirdSectionHeadView.m in Sources */,
 				15A6F1CE24752C15002C0930 /* MXZFullFourthSectionCell.m in Sources */,
 				1526D6D8247E0A7C006A2556 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				152636A5246E771D00D01BE0 /* MXZHomeFourthSectionCell.m in Sources */,

@@ -105,6 +105,7 @@
 		15CDFADC2474D49800B2811F /* MXZFullSecondSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CDFADA2474D49800B2811F /* MXZFullSecondSectionCell.xib */; };
 		15CDFADE2474F83800B2811F /* MXZFullSecondSectionFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CDFADD2474F83800B2811F /* MXZFullSecondSectionFootView.xib */; };
 		15CDFAE32475036200B2811F /* MXZFullThirdSectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CDFAE12475036200B2811F /* MXZFullThirdSectionHeadView.xib */; };
+		18132965247E6C22009FEE55 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18132964247E6C22009FEE55 /* BaseModel.m */; };
 		181F5036246B908500CCCBDB /* CustomTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F5035246B908500CCCBDB /* CustomTBC.m */; };
 		183B78BF247E533000D23A59 /* ZZHQuoteIndustryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78B2247E532E00D23A59 /* ZZHQuoteIndustryVC.xib */; };
 		183B78C0247E533000D23A59 /* ZZHQuoteNewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78B3247E532F00D23A59 /* ZZHQuoteNewsVC.xib */; };
@@ -348,6 +349,8 @@
 		15CDFADA2474D49800B2811F /* MXZFullSecondSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullSecondSectionCell.xib; sourceTree = "<group>"; };
 		15CDFADD2474F83800B2811F /* MXZFullSecondSectionFootView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullSecondSectionFootView.xib; sourceTree = "<group>"; };
 		15CDFAE12475036200B2811F /* MXZFullThirdSectionHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZFullThirdSectionHeadView.xib; sourceTree = "<group>"; };
+		18132963247E6C21009FEE55 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		18132964247E6C22009FEE55 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		181F5034246B908500CCCBDB /* CustomTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTBC.h; sourceTree = "<group>"; };
 		181F5035246B908500CCCBDB /* CustomTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTBC.m; sourceTree = "<group>"; };
 		183B78B0247E532E00D23A59 /* ZZHQuotesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuotesVC.h; sourceTree = "<group>"; };
@@ -648,18 +651,18 @@
 		1526D6A6247E07E6006A2556 /* NetWorkManager */ = {
 			isa = PBXGroup;
 			children = (
+				1526D6AB247E07E6006A2556 /* ENDLCPNetWorkERROR.h */,
+				1526D6B2247E07E6006A2556 /* ENDLCPNetWorkERROR.m */,
+				1526D6AE247E07E6006A2556 /* ENDLCPNetWorkGET.h */,
 				1526D6A7247E07E6006A2556 /* ENDLCPNetWorkGET.m */,
 				1526D6A8247E07E6006A2556 /* ENDNetWorkDELETE.h */,
-				1526D6A9247E07E6006A2556 /* ENDNetWorkPUT.h */,
-				1526D6AA247E07E6006A2556 /* ENDNetWorkPOST.m */,
-				1526D6AB247E07E6006A2556 /* ENDLCPNetWorkERROR.h */,
-				1526D6AC247E07E6006A2556 /* ENDNetWorkManager.m */,
 				1526D6AD247E07E6006A2556 /* ENDNetWorkDELETE.m */,
-				1526D6AE247E07E6006A2556 /* ENDLCPNetWorkGET.h */,
-				1526D6AF247E07E6006A2556 /* ENDNetWorkPOST.h */,
-				1526D6B0247E07E6006A2556 /* ENDNetWorkPUT.m */,
 				1526D6B1247E07E6006A2556 /* ENDNetWorkManager.h */,
-				1526D6B2247E07E6006A2556 /* ENDLCPNetWorkERROR.m */,
+				1526D6AC247E07E6006A2556 /* ENDNetWorkManager.m */,
+				1526D6AF247E07E6006A2556 /* ENDNetWorkPOST.h */,
+				1526D6AA247E07E6006A2556 /* ENDNetWorkPOST.m */,
+				1526D6A9247E07E6006A2556 /* ENDNetWorkPUT.h */,
+				1526D6B0247E07E6006A2556 /* ENDNetWorkPUT.m */,
 			);
 			path = NetWorkManager;
 			sourceTree = "<group>";
@@ -909,6 +912,8 @@
 		185AC2BD246E8C98006EC3E6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				18132963247E6C21009FEE55 /* BaseModel.h */,
+				18132964247E6C22009FEE55 /* BaseModel.m */,
 				18A584832472544400C0437F /* ContentBaseViewController.h */,
 				18A584842472544400C0437F /* ContentBaseViewController.m */,
 				18A584852472544400C0437F /* ListViewController.h */,
@@ -1245,6 +1250,7 @@
 				183B78C4247E533000D23A59 /* ZZHQuoteIndustryVC.m in Sources */,
 				18E8AC8A247519D100E3D7C4 /* CommunityDynamicModel.m in Sources */,
 				18BD94F5247290D5005A84B5 /* CommunityVC.m in Sources */,
+				18132965247E6C22009FEE55 /* BaseModel.m in Sources */,
 				151AC1942472595D00EAE0BD /* ZKCycleScrollViewFlowLayout.m in Sources */,
 				18E8AC792474C60E00E3D7C4 /* CommunityFriendModel.m in Sources */,
 				15263699246E771D00D01BE0 /* MXZHomeQuoteVC.m in Sources */,
@@ -1453,7 +1459,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mo.futures;
+				PRODUCT_BUNDLE_IDENTIFIER = ssiswent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1473,7 +1479,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mo.futures;
+				PRODUCT_BUNDLE_IDENTIFIER = ssiswent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

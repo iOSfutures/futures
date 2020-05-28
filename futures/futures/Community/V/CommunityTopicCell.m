@@ -25,7 +25,6 @@
 {
     _communityTopicModel = communityTopicModel;
     self.contentLabel.text = communityTopicModel.content;
-    self.topicImgView.image = [UIImage imageNamed:communityTopicModel.imageName];
 }
 
 @end

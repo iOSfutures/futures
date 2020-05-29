@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *affairLabel0;
 @property (weak, nonatomic) IBOutlet UILabel *affairLabel1;
 @property (weak, nonatomic) IBOutlet UILabel *affairLabel2;
+@property (strong, nonatomic) NSArray *affairsArray;
 
+@property (copy, nonatomic) void (^jumpBlock)(NSArray *affairArray);
 @end
 
 NS_ASSUME_NONNULL_END

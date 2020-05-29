@@ -57,6 +57,9 @@
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="10" id="bPr-1x-yOr"/>
                     </constraints>
                     <state key="normal" title="Button" image="ic_more"/>
+                    <connections>
+                        <action selector="jumpToIndustryVC:" destination="EcU-Cz-Dle" eventType="touchUpInside" id="MRh-cc-cck"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUk-mq-24I">
                     <rect key="frame" x="374" y="26" width="25" height="10"/>
@@ -65,6 +68,9 @@
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="25" id="b8w-B2-sgc"/>
                     </constraints>
                     <state key="normal" title="Button" image="ic_more"/>
+                    <connections>
+                        <action selector="jumpToIndustryVC:" destination="EcU-Cz-Dle" eventType="touchUpInside" id="HYE-ke-fy8"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXm-CS-Pmp">
                     <rect key="frame" x="374" y="43.5" width="25" height="10"/>
@@ -73,6 +79,9 @@
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="25" id="Hje-4q-sSc"/>
                     </constraints>
                     <state key="normal" title="Button" image="ic_more"/>
+                    <connections>
+                        <action selector="jumpToIndustryVC:" destination="EcU-Cz-Dle" eventType="touchUpInside" id="mje-TT-4l6"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.99607843137254903" green="0.96862745098039216" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>

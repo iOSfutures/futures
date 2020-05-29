@@ -263,6 +263,7 @@
 
 -(void)industryBtnClick{
     MXZHomeIndustryVC *industryVC = [[MXZHomeIndustryVC alloc]init];
+    industryVC.affairsArray = self.affairsArray;
     industryVC.tabBarHidden = YES;
     [self.navigationController pushViewController:industryVC animated:YES];
 }
@@ -305,7 +306,7 @@
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if(error == nil){
             //网络连接成功才执行
-            //        NSLog(@"%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
+//            NSLog(@"%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
             id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
             NSDictionary *dict = [[NSDictionary alloc]initWithDictionary:jsonObj];
             NSArray *allArray = dict[@"data"];
@@ -425,6 +426,14 @@
     }
     else if (section == 2){
         [self setAffairs];
+        WEAKSELF
+        self.homeThirdSectionHeadView.jumpBlock = ^(NSArray * _Nonnull affairArray){
+            MXZHomeIndustryVC *industryVC = [[MXZHomeIndustryVC alloc]init];
+            industryVC.affairsArray = affairArray;
+            industryVC.tabBarHidden = YES;
+            [weakSelf.navigationController pushViewController:industryVC animated:YES];
+        };
+        self.homeThirdSectionHeadView.affairsArray = self.affairsArray;
         return self.homeThirdSectionHeadView;
     }
     else if (section == 3 || section == 4){

@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "ContentBaseViewController.h"
+#import "MXZFinanceAffairModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MXZHomeIndustryVC : ContentBaseViewController <JXCategoryListContentViewDelegate>
 
 @property (nonatomic, assign, getter=isTabBarHidden)BOOL tabBarHidden;
+
+@property (strong, nonatomic) NSArray *affairsArray;
 
 @end
 

@@ -51,21 +51,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="炒股指南_601077行情_还会涨吗?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rQ-8X-fHZ">
-                                <rect key="frame" x="45" y="50" width="238.5" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" priority="900" constant="16" id="Pw2-qG-slQ"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="900" constant="300" id="WcV-C0-fWS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTn-Rw-nuk">
                                 <rect key="frame" x="15" y="84" width="344" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="sHg-gW-zRG"/>
-                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Facebook携手权威咨询机构发布了“2019年中国出海品牌50强白皮书”，连续三年推出了“2019年度，咨询机构发布了6010...">
                                         <attributes>
@@ -80,17 +67,15 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="KTn-Rw-nuk" firstAttribute="top" secondItem="oXL-L6-gZe" secondAttribute="bottom" priority="900" constant="51" id="4uL-BL-NEF"/>
+                            <constraint firstAttribute="bottom" secondItem="KTn-Rw-nuk" secondAttribute="bottom" constant="32" id="8Jw-FC-Nv3"/>
                             <constraint firstItem="KTn-Rw-nuk" firstAttribute="leading" secondItem="oXL-L6-gZe" secondAttribute="leading" id="8bS-Od-qUw"/>
-                            <constraint firstItem="KTn-Rw-nuk" firstAttribute="top" secondItem="JmM-Xz-bfS" secondAttribute="bottom" constant="18" id="Jr4-4Q-0jv"/>
                             <constraint firstAttribute="trailing" secondItem="ILl-PB-GZQ" secondAttribute="trailing" constant="16" id="KfK-qJ-1Pc"/>
-                            <constraint firstItem="1rQ-8X-fHZ" firstAttribute="leading" secondItem="JmM-Xz-bfS" secondAttribute="trailing" priority="900" constant="6" id="Lxr-4A-tZh"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="900" constant="167" id="Pho-9P-gL4"/>
                             <constraint firstItem="JmM-Xz-bfS" firstAttribute="leading" secondItem="oXL-L6-gZe" secondAttribute="leading" id="Pnf-nb-v54"/>
                             <constraint firstItem="oXL-L6-gZe" firstAttribute="top" secondItem="M1e-xa-XXp" secondAttribute="top" constant="13" id="TIP-nt-1Ns"/>
                             <constraint firstItem="ILl-PB-GZQ" firstAttribute="bottom" secondItem="oXL-L6-gZe" secondAttribute="bottom" id="Y0w-oo-OAu"/>
                             <constraint firstItem="JmM-Xz-bfS" firstAttribute="top" secondItem="oXL-L6-gZe" secondAttribute="bottom" constant="18" id="gln-bV-DwU"/>
                             <constraint firstItem="oXL-L6-gZe" firstAttribute="leading" secondItem="M1e-xa-XXp" secondAttribute="leading" constant="15" id="jBC-u1-OdZ"/>
-                            <constraint firstItem="1rQ-8X-fHZ" firstAttribute="bottom" secondItem="JmM-Xz-bfS" secondAttribute="bottom" priority="900" id="oyD-zD-XwU"/>
                             <constraint firstItem="ILl-PB-GZQ" firstAttribute="trailing" secondItem="KTn-Rw-nuk" secondAttribute="trailing" id="rGj-mr-spH"/>
                         </constraints>
                     </view>
@@ -109,7 +94,6 @@
                 <outlet property="kindLabel" destination="oXL-L6-gZe" id="JES-Gj-SI3"/>
                 <outlet property="subtitleLabel" destination="JmM-Xz-bfS" id="QDm-m6-OdM"/>
                 <outlet property="timeLabel" destination="ILl-PB-GZQ" id="Hdh-Vb-0b4"/>
-                <outlet property="titleLabel" destination="1rQ-8X-fHZ" id="iB2-ow-ZU9"/>
             </connections>
             <point key="canvasLocation" x="139" y="127"/>
         </tableViewCell>

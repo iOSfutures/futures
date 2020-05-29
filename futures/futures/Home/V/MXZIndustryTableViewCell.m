@@ -26,28 +26,28 @@
     self.cellView.layer.shadowOffset = CGSizeMake(0,0);
     self.cellView.layer.shadowOpacity = 1;
     self.cellView.layer.shadowRadius = 15;
-    
+    //设置kindLabel随机颜色
+    self.kindLabel.backgroundColor = [UIColor colorWithRed:(arc4random()%256)/255.0 green:(arc4random()%256)/255.0 blue:(arc4random()%256)/255.0 alpha:1.0];
+    self.subtitleLabel.backgroundColor = [UIColor colorWithRed:(arc4random()%256)/255.0 green:(arc4random()%256)/255.0 blue:(arc4random()%256)/255.0 alpha:1.0];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    self = [[NSBundle mainBundle]loadNibNamed:@"MXZIndustryTableViewCell" owner:self options:nil].firstObject;
+    if (self) {
+        self.frame = frame;
+    }
+    return self;
 }
 
 
-
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 - (void)layoutSubviews {
     [super layoutSubviews];
     if (self.nonSubtitle == true) {
-//        AutoLayout创建的控件,frame设置无效
-//        self.titleLabel.frame = CGRectMake(15, 50, 300, 16);
-//        self.titleLabel.frame = CGRectMake(self.kindLabel.frame.origin.x, self.titleLabel.frame.origin.y, self.titleLabel.frame.size.width, self.titleLabel.frame.size.height);
-        [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.subtitleLabel removeFromSuperview];
+        [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.kindLabel).offset(38.f);
-            make.left.equalTo(self.kindLabel.superview).offset(15.f);
-            make.width.equalTo(self.kindLabel).offset(180.f);
-            make.height.equalTo(self.kindLabel).offset(-4.f);
         }];
     }
 }

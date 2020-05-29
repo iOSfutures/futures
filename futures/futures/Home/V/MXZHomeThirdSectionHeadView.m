@@ -7,6 +7,7 @@
 //
 
 #import "MXZHomeThirdSectionHeadView.h"
+#import "MXZHomeIndustryVC.h"
 
 @implementation MXZHomeThirdSectionHeadView
 
@@ -27,6 +28,16 @@
         self.frame = frame;
     }
     return self;
+}
+- (IBAction)jumpToIndustryVC:(id)sender {
+    NSArray *tempArray = self.affairsArray;
+    if(_jumpBlock){
+        _jumpBlock(tempArray);
+    }
+//    MXZHomeIndustryVC *industryVC = [[MXZHomeIndustryVC alloc]init];
+//    industryVC.affairsArray = self.affairsArray;
+//    industryVC.tabBarHidden = YES;
+//    [self.navigationController pushViewController:industryVC animated:YES];
 }
 
 @end

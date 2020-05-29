@@ -78,6 +78,7 @@
 		1564961E2477CA56006745E8 /* MXZQuestionWeekItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1564961C2477CA56006745E8 /* MXZQuestionWeekItem.m */; };
 		1564961F2477CA56006745E8 /* MXZQuestionWeekItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1564961D2477CA56006745E8 /* MXZQuestionWeekItem.xib */; };
 		156496222477D1D6006745E8 /* MXZAnswerABCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 156496212477D1D6006745E8 /* MXZAnswerABCButton.m */; };
+		156FEAFE2480E0D200FCA75F /* MXZRecommandTalkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FEAFD2480E0D200FCA75F /* MXZRecommandTalkModel.m */; };
 		157A7163247676CE003D0081 /* MXZSignPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 157A7161247676CE003D0081 /* MXZSignPopView.m */; };
 		157A7164247676CE003D0081 /* MXZSignPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157A7162247676CE003D0081 /* MXZSignPopView.xib */; };
 		157A716B2477A282003D0081 /* MXZAnswerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 157A71692477A282003D0081 /* MXZAnswerVC.m */; };
@@ -309,6 +310,8 @@
 		1564961D2477CA56006745E8 /* MXZQuestionWeekItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZQuestionWeekItem.xib; sourceTree = "<group>"; };
 		156496202477D1D6006745E8 /* MXZAnswerABCButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZAnswerABCButton.h; sourceTree = "<group>"; };
 		156496212477D1D6006745E8 /* MXZAnswerABCButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZAnswerABCButton.m; sourceTree = "<group>"; };
+		156FEAFC2480E0D200FCA75F /* MXZRecommandTalkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZRecommandTalkModel.h; sourceTree = "<group>"; };
+		156FEAFD2480E0D200FCA75F /* MXZRecommandTalkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZRecommandTalkModel.m; sourceTree = "<group>"; };
 		157A7160247676CE003D0081 /* MXZSignPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZSignPopView.h; sourceTree = "<group>"; };
 		157A7161247676CE003D0081 /* MXZSignPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZSignPopView.m; sourceTree = "<group>"; };
 		157A7162247676CE003D0081 /* MXZSignPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZSignPopView.xib; sourceTree = "<group>"; };
@@ -518,6 +521,8 @@
 			children = (
 				15AA6EF5247F459300F416CF /* MXZFinanceAffairModel.h */,
 				15AA6EF6247F459300F416CF /* MXZFinanceAffairModel.m */,
+				156FEAFC2480E0D200FCA75F /* MXZRecommandTalkModel.h */,
+				156FEAFD2480E0D200FCA75F /* MXZRecommandTalkModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -1323,6 +1328,7 @@
 				154C26B7247B8CEF00A9162D /* MXZAnswerTomorrowItem.m in Sources */,
 				183B78E0247E535300D23A59 /* ZZHCollectionViewCell.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,
+				156FEAFE2480E0D200FCA75F /* MXZRecommandTalkModel.m in Sources */,
 				1526D6D6247E0A7C006A2556 /* StringAndLabelDealTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

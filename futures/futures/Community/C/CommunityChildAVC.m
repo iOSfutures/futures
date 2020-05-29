@@ -181,4 +181,12 @@ NSString *DynamicCell = @"DynamicCell";
     }];
 }
 
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UserModel *model = _topicsArray[indexPath];
+//    UIViewController *vc = UIViewController.new;
+//    vc.model = model;
+//    [self.navigationController pushViewController:vc animated:YES];
+//}
+
 @end

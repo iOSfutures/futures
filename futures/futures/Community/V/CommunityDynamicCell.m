@@ -31,6 +31,12 @@
     [super awakeFromNib];
     _avatarImgView.layer.cornerRadius = 21;
     _avatarImgView.layer.masksToBounds = YES;
+    
+    _contentImgView1.layer.cornerRadius = 6;
+    _contentImgView1.layer.masksToBounds = YES;
+    
+    _contentImgView2.layer.cornerRadius = 6;
+    _contentImgView2.layer.masksToBounds = YES;
 }
 
 - (void)setDynamicModel:(CommunityDynamicModel *)dynamicModel

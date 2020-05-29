@@ -10,7 +10,7 @@
 #import "MXZAnswerCell.h"
 #import "UIImage+OriginalImage.h"
 
-@interface MXZAnswerVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface MXZAnswerVC ()<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -23,11 +23,15 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.tableView registerNib:[UINib nibWithNibName:@"MXZAnswerCell" bundle:nil] forCellReuseIdentifier:@"MXZAnswerCell"];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
+    
+    //启用右滑返回手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = YES;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 

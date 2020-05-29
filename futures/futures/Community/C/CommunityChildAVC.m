@@ -28,59 +28,6 @@
 
 @implementation CommunityChildAVC
 
-- (NSArray *)topicsArray
-{
-    if(_topicsArray == nil)
-    {
-        CommunityTopicModel *topicModelA = CommunityTopicModel.new;
-        topicModelA.content = @"美股芯片股盘前普遍下挫，此前美光披露第四财季业绩，净利润同比大...";
-        topicModelA.imageName = @"banner01_community";
-        CommunityTopicModel *topicModelB = CommunityTopicModel.new;
-        topicModelB.content = @"家乐福超市被收购？ 今日，苏宁易购完成收购家乐…";
-        topicModelB.imageName = @"banner02_community";
-        CommunityTopicModel *topicModelC = CommunityTopicModel.new;
-        topicModelC.content = @"美股芯片股盘前普遍下挫，此前美光披露第四财季业绩，净利润同比大...";
-        topicModelC.imageName = @"banner03_community";
-        NSMutableArray *temp = NSMutableArray.new;
-        [temp addObject:topicModelA];
-        [temp addObject:topicModelB];
-        [temp addObject:topicModelC];
-        _topicsArray = temp;
-    }
-    return _topicsArray;
-}
-
-- (NSArray *)dynamicsArray
-{
-    if(_dynamicsArray == nil)
-    {
-        CommunityDynamicModel *dynamicModelA = CommunityDynamicModel.new;
-        dynamicModelA.avatarImgName = @"user_hot chat_community";
-        dynamicModelA.contentImg1Name = @"talk about_banner01_community";
-        dynamicModelA.content = @"今年你更看好哪种基金表现？";
-        CommunityDynamicModel *dynamicModelB = CommunityDynamicModel.new;
-        dynamicModelB.avatarImgName = @"user_hot_community";
-        dynamicModelB.contentImg1Name = @"talk about_banner02_community";
-        dynamicModelB.contentImg2Name = @"talk about_banner03_community";
-        dynamicModelB.content = @"今年你更看好哪种基金表现？";
-        CommunityDynamicModel *dynamicModelC = CommunityDynamicModel.new;
-        dynamicModelC.avatarImgName = @"user_hot chat_community";
-        dynamicModelC.content = @"Facebook携手权威咨询机构发布了“2019年中国出海品牌50强白皮书”，连续三年推出了“2019年度，咨询机构发布了...";
-        CommunityDynamicModel *dynamicModelD = CommunityDynamicModel.new;
-        dynamicModelD.avatarImgName = @"user_hot_community";
-        dynamicModelD.contentImg1Name = @"talk about_banner01_community";
-        dynamicModelD.content = @"今年你更看好哪种基金表现？";
-        
-        NSMutableArray *temp = NSMutableArray.new;
-        [temp addObject:dynamicModelA];
-        [temp addObject:dynamicModelB];
-        [temp addObject:dynamicModelC];
-        [temp addObject:dynamicModelD];
-        _dynamicsArray = temp;
-    }
-    return _dynamicsArray;
-}
-
 NSString *BannerID = @"Banner";
 NSString *FriendID = @"Friend";
 NSString *TopicCellID = @"TopicCell";
@@ -94,6 +41,9 @@ NSString *DynamicCell = @"DynamicCell";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityFriendCell class]) bundle:nil] forCellReuseIdentifier:FriendID];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityTopicCell class]) bundle:nil] forCellReuseIdentifier:TopicCellID];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityDynamicCell class]) bundle:nil]forCellReuseIdentifier:DynamicCell];
+    
+    [self getTopics];
+    [self getDynamics];
     
 }
 
@@ -144,16 +94,19 @@ NSString *DynamicCell = @"DynamicCell";
         {
             cell.tagView.backgroundColor = [UIColor colorWithHexString:@"#EF9942"];
             cell.tagLabel.text = @"#今日财经";
+            cell.topicImgView.image = [UIImage imageNamed:@"banner01_community"];
         }
         else if(indexPath.row == 1)
         {
             cell.tagView.backgroundColor = [UIColor colorWithHexString:@"#77C116"];
             cell.tagLabel.text = @"#都市新闻";
+            cell.topicImgView.image = [UIImage imageNamed:@"banner02_community"];
         }
         else
         {
             cell.tagView.backgroundColor = [UIColor colorWithHexString:@"#F9386E"];
             cell.tagLabel.text = @"#财经频道";
+            cell.topicImgView.image = [UIImage imageNamed:@"banner03_community"];
         }
         return cell;
     }
@@ -193,6 +146,37 @@ NSString *DynamicCell = @"DynamicCell";
     {
         return 0.01;
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.01;
+}
+
+-(void)getTopics{
+    WEAKSELF
+    NSDate *todayDate = [NSDate date];
+    NSDictionary *dic = @{@"date":todayDate};
+    [ENDNetWorkManager getWithPathUrl:@"/admin/getFinanceAffairs" parameters:nil queryParams:dic Header:nil success:^(BOOL success, id result) {
+        NSError *error;
+        weakSelf.topicsArray = [MTLJSONAdapter modelsOfClass:[CommunityTopicModel class] fromJSONArray:result[@"data"] error:&error];
+        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf.view Message:@"请求话题失败" afterHideTime:DELAYTiME];
+    }];
+}
+
+-(void)getDynamics{
+    WEAKSELF
+    [ENDNetWorkManager getWithPathUrl:@"/user/talk/getRecommandTalk" parameters:nil queryParams:nil Header:nil success:^(BOOL success, id result) {
+        NSError *error;
+        weakSelf.dynamicsArray = [MTLJSONAdapter modelsOfClass:[CommunityDynamicModel class] fromJSONArray:result[@"data"][@"list"] error:&error];
+        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:3] withRowAnimation:UITableViewRowAnimationFade];
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf.view Message:@"请求推荐说说失败" afterHideTime:DELAYTiME];
+    }];
 }
 
 @end

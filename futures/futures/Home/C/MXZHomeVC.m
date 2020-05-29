@@ -21,21 +21,36 @@
 #import <Masonry/Masonry.h>
 #import "MXZSignVC.h"
 #import "MXZAnswerVC.h"
+#import "MXZFinanceAffairModel.h"
+#import "MXZHomeThirdSectionHeadView.h"
 
 #import "MXZHomeNavSearchView.h"
+#import "ZZHQuoteCalendarVC.h"
+#import "ZZHQuoteNewsVC.h"
+
+
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
 #define kScaleFrom_iPhone6_Desgin(_X_) (_X_ * (SCREEN_WIDTH/375))
 
-@interface MXZHomeVC ()<UITableViewDelegate, UITableViewDataSource, ZKCycleScrollViewDelegate, ZKCycleScrollViewDataSource>
+@interface MXZHomeVC ()<UITableViewDelegate, UITableViewDataSource, NSURLSessionDataDelegate, ZKCycleScrollViewDelegate, ZKCycleScrollViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
-
+@property (strong, nonatomic) NSArray *affairsArray;
+@property (strong, nonatomic) MXZHomeThirdSectionHeadView *homeThirdSectionHeadView;
 @end
 
 @implementation MXZHomeVC
 
+- (MXZHomeThirdSectionHeadView *)homeThirdSectionHeadView
+{
+    if(_homeThirdSectionHeadView == nil){
+        MXZHomeThirdSectionHeadView *tempView = [[MXZHomeThirdSectionHeadView alloc]init];
+        _homeThirdSectionHeadView = tempView;
+    }
+    return _homeThirdSectionHeadView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     //不使用系统TabBar设置背景图片的方式来设置图片
     [self getBackView:self.tabBarController.tabBar getViewBlock:^(UIView *subView) {
         if ([subView isKindOfClass:NSClassFromString(@"_UIBarBackground")]) {
@@ -67,6 +82,9 @@
     
     //去掉tableView的分割线
     self.homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    NSString *port = [NSString stringWithFormat:@"/admin/getFinanceAffairs?date"];
+    [self getData:port];
 }
 
 -(void)getBackView:(UIView*)superView getViewBlock:(void(^)(UIView *view))Blcok
@@ -221,7 +239,7 @@
     
     UILabel *expressLabel = [[UILabel alloc] init];
     expressLabel.frame = CGRectMake(CGRectGetMinX(expressBtn.frame), CGRectGetMaxY(expressBtn.frame)+1, 55, 12);
-    expressLabel.text = @"7X24快讯";
+    expressLabel.text = @"7×24快讯";
     expressLabel.font = [UIFont systemFontOfSize:12];
     expressLabel.textAlignment = NSTextAlignmentCenter;
     [fView addSubview:expressLabel];
@@ -243,18 +261,21 @@
 
 //跳转界面
 -(void)calendarBtnClick{
-    MXZHomeCalendarVC *calendarVC = [[MXZHomeCalendarVC alloc]init];
+    ZZHQuoteCalendarVC *calendarVC = ZZHQuoteCalendarVC.new;
+    calendarVC.tabBarHidden = YES;
     [self.navigationController pushViewController:calendarVC animated:YES];
 }
 
 -(void)industryBtnClick{
     MXZHomeIndustryVC *industryVC = [[MXZHomeIndustryVC alloc]init];
+    industryVC.affairsArray = self.affairsArray;
     industryVC.tabBarHidden = YES;
     [self.navigationController pushViewController:industryVC animated:YES];
 }
 
 -(void)expressBtnClick{
-    MXZHomeExpressVC *expressVC = [[MXZHomeExpressVC alloc]init];
+    ZZHQuoteNewsVC *expressVC = [[ZZHQuoteNewsVC alloc]init];
+    expressVC.tabBarHidden = YES;
     [self.navigationController pushViewController:expressVC animated:YES];
 }
 
@@ -281,6 +302,46 @@
     [self.navigationController pushViewController:answerVC animated:YES];
 }
 
+
+#pragma mark - URLRequest
+-(void)getData:(NSString *)port{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.yysc.online/%@", port]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error == nil){
+            //网络连接成功才执行
+//            NSLog(@"%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
+            id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+            NSDictionary *dict = [[NSDictionary alloc]initWithDictionary:jsonObj];
+            NSArray *allArray = dict[@"data"];
+            NSMutableArray *arrayObj = [NSMutableArray array];
+            for (NSDictionary *affairDict in allArray) {
+                MXZFinanceAffairModel *affair = [[MXZFinanceAffairModel alloc]init];
+                affair.content = affairDict[@"content"];
+                [arrayObj addObject:affair];
+            }
+            self.affairsArray = arrayObj;
+        }
+    }];
+    
+    [dataTask resume];
+}
+
+//获取财经大事数据
+-(void)setAffairs{
+    
+    MXZFinanceAffairModel *tempModel0 = _affairsArray[0];
+    MXZFinanceAffairModel *tempModel1 = _affairsArray[1];
+    MXZFinanceAffairModel *tempModel2 = _affairsArray[2];
+    if (tempModel0 != nil){
+    self.homeThirdSectionHeadView.affairLabel0.text = tempModel0.content;
+    self.homeThirdSectionHeadView.affairLabel1.text = tempModel1.content;
+    self.homeThirdSectionHeadView.affairLabel2.text = tempModel2.content;
+    }
+    
+}
 
 #pragma mark - Table view data source
 
@@ -370,8 +431,16 @@
         return headerView;
     }
     else if (section == 2){
-        UIView *headerView = [[NSBundle mainBundle]loadNibNamed:@"MXZHomeThirdSectionHeadView" owner:self options:nil].firstObject;
-        return headerView;
+        [self setAffairs];
+        WEAKSELF
+        self.homeThirdSectionHeadView.jumpBlock = ^(NSArray * _Nonnull affairArray){
+            MXZHomeIndustryVC *industryVC = [[MXZHomeIndustryVC alloc]init];
+            industryVC.affairsArray = affairArray;
+            industryVC.tabBarHidden = YES;
+            [weakSelf.navigationController pushViewController:industryVC animated:YES];
+        };
+        self.homeThirdSectionHeadView.affairsArray = self.affairsArray;
+        return self.homeThirdSectionHeadView;
     }
     else if (section == 3 || section == 4){
         UIView *headerView = [[NSBundle mainBundle]loadNibNamed:@"MXZHomeFourthSectionHeadView" owner:self options:nil].firstObject;

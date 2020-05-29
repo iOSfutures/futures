@@ -63,6 +63,16 @@
     
     self.window.rootViewController = customTBC;
     [self.window makeKeyAndVisible];
+    
+    [self setStatusBar];
+    
+    return YES;
+}
+
+- (void)setStatusBar
+{
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
     if (@available(iOS 13.0, *)) {// iOS 13 不能直接获取到statusbar 手动添加个view到window上当做statusbar背景
         if (!self.customizedStatusBar) {
             //获取最底层Window
@@ -79,7 +89,6 @@
     if ([self.customizedStatusBar respondsToSelector:@selector(setBackgroundColor:)]) {
         self.customizedStatusBar.backgroundColor = [UIColor colorWithHexString:@"#FEA203"];
     }
-    return YES;
 }
 -(void)testFunction{
     NSLog(@"dd");

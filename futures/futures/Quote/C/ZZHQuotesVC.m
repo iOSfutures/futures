@@ -23,7 +23,7 @@
 @implementation ZZHQuotesVC
 
 - (void)viewDidLoad {
-    self.titles = @[@"实时行情", @"日历数据", @"行业风暴", @"7x24快讯"];
+    self.titles = @[@"实时行情", @"日历数据", @"行业风暴", @"7×24快讯"];
     
     //设置导航条的背景图片不为空，就可以隐藏背景
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];

@@ -8,6 +8,7 @@
 
 #import "CommunityDynamicCell.h"
 #import "CommunityDynamicModel.h"
+#import "UserModel.h"
 
 @interface CommunityDynamicCell()
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImgView;
@@ -25,27 +26,40 @@
 
 @implementation CommunityDynamicCell
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    _avatarImgView.layer.cornerRadius = 21;
+    _avatarImgView.layer.masksToBounds = YES;
+}
+
 - (void)setDynamicModel:(CommunityDynamicModel *)dynamicModel
 {
     _dynamicModel = dynamicModel;
-    self.avatarImgView.image = [UIImage imageNamed:dynamicModel.avatarImgName];
-//    self.nameLabel.text = dynamicModel.name;
+    
+    UserModel *userModel = dynamicModel.user;
+    
+    [self.avatarImgView sd_setImageWithURL:[NSURL URLWithString:userModel.head]
+    placeholderImage:[UIImage imageNamed:@"user_hot chat_community"]];
+    self.nameLabel.text = userModel.nickName;
     self.contentLabel.text = dynamicModel.content;
-    if(dynamicModel.contentImg1Name)
+    if(dynamicModel.picture1)
     {
         self.contentImgView1.hidden = NO;
         self.contentImgView1W.constant = 345;
         self.contentImgView1H.constant = 167.5;
-        self.contentImgView1.image = [UIImage imageNamed:dynamicModel.contentImg1Name];
+        [self.contentImgView1 sd_setImageWithURL:[NSURL URLWithString:dynamicModel.picture1]
+        placeholderImage:[UIImage imageNamed:@"talk about_banner01_community"]];
         
         self.contentImgView1T.constant = 21.5;
         
-        if(dynamicModel.contentImg2Name)
+        if(dynamicModel.picture2)
         {
             self.contentImgView1W.constant = 165;
             self.contentImgView2.hidden = NO;
             self.contentImgView2H.constant = 167.5;
-            self.contentImgView2.image = [UIImage imageNamed:dynamicModel.contentImg2Name];
+            [self.contentImgView2 sd_setImageWithURL:[NSURL URLWithString:dynamicModel.picture2]
+            placeholderImage:[UIImage imageNamed:@"talk about_banner03_community"]];
         }
         else
         {

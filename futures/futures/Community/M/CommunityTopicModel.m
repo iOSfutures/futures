@@ -10,4 +10,10 @@
 
 @implementation CommunityTopicModel
 
++ (NSDictionary*) JSONKeyPathsByPropertyKey{
+    return @{
+             NSStringFromSelector(@selector(content)):@"content",
+             };
+}
+
 @end

@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CommunityFriendModel : NSObject
+@interface CommunityFriendModel : BaseModel
 
-@property (nonatomic, copy)NSString *avatarImgName;
-@property (nonatomic, copy)NSString *name;
-@property (nonatomic, copy)NSString *descript;
+@property (nonatomic, copy)NSString *head;
+@property (nonatomic, copy)NSString *nickName;
+@property (nonatomic, copy)NSString *signature;
 @property (nonatomic, assign, getter=isFollowed)BOOL followed;
 
 @end

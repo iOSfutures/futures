@@ -10,4 +10,12 @@
 
 @implementation CommunityFriendModel
 
++ (NSDictionary*) JSONKeyPathsByPropertyKey{
+    return @{
+             NSStringFromSelector(@selector(head)):@"head",
+             NSStringFromSelector(@selector(nickName)):@"nickName",
+             NSStringFromSelector(@selector(signature)):@"signature",
+             };
+}
+
 @end

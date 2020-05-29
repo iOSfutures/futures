@@ -1,20 +1,19 @@
 //
-//  CommunityFriendModel.m
+//  UserModel.m
 //  futures
 //
-//  Created by Ssiswent on 2020/5/20.
+//  Created by Ssiswent on 2020/5/28.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
-#import "CommunityFriendModel.h"
+#import "UserModel.h"
 
-@implementation CommunityFriendModel
+@implementation UserModel
 
 + (NSDictionary*) JSONKeyPathsByPropertyKey{
     return @{
              NSStringFromSelector(@selector(head)):@"head",
              NSStringFromSelector(@selector(nickName)):@"nickName",
-             NSStringFromSelector(@selector(signature)):@"signature",
              };
 }
 

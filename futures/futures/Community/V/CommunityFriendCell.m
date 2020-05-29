@@ -27,40 +27,40 @@
 
 @implementation CommunityFriendCell
 
-- (NSArray *)friendsArray
-{
-    if(_friendsArray == nil)
-    {
-        CommunityFriendModel *friendModelA = CommunityFriendModel.new;
-        friendModelA.avatarImgName = @"user_hot_community";
-        friendModelA.name = @"冬梨优子";
-        friendModelA.descript = @"金融理财专家";
-        friendModelA.followed = NO;
-        CommunityFriendModel *friendModelB = CommunityFriendModel.new;
-        friendModelB.avatarImgName = @"user_hot chat_community";
-        friendModelB.name = @"冬梨优子";
-        friendModelB.descript = @"金融理财专家";
-        friendModelB.followed = YES;
-        CommunityFriendModel *friendModelC = CommunityFriendModel.new;
-        friendModelC.avatarImgName = @"user_hot_community";
-        friendModelC.name = @"冬梨优子";
-        friendModelC.descript = @"金融理财专家";
-        friendModelC.followed = NO;
-        CommunityFriendModel *friendModelD = CommunityFriendModel.new;
-        friendModelD.avatarImgName = @"user_hot chat_community";
-        friendModelD.name = @"冬梨优子";
-        friendModelD.descript = @"金融理财专家";
-        friendModelD.followed = YES;
-        
-        NSMutableArray *temp = NSMutableArray.new;
-        [temp addObject:friendModelA];
-        [temp addObject:friendModelB];
-        [temp addObject:friendModelC];
-        [temp addObject:friendModelD];
-        _friendsArray = temp;
-    }
-    return _friendsArray;
-}
+//- (NSArray *)friendsArray
+//{
+//    if(_friendsArray == nil)
+//    {
+//        CommunityFriendModel *friendModelA = CommunityFriendModel.new;
+//        friendModelA.avatarImgName = @"user_hot_community";
+//        friendModelA.name = @"冬梨优子";
+//        friendModelA.descript = @"金融理财专家";
+//        friendModelA.followed = NO;
+//        CommunityFriendModel *friendModelB = CommunityFriendModel.new;
+//        friendModelB.avatarImgName = @"user_hot chat_community";
+//        friendModelB.name = @"冬梨优子";
+//        friendModelB.descript = @"金融理财专家";
+//        friendModelB.followed = YES;
+//        CommunityFriendModel *friendModelC = CommunityFriendModel.new;
+//        friendModelC.avatarImgName = @"user_hot_community";
+//        friendModelC.name = @"冬梨优子";
+//        friendModelC.descript = @"金融理财专家";
+//        friendModelC.followed = NO;
+//        CommunityFriendModel *friendModelD = CommunityFriendModel.new;
+//        friendModelD.avatarImgName = @"user_hot chat_community";
+//        friendModelD.name = @"冬梨优子";
+//        friendModelD.descript = @"金融理财专家";
+//        friendModelD.followed = YES;
+//
+//        NSMutableArray *temp = NSMutableArray.new;
+//        [temp addObject:friendModelA];
+//        [temp addObject:friendModelB];
+//        [temp addObject:friendModelC];
+//        [temp addObject:friendModelD];
+//        _friendsArray = temp;
+//    }
+//    return _friendsArray;
+//}
 
 NSString *FriendCellID = @"FriendCell";
 
@@ -73,6 +73,8 @@ NSString *FriendCellID = @"FriendCell";
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
     [self addPagerView];
+    
+    [self getFriends];
 }
 
 - (void)layoutSubviews
@@ -120,6 +122,19 @@ NSString *FriendCellID = @"FriendCell";
 
 - (void)pagerView:(TYCyclePagerView *)pageView didScrollFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
     NSLog(@"%ld ->  %ld",fromIndex,toIndex);
+}
+
+-(void)getFriends{
+    WEAKSELF
+    [ENDNetWorkManager getWithPathUrl:@"/user/follow/getRecommandUserList" parameters:nil queryParams:nil Header:nil success:^(BOOL success, id result) {
+        NSError *error;
+        weakSelf.friendsArray = [MTLJSONAdapter modelsOfClass:[CommunityFriendModel class] fromJSONArray:result[@"data"] error:&error];
+//        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
+        [weakSelf.pagerView reloadData];
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf Message:@"请求话题失败" afterHideTime:DELAYTiME];
+    }];
 }
 
 @end

@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="328"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_hot chat_community" translatesAutoresizingMaskIntoConstraints="NO" id="dYW-fR-zwZ" userLabel="AvatarImgView">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_hot chat_community" translatesAutoresizingMaskIntoConstraints="NO" id="dYW-fR-zwZ" userLabel="AvatarImgView">
                         <rect key="frame" x="15" y="14" width="42" height="42"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="42" id="IlD-cu-e7I"/>
@@ -59,7 +59,7 @@
                         <color key="textColor" red="0.6247445345" green="0.62866049999999996" blue="0.63229727749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今年你更看好哪种基金表现？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnN-UM-bcM" userLabel="ContentLabel">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今年你更看好哪种基金表现？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnN-UM-bcM" userLabel="ContentLabel">
                         <rect key="frame" x="15" y="259.5" width="348" height="8"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.20069780949999999" green="0.20068871969999999" blue="0.2006948888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -171,7 +171,7 @@
                 <outlet property="contentLabel" destination="gnN-UM-bcM" id="FBe-cK-Jfa"/>
                 <outlet property="nameLabel" destination="wps-G5-NO5" id="SIb-zt-hfH"/>
             </connections>
-            <point key="canvasLocation" x="172.46376811594203" y="192.85714285714286"/>
+            <point key="canvasLocation" x="-333" y="157"/>
         </tableViewCell>
     </objects>
     <resources>

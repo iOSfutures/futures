@@ -23,44 +23,14 @@
 
 @implementation CommunityChildBVC
 
-- (NSArray *)dynamicsArray
-{
-    if(_dynamicsArray == nil)
-    {
-        CommunityDynamicModel *dynamicModelA = CommunityDynamicModel.new;
-        dynamicModelA.avatarImgName = @"user_hot_community";
-        dynamicModelA.contentImg1Name = @"talk about_banner02_community";
-        dynamicModelA.contentImg2Name = @"talk about_banner03_community";
-        dynamicModelA.content = @"今年你更看好哪种基金表现？";
-        CommunityDynamicModel *dynamicModelB = CommunityDynamicModel.new;
-        dynamicModelB.avatarImgName = @"user_hot chat_community";
-        dynamicModelB.content = @"Facebook携手权威咨询机构发布了“2019年中国出海品牌50强白皮书”，连续三年推出了“2019年度，咨询机构发布了...";
-        CommunityDynamicModel *dynamicModelC = CommunityDynamicModel.new;
-        dynamicModelC.avatarImgName = @"user_hot_community";
-        dynamicModelC.contentImg1Name = @"talk about_banner01_community";
-        dynamicModelC.content = @"今年你更看好哪种基金表现？";
-        CommunityDynamicModel *dynamicModelD = CommunityDynamicModel.new;
-        dynamicModelD.avatarImgName = @"user_hot chat_community";
-        dynamicModelD.contentImg1Name = @"talk about_banner02_community";
-        dynamicModelD.contentImg2Name = @"talk about_banner03_community";
-        dynamicModelD.content = @"今年你更看好哪种基金表现？";
-        
-        NSMutableArray *temp = NSMutableArray.new;
-        [temp addObject:dynamicModelA];
-        [temp addObject:dynamicModelB];
-        [temp addObject:dynamicModelC];
-        [temp addObject:dynamicModelD];
-        _dynamicsArray = temp;
-    }
-    return _dynamicsArray;
-}
-
 NSString *DynamicCell2 = @"DynamicCell2";
 NSString *FriendID2 = @"Friend2";
 
 - (void)viewDidLoad {
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityDynamicCell class]) bundle:nil]forCellReuseIdentifier:DynamicCell2];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityFriendCell class]) bundle:nil] forCellReuseIdentifier:FriendID2];
+    
+    [self getDynamics];
 }
 
 -(UIView *)listView{
@@ -93,6 +63,23 @@ NSString *FriendID2 = @"Friend2";
         cell.dynamicModel = self.dynamicsArray[indexPath.row - 1];
         return cell;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+-(void)getDynamics{
+    WEAKSELF
+    [ENDNetWorkManager getWithPathUrl:@"/user/talk/getRecommandTalk" parameters:nil queryParams:nil Header:nil success:^(BOOL success, id result) {
+        NSError *error;
+        weakSelf.dynamicsArray = [MTLJSONAdapter modelsOfClass:[CommunityDynamicModel class] fromJSONArray:result[@"data"][@"list"] error:&error];
+        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf.view Message:@"请求推荐说说失败" afterHideTime:DELAYTiME];
+    }];
 }
 
 @end

@@ -10,7 +10,9 @@
 #import "ZZHTimeLineTableViewCell.h"
 #import "ZZHImageTableViewCell.h"
 
-@interface ZZHQuoteNewsVC () <UITableViewDelegate, UITableViewDataSource>
+#import "UIImage+OriginalImage.h"
+
+@interface ZZHQuoteNewsVC () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArr;
 
@@ -24,6 +26,11 @@ NSString *TimeLineID = @"TimeLine";
 
 
 - (void)viewDidLoad {
+    
+    self.title = @"7×24快讯";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     //隐藏分割线
@@ -35,10 +42,17 @@ NSString *TimeLineID = @"TimeLine";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZZHImageTableViewCell class]) bundle:nil] forCellReuseIdentifier:ZZHImageCellID];
     //注册时间线轮播图cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZZHTimeLineTableViewCell class]) bundle:nil] forCellReuseIdentifier:TimeLineID];
+    
+    //启用右滑返回手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 -(UIView *)listView{
     return self.view;
+}
+
+-(void)backPreView{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - UITableViewViewDataSource
@@ -71,6 +85,18 @@ NSString *TimeLineID = @"TimeLine";
     } else if (self.tableView.contentOffset.y < 0) {
         self.tableView.bounces = NO;
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = self.isTabBarHidden;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 @end

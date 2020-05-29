@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZZHQuoteCalendarVC : ContentBaseViewController<JXCategoryListContentViewDelegate>
 
+@property (nonatomic, assign, getter=isTabBarHidden)BOOL tabBarHidden;
+
 @end
 
 NS_ASSUME_NONNULL_END

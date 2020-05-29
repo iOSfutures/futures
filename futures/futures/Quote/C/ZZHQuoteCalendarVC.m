@@ -12,8 +12,9 @@
 #import "ZZHDateHeadCell.h"
 
 #import "UIColor+Hex.h"
+#import "UIImage+OriginalImage.h"
 
-@interface ZZHQuoteCalendarVC () <UITableViewDelegate,UITableViewDataSource>
+@interface ZZHQuoteCalendarVC () <UITableViewDelegate,UITableViewDataSource, UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -32,6 +33,11 @@ NSString *CollectionTableViewID = @"collectionView";
 NSString *TableViewID = @"TableView";
 
 - (void)viewDidLoad {
+    
+    self.title = @"日历数据";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
+    
     _weekDayArray = @[@"日",@"一",@"二",@"三",@"四",@"五",@"六"];
     
     self.tableView.delegate = self;
@@ -51,7 +57,26 @@ NSString *TableViewID = @"TableView";
     //自适应高度
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 100;
+    
+    //启用右滑返回手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = self.tabBarHidden;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = NO;
+}
+
+-(void)backPreView{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

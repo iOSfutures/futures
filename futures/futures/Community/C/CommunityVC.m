@@ -13,6 +13,8 @@
 
 #import "JXCategoryTitleView.h"
 
+#import "MXZSignVC.h"
+
 @interface CommunityVC ()
 
 @property (nonatomic, strong) JXCategoryTitleView *myCategoryView;
@@ -59,7 +61,7 @@
     UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:contentView];
     self.navigationItem.leftBarButtonItem = barButtonItem;
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_qiandao"] style:0 target:self action:nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_qiandao"] style:0 target:self action:@selector(toCheckInPage)];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -97,4 +99,11 @@
     }
     
 }
+
+- (void)toCheckInPage
+{
+    MXZSignVC *signVC = MXZSignVC.new;
+    [self.navigationController pushViewController:signVC animated:YES];
+}
+
 @end

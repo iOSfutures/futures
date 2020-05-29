@@ -27,6 +27,7 @@
 #import "MXZHomeNavSearchView.h"
 #import "ZZHQuoteCalendarVC.h"
 #import "ZZHQuoteNewsVC.h"
+#import "MXZRecommandTalkModel.h"
 
 
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
@@ -35,6 +36,7 @@
 @interface MXZHomeVC ()<UITableViewDelegate, UITableViewDataSource, NSURLSessionDataDelegate, ZKCycleScrollViewDelegate, ZKCycleScrollViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 @property (strong, nonatomic) NSArray *affairsArray;
+@property (strong, nonatomic) NSArray *recommandTalkArray;
 @property (strong, nonatomic) MXZHomeThirdSectionHeadView *homeThirdSectionHeadView;
 @end
 
@@ -85,6 +87,7 @@
     
     NSString *port = [NSString stringWithFormat:@"/admin/getFinanceAffairs?date"];
     [self getData:port];
+    [self getRecommandTalkModel];
 }
 
 -(void)getBackView:(UIView*)superView getViewBlock:(void(^)(UIView *view))Blcok
@@ -343,6 +346,20 @@
     
 }
 
+-(void)getRecommandTalkModel{
+    WEAKSELF
+    [ENDNetWorkManager getWithPathUrl:@"/user/talk/getRecommandTalk" parameters:nil queryParams:nil Header:nil success:^(BOOL success, id result) {
+        NSError *error;
+        weakSelf.recommandTalkArray = [MTLJSONAdapter modelsOfClass:[MXZRecommandTalkModel class] fromJSONArray:result[@"data"][@"list"] error:&error];
+        //刷新第5个section
+        [weakSelf.homeTableView reloadSections:[NSIndexSet indexSetWithIndex:4] withRowAnimation:UITableViewRowAnimationFade];
+
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf.view Message:@"请求推荐说说失败" afterHideTime:DELAYTiME];
+    }];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -358,7 +375,7 @@
         return 1;
     }
     else if (section == 4){
-        return 1;
+        return self.recommandTalkArray.count;
     }
     else{
         return 0;
@@ -388,6 +405,7 @@
         if(cell == nil){
             cell = [[NSBundle mainBundle] loadNibNamed:@"MXZHomeFifthSectionCell" owner:self options:nil].firstObject;
         }
+        cell.recommandModel = self.recommandTalkArray[indexPath.row];
         return cell;
     }
     
@@ -504,6 +522,7 @@
 {
     if (indexPath.section == 4) {
         MXZFullDisplay *titleVC = [[MXZFullDisplay alloc]init];
+        titleVC.recommandModel = self.recommandTalkArray[indexPath.row];
         [self.navigationController pushViewController:titleVC animated:YES];
     }
 }

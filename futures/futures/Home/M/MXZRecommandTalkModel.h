@@ -7,13 +7,15 @@
 //
 
 #import "BaseModel.h"
-
+#import "UserModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MXZRecommandTalkModel : BaseModel
 
 @property(nonatomic, copy) NSString *content;
+@property(nonatomic, copy) NSString *picture;
 
+@property (nonatomic, strong)UserModel *user;
 @end
 
 NS_ASSUME_NONNULL_END

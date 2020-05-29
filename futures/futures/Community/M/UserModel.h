@@ -1,8 +1,8 @@
 //
-//  CommunityFriendModel.h
+//  UserModel.h
 //  futures
 //
-//  Created by Ssiswent on 2020/5/20.
+//  Created by Ssiswent on 2020/5/28.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
@@ -11,12 +11,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CommunityFriendModel : BaseModel
+@interface UserModel : BaseModel
 
 @property (nonatomic, copy)NSString *head;
 @property (nonatomic, copy)NSString *nickName;
-@property (nonatomic, copy)NSString *signature;
-@property (nonatomic, assign, getter=isFollowed)BOOL followed;
 
 @end
 

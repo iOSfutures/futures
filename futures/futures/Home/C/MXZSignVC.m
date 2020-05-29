@@ -10,7 +10,7 @@
 #import "MXZSignPopView.h"
 #import "UIImage+OriginalImage.h"
 
-@interface MXZSignVC ()
+@interface MXZSignVC ()<UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *titleView;
 @property (strong, nonatomic) UIView *coverView;
 @property (strong, nonatomic) MXZSignPopView *popView;
@@ -29,10 +29,14 @@
     self.titleView.layer.cornerRadius = 14;
     [self.signBtn addTarget:self action:@selector(popCoverview) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
+    
+    //启用右滑返回手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = YES;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

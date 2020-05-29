@@ -23,6 +23,10 @@
 #import "MXZAnswerVC.h"
 
 #import "MXZHomeNavSearchView.h"
+#import "ZZHQuoteCalendarVC.h"
+#import "ZZHQuoteNewsVC.h"
+
+
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
 #define kScaleFrom_iPhone6_Desgin(_X_) (_X_ * (SCREEN_WIDTH/375))
 
@@ -221,7 +225,7 @@
     
     UILabel *expressLabel = [[UILabel alloc] init];
     expressLabel.frame = CGRectMake(CGRectGetMinX(expressBtn.frame), CGRectGetMaxY(expressBtn.frame)+1, 55, 12);
-    expressLabel.text = @"7X24快讯";
+    expressLabel.text = @"7×24快讯";
     expressLabel.font = [UIFont systemFontOfSize:12];
     expressLabel.textAlignment = NSTextAlignmentCenter;
     [fView addSubview:expressLabel];
@@ -243,7 +247,8 @@
 
 //跳转界面
 -(void)calendarBtnClick{
-    MXZHomeCalendarVC *calendarVC = [[MXZHomeCalendarVC alloc]init];
+    ZZHQuoteCalendarVC *calendarVC = ZZHQuoteCalendarVC.new;
+    calendarVC.tabBarHidden = YES;
     [self.navigationController pushViewController:calendarVC animated:YES];
 }
 
@@ -254,7 +259,8 @@
 }
 
 -(void)expressBtnClick{
-    MXZHomeExpressVC *expressVC = [[MXZHomeExpressVC alloc]init];
+    ZZHQuoteNewsVC *expressVC = [[ZZHQuoteNewsVC alloc]init];
+    expressVC.tabBarHidden = YES;
     [self.navigationController pushViewController:expressVC animated:YES];
 }
 

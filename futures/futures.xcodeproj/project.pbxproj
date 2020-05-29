@@ -142,6 +142,7 @@
 		184687A7247D1D53007BC2FC /* MXZHomeIndustryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 184687A4247D1D53007BC2FC /* MXZHomeIndustryVC.m */; };
 		184687A8247D1D53007BC2FC /* MXZHomeIndustryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184687A6247D1D53007BC2FC /* MXZHomeIndustryVC.xib */; };
 		184687AA247D1D98007BC2FC /* MXZHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 184687A9247D1D98007BC2FC /* MXZHomeVC.m */; };
+		184B78A1247F94B000BFCB45 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B78A0247F94B000BFCB45 /* UserModel.m */; };
 		1859014124692D8B00CA7A68 /* PublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1859013F24692D8B00CA7A68 /* PublishVC.m */; };
 		1859014224692D8B00CA7A68 /* PublishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1859014024692D8B00CA7A68 /* PublishVC.xib */; };
 		185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 185901512469462800CA7A68 /* UIImage+OriginalImage.m */; };
@@ -403,6 +404,8 @@
 		184687A5247D1D53007BC2FC /* MXZHomeIndustryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeIndustryVC.h; sourceTree = "<group>"; };
 		184687A6247D1D53007BC2FC /* MXZHomeIndustryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeIndustryVC.xib; sourceTree = "<group>"; };
 		184687A9247D1D98007BC2FC /* MXZHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXZHomeVC.m; sourceTree = "<group>"; };
+		184B789F247F94B000BFCB45 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		184B78A0247F94B000BFCB45 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		1859013E24692D8B00CA7A68 /* PublishVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishVC.h; sourceTree = "<group>"; };
 		1859013F24692D8B00CA7A68 /* PublishVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishVC.m; sourceTree = "<group>"; };
 		1859014024692D8B00CA7A68 /* PublishVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublishVC.xib; sourceTree = "<group>"; };
@@ -1001,6 +1004,8 @@
 				18E8AC782474C60E00E3D7C4 /* CommunityFriendModel.m */,
 				18E8AC88247519D000E3D7C4 /* CommunityDynamicModel.h */,
 				18E8AC89247519D000E3D7C4 /* CommunityDynamicModel.m */,
+				184B789F247F94B000BFCB45 /* UserModel.h */,
+				184B78A0247F94B000BFCB45 /* UserModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -1220,6 +1225,7 @@
 				1564961E2477CA56006745E8 /* MXZQuestionWeekItem.m in Sources */,
 				18C2DE222473BB1C00116E2E /* CommunityTopicCell.m in Sources */,
 				1526D6B8247E07E6006A2556 /* ENDLCPNetWorkERROR.m in Sources */,
+				184B78A1247F94B000BFCB45 /* UserModel.m in Sources */,
 				157A716B2477A282003D0081 /* MXZAnswerVC.m in Sources */,
 				1846879D247D1D2C007BC2FC /* AttentionVC.m in Sources */,
 				152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */,

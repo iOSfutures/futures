@@ -11,7 +11,7 @@
 #import "MXZTtileVC.h"
 #import "UIImage+OriginalImage.h"
 
-@interface MXZHomeQuoteVC ()
+@interface MXZHomeQuoteVC ()<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) JXCategoryTitleView *myCategoryView;
 @end
 
@@ -24,11 +24,16 @@
 //    [self.navigationController popViewControllerAnimated:YES];
 //    [self setTitleView];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
+    
+    //启用右滑返回手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = YES;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 

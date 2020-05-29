@@ -22,21 +22,21 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_background" translatesAutoresizingMaskIntoConstraints="NO" id="Aaf-mv-3Qd" userLabel="BgImgView">
                                 <rect key="frame" x="0.0" y="0.0" width="136" height="167"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_hot_community" translatesAutoresizingMaskIntoConstraints="NO" id="IoH-te-Qyc" userLabel="AvatarImgView">
-                                <rect key="frame" x="37.5" y="13.5" width="61" height="62.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_hot_community" translatesAutoresizingMaskIntoConstraints="NO" id="IoH-te-Qyc" userLabel="AvatarImgView">
+                                <rect key="frame" x="37" y="13.5" width="62" height="62"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="K9j-f8-S3C"/>
-                                    <constraint firstAttribute="height" constant="62.5" id="VTa-wD-dob"/>
+                                    <constraint firstAttribute="width" constant="62" id="K9j-f8-S3C"/>
+                                    <constraint firstAttribute="height" constant="62" id="VTa-wD-dob"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="冬梨优子" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOP-T7-mSj" userLabel="NameLabel">
-                                <rect key="frame" x="37" y="89" width="62" height="18"/>
+                                <rect key="frame" x="37" y="88.5" width="62" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金融理财专家" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpT-iO-om5" userLabel="DescriptionLabel">
-                                <rect key="frame" x="34.5" y="113.5" width="67.5" height="13.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金融理财专家" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpT-iO-om5" userLabel="DescriptionLabel">
+                                <rect key="frame" x="10" y="113" width="116" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -59,8 +59,9 @@
                             <constraint firstItem="IoH-te-Qyc" firstAttribute="top" secondItem="gqA-1a-LkU" secondAttribute="top" constant="13.5" id="OY8-ZY-Lev"/>
                             <constraint firstAttribute="trailing" secondItem="Aaf-mv-3Qd" secondAttribute="trailing" id="SSv-cL-6GJ"/>
                             <constraint firstItem="GOP-T7-mSj" firstAttribute="centerX" secondItem="gqA-1a-LkU" secondAttribute="centerX" id="Tat-xg-9EL"/>
+                            <constraint firstItem="gpT-iO-om5" firstAttribute="leading" secondItem="gqA-1a-LkU" secondAttribute="leading" constant="10" id="Tib-qm-nbD"/>
+                            <constraint firstAttribute="trailing" secondItem="gpT-iO-om5" secondAttribute="trailing" constant="10" id="Vae-2o-HcX"/>
                             <constraint firstAttribute="bottom" secondItem="w73-wJ-JRs" secondAttribute="bottom" constant="16" id="faQ-b4-S74"/>
-                            <constraint firstItem="gpT-iO-om5" firstAttribute="centerX" secondItem="gqA-1a-LkU" secondAttribute="centerX" id="fxY-V2-fDP"/>
                             <constraint firstItem="Aaf-mv-3Qd" firstAttribute="leading" secondItem="gqA-1a-LkU" secondAttribute="leading" id="ioQ-1W-tj4"/>
                             <constraint firstItem="gpT-iO-om5" firstAttribute="top" secondItem="GOP-T7-mSj" secondAttribute="bottom" constant="6.5" id="lDZ-3a-dIT"/>
                             <constraint firstItem="w73-wJ-JRs" firstAttribute="centerX" secondItem="gqA-1a-LkU" secondAttribute="centerX" id="oys-sO-5fk"/>

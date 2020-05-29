@@ -11,12 +11,20 @@
 
 @implementation CommunityFriendViewCell
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    _avatarImgView.layer.cornerRadius = 31;
+    _avatarImgView.layer.masksToBounds = YES;
+}
+
 - (void)setFriendModel:(CommunityFriendModel *)friendModel
 {
     _friendModel = friendModel;
-    self.avatarImgView.image = [UIImage imageNamed:friendModel.avatarImgName];
-    self.nameLabel.text = friendModel.name;
-    self.descriptionLabel.text = friendModel.descript;
+    [self.avatarImgView sd_setImageWithURL:[NSURL URLWithString:friendModel.head]
+    placeholderImage:[UIImage imageNamed:@"user_hot_community"]];
+    self.nameLabel.text = friendModel.nickName;
+    self.descriptionLabel.text = friendModel.signature;
     if(friendModel.isFollowed == YES)
     {
         [self.followBtn setImage:[UIImage imageNamed:@"ic_followed"] forState:UIControlStateNormal];
@@ -37,7 +45,7 @@
     {
         [self.followBtn setImage:[UIImage imageNamed:@"ic_follow"] forState:UIControlStateNormal];
     }
-    
+
     if([self.delegate respondsToSelector:@selector(communityFriendViewCellDidClickFollowBtn:)])
     {
         [self.delegate communityFriendViewCellDidClickFollowBtn:self];

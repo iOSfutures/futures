@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AttentionVC : UIViewController
 
+@property (nonatomic, copy)NSString *titleStr;
+@property (nonatomic, copy)NSString *followsOrFans;
+
 @end
 
 NS_ASSUME_NONNULL_END

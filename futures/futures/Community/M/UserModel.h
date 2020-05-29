@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy)NSString *head;
 @property (nonatomic, copy)NSString *nickName;
+@property (nonatomic, strong)NSNumber *followCount;
+@property (nonatomic, strong)NSNumber *fansCount;
+@property (nonatomic, copy)NSString *signature;
+@property (nonatomic, strong)NSNumber *userId;
 
 @end
 

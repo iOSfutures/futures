@@ -9,7 +9,8 @@
 #import "MXZMessageCenterVC.h"
 #import "UIImage+OriginalImage.h"
 
-@interface MXZMessageCenterVC ()
+@interface MXZMessageCenterVC ()<UIGestureRecognizerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
@@ -17,16 +18,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"消息中心";
+    self.navigationItem.title = _titleStr;
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithHexString:@"#FEA203"];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
+    
+    _label.text = _labelStr;
+    
+    //启用右滑返回手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = YES;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 

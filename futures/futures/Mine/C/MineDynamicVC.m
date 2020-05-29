@@ -12,6 +12,10 @@
 #import "CommunityDynamicCell.h"
 #import "CommunityDynamicModel.h"
 #import "MineEditVC.h"
+#import "AttentionVC.h"
+#import "MXZMessageCenterVC.h"
+
+#import "UserModel.h"
 
 #define oriOffsetY -335.5
 #define oriH 293
@@ -19,17 +23,24 @@
 @interface MineDynamicVC ()<UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImgView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *signatureLabel;
+
 @property (weak, nonatomic) IBOutlet UIButton *newsBtn;
 @property (weak, nonatomic) IBOutlet UIButton *editBtn;
 @property (weak, nonatomic) IBOutlet UIButton *dynamicBtn;
 @property (weak, nonatomic) IBOutlet UIButton *likeBtn;
 @property (weak, nonatomic) IBOutlet UITableView *dynamicTableView;
 
-@property (strong , nonatomic) NSArray *dynamicsArray;
+@property (weak, nonatomic) IBOutlet UILabel *attentionCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fanCountLabel;
+
+@property (weak, nonatomic) IBOutlet UIView *AttentionView;
+@property (weak, nonatomic) IBOutlet UIView *favoriteView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintH;
 
-@property (nonatomic, strong) UIView *customizedStatusBar;
+@property (strong , nonatomic) NSArray *dynamicsArray;
 
 @end
 
@@ -50,11 +61,48 @@ NSString *DynamicCell3 = @"DynamicCell3";
     
     [self.dynamicTableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityDynamicCell class]) bundle:nil]forCellReuseIdentifier:DynamicCell3];
     
+    [self setHeaderView];
+    
     [self setLayer];
     [self setFadeStyle];
     
+    [self clickAttentionGes];
+    [self clickFavoriteGes];
+    
+//    _user = UserModel.new;
+//    _user.userId = @155;
+    [self getDynamics];
+    
     //启用右滑返回手势
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
+}
+
+- (void)clickAttentionGes {
+    //添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAttentionGes:)];
+    [self.AttentionView addGestureRecognizer:tap];
+}
+
+- (void)clickAttentionGes: (UITapGestureRecognizer *)tap {
+    AttentionVC *attentionVC = [[AttentionVC alloc] init];
+    if (tap > 0) {
+        [self.navigationController pushViewController:attentionVC animated:YES];
+    }
+}
+
+- (void)clickFavoriteGes {
+    //添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickFavoriteGes:)];
+    [self.favoriteView addGestureRecognizer:tap];
+}
+
+- (void)clickFavoriteGes: (UITapGestureRecognizer *)tap {
+    MXZMessageCenterVC *favoriteVC = [[MXZMessageCenterVC alloc] init];
+    favoriteVC.labelStr = @"暂无收藏";
+    favoriteVC.titleStr = @"我的收藏";
+    if (tap > 0) {
+        [self.navigationController pushViewController:favoriteVC animated:YES];
+    }
 }
 
 - (void)backBtnClicked
@@ -123,6 +171,29 @@ NSString *DynamicCell3 = @"DynamicCell3";
         frame.origin.y = 667;
         self.tabBarController.tabBar.frame = frame;
         self.navigationController.navigationBar.backgroundColor = UIColorWithRGBA(254, 162, 3, 1);
+    }];
+}
+
+- (void)setHeaderView
+{
+    _attentionCountLabel.text = [NSString stringWithFormat:@"%d",_user.followCount.intValue];
+    _fanCountLabel.text = [NSString stringWithFormat:@"%d",_user.fansCount.intValue];
+    [_avatarImgView sd_setImageWithURL:[NSURL URLWithString:_user.head]
+    placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
+    _nameLabel.text = _user.nickName;
+    _signatureLabel.text = _user.signature;
+}
+
+-(void)getDynamics{
+    WEAKSELF
+    NSDictionary *dic = @{@"_orderByDesc":@"publishTime",@"userId":_user.userId};
+    [ENDNetWorkManager postWithPathUrl:[NSString stringWithFormat:@"/user/talk/getTalkList/%d",_user.userId.intValue] parameters:dic queryParams:nil Header:nil success:^(BOOL success, id result) {
+        NSError *error;
+        weakSelf.dynamicsArray = [MTLJSONAdapter modelsOfClass:[CommunityDynamicModel class] fromJSONArray:result[@"data"][@"list"] error:&error];
+        [weakSelf.dynamicTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf.view Message:@"请求用户说说失败" afterHideTime:DELAYTiME];
     }];
 }
 

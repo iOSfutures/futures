@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MXZFinanceAffairModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *kindLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
 @property (assign, nonatomic) BOOL nonSubtitle;

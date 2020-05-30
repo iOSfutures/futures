@@ -85,6 +85,9 @@
     //去掉tableView的分割线
     self.homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+}
+
+- (void)viewWillAppear:(BOOL)animated{
     NSString *port = [NSString stringWithFormat:@"/admin/getFinanceAffairs?date"];
     [self getData:port];
     [self getRecommandTalkModel];
@@ -104,9 +107,7 @@
     
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-}
+
 
 //设置navigationBar
 -(void)setNavBarView{
@@ -334,16 +335,18 @@
 
 //获取财经大事数据
 -(void)setAffairs{
-    
-    MXZFinanceAffairModel *tempModel0 = _affairsArray[0];
-    MXZFinanceAffairModel *tempModel1 = _affairsArray[1];
-    MXZFinanceAffairModel *tempModel2 = _affairsArray[2];
-    if (tempModel0 != nil){
-    self.homeThirdSectionHeadView.affairLabel0.text = tempModel0.content;
-    self.homeThirdSectionHeadView.affairLabel1.text = tempModel1.content;
-    self.homeThirdSectionHeadView.affairLabel2.text = tempModel2.content;
+    if(self.affairsArray[0] != nil){
+        MXZFinanceAffairModel *tempModel0 = _affairsArray[0];
+        self.homeThirdSectionHeadView.affairLabel0.text = tempModel0.content;
     }
-    
+    else if ( self.affairsArray[1] != nil){
+        MXZFinanceAffairModel *tempModel1 = _affairsArray[1];
+        self.homeThirdSectionHeadView.affairLabel1.text = tempModel1.content;
+    }
+    else if( self.affairsArray[2] != nil){
+        MXZFinanceAffairModel *tempModel2 = _affairsArray[2];
+        self.homeThirdSectionHeadView.affairLabel2.text = tempModel2.content;
+    }
 }
 
 -(void)getRecommandTalkModel{

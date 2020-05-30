@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MXZRecommandTalkModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MXZHomeFifthSectionCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *contentPic;
-
+@property (strong, nonatomic) MXZRecommandTalkModel *recommandModel;
 @end
 
 NS_ASSUME_NONNULL_END

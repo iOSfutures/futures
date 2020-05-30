@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MXZFullFirstSectionCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *headPic;
+@property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
 
 @end
 

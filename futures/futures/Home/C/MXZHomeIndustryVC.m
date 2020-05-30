@@ -10,7 +10,7 @@
 #import "MXZIndustryTableViewCell.h"
 #import "UIImage+OriginalImage.h"
 
-@interface MXZHomeIndustryVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface MXZHomeIndustryVC ()<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -25,6 +25,9 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"MXZIndustryTableViewCell" bundle:nil] forCellReuseIdentifier:@"MXZIndustryTableViewCell"];
 //    self.tableView.estimatedRowHeight = 171;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
+    
+    //启用右滑返回手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 - (UIView *)listView
@@ -35,6 +38,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = self.isTabBarHidden;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 

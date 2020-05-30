@@ -7,18 +7,21 @@
 //
 
 #import "MineEditProfileCell.h"
+#import "UserModel.h"
+
+@interface MineEditProfileCell()
+
+@property (weak, nonatomic) IBOutlet UITextField *signatureTextF;
+
+
+@end
 
 @implementation MineEditProfileCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setUser:(UserModel *)user
+{
+    _user = user;
+    _signatureTextF.text = user.signature;
 }
 
 @end

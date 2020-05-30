@@ -29,6 +29,7 @@
                         <constraint firstAttribute="width" constant="294" id="wYU-zF-ObU"/>
                         <constraint firstAttribute="height" constant="50" id="xHA-zA-lkU"/>
                     </constraints>
+                    <color key="textColor" red="0.94446575639999997" green="0.65159273149999997" blue="0.23140901329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>

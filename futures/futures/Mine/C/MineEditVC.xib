@@ -36,6 +36,9 @@
                                 <constraint firstAttribute="height" constant="40" id="n9j-fm-li6"/>
                             </constraints>
                             <state key="normal" image="camera_personal center"/>
+                            <connections>
+                                <action selector="cameraBtnClicked:" destination="-1" eventType="touchUpInside" id="NiR-eG-r2Z"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

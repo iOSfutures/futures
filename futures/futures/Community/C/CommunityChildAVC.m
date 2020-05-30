@@ -66,7 +66,14 @@ NSString *DynamicCell = @"DynamicCell";
     }
     else if(section == 1)
     {
-        return 3;
+        if(self.topicsArray.count >= 3)
+        {
+            return 3;
+        }
+        else
+        {
+            return self.topicsArray.count;
+        }
     }
     else if(section == 2)
     {
@@ -160,6 +167,7 @@ NSString *DynamicCell = @"DynamicCell";
     [ENDNetWorkManager getWithPathUrl:@"/admin/getFinanceAffairs" parameters:nil queryParams:dic Header:nil success:^(BOOL success, id result) {
         NSError *error;
         weakSelf.topicsArray = [MTLJSONAdapter modelsOfClass:[CommunityTopicModel class] fromJSONArray:result[@"data"] error:&error];
+        NSLog(@"话题：%@",weakSelf.topicsArray);
         [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
     } failure:^(BOOL failuer, NSError *error) {
         NSLog(@"%@",error.description);

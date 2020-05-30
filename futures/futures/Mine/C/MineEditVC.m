@@ -7,7 +7,6 @@
 //
 
 #import "MineEditVC.h"
-#import "MineInformationModel.h"
 #import "UIImage+OriginalImage.h"
 
 #import "MineInformationNameView.h"
@@ -15,56 +14,98 @@
 
 #import "MineEditProfileCell.h"
 
+#import "UserModel.h"
+
 #import <BRPickerView.h>
 
 @interface MineEditVC ()<UITableViewDataSource, UITableViewDelegate, MineInformationNameViewDelegate, MineInformationSexViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImgView;
 
-@property (nonatomic, strong)NSArray *informationArray;
 @property (weak, nonatomic) IBOutlet UITableView *mineEditTableView;
 
 @property (weak, nonatomic)UIView *coverView;
 @property (weak, nonatomic)MineInformationNameView *mineInformationNameView;
 @property (weak, nonatomic)MineInformationSexView *mineInformationSexView;
 
+@property (copy, nonatomic)NSString *changedName;
+
 
 @end
 
 @implementation MineEditVC
-
-- (NSArray *)informationArray
-{
-    if(_informationArray == nil)
-    {
-        MineInformationModel *informationModel = MineInformationModel.new;
-        informationModel.name = @"`电竞...高高手`";
-        informationModel.sex = @"女";
-        informationModel.birthday = @"1996-02-12";
-        
-        NSMutableArray *temp = NSMutableArray.new;
-        [temp addObject:informationModel];
-        _informationArray = temp;
-    }
-    return _informationArray;
-}
 
 NSString *MineProfileCellID = @"MineProfileCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back "] style:0 target:self action:@selector(backBtnClicked)];
-    _avatarImgView.layer.cornerRadius = CGRectGetWidth(_avatarImgView.frame)/2;
+    
     self.tabBarController.tabBar.hidden = YES;
+    
     self.view.backgroundColor = [UIColor colorWithHexString:@"#F0F0F0"];
     self.mineEditTableView.backgroundColor = [UIColor colorWithHexString:@"#F0F0F0"];
     
     [self.mineEditTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MineEditProfileCell class]) bundle:nil] forCellReuseIdentifier:MineProfileCellID];
+    
+    [self setAvatarImg];
+    [self setLayer];
+}
+
+- (void)setAvatarImg
+{
+     [_avatarImgView sd_setImageWithURL:[NSURL URLWithString:_user.head]
+       placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
+}
+
+- (void)setLayer
+{
+    _avatarImgView.layer.cornerRadius = CGRectGetWidth(_avatarImgView.frame)/2;
+    _avatarImgView.layer.masksToBounds = YES;
 }
 
 - (void)backBtnClicked
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (IBAction)cameraBtnClicked:(id)sender {
+    //UIAlertControllerStyleAlert
+    //UIAlertControllerStyleActionSheet
+    //1.创建控制器
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    //2.创建按钮
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //点击按钮要执行的方法
+    }];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"从手机相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //点击按钮要执行的方法
+    }];
+    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"保存图片" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //点击按钮要执行的方法
+    }];
+    UIAlertAction *action4 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //点击按钮要执行的方法
+    }];
+    
+    UIColor *alertTextColor = [UIColor colorWithHexString:@"#FEA203"];
+    [action1 setValue:alertTextColor forKey:@"titleTextColor"];
+    [action2 setValue:alertTextColor forKey:@"titleTextColor"];
+    [action3 setValue:alertTextColor forKey:@"titleTextColor"];
+    [action4 setValue:[UIColor colorWithHexString:@"#333333"] forKey:@"titleTextColor"];
+    
+    
+    //3.添加按钮
+    [alertC addAction:action1];
+    [alertC addAction:action2];
+    [alertC addAction:action3];
+    [alertC addAction:action4];
+    
+    //4.显示弹窗(相当于show)
+    //这种方法，开头必须是控制器
+    [self presentViewController:alertC animated:YES completion:nil];
+}
+
+#pragma mark - TableViewDelegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -87,9 +128,7 @@ NSString *MineProfileCellID = @"MineProfileCell";
 {
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    MineEditProfileCell *profileCell = [tableView dequeueReusableCellWithIdentifier:MineProfileCellID];
     
-    MineInformationModel *informationModel = self.informationArray[0];
     if(indexPath.section == 0)
     {
         cell.textLabel.textColor = [UIColor colorWithHexString:@"#333333"];
@@ -97,23 +136,25 @@ NSString *MineProfileCellID = @"MineProfileCell";
         if(indexPath.row == 0)
         {
             cell.textLabel.text = @"昵称";
-            cell.detailTextLabel.text = informationModel.name;
+            cell.detailTextLabel.text = _changedName;
             return cell;
         }
         else if(indexPath.row == 1)
         {
             cell.textLabel.text = @"性别";
-            cell.detailTextLabel.text = informationModel.sex;
+            cell.detailTextLabel.text = @"男";
             return cell;
         }
         else if(indexPath.row == 2)
         {
             cell.textLabel.text = @"生日";
-            cell.detailTextLabel.text = informationModel.birthday;
+            cell.detailTextLabel.text = @"1996-02-12";
             return cell;
         }
         else
         {
+            MineEditProfileCell *profileCell = [tableView dequeueReusableCellWithIdentifier:MineProfileCellID];
+            profileCell.user = _user;
             return profileCell;
         }
     }
@@ -204,10 +245,10 @@ NSString *MineProfileCellID = @"MineProfileCell";
             datePickerView.isAutoSelect = YES;
             datePickerView.resultBlock = ^(NSDate *selectDate, NSString *selectValue) {
                 NSLog(@"选择的值：%@", selectValue);
-                MineInformationModel *mineInformationModel = self.informationArray[0];
-                mineInformationModel.birthday = selectValue;
-                NSArray *indexPaths = @[[NSIndexPath indexPathForRow:2 inSection:0]];
-                [self.mineEditTableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+//                MineInformationModel *mineInformationModel = self.informationArray[0];
+//                mineInformationModel.birthday = selectValue;
+//                NSArray *indexPaths = @[[NSIndexPath indexPathForRow:2 inSection:0]];
+//                [self.mineEditTableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
             };
             // 设置自定义样式
             BRPickerStyle *customStyle = [[BRPickerStyle alloc]init];
@@ -235,8 +276,12 @@ NSString *MineProfileCellID = @"MineProfileCell";
     [self removeCoverView:mineInformationNameView];
 }
 
-- (void)mineInformationNameViewDidClickConfirmBtn:(MineInformationNameView *)mineInformationNameView
+- (void)mineInformationNameViewDidClickConfirmBtn:(MineInformationNameView *)mineInformationNameView changedName:(NSString *)changedName
 {
+    _changedName = changedName;
+    [self setUser];
+    NSArray *indexPaths = @[[NSIndexPath indexPathForRow:0 inSection:0]];
+    [self.mineEditTableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
     [self removeCoverView:mineInformationNameView];
 }
 
@@ -314,6 +359,16 @@ NSString *MineProfileCellID = @"MineProfileCell";
             frame.size = CGSizeMake(340, 181);
             self.mineInformationSexView.frame = frame;
         }
+    }];
+}
+
+-(void)setUser{
+    WEAKSELF
+    NSDictionary *dic = @{@"id":@155,@"nickName":_changedName};
+    [ENDNetWorkManager putWithPathUrl:@"/user/personal/updateUser" parameters:dic queryParams:nil Header:nil success:^(BOOL success, id result) {
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf.view Message:@"上传用户资料失败" afterHideTime:DELAYTiME];
     }];
 }
 

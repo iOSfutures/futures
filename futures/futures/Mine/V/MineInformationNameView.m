@@ -45,9 +45,9 @@
     }
 }
 - (IBAction)confirmBtnClicked:(id)sender {
-    if([self.delegate respondsToSelector:@selector(mineInformationNameViewDidClickCancelBtn:)])
+    if([self.delegate respondsToSelector:@selector(mineInformationNameViewDidClickConfirmBtn:changedName:)])
     {
-        [self.delegate mineInformationNameViewDidClickConfirmBtn:self];
+        [self.delegate mineInformationNameViewDidClickConfirmBtn:self changedName:_nameTextF.text];
     }
 }
 

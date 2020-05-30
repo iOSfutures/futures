@@ -141,7 +141,6 @@
 - (void)avatarImgViewClicked
 {
     MineDynamicVC *mineDynamicVC = MineDynamicVC.new;
-    mineDynamicVC.user = _user;
     [self.navigationController pushViewController:mineDynamicVC animated:YES];
 }
 
@@ -309,11 +308,19 @@
 {
     [UIView animateWithDuration:0.2 animations:^{
         CGRect frame = self.tabBarController.tabBar.frame;
-        frame.origin.y = 593;
+        if(SCREEN_WIDTH == 375)
+        {
+            frame.origin.y = 593;
+        }
+        else if (SCREEN_WIDTH == 414)
+        {
+            frame.origin.y = 822;
+        }
         self.tabBarController.tabBar.frame = frame;
         self.navigationController.navigationBar.backgroundColor = UIColorWithRGBA(254, 162, 3, 0);
         self.tabBarController.tabBar.hidden = NO;
     }];
+    [self getUser];
 }
 
 - (void)changeBottomViewBg

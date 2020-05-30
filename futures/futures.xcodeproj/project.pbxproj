@@ -153,7 +153,6 @@
 		1866EA03247DF89D002C0E05 /* MineEditProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866EA01247DF89D002C0E05 /* MineEditProfileCell.m */; };
 		1866EA04247DF89D002C0E05 /* MineEditProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1866EA02247DF89D002C0E05 /* MineEditProfileCell.xib */; };
 		18699CFD247B544F000A1022 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699CFC247B544F000A1022 /* UIImage+Image.m */; };
-		18699D05247B729C000A1022 /* MineInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D04247B729C000A1022 /* MineInformationModel.m */; };
 		18699D0B247B90F1000A1022 /* MineInformationNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18699D09247B90F1000A1022 /* MineInformationNameView.xib */; };
 		18699D0E247B998A000A1022 /* MineInformationNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D0D247B998A000A1022 /* MineInformationNameView.m */; };
 		18699D16247BB55E000A1022 /* MineInformationSexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D15247BB55E000A1022 /* MineInformationSexView.m */; };
@@ -427,8 +426,6 @@
 		1866EA02247DF89D002C0E05 /* MineEditProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineEditProfileCell.xib; sourceTree = "<group>"; };
 		18699CFB247B544F000A1022 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		18699CFC247B544F000A1022 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
-		18699D03247B729C000A1022 /* MineInformationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInformationModel.h; sourceTree = "<group>"; };
-		18699D04247B729C000A1022 /* MineInformationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineInformationModel.m; sourceTree = "<group>"; };
 		18699D09247B90F1000A1022 /* MineInformationNameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineInformationNameView.xib; sourceTree = "<group>"; };
 		18699D0C247B998A000A1022 /* MineInformationNameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInformationNameView.h; sourceTree = "<group>"; };
 		18699D0D247B998A000A1022 /* MineInformationNameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineInformationNameView.m; sourceTree = "<group>"; };
@@ -1004,8 +1001,6 @@
 			children = (
 				189BD81A246D1B9400490E35 /* MineModel.h */,
 				189BD81B246D1B9400490E35 /* MineModel.m */,
-				18699D03247B729C000A1022 /* MineInformationModel.h */,
-				18699D04247B729C000A1022 /* MineInformationModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -1265,7 +1260,6 @@
 				151AC1942472595D00EAE0BD /* ZKCycleScrollViewFlowLayout.m in Sources */,
 				18E8AC792474C60E00E3D7C4 /* CommunityFriendModel.m in Sources */,
 				15263699246E771D00D01BE0 /* MXZHomeQuoteVC.m in Sources */,
-				18699D05247B729C000A1022 /* MineInformationModel.m in Sources */,
 				18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */,
 				183B78DE247E535300D23A59 /* ZZHTimeLineTableViewCell.m in Sources */,
 				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,

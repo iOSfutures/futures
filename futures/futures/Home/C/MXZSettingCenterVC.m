@@ -11,7 +11,7 @@
 #import "UIImage+OriginalImage.h"
 #import "MXZFeedbackVC.h"
 
-@interface MXZSettingCenterVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface MXZSettingCenterVC ()<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *labelArray;
 
@@ -34,11 +34,15 @@
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithHexString:@"#FEA203"];
     self.tableView.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
+    
+    //启用右滑返回手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = YES;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 

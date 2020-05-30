@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class UserModel;
+
 @interface MineEditProfileCell : UITableViewCell
+
+@property (nonatomic, strong)UserModel *user;
 
 @end
 

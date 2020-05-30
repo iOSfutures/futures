@@ -42,6 +42,8 @@
 
 @property (strong , nonatomic) NSArray *dynamicsArray;
 
+@property (nonatomic, strong)UserModel *user;
+
 @end
 
 @implementation MineDynamicVC
@@ -61,7 +63,7 @@ NSString *DynamicCell3 = @"DynamicCell3";
     
     [self.dynamicTableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityDynamicCell class]) bundle:nil]forCellReuseIdentifier:DynamicCell3];
     
-    [self setHeaderView];
+//    [self setHeaderView];
     
     [self setLayer];
     [self setFadeStyle];
@@ -71,6 +73,7 @@ NSString *DynamicCell3 = @"DynamicCell3";
     
 //    _user = UserModel.new;
 //    _user.userId = @155;
+    [self getUser];
     [self getDynamics];
     
     //启用右滑返回手势
@@ -158,6 +161,7 @@ NSString *DynamicCell3 = @"DynamicCell3";
 
 - (IBAction)editBtnClicked:(id)sender {
     MineEditVC *mineEditVC = MineEditVC.new;
+    mineEditVC.user = _user;
     [self.navigationController pushViewController:mineEditVC animated:YES];
 }
 
@@ -168,25 +172,34 @@ NSString *DynamicCell3 = @"DynamicCell3";
     
     [UIView animateWithDuration:0.2 animations:^{
         CGRect frame = self.tabBarController.tabBar.frame;
-        frame.origin.y = 667;
+        if(SCREEN_WIDTH == 375)
+        {
+            frame.origin.y = 667;
+        }
+        else if (SCREEN_WIDTH == 414)
+        {
+            frame.origin.y = 896;
+        }
         self.tabBarController.tabBar.frame = frame;
         self.navigationController.navigationBar.backgroundColor = UIColorWithRGBA(254, 162, 3, 1);
     }];
+    
+    [self getUser];
 }
 
-- (void)setHeaderView
-{
-    _attentionCountLabel.text = [NSString stringWithFormat:@"%d",_user.followCount.intValue];
-    _fanCountLabel.text = [NSString stringWithFormat:@"%d",_user.fansCount.intValue];
-    [_avatarImgView sd_setImageWithURL:[NSURL URLWithString:_user.head]
-    placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
-    _nameLabel.text = _user.nickName;
-    _signatureLabel.text = _user.signature;
-}
+//- (void)setHeaderView
+//{
+//    _attentionCountLabel.text = [NSString stringWithFormat:@"%d",_user.followCount.intValue];
+//    _fanCountLabel.text = [NSString stringWithFormat:@"%d",_user.fansCount.intValue];
+//    [_avatarImgView sd_setImageWithURL:[NSURL URLWithString:_user.head]
+//    placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
+//    _nameLabel.text = _user.nickName;
+//    _signatureLabel.text = _user.signature;
+//}
 
 -(void)getDynamics{
     WEAKSELF
-    NSDictionary *dic = @{@"_orderByDesc":@"publishTime",@"userId":_user.userId};
+    NSDictionary *dic = @{@"_orderByDesc":@"publishTime",@"userId":@155};
     [ENDNetWorkManager postWithPathUrl:[NSString stringWithFormat:@"/user/talk/getTalkList/%d",_user.userId.intValue] parameters:dic queryParams:nil Header:nil success:^(BOOL success, id result) {
         NSError *error;
         weakSelf.dynamicsArray = [MTLJSONAdapter modelsOfClass:[CommunityDynamicModel class] fromJSONArray:result[@"data"][@"list"] error:&error];
@@ -194,6 +207,26 @@ NSString *DynamicCell3 = @"DynamicCell3";
     } failure:^(BOOL failuer, NSError *error) {
         NSLog(@"%@",error.description);
         [Toast makeText:weakSelf.view Message:@"请求用户说说失败" afterHideTime:DELAYTiME];
+    }];
+}
+
+-(void)getUser{
+    WEAKSELF
+    NSDictionary *dic = @{@"userId":@155};
+    [ENDNetWorkManager postWithPathUrl:@"/user/personal/queryUser" parameters:nil queryParams:dic Header:nil success:^(BOOL success, id result) {
+        NSError *error;
+        UserModel *user = [MTLJSONAdapter modelOfClass:[UserModel class] fromJSONDictionary:result[@"data"] error:&error];
+        weakSelf.attentionCountLabel.text = [NSString stringWithFormat:@"%d",user.followCount.intValue];
+        weakSelf.fanCountLabel.text = [NSString stringWithFormat:@"%d",user.fansCount.intValue];
+        [weakSelf.avatarImgView sd_setImageWithURL:[NSURL URLWithString:user.head]
+        placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
+        weakSelf.nameLabel.text = user.nickName;
+        weakSelf.signatureLabel.text = user.signature;
+        weakSelf.user = user;
+//        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf.view Message:@"请求用户数据失败" afterHideTime:DELAYTiME];
     }];
 }
 

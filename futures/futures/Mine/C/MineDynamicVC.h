@@ -20,8 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)NSString *followCountStr;
 @property (nonatomic, copy)NSString *fanCountStr;
 
-@property (nonatomic, strong)UserModel *user;
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -39,6 +39,7 @@ PODS:
   - SDWebImage/Core (5.0.6)
   - SVProgressHUD (2.2.5)
   - TYCyclePagerView (1.2.0)
+  - ZXCountDownView (1.0.6)
 
 DEPENDENCIES:
   - AFNetworking (<= 3.2.1)
@@ -52,6 +53,7 @@ DEPENDENCIES:
   - SDWebImage (~> 5.0.6)
   - SVProgressHUD (~> 2.2.5)
   - TYCyclePagerView
+  - ZXCountDownView
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
@@ -66,6 +68,7 @@ SPEC REPOS:
     - SDWebImage
     - SVProgressHUD
     - TYCyclePagerView
+    - ZXCountDownView
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -79,7 +82,8 @@ SPEC CHECKSUMS:
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TYCyclePagerView: 2b051dade0615c70784aa34f40c646feeddb7344
+  ZXCountDownView: 486d888558551210c6790855ec24e82853a31d9e
 
-PODFILE CHECKSUM: 1f0320faddec7f1785ba3ef25f13d6dd18a58b56
+PODFILE CHECKSUM: 625ac96d17926ee472d5e5520f10c58a204a9509
 
 COCOAPODS: 1.9.1

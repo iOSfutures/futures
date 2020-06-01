@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class UserModel;
+
 @interface MineDynamicVC : UIViewController
+
+@property (nonatomic, copy)NSString *avatarStr;
+@property (nonatomic, copy)NSString *nameStr;
+@property (nonatomic, copy)NSString *signatureStr;
+@property (nonatomic, copy)NSString *followCountStr;
+@property (nonatomic, copy)NSString *fanCountStr;
 
 @end
 

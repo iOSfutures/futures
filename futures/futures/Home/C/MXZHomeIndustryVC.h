@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ContentBaseViewController.h"
 #import "MXZFinanceAffairModel.h"
+#import "MXZRecommandTalkModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, getter=isTabBarHidden)BOOL tabBarHidden;
 
-@property (strong, nonatomic) NSArray *affairsArray;
+@property (strong, nonatomic) NSArray *affairsArray1;
 
 @end
 

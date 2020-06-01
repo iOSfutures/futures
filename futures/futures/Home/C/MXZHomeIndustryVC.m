@@ -10,7 +10,7 @@
 #import "MXZIndustryTableViewCell.h"
 #import "UIImage+OriginalImage.h"
 
-@interface MXZHomeIndustryVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface MXZHomeIndustryVC ()<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -18,6 +18,7 @@
 @implementation MXZHomeIndustryVC
 
 - (void)viewDidLoad {
+    self.affairsArray1 = [NSArray new];
     self.navigationItem.title = @"行业风暴";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
@@ -25,6 +26,11 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"MXZIndustryTableViewCell" bundle:nil] forCellReuseIdentifier:@"MXZIndustryTableViewCell"];
 //    self.tableView.estimatedRowHeight = 171;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
+    
+    //启用右滑返回手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    
+    [self getRecommandTalkModel];
 }
 
 - (UIView *)listView
@@ -35,6 +41,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = self.isTabBarHidden;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 
@@ -48,12 +55,12 @@
 }
 
 -(void)setAffairsArray:(NSArray *)affairsArray{
-    _affairsArray = affairsArray;
+    _affairsArray1 = affairsArray;
 }
 #pragma mark - tableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.affairsArray.count;
+    return self.affairsArray1.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -68,7 +75,7 @@
     if(cell == nil){
         cell = [[MXZIndustryTableViewCell alloc]init];
     }
-    MXZFinanceAffairModel *tempModel = self.affairsArray[indexPath.section];
+    MXZFinanceAffairModel *tempModel = self.affairsArray1[indexPath.section];
     cell.contentLabel.text = tempModel.content;
 
     switch (indexPath.section) {
@@ -99,6 +106,19 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return 0.01f;
+}
+
+-(void)getRecommandTalkModel{
+    WEAKSELF
+    [ENDNetWorkManager getWithPathUrl:@"/admin/getFinanceAffairs?date" parameters:nil queryParams:nil Header:nil success:^(BOOL success, id result) {
+        NSError *error;
+        weakSelf.affairsArray1 = [MTLJSONAdapter modelsOfClass:[MXZRecommandTalkModel class] fromJSONArray:result[@"data"] error:&error];
+//        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView reloadData];
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf.view Message:@"请求推荐说说失败" afterHideTime:DELAYTiME];
+    }];
 }
 
 @end

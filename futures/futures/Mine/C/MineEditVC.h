@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class UserModel;
+
 @interface MineEditVC : UIViewController
+
+@property (nonatomic, strong)UserModel *user;
 
 @end
 

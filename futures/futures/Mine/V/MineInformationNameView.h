@@ -17,8 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 
 - (void)mineInformationNameViewDidClickCancelBtn:(MineInformationNameView *)mineInformationNameView;
-- (void)mineInformationNameViewDidClickConfirmBtn:(MineInformationNameView *)mineInformationNameView;
-
+- (void)mineInformationNameViewDidClickConfirmBtn:(MineInformationNameView *)mineInformationNameView changedName:(NSString *)changedName;
 
 @end
 

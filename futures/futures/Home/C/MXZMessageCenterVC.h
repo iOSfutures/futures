@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MXZMessageCenterVC : UIViewController
 
+@property(nonatomic, copy)NSString *labelStr;
+@property(nonatomic, copy)NSString *titleStr;
+
 @end
 
 NS_ASSUME_NONNULL_END

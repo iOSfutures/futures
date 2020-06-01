@@ -16,10 +16,16 @@
 #import "MineDynamicVC.h"
 #import "MineEditVC.h"
 
+#import "MXZMessageCenterVC.h"
+#import "MXZSignVC.h"
+
+#import "UserModel.h"
+
 @interface MineVC ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *avatarLeft;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *avatarTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *avatarH;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *nameLabelLeft;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lvImgViewLeft;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *alertViewLeft;
@@ -43,6 +49,9 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *FanLabelRight;
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImgView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *signatureLabel;
+
 @property (weak, nonatomic) IBOutlet UIView *alertView;
 
 @property (weak, nonatomic) IBOutlet UITableView *mineTableView;
@@ -50,8 +59,14 @@
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 
 @property (weak, nonatomic) IBOutlet UIView *AttentionView;
+@property (weak, nonatomic) IBOutlet UIView *fanView;
+@property (weak, nonatomic) IBOutlet UIView *favoriteView;
+@property (weak, nonatomic) IBOutlet UIImageView *checkInImgView;
+@property (weak, nonatomic) IBOutlet UILabel *attentionCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fanCountLabel;
 
 @property (nonatomic, strong)NSArray *mineArray;
+@property (nonatomic, strong)UserModel *user;
 
 @end
 
@@ -97,36 +112,109 @@
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
+    self.view.backgroundColor = UIColorWithRGBA(240, 240, 240, 1);
+    
     [self setConstant];
     [self changeBottomViewBg];
+    [self setLayer];
+    [self setGestures];
     
+    [self getUser];
+}
+
+- (void)setGestures
+{
+    [self clickFavoriteGes];
+    [self clickAttentionGes];
+    [self clickFanGes];
+    [self clickCheckInGes1];
+    [self clickCheckInGes2];
+    [self clickAvatarGes];
+}
+
+ - (void)clickAvatarGes
+{
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(avatarImgViewClicked)];
+    [_avatarImgView addGestureRecognizer:tap];
+}
+
+- (void)avatarImgViewClicked
+{
+    MineDynamicVC *mineDynamicVC = MineDynamicVC.new;
+    [self.navigationController pushViewController:mineDynamicVC animated:YES];
+}
+
+- (void)clickAttentionGes {
+    //添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAttentionGes:)];
+    [self.AttentionView addGestureRecognizer:tap];
+}
+
+- (void)clickAttentionGes: (UITapGestureRecognizer *)tap {
+    AttentionVC *attentionVC = [[AttentionVC alloc] init];
+    attentionVC.titleStr = @"wo的关注";
+    attentionVC.followsOrFans = @"follows";
+    if (tap > 0) {
+        [self.navigationController pushViewController:attentionVC animated:YES];
+    }
+}
+
+- (void)clickFanGes {
+    //添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickFanGes:)];
+    [self.fanView addGestureRecognizer:tap];
+}
+
+- (void)clickFanGes: (UITapGestureRecognizer *)tap {
+    AttentionVC *attentionVC = [[AttentionVC alloc] init];
+    attentionVC.titleStr = @"wo的粉丝";
+    attentionVC.followsOrFans = @"Fans";
+    if (tap > 0) {
+        [self.navigationController pushViewController:attentionVC animated:YES];
+    }
+}
+
+- (void)clickFavoriteGes {
+    //添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickFavoriteGes:)];
+    [self.favoriteView addGestureRecognizer:tap];
+}
+
+- (void)clickFavoriteGes: (UITapGestureRecognizer *)tap {
+    MXZMessageCenterVC *favoriteVC = [[MXZMessageCenterVC alloc] init];
+    favoriteVC.labelStr = @"暂无收藏";
+    favoriteVC.titleStr = @"我的收藏";
+    if (tap > 0) {
+        [self.navigationController pushViewController:favoriteVC animated:YES];
+    }
+}
+
+- (void)clickCheckInGes1 {
+    //添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickCheckInGes:)];
+    [self.checkInImgView addGestureRecognizer:tap];
+}
+
+- (void)clickCheckInGes2 {
+    //添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickCheckInGes:)];
+    [self.alertView addGestureRecognizer:tap];
+}
+
+- (void)clickCheckInGes: (UITapGestureRecognizer *)tap {
+    MXZSignVC *signVC = MXZSignVC.new;
+    [self.navigationController pushViewController:signVC animated:YES];
+}
+
+- (void)setLayer
+{
     CGFloat avatarImgViewHeight = kScaleFrom_iPhone8_Height(45);
     _avatarImgView.layer.cornerRadius = avatarImgViewHeight/2;
     _avatarImgView.layer.masksToBounds = YES;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(avatarImgViewClicked)];
-    [_avatarImgView addGestureRecognizer:tap];
     
     CGFloat alertViewHeight = kScaleFrom_iPhone8_Height(24);
     _alertView.layer.cornerRadius = alertViewHeight/2;
     _alertView.layer.masksToBounds = YES;
-    
-    self.view.backgroundColor = UIColorWithRGBA(240, 240, 240, 1);
-    
-    self.AttentionView.userInteractionEnabled = YES;
-    [self clickGes];
-}
-
-- (void)clickGes {
-    //添加手势
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickGes:)];
-    [self.AttentionView addGestureRecognizer:tap];
-}
-
-- (void)clickGes: (UITapGestureRecognizer *)tap {
-    AttentionVC *attentionVC = [[AttentionVC alloc] init];
-    if (tap > 0) {
-        [self.navigationController pushViewController:attentionVC animated:YES];
-    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -187,10 +275,11 @@
 
 - (void)setConstant
 {
+    _avatarH.constant = kScaleFrom_iPhone8_Height(45);
     _avatarLeft.constant = kScaleFrom_iPhone8_Width(15);
     _avatarTop.constant = kScaleFrom_iPhone8_Height(53.5);
     _nameLabelLeft.constant = kScaleFrom_iPhone8_Width(81);
-    _lvImgViewLeft.constant = kScaleFrom_iPhone8_Width(235);
+    _lvImgViewLeft.constant = kScaleFrom_iPhone8_Width(8.5);
     _alertViewLeft.constant = kScaleFrom_iPhone8_Width(20);
     _alertViewRight.constant = kScaleFrom_iPhone8_Width(20);
     _alertViewTop.constant = kScaleFrom_iPhone8_Height(135);
@@ -215,21 +304,23 @@
     }
 }
 
-- (void)avatarImgViewClicked
-{
-    MineDynamicVC *mineDynamicVC = MineDynamicVC.new;
-    [self.navigationController pushViewController:mineDynamicVC animated:YES];
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [UIView animateWithDuration:0.2 animations:^{
         CGRect frame = self.tabBarController.tabBar.frame;
-        frame.origin.y = 593;
+        if(SCREEN_WIDTH == 375)
+        {
+            frame.origin.y = 593;
+        }
+        else if (SCREEN_WIDTH == 414)
+        {
+            frame.origin.y = 822;
+        }
         self.tabBarController.tabBar.frame = frame;
         self.navigationController.navigationBar.backgroundColor = UIColorWithRGBA(254, 162, 3, 0);
         self.tabBarController.tabBar.hidden = NO;
     }];
+    [self getUser];
 }
 
 - (void)changeBottomViewBg
@@ -254,12 +345,34 @@
     }
     else if (indexPath.item == 1){
         MXZMessageCenterVC *messageVC = [[MXZMessageCenterVC alloc]init];
+        messageVC.labelStr = @"暂无消息";
+        messageVC.titleStr = @"消息中心";
         [self.navigationController pushViewController:messageVC animated:YES];
     }
     else if (indexPath.section == 1 && indexPath.row == 0) {
         MineDynamicVC *mineDynamicVC = MineDynamicVC.new;
         [self.navigationController pushViewController:mineDynamicVC animated:YES];
     }
+}
+
+-(void)getUser{
+    WEAKSELF
+    NSDictionary *dic = @{@"userId":@155};
+    [ENDNetWorkManager postWithPathUrl:@"/user/personal/queryUser" parameters:nil queryParams:dic Header:nil success:^(BOOL success, id result) {
+        NSError *error;
+        UserModel *user = [MTLJSONAdapter modelOfClass:[UserModel class] fromJSONDictionary:result[@"data"] error:&error];
+        weakSelf.attentionCountLabel.text = [NSString stringWithFormat:@"%d",user.followCount.intValue];
+        weakSelf.fanCountLabel.text = [NSString stringWithFormat:@"%d",user.fansCount.intValue];
+        [weakSelf.avatarImgView sd_setImageWithURL:[NSURL URLWithString:user.head]
+        placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
+        weakSelf.nameLabel.text = user.nickName;
+        weakSelf.signatureLabel.text = user.signature;
+        weakSelf.user = user;
+//        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf.view Message:@"请求用户数据失败" afterHideTime:DELAYTiME];
+    }];
 }
 
 @end

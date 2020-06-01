@@ -18,4 +18,5 @@ pod 'SDWebImage', '~> 5.0.6'
 pod 'MBProgressHUD', '~> 1.1.0'
 pod 'SVProgressHUD', '~> 2.2.5'
 pod 'Mantle', '~> 2.1.0'
+pod 'ZXCountDownView'
 end

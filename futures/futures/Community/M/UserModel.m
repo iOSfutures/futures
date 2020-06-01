@@ -14,6 +14,10 @@
     return @{
              NSStringFromSelector(@selector(head)):@"head",
              NSStringFromSelector(@selector(nickName)):@"nickName",
+             NSStringFromSelector(@selector(followCount)):@"followCount",
+             NSStringFromSelector(@selector(fansCount)):@"fansCount",
+             NSStringFromSelector(@selector(signature)):@"signature",
+             NSStringFromSelector(@selector(userId)):@"id",
              };
 }
 

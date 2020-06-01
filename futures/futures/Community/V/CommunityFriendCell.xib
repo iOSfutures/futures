@@ -41,31 +41,27 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iv7-ZV-9eS" userLabel="ChangeBtn1">
-                                <rect key="frame" x="382.5" y="13.5" width="13" height="13"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iv7-ZV-9eS" userLabel="RefreshBtn">
+                                <rect key="frame" x="351" y="5" width="100" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="13" id="1ce-70-JSk"/>
-                                    <constraint firstAttribute="width" constant="13" id="OQX-MJ-A3n"/>
+                                    <constraint firstAttribute="height" constant="30" id="1ce-70-JSk"/>
+                                    <constraint firstAttribute="width" constant="100" id="biv-kU-jtu"/>
                                 </constraints>
-                                <state key="normal" image="icon_huanyipi"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIi-RT-nZd" userLabel="ChangeBtn2">
-                                <rect key="frame" x="405" y="13" width="46" height="14.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="14.5" id="MfJ-tK-8pB"/>
-                                </constraints>
-                                <state key="normal" title="换一批">
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-15" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="换一批" image="icon_huanyipi">
                                     <color key="titleColor" red="0.94355970619999996" green="0.66552573439999996" blue="0.27463412279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="refreshBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qNu-cB-S7E"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="GOx-X9-CwK" firstAttribute="leading" secondItem="My4-TD-6RD" secondAttribute="leading" id="9fm-fq-gNU"/>
-                            <constraint firstItem="LIi-RT-nZd" firstAttribute="leading" secondItem="iv7-ZV-9eS" secondAttribute="trailing" constant="9.5" id="FIX-no-mhB"/>
-                            <constraint firstAttribute="trailing" secondItem="LIi-RT-nZd" secondAttribute="trailing" constant="15" id="L70-7D-382"/>
-                            <constraint firstItem="LIi-RT-nZd" firstAttribute="centerY" secondItem="My4-TD-6RD" secondAttribute="centerY" id="LVl-QT-IWN"/>
                             <constraint firstItem="GOx-X9-CwK" firstAttribute="top" secondItem="My4-TD-6RD" secondAttribute="top" id="MZ5-lG-hMy"/>
                             <constraint firstItem="K2v-zd-188" firstAttribute="centerY" secondItem="My4-TD-6RD" secondAttribute="centerY" id="RVm-ns-gHu"/>
+                            <constraint firstAttribute="trailing" secondItem="iv7-ZV-9eS" secondAttribute="trailing" constant="15" id="UR5-Su-nFJ"/>
                             <constraint firstItem="iv7-ZV-9eS" firstAttribute="centerY" secondItem="My4-TD-6RD" secondAttribute="centerY" id="dSi-bn-uoe"/>
                             <constraint firstAttribute="height" constant="40" id="eCz-xW-08G"/>
                             <constraint firstAttribute="bottom" secondItem="GOx-X9-CwK" secondAttribute="bottom" id="mlI-HR-71q"/>

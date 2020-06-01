@@ -66,6 +66,8 @@
         if(cell == nil){
             cell = [[NSBundle mainBundle] loadNibNamed:@"MXZFullFirstSectionCell" owner:self options:nil].firstObject;
         }
+        [cell.headPic sd_setImageWithURL:[NSURL URLWithString:self.recommandModel.user.head]];
+        cell.nickNameLabel.text = self.recommandModel.user.nickName;
         return cell;
     }
     else if (indexPath.section == 1){
@@ -73,6 +75,13 @@
         MXZFullSecondSectionCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
         if(cell == nil){
             cell = [[NSBundle mainBundle] loadNibNamed:@"MXZFullSecondSectionCell" owner:self options:nil].firstObject;
+        }
+        if(self.recommandModel != nil){
+            [cell.pic01 removeFromSuperview];
+            [cell.pic02 removeFromSuperview];
+            [cell.secondLabel removeFromSuperview];
+            [cell.thirdLabel removeFromSuperview];
+            cell.firstLabel.text = self.recommandModel.content;
         }
         return cell;
     }
@@ -108,7 +117,8 @@
         UILabel *label = [[UILabel alloc] init];
         label.frame = CGRectMake(15,0,350,80);
         label.numberOfLines = 0;
-        label.text = @"对个人而言，股票指数期货市场将是一个大有可为的市场。那么股指期货如何操作？";
+        label.text = [self.recommandModel.content substringToIndex:30];
+//        label.text = @"对个人而言，股票指数期货市场将是一个大有可为的市场。那么股指期货如何操作？";
         label.font = [UIFont boldSystemFontOfSize:18];
         label.textColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0];
         

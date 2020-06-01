@@ -130,6 +130,14 @@
 		183B78E4247E535300D23A59 /* ZZHDateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78D7247E535200D23A59 /* ZZHDateCollectionViewCell.xib */; };
 		183B78E5247E535300D23A59 /* ZZHDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78D8247E535200D23A59 /* ZZHDateTableViewCell.xib */; };
 		183B78E6247E535300D23A59 /* ZZHCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78DA247E535300D23A59 /* ZZHCollectionViewCell.xib */; };
+		183E06682482522800854297 /* forgetPwdVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183E065F2482522700854297 /* forgetPwdVC.xib */; };
+		183E06692482522800854297 /* forgetPwdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183E06612482522700854297 /* forgetPwdVC.m */; };
+		183E066A2482522800854297 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183E06622482522700854297 /* RegisterVC.m */; };
+		183E066B2482522800854297 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183E06632482522700854297 /* LoginVC.xib */; };
+		183E066C2482522800854297 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183E06642482522800854297 /* RegisterVC.xib */; };
+		183E066D2482522800854297 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183E06662482522800854297 /* LoginVC.m */; };
+		183E06712482524100854297 /* LoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183E066F2482524000854297 /* LoginTableViewCell.m */; };
+		183E06722482524100854297 /* LoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183E06702482524000854297 /* LoginTableViewCell.xib */; };
 		18468789247D1D0D007BC2FC /* ZZHNewsImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468786247D1D0D007BC2FC /* ZZHNewsImageModel.m */; };
 		1846878A247D1D0D007BC2FC /* ZZHQuoteDateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468787247D1D0D007BC2FC /* ZZHQuoteDateModel.m */; };
 		1846879A247D1D2C007BC2FC /* AttentionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1846878C247D1D2A007BC2FC /* AttentionVC.xib */; };
@@ -153,7 +161,6 @@
 		1866EA03247DF89D002C0E05 /* MineEditProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866EA01247DF89D002C0E05 /* MineEditProfileCell.m */; };
 		1866EA04247DF89D002C0E05 /* MineEditProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1866EA02247DF89D002C0E05 /* MineEditProfileCell.xib */; };
 		18699CFD247B544F000A1022 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699CFC247B544F000A1022 /* UIImage+Image.m */; };
-		18699D05247B729C000A1022 /* MineInformationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D04247B729C000A1022 /* MineInformationModel.m */; };
 		18699D0B247B90F1000A1022 /* MineInformationNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18699D09247B90F1000A1022 /* MineInformationNameView.xib */; };
 		18699D0E247B998A000A1022 /* MineInformationNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D0D247B998A000A1022 /* MineInformationNameView.m */; };
 		18699D16247BB55E000A1022 /* MineInformationSexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D15247BB55E000A1022 /* MineInformationSexView.m */; };
@@ -390,6 +397,18 @@
 		183B78D8247E535200D23A59 /* ZZHDateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHDateTableViewCell.xib; sourceTree = "<group>"; };
 		183B78D9247E535300D23A59 /* ZZHDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHDateTableViewCell.h; sourceTree = "<group>"; };
 		183B78DA247E535300D23A59 /* ZZHCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHCollectionViewCell.xib; sourceTree = "<group>"; };
+		183E065F2482522700854297 /* forgetPwdVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = forgetPwdVC.xib; sourceTree = "<group>"; };
+		183E06602482522700854297 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		183E06612482522700854297 /* forgetPwdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = forgetPwdVC.m; sourceTree = "<group>"; };
+		183E06622482522700854297 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		183E06632482522700854297 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		183E06642482522800854297 /* RegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
+		183E06652482522800854297 /* forgetPwdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forgetPwdVC.h; sourceTree = "<group>"; };
+		183E06662482522800854297 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		183E06672482522800854297 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		183E066E2482524000854297 /* LoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableViewCell.h; sourceTree = "<group>"; };
+		183E066F2482524000854297 /* LoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewCell.m; sourceTree = "<group>"; };
+		183E06702482524000854297 /* LoginTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginTableViewCell.xib; sourceTree = "<group>"; };
 		18468785247D1D0D007BC2FC /* ZZHNewsImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHNewsImageModel.h; sourceTree = "<group>"; };
 		18468786247D1D0D007BC2FC /* ZZHNewsImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHNewsImageModel.m; sourceTree = "<group>"; };
 		18468787247D1D0D007BC2FC /* ZZHQuoteDateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteDateModel.m; sourceTree = "<group>"; };
@@ -427,8 +446,6 @@
 		1866EA02247DF89D002C0E05 /* MineEditProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineEditProfileCell.xib; sourceTree = "<group>"; };
 		18699CFB247B544F000A1022 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		18699CFC247B544F000A1022 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
-		18699D03247B729C000A1022 /* MineInformationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInformationModel.h; sourceTree = "<group>"; };
-		18699D04247B729C000A1022 /* MineInformationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineInformationModel.m; sourceTree = "<group>"; };
 		18699D09247B90F1000A1022 /* MineInformationNameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineInformationNameView.xib; sourceTree = "<group>"; };
 		18699D0C247B998A000A1022 /* MineInformationNameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInformationNameView.h; sourceTree = "<group>"; };
 		18699D0D247B998A000A1022 /* MineInformationNameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineInformationNameView.m; sourceTree = "<group>"; };
@@ -913,6 +930,15 @@
 				1846878B247D1D2A007BC2FC /* AttentionVC.h */,
 				1846878F247D1D2B007BC2FC /* AttentionVC.m */,
 				1846878C247D1D2A007BC2FC /* AttentionVC.xib */,
+				183E06602482522700854297 /* LoginVC.h */,
+				183E06662482522800854297 /* LoginVC.m */,
+				183E06632482522700854297 /* LoginVC.xib */,
+				183E06672482522800854297 /* RegisterVC.h */,
+				183E06622482522700854297 /* RegisterVC.m */,
+				183E06642482522800854297 /* RegisterVC.xib */,
+				183E06652482522800854297 /* forgetPwdVC.h */,
+				183E06612482522700854297 /* forgetPwdVC.m */,
+				183E065F2482522700854297 /* forgetPwdVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -944,6 +970,9 @@
 				1866EA00247DF89D002C0E05 /* MineEditProfileCell.h */,
 				1866EA01247DF89D002C0E05 /* MineEditProfileCell.m */,
 				1866EA02247DF89D002C0E05 /* MineEditProfileCell.xib */,
+				183E066E2482524000854297 /* LoginTableViewCell.h */,
+				183E066F2482524000854297 /* LoginTableViewCell.m */,
+				183E06702482524000854297 /* LoginTableViewCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1004,8 +1033,6 @@
 			children = (
 				189BD81A246D1B9400490E35 /* MineModel.h */,
 				189BD81B246D1B9400490E35 /* MineModel.m */,
-				18699D03247B729C000A1022 /* MineInformationModel.h */,
-				18699D04247B729C000A1022 /* MineInformationModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -1144,11 +1171,13 @@
 				18BD94F6247290D5005A84B5 /* CommunityVC.xib in Resources */,
 				154DFC732468F4B00098498C /* LaunchScreen.storyboard in Resources */,
 				15CDFADC2474D49800B2811F /* MXZFullSecondSectionCell.xib in Resources */,
+				183E066B2482522800854297 /* LoginVC.xib in Resources */,
 				152636A0246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib in Resources */,
 				1846879A247D1D2C007BC2FC /* AttentionVC.xib in Resources */,
 				183B78E1247E535300D23A59 /* ZZHImageTableViewCell.xib in Resources */,
 				1846879F247D1D2C007BC2FC /* MineDynamicVC.xib in Resources */,
 				15CDFAE32475036200B2811F /* MXZFullThirdSectionHeadView.xib in Resources */,
+				183E066C2482522800854297 /* RegisterVC.xib in Resources */,
 				184687A0247D1D2C007BC2FC /* MineVC.xib in Resources */,
 				1846879E247D1D2C007BC2FC /* MineEditVC.xib in Resources */,
 				152636A6246E771D00D01BE0 /* MXZHomeFourthSectionHeadView.xib in Resources */,
@@ -1156,10 +1185,12 @@
 				183B78C8247E533000D23A59 /* ZZHQuoteTimeVC.xib in Resources */,
 				183B78C3247E533000D23A59 /* ZZHQuotesVC.xib in Resources */,
 				1846879B247D1D2C007BC2FC /* AttentionTableViewCell.xib in Resources */,
+				183E06722482524100854297 /* LoginTableViewCell.xib in Resources */,
 				15A6F1CF24752C15002C0930 /* MXZFullFourthSectionCell.xib in Resources */,
 				154DFC702468F4B00098498C /* Assets.xcassets in Resources */,
 				15263696246E771D00D01BE0 /* MXZHomeQuoteVC.xib in Resources */,
 				15A6F1D124753351002C0930 /* MXZFullFourthSectionFootVIew.xib in Resources */,
+				183E06682482522800854297 /* forgetPwdVC.xib in Resources */,
 				157A71732477B14F003D0081 /* MXZAnswerWeekItem.xib in Resources */,
 				15CDFAD72474C95900B2811F /* MXZFullFirstSectionCell.xib in Resources */,
 				18AA2BC3246E23B1000801B1 /* CommunityChildBVC.xib in Resources */,
@@ -1226,11 +1257,13 @@
 			files = (
 				15CDF74F2473BAFD00B2811F /* MXZTtileVC.m in Sources */,
 				15593E00247622FA007B3141 /* MXZSignVC.m in Sources */,
+				183E066D2482522800854297 /* LoginVC.m in Sources */,
 				183B78C7247E533000D23A59 /* ZZHQuotesVC.m in Sources */,
 				189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */,
 				18699D0E247B998A000A1022 /* MineInformationNameView.m in Sources */,
 				15CDFAD62474C95900B2811F /* MXZFullFirstSectionCell.m in Sources */,
 				184687AA247D1D98007BC2FC /* MXZHomeVC.m in Sources */,
+				183E06692482522800854297 /* forgetPwdVC.m in Sources */,
 				15A6F1C4247524E2002C0930 /* MXZFullThirdSectionCell.m in Sources */,
 				1517AC83247D1360007BC789 /* MXZFeedbackFourthCell.m in Sources */,
 				18A584882472544400C0437F /* ListViewController.m in Sources */,
@@ -1243,6 +1276,7 @@
 				184B78A1247F94B000BFCB45 /* UserModel.m in Sources */,
 				157A716B2477A282003D0081 /* MXZAnswerVC.m in Sources */,
 				1846879D247D1D2C007BC2FC /* AttentionVC.m in Sources */,
+				183E06712482524100854297 /* LoginTableViewCell.m in Sources */,
 				152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */,
 				183B78C2247E533000D23A59 /* ZZHQuoteTimeVC.m in Sources */,
 				183B78C5247E533000D23A59 /* ZZHQuoteNewsVC.m in Sources */,
@@ -1265,7 +1299,6 @@
 				151AC1942472595D00EAE0BD /* ZKCycleScrollViewFlowLayout.m in Sources */,
 				18E8AC792474C60E00E3D7C4 /* CommunityFriendModel.m in Sources */,
 				15263699246E771D00D01BE0 /* MXZHomeQuoteVC.m in Sources */,
-				18699D05247B729C000A1022 /* MineInformationModel.m in Sources */,
 				18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */,
 				183B78DE247E535300D23A59 /* ZZHTimeLineTableViewCell.m in Sources */,
 				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,
@@ -1301,6 +1334,7 @@
 				184687A1247D1D2C007BC2FC /* MineDynamicVC.m in Sources */,
 				1526369C246E771D00D01BE0 /* MXZHomeExpressVC.m in Sources */,
 				1859014124692D8B00CA7A68 /* PublishVC.m in Sources */,
+				183E066A2482522800854297 /* RegisterVC.m in Sources */,
 				18699D16247BB55E000A1022 /* MineInformationSexView.m in Sources */,
 				18A584872472544400C0437F /* ContentBaseViewController.m in Sources */,
 				154DFC762468F4B00098498C /* main.m in Sources */,

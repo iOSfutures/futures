@@ -11,6 +11,8 @@
 #import "UIImage+OriginalImage.h"
 #import "MXZFeedbackVC.h"
 
+#import "LoginVC.h"
+
 @interface MXZSettingCenterVC ()<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *labelArray;
@@ -110,6 +112,10 @@
         //跳转到意见反馈界面
         MXZFeedbackVC *feedbackVC = [[MXZFeedbackVC alloc]init];
         [self.navigationController pushViewController:feedbackVC animated:YES];
+    }
+    else if (indexPath.section == 0 && indexPath.row == 0) {
+        LoginVC *loginVC = [LoginVC new];
+        [self.navigationController pushViewController:loginVC animated:YES];
     }
     else if (indexPath.section == 1 && indexPath.row == 0){
         MXZAboutUsVC *aboutVC = [[MXZAboutUsVC alloc]init];

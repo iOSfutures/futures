@@ -335,15 +335,15 @@
 
 //获取财经大事数据
 -(void)setAffairs{
-    if(self.affairsArray[0] != nil){
+    if(self.affairsArray.count >= 1){
         MXZFinanceAffairModel *tempModel0 = _affairsArray[0];
         self.homeThirdSectionHeadView.affairLabel0.text = tempModel0.content;
     }
-    else if ( self.affairsArray[1] != nil){
+    else if ( self.affairsArray.count >= 2){
         MXZFinanceAffairModel *tempModel1 = _affairsArray[1];
         self.homeThirdSectionHeadView.affairLabel1.text = tempModel1.content;
     }
-    else if( self.affairsArray[2] != nil){
+    else if( self.affairsArray.count >= 3){
         MXZFinanceAffairModel *tempModel2 = _affairsArray[2];
         self.homeThirdSectionHeadView.affairLabel2.text = tempModel2.content;
     }

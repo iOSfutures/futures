@@ -157,6 +157,14 @@
 		18699D0E247B998A000A1022 /* MineInformationNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D0D247B998A000A1022 /* MineInformationNameView.m */; };
 		18699D16247BB55E000A1022 /* MineInformationSexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699D15247BB55E000A1022 /* MineInformationSexView.m */; };
 		18699D18247BB56A000A1022 /* MineInformationSexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18699D17247BB56A000A1022 /* MineInformationSexView.xib */; };
+		188FC31D248495A00004FF40 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 188FC3142484959B0004FF40 /* RegisterVC.m */; };
+		188FC31E248495A00004FF40 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FC3162484959B0004FF40 /* RegisterVC.xib */; };
+		188FC31F248495A00004FF40 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 188FC3172484959B0004FF40 /* LoginVC.m */; };
+		188FC320248495A00004FF40 /* forgetPwdVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FC3192484959C0004FF40 /* forgetPwdVC.xib */; };
+		188FC321248495A00004FF40 /* forgetPwdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 188FC31B2484959E0004FF40 /* forgetPwdVC.m */; };
+		188FC322248495A00004FF40 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FC31C2484959F0004FF40 /* LoginVC.xib */; };
+		188FC3262484972C0004FF40 /* LoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188FC3232484972B0004FF40 /* LoginTableViewCell.xib */; };
+		188FC3272484972C0004FF40 /* LoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188FC3242484972B0004FF40 /* LoginTableViewCell.m */; };
 		189BD81C246D1B9400490E35 /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BD81B246D1B9400490E35 /* MineModel.m */; };
 		189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BD81E246D45C300490E35 /* CommunityChildAVC.m */; };
 		189BD821246D45C300490E35 /* CommunityChildAVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189BD81F246D45C300490E35 /* CommunityChildAVC.xib */; };
@@ -432,6 +440,18 @@
 		18699D14247BB55E000A1022 /* MineInformationSexView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineInformationSexView.h; sourceTree = "<group>"; };
 		18699D15247BB55E000A1022 /* MineInformationSexView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineInformationSexView.m; sourceTree = "<group>"; };
 		18699D17247BB56A000A1022 /* MineInformationSexView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineInformationSexView.xib; sourceTree = "<group>"; };
+		188FC3142484959B0004FF40 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		188FC3152484959B0004FF40 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		188FC3162484959B0004FF40 /* RegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
+		188FC3172484959B0004FF40 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		188FC3182484959C0004FF40 /* forgetPwdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forgetPwdVC.h; sourceTree = "<group>"; };
+		188FC3192484959C0004FF40 /* forgetPwdVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = forgetPwdVC.xib; sourceTree = "<group>"; };
+		188FC31A2484959D0004FF40 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		188FC31B2484959E0004FF40 /* forgetPwdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = forgetPwdVC.m; sourceTree = "<group>"; };
+		188FC31C2484959F0004FF40 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		188FC3232484972B0004FF40 /* LoginTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginTableViewCell.xib; sourceTree = "<group>"; };
+		188FC3242484972B0004FF40 /* LoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewCell.m; sourceTree = "<group>"; };
+		188FC3252484972B0004FF40 /* LoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableViewCell.h; sourceTree = "<group>"; };
 		189BD81A246D1B9400490E35 /* MineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
 		189BD81B246D1B9400490E35 /* MineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineModel.m; sourceTree = "<group>"; };
 		189BD81D246D45C300490E35 /* CommunityChildAVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityChildAVC.h; sourceTree = "<group>"; };
@@ -910,6 +930,15 @@
 				1846878B247D1D2A007BC2FC /* AttentionVC.h */,
 				1846878F247D1D2B007BC2FC /* AttentionVC.m */,
 				1846878C247D1D2A007BC2FC /* AttentionVC.xib */,
+				188FC31A2484959D0004FF40 /* LoginVC.h */,
+				188FC3172484959B0004FF40 /* LoginVC.m */,
+				188FC31C2484959F0004FF40 /* LoginVC.xib */,
+				188FC3152484959B0004FF40 /* RegisterVC.h */,
+				188FC3142484959B0004FF40 /* RegisterVC.m */,
+				188FC3162484959B0004FF40 /* RegisterVC.xib */,
+				188FC3182484959C0004FF40 /* forgetPwdVC.h */,
+				188FC31B2484959E0004FF40 /* forgetPwdVC.m */,
+				188FC3192484959C0004FF40 /* forgetPwdVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -941,6 +970,9 @@
 				1866EA00247DF89D002C0E05 /* MineEditProfileCell.h */,
 				1866EA01247DF89D002C0E05 /* MineEditProfileCell.m */,
 				1866EA02247DF89D002C0E05 /* MineEditProfileCell.xib */,
+				188FC3252484972B0004FF40 /* LoginTableViewCell.h */,
+				188FC3242484972B0004FF40 /* LoginTableViewCell.m */,
+				188FC3232484972B0004FF40 /* LoginTableViewCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1103,6 +1135,7 @@
 				151AC19B247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib in Resources */,
 				18E8AC762474BDA300E3D7C4 /* CommunityFriendViewCell.xib in Resources */,
 				1517AC84247D1360007BC789 /* MXZFeedbackFourthCell.xib in Resources */,
+				188FC320248495A00004FF40 /* forgetPwdVC.xib in Resources */,
 				151A95AB247BA995007F3AAB /* MXZSettingCenterVC.xib in Resources */,
 				15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */,
 				151AC1A024726AAF00EAE0BD /* MXZIndustryTableViewCell.xib in Resources */,
@@ -1117,6 +1150,7 @@
 				151AC19A247259A500EAE0BD /* MXZHomeNavSearchView.xib in Resources */,
 				1564961F2477CA56006745E8 /* MXZQuestionWeekItem.xib in Resources */,
 				183B78C0247E533000D23A59 /* ZZHQuoteNewsVC.xib in Resources */,
+				188FC31E248495A00004FF40 /* RegisterVC.xib in Resources */,
 				152636A4246E771D00D01BE0 /* MXZHomeFourthCollectionCell.xib in Resources */,
 				157A71712477A526003D0081 /* MXZAnswerCell.xib in Resources */,
 				152636A8246E771D00D01BE0 /* MXZHomeFifthSectionCell.xib in Resources */,
@@ -1142,6 +1176,7 @@
 				152636A0246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib in Resources */,
 				1846879A247D1D2C007BC2FC /* AttentionVC.xib in Resources */,
 				183B78E1247E535300D23A59 /* ZZHImageTableViewCell.xib in Resources */,
+				188FC322248495A00004FF40 /* LoginVC.xib in Resources */,
 				1846879F247D1D2C007BC2FC /* MineDynamicVC.xib in Resources */,
 				15CDFAE32475036200B2811F /* MXZFullThirdSectionHeadView.xib in Resources */,
 				184687A0247D1D2C007BC2FC /* MineVC.xib in Resources */,
@@ -1150,6 +1185,7 @@
 				184687A8247D1D53007BC2FC /* MXZHomeIndustryVC.xib in Resources */,
 				183B78C8247E533000D23A59 /* ZZHQuoteTimeVC.xib in Resources */,
 				183B78C3247E533000D23A59 /* ZZHQuotesVC.xib in Resources */,
+				188FC3262484972C0004FF40 /* LoginTableViewCell.xib in Resources */,
 				1846879B247D1D2C007BC2FC /* AttentionTableViewCell.xib in Resources */,
 				15A6F1CF24752C15002C0930 /* MXZFullFourthSectionCell.xib in Resources */,
 				154DFC702468F4B00098498C /* Assets.xcassets in Resources */,
@@ -1240,6 +1276,7 @@
 				1846879D247D1D2C007BC2FC /* AttentionVC.m in Sources */,
 				152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */,
 				183B78C2247E533000D23A59 /* ZZHQuoteTimeVC.m in Sources */,
+				188FC3272484972C0004FF40 /* LoginTableViewCell.m in Sources */,
 				183B78C5247E533000D23A59 /* ZZHQuoteNewsVC.m in Sources */,
 				18E8AC752474BDA300E3D7C4 /* CommunityFriendViewCell.m in Sources */,
 				1526D6B6247E07E6006A2556 /* ENDNetWorkDELETE.m in Sources */,
@@ -1266,6 +1303,7 @@
 				183B78DF247E535300D23A59 /* ZZHDateCollectionViewCell.m in Sources */,
 				1526D6D2247E0A7C006A2556 /* EGHImagePickerVCManager.m in Sources */,
 				1526D6D4247E0A7C006A2556 /* ENDGradientLabel.m in Sources */,
+				188FC321248495A00004FF40 /* forgetPwdVC.m in Sources */,
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
 				15CDFAD12474C2FB00B2811F /* MXZFullDisplay.m in Sources */,
 				152636A7246E771D00D01BE0 /* MXZHomeFifthSectionCell.m in Sources */,
@@ -1274,6 +1312,7 @@
 				151AC19F24726AAF00EAE0BD /* MXZIndustryTableViewCell.m in Sources */,
 				1526D6B5247E07E6006A2556 /* ENDNetWorkManager.m in Sources */,
 				1517AC79247D0497007BC789 /* MXZFeedbackSecondCell.m in Sources */,
+				188FC31D248495A00004FF40 /* RegisterVC.m in Sources */,
 				184687A3247D1D2C007BC2FC /* MineVC.m in Sources */,
 				15AA6EF7247F459300F416CF /* MXZFinanceAffairModel.m in Sources */,
 				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
@@ -1324,6 +1363,7 @@
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,
 				156FEAFE2480E0D200FCA75F /* MXZRecommandTalkModel.m in Sources */,
 				1526D6D6247E0A7C006A2556 /* StringAndLabelDealTool.m in Sources */,
+				188FC31F248495A00004FF40 /* LoginVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

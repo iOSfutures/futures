@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="122" id="KGk-i7-Jjw" customClass="LoginTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M0X-fB-Y0F">
+                        <rect key="frame" x="15" y="0.0" width="305" height="61"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iSX-JZ-uhn">
+                        <rect key="frame" x="15" y="61" width="305" height="61"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUr-w3-FOa">
+                        <rect key="frame" x="195" y="76.5" width="90" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="获取验证码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeE-aO-fkg" customClass="ZXCountDownLabel">
+                                <rect key="frame" x="6.5" y="6" width="77" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="1aR-D5-PxN"/>
+                            <constraint firstItem="IeE-aO-fkg" firstAttribute="centerX" secondItem="cUr-w3-FOa" secondAttribute="centerX" id="JwC-lY-s2w"/>
+                            <constraint firstItem="IeE-aO-fkg" firstAttribute="centerY" secondItem="cUr-w3-FOa" secondAttribute="centerY" id="u7l-td-WUK"/>
+                            <constraint firstAttribute="height" constant="30" id="zn6-xw-yRY"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqf-6j-TwB">
+                        <rect key="frame" x="218" y="76.5" width="62" height="30"/>
+                        <state key="normal" title="忘记密码">
+                            <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iSX-JZ-uhn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="0T0-nE-PQ3"/>
+                    <constraint firstItem="M0X-fB-Y0F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BL8-GK-kQ0"/>
+                    <constraint firstItem="iSX-JZ-uhn" firstAttribute="height" secondItem="M0X-fB-Y0F" secondAttribute="height" id="C0m-Nb-s9Y"/>
+                    <constraint firstItem="cUr-w3-FOa" firstAttribute="centerY" secondItem="iSX-JZ-uhn" secondAttribute="centerY" id="H2Y-AP-nlC"/>
+                    <constraint firstItem="M0X-fB-Y0F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="PDB-F8-fTs"/>
+                    <constraint firstAttribute="bottom" secondItem="iSX-JZ-uhn" secondAttribute="bottom" id="V0g-Tr-WOi"/>
+                    <constraint firstAttribute="trailing" secondItem="M0X-fB-Y0F" secondAttribute="trailing" id="Wva-d1-etD"/>
+                    <constraint firstAttribute="trailing" secondItem="eqf-6j-TwB" secondAttribute="trailing" constant="40" id="gMj-TS-ANC"/>
+                    <constraint firstItem="iSX-JZ-uhn" firstAttribute="top" secondItem="M0X-fB-Y0F" secondAttribute="bottom" id="m1Z-qn-X5C"/>
+                    <constraint firstAttribute="trailing" secondItem="cUr-w3-FOa" secondAttribute="trailing" constant="35" id="tac-0t-8QD"/>
+                    <constraint firstItem="eqf-6j-TwB" firstAttribute="centerY" secondItem="iSX-JZ-uhn" secondAttribute="centerY" id="xHF-Kw-2wn"/>
+                    <constraint firstAttribute="trailing" secondItem="iSX-JZ-uhn" secondAttribute="trailing" id="xz5-Me-vXw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="forgetpwdBtn" destination="eqf-6j-TwB" id="K8Z-ki-xrK"/>
+                <outlet property="loginTimeLabel" destination="IeE-aO-fkg" id="9t1-YF-MZS"/>
+                <outlet property="numTextF" destination="M0X-fB-Y0F" id="rc9-Wn-kqE"/>
+                <outlet property="pwdTextF" destination="iSX-JZ-uhn" id="Bqz-Jd-AIP"/>
+                <outlet property="timeBgView" destination="cUr-w3-FOa" id="oHp-t5-Xlg"/>
+            </connections>
+            <point key="canvasLocation" x="-52.173913043478265" y="109.15178571428571"/>
+        </tableViewCell>
+    </objects>
+</document>

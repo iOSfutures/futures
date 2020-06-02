@@ -66,6 +66,7 @@
 		1526D6DA247E0A7C006A2556 /* EGHCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6D1247E0A7C006A2556 /* EGHCodeTool.m */; };
 		1526D6E0247E0E24006A2556 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6DC247E0E24006A2556 /* Reachability.m */; };
 		1526D6E1247E0E24006A2556 /* LCPReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526D6DF247E0E24006A2556 /* LCPReachability.m */; };
+		1538357724863FA400EA6578 /* MXZDiscussModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1538357624863FA400EA6578 /* MXZDiscussModel.m */; };
 		154C26B7247B8CEF00A9162D /* MXZAnswerTomorrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 154C26B5247B8CEF00A9162D /* MXZAnswerTomorrowItem.m */; };
 		154C26B8247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154C26B6247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib */; };
 		154DFC652468F4AE0098498C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 154DFC642468F4AE0098498C /* AppDelegate.m */; };
@@ -318,6 +319,8 @@
 		1526D6DD247E0E24006A2556 /* LCPReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCPReachability.h; sourceTree = "<group>"; };
 		1526D6DE247E0E24006A2556 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1526D6DF247E0E24006A2556 /* LCPReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPReachability.m; sourceTree = "<group>"; };
+		1538357524863FA400EA6578 /* MXZDiscussModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZDiscussModel.h; sourceTree = "<group>"; };
+		1538357624863FA400EA6578 /* MXZDiscussModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZDiscussModel.m; sourceTree = "<group>"; };
 		154C26B4247B8CEF00A9162D /* MXZAnswerTomorrowItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZAnswerTomorrowItem.h; sourceTree = "<group>"; };
 		154C26B5247B8CEF00A9162D /* MXZAnswerTomorrowItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZAnswerTomorrowItem.m; sourceTree = "<group>"; };
 		154C26B6247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZAnswerTomorrowItem.xib; sourceTree = "<group>"; };
@@ -605,6 +608,8 @@
 				15AA6EF6247F459300F416CF /* MXZFinanceAffairModel.m */,
 				156FEAFC2480E0D200FCA75F /* MXZRecommandTalkModel.h */,
 				156FEAFD2480E0D200FCA75F /* MXZRecommandTalkModel.m */,
+				1538357524863FA400EA6578 /* MXZDiscussModel.h */,
+				1538357624863FA400EA6578 /* MXZDiscussModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -1396,6 +1401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1538357724863FA400EA6578 /* MXZDiscussModel.m in Sources */,
 				15CDF74F2473BAFD00B2811F /* MXZTtileVC.m in Sources */,
 				15593E00247622FA007B3141 /* MXZSignVC.m in Sources */,
 				183B78C7247E533000D23A59 /* ZZHQuotesVC.m in Sources */,

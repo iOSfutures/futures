@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MXZDiscussModel.h"
+#import "UserModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MXZFullFourthSectionCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *headImg;
+@property (weak, nonatomic) IBOutlet UILabel *nickName;
+@property (strong, nonatomic) MXZDiscussModel *discussModel;
+
 
 @end
 

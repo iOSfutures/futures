@@ -33,10 +33,10 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="建议1486不破做多，止损1481" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kC-GI-9Z4">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="建议1486不破做多，止损1481" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kC-GI-9Z4">
                         <rect key="frame" x="71" y="33" width="205" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="fqw-9P-Pp9"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="fqw-9P-Pp9"/>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="zhz-Sx-KgP"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -70,12 +70,12 @@
                     <constraint firstAttribute="bottom" secondItem="ci0-8t-UO7" secondAttribute="bottom" constant="2" id="07Z-7o-VyJ"/>
                     <constraint firstItem="xQg-P7-5G9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="7en-ds-Qib"/>
                     <constraint firstItem="Y7h-Qp-Zqo" firstAttribute="leading" secondItem="xQg-P7-5G9" secondAttribute="trailing" constant="11" id="AxI-tL-lkB"/>
+                    <constraint firstItem="ci0-8t-UO7" firstAttribute="top" secondItem="5kC-GI-9Z4" secondAttribute="bottom" constant="5" id="FEG-h6-btY"/>
                     <constraint firstItem="5kC-GI-9Z4" firstAttribute="leading" secondItem="Y7h-Qp-Zqo" secondAttribute="leading" id="G0v-vR-f4T"/>
                     <constraint firstItem="QAr-D6-JCX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="NKM-MV-wDi"/>
                     <constraint firstItem="ci0-8t-UO7" firstAttribute="leading" secondItem="Y7h-Qp-Zqo" secondAttribute="leading" id="SyW-25-pWE"/>
-                    <constraint firstItem="5kC-GI-9Z4" firstAttribute="top" secondItem="Y7h-Qp-Zqo" secondAttribute="bottom" constant="12" id="Zi8-Lc-cRV"/>
                     <constraint firstItem="xQg-P7-5G9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fIq-k5-eIV"/>
-                    <constraint firstAttribute="bottom" secondItem="xQg-P7-5G9" secondAttribute="bottom" constant="40" id="iSU-zC-qSU"/>
+                    <constraint firstItem="5kC-GI-9Z4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="lKM-Oo-EXW"/>
                     <constraint firstAttribute="trailing" secondItem="QAr-D6-JCX" secondAttribute="trailing" constant="30" id="mj2-LR-dex"/>
                     <constraint firstItem="Y7h-Qp-Zqo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="uKI-nS-ZUi"/>
                 </constraints>
@@ -83,8 +83,10 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="commentLabel" destination="5kC-GI-9Z4" id="47A-Gb-wQ3"/>
+                <outlet property="headImg" destination="xQg-P7-5G9" id="DlF-9V-pyi"/>
+                <outlet property="nickName" destination="Y7h-Qp-Zqo" id="wtN-hK-OTT"/>
             </connections>
-            <point key="canvasLocation" x="139" y="95"/>
+            <point key="canvasLocation" x="110" y="93"/>
         </tableViewCell>
     </objects>
     <resources>

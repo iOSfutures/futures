@@ -71,7 +71,7 @@
                     }
                     else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 736)
                     {
-                        imageView.frame = CGRectMake(0, -10, SCREEN_WIDTH, kScaleFrom_iPhone6_Desgin(74));
+                        imageView.frame = CGRectMake(0, -20, SCREEN_WIDTH, kScaleFrom_iPhone6_Desgin(74));
                     }
                     else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 896)
                     {

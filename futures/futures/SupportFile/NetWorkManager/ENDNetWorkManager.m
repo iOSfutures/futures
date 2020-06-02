@@ -127,12 +127,15 @@
             i++;
         }
     }
-    NSString *newPathURl = (NSString *)
-     CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                              (CFStringRef)pathUrl,
-                                                              (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]",
-                                                              NULL,
-                                                              kCFStringEncodingUTF8));
+    NSString *newPathURl = [pathUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    
+    
+//    (NSString *)
+//     CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+//                                                              (CFStringRef)pathUrl,
+//                                                              (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]",
+//                                                              NULL,
+//                                                              kCFStringEncodingUTF8));
     switch (requestMethod) {
         case kHttpRequestTypeFormPost:{
             [ENDNetWorkPOST POSTFormDataWithParams:parameters pathurl:newPathURl success:successBlock failure:failureBlock manager:manager];

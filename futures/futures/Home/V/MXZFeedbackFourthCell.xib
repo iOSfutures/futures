@@ -23,6 +23,9 @@
                         </constraints>
                         <inset key="titleEdgeInsets" minX="0.0" minY="-12" maxX="0.0" maxY="0.0"/>
                         <state key="normal" title="提交" backgroundImage="button"/>
+                        <connections>
+                            <action selector="publishClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4Bv-Jc-GLN"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

@@ -66,6 +66,8 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="addPicBtn" destination="UNn-fD-vn2" id="Dy4-7y-yFC"/>
+                <outlet property="contentTextView" destination="r8D-vM-wuE" id="F9k-YI-Sbm"/>
+                <outlet property="picImage" destination="ffD-p2-bmX" id="rA9-Uk-WXK"/>
             </connections>
             <point key="canvasLocation" x="138.40579710144928" y="125.55803571428571"/>
         </tableViewCell>

@@ -46,30 +46,38 @@
 }
 
 + (void)POSTDataWithParams:(NSDictionary *)params pathurl:(NSString *)pathUrl success:(HTTPSuccessBlock)successBlock failure:(HTTPFailureBlock)failureBlock manager:(AFHTTPSessionManager *)manager{
-    [manager POST:pathUrl parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+    [manager POST:pathUrl parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+      
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary* json;
-        if ([responseObject isKindOfClass:[NSDictionary class]]) {
-            json=responseObject;
-        }else{
-            json=[NSJSONSerialization JSONObjectWithData:responseObject options:NSUTF8StringEncoding error:nil];
-        }
-        if ([json valueForKey:@"error"]) {
-            NSError *error = [[NSError alloc] initWithDomain:@"server error" code:500 userInfo:nil];
-            failureBlock(NO,error);
-            return ;
-        }
-        [ENDLCPNetWorkERROR DealJsonDict:json callBackBlock:^(id result, BOOL error) {
-            if (!error) {
-                successBlock(YES,json);
-            }else{
-                failureBlock(NO,result);
-            }
-        }];
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                     if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                         json=responseObject;
+                     }else{
+                         json=[NSJSONSerialization JSONObjectWithData:responseObject options:NSUTF8StringEncoding error:nil];
+                     }
+                     if ([json valueForKey:@"error"]) {
+                         NSError *error = [[NSError alloc] initWithDomain:@"server error" code:500 userInfo:nil];
+                         failureBlock(NO,error);
+                         return ;
+                     }
+                     [ENDLCPNetWorkERROR DealJsonDict:json callBackBlock:^(id result, BOOL error) {
+                         if (!error) {
+                             successBlock(YES,json);
+                         }else{
+                             failureBlock(NO,result);
+                         }
+                     }];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [ENDLCPNetWorkERROR dealErrorInfo:error Task:task CompeleteBlcok:^(NSError *newError) {
-            failureBlock(YES,newError);
-        }];
+                   failureBlock(YES,newError);
+               }];
     }];
+
+//    [manager POST:pathUrl parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+//       
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//       
+//    }];
 }
 
 + (void)POSTJSONWithParams:(NSDictionary *)params pathurl:(NSString *)pathUrl success:(HTTPSuccessBlock)successBlock failure:(HTTPFailureBlock)failureBlock manager:(AFHTTPSessionManager *)manager{

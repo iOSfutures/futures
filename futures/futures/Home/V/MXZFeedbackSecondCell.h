@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MXZFeedbackSecondCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIButton *addPicBtn;
+@property (weak, nonatomic) IBOutlet UITextView *contentTextView;
+@property (weak, nonatomic) IBOutlet UIImageView *picImage;
+
+@property (copy, nonatomic) void (^textBlock)(NSString *);
 
 @end
 

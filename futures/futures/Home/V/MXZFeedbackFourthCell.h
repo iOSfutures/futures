@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MXZFeedbackFourthCell : UITableViewCell
 
+@property (nonatomic, copy) void(^pubulishBlock)(void);
 @end
 
 NS_ASSUME_NONNULL_END

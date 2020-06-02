@@ -20,5 +20,10 @@
 
     // Configure the view for the selected state
 }
+- (IBAction)publishClick:(id)sender {
+    if (_pubulishBlock) {
+        _pubulishBlock();
+    }
+}
 
 @end

@@ -11,9 +11,11 @@
 #import "MXZFeedbackSecondCell.h"
 #import "MXZFeedbackFourthCell.h"
 
-@interface PublishVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface PublishVC ()<UITableViewDelegate, UITableViewDataSource,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (copy, nonatomic) NSString *contentStr;
+@property (strong, nonatomic) NSArray *picArray;
+@property (copy, nonatomic)  NSString *saveURL;
 @end
 
 @implementation PublishVC
@@ -54,9 +56,25 @@
     }
     else if (indexPath.section == 1){
     MXZFeedbackSecondCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MXZFeedbackSecondCell"];
+        
+        //设置完成编辑代理监听
+        cell.textBlock = ^(NSString * string) {
+            NSLog(@"string = %@",string);
+            self.contentStr = string;
+        };
+//        cell.contentTextView.delegate = self;
+        NSMutableArray *savePicArray = [NSMutableArray array];
+        [savePicArray addObject:cell.picImage.image];
+        self.picArray = savePicArray;
     return cell;
     }
     MXZFeedbackFourthCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MXZFeedbackFourthCell"];
+    cell.pubulishBlock = ^(){
+        //点击提交按钮后,结束编辑
+        [self.view endEditing:true];
+        //将图片上传到服务器,获得图片的URL
+        [self uploadImg];
+    };
     return cell;
 }
 
@@ -87,14 +105,44 @@
     return 0.001;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//上传图片
+-(void)uploadImg{
+    WEAKSELF
+    NSDictionary *dict = @{
+        @"file" : self.picArray[0]
+    };
+    
+    [ENDNetWorkManager postFormWithPathUrl:@"http://image.yysc.online/upload" parameters:nil queryParams:dict Header:nil success:^(BOOL success, id result) {
+        NSLog(@"result:%@", result);
+        NSString *URL = [[NSString alloc]initWithData:result encoding:NSUTF8StringEncoding];
+        weakSelf.saveURL = URL;
+        //上传图片成功后才publishMessage
+        [self publishMessage];
+    } failure:^(BOOL failuer, NSError *error) {
+        [Toast makeText:weakSelf.view Message:@"上传图片失败" afterHideTime:DELAYTiME];
+        NSLog(@"error:%@", error);
+        self.saveURL = @"http://image.yysc.online/files/2020/5/1/ad4c4e590953f15463064bcf5c39a1b9.jpg";
+        [self publishMessage];
+    }];
 }
-*/
+
+
+-(void)publishMessage{
+    WEAKSELF
+    NSDictionary *dict = @{
+        @"userId" : @4160,
+        @"content" : self.contentStr,
+        @"picture" : self.saveURL
+    };
+    [ENDNetWorkManager postWithPathUrl:@"/user/talk/publishTalk" parameters:nil queryParams:dict Header:nil success:^(BOOL success, id result) {
+        [Toast makeText:weakSelf.view Message:@"发布说说成功" afterHideTime:DELAYTiME];
+        NSLog(@"%@",result);
+    } failure:^(BOOL failuer, NSError *error) {
+        [Toast makeText:weakSelf.view Message:@"发布说说失败" afterHideTime:DELAYTiME];
+        NSLog(@"%@",error);
+    }];
+}
+
+
 
 @end

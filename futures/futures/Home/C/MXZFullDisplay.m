@@ -14,7 +14,7 @@
 #import "MXZFullFourthSectionCell.h"
 #import "UIImage+OriginalImage.h"
 
-@interface MXZFullDisplay ()<UITableViewDelegate, UITableViewDataSource>
+@interface MXZFullDisplay ()<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *displayTableview;
 //@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -29,11 +29,15 @@
     [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullThirdSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullThirdSectionCell"];
     [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullFourthSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullFourthSectionCell"];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
+    
+    //启用右滑返回手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = YES;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 

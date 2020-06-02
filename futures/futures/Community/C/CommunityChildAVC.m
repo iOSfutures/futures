@@ -18,6 +18,9 @@
 
 #import "CommunityTopicHeaderView.h"
 
+#import "MXZFullDisplay.h"
+#import "MXZRecommandTalkModel.h"
+
 @interface CommunityChildAVC ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -189,12 +192,15 @@ NSString *DynamicCell = @"DynamicCell";
     }];
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    UserModel *model = _topicsArray[indexPath];
-//    UIViewController *vc = UIViewController.new;
-//    vc.model = model;
-//    [self.navigationController pushViewController:vc animated:YES];
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section == 3)
+    {
+        CommunityTopicModel *model = _topicsArray[indexPath.item];
+        MXZFullDisplay *vc = MXZFullDisplay.new;
+        vc.recommandModel = model;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
 
 @end

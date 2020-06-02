@@ -13,11 +13,11 @@
 #import "MXZFullThirdSectionCell.h"
 #import "MXZFullFourthSectionCell.h"
 #import "UIImage+OriginalImage.h"
+#import "MXZDiscussModel.h"
 
 @interface MXZFullDisplay ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *displayTableview;
-//@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (strong, nonatomic) NSArray *discussArray;
 @end
 
 @implementation MXZFullDisplay
@@ -34,6 +34,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = YES;
+    [self getDiscussModel];
 }
 
 
@@ -46,6 +47,22 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark getDiscuss
+-(void)getDiscussModel{
+    WEAKSELF
+    [ENDNetWorkManager getWithPathUrl:@"/user/talk/getDiscussByUserId?userId=4161" parameters:nil queryParams:nil Header:nil success:^(BOOL success, id result) {
+        NSError *error;
+        weakSelf.discussArray = [MTLJSONAdapter modelsOfClass:[MXZDiscussModel class] fromJSONArray:result[@"data"][@"list"] error:&error];
+        //刷新第5个section
+        [weakSelf.displayTableview reloadSections:[NSIndexSet indexSetWithIndex:3] withRowAnimation:UITableViewRowAnimationFade];
+
+    } failure:^(BOOL failuer, NSError *error) {
+        [Toast makeText:weakSelf.view Message:@"获取评论失败" afterHideTime:DELAYTiME];
+    }];
+}
+
+
+#pragma mark -TableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 4;
@@ -53,7 +70,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(section == 3){
-        return 2;
+        return self.discussArray.count;
     }
     return 1;
 }
@@ -99,11 +116,7 @@
         if(cell == nil){
             cell = [[NSBundle mainBundle] loadNibNamed:@"MXZFullFourthSectionCell" owner:self options:nil].firstObject;
         }
-        if(indexPath.row == 1){
-            cell.commentLabel.text = @"目标1491-1500";
-        }else if (indexPath.row == 0){
-            cell.commentLabel.text = @"建议1486不破做多，止损1481";
-        }
+        cell.discussModel = self.discussArray[indexPath.row];
         return cell;
     }
     

@@ -147,7 +147,7 @@
         //上传图片成功后才publishMessage
         [self publishMessage];
     } failure:^(BOOL failuer, NSError *error) {
-        [Toast makeText:weakSelf.view Message:@"上传图片失败" afterHideTime:DELAYTiME];
+//        [Toast makeText:weakSelf.view Message:@"上传图片失败" afterHideTime:DELAYTiME];
         NSLog(@"error:%@", error);
         self.saveURL = @"http://image.yysc.online/files/2020/5/1/ad4c4e590953f15463064bcf5c39a1b9.jpg";
         [self publishMessage];
@@ -164,7 +164,6 @@
     };
     [ENDNetWorkManager postWithPathUrl:@"/user/talk/publishTalk" parameters:nil queryParams:dict Header:nil success:^(BOOL success, id result) {
         [Toast makeText:weakSelf.view Message:@"发布说说成功" afterHideTime:DELAYTiME];
-        NSLog(@"%@",result);
     } failure:^(BOOL failuer, NSError *error) {
         [Toast makeText:weakSelf.view Message:@"发布说说失败" afterHideTime:DELAYTiME];
         NSLog(@"%@",error);

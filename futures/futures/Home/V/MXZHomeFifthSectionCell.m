@@ -25,6 +25,7 @@
 
 - (void)setRecommandModel:(MXZRecommandTalkModel *)recommandModel
 {
+    
     _recommandModel = recommandModel;
     [self.contentPic sd_setImageWithURL:[NSURL URLWithString:recommandModel.picture] placeholderImage:[UIImage imageNamed:@"banner01_zx"]];
     if(recommandModel.content != nil){

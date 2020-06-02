@@ -43,26 +43,26 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="293"/>
                     <subviews>
                         <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallhaven-oxv6gl" translatesAutoresizingMaskIntoConstraints="NO" id="nu9-lF-pLL" userLabel="AvatarImgView">
-                            <rect key="frame" x="16" y="77.5" width="89" height="89"/>
+                            <rect key="frame" x="16" y="52" width="89" height="89"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="89" id="Mg8-7I-Ch1"/>
                                 <constraint firstAttribute="width" constant="89" id="uYr-Ze-EGz"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这个人太懒了，什么都没留下..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWF-lm-GMI" userLabel="SignatureLabel">
-                            <rect key="frame" x="134" y="110.5" width="170" height="14.5"/>
+                            <rect key="frame" x="134" y="85" width="170" height="14.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快去取个昵称吧~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbx-We-i7R" userLabel="NameLabel">
-                            <rect key="frame" x="134" y="77.5" width="140" height="21.5"/>
+                            <rect key="frame" x="134" y="52" width="140" height="21.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZS-Df-Nqm" userLabel="NewsBtn">
-                            <rect key="frame" x="134" y="145.5" width="71.5" height="22.5"/>
+                            <rect key="frame" x="134" y="120" width="71.5" height="22.5"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="22.600000000000001" id="c0m-f4-3Gk"/>
                                 <constraint firstAttribute="width" constant="71.599999999999994" id="f71-Ox-Itc"/>
@@ -75,7 +75,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aly-e1-TVJ" userLabel="EditBtn">
-                            <rect key="frame" x="220.5" y="145.5" width="71.5" height="22.5"/>
+                            <rect key="frame" x="220.5" y="120" width="71.5" height="22.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="71.599999999999994" id="4ZE-rL-apH"/>
                                 <constraint firstAttribute="height" constant="22.600000000000001" id="9Ev-1g-cpu"/>
@@ -213,7 +213,6 @@
                     <color key="backgroundColor" red="0.94446575639999997" green="0.65159273149999997" blue="0.23140901329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="mBt-mv-L8U" secondAttribute="trailing" constant="15" id="13H-8h-HZe"/>
-                        <constraint firstAttribute="bottom" secondItem="nu9-lF-pLL" secondAttribute="bottom" constant="126.5" id="2ym-44-Dxj"/>
                         <constraint firstItem="alf-zb-Ho5" firstAttribute="leading" secondItem="D5g-M9-7Aj" secondAttribute="leading" constant="15" id="7EM-tt-VEy"/>
                         <constraint firstItem="eZS-Df-Nqm" firstAttribute="top" secondItem="jWF-lm-GMI" secondAttribute="bottom" constant="20.5" id="9Q7-zK-sBD"/>
                         <constraint firstItem="xhm-gq-SI8" firstAttribute="width" secondItem="alf-zb-Ho5" secondAttribute="width" id="DoG-Aq-YgB"/>
@@ -228,6 +227,7 @@
                         <constraint firstItem="mBt-mv-L8U" firstAttribute="height" secondItem="alf-zb-Ho5" secondAttribute="height" id="Uge-R9-WZO"/>
                         <constraint firstItem="mBt-mv-L8U" firstAttribute="width" secondItem="alf-zb-Ho5" secondAttribute="width" id="Vgb-HD-8PK"/>
                         <constraint firstItem="xhm-gq-SI8" firstAttribute="height" secondItem="alf-zb-Ho5" secondAttribute="height" id="Z7D-VT-P7T"/>
+                        <constraint firstItem="nu9-lF-pLL" firstAttribute="top" secondItem="D5g-M9-7Aj" secondAttribute="topMargin" id="gsu-4z-Ikh"/>
                         <constraint firstItem="jWF-lm-GMI" firstAttribute="top" secondItem="nbx-We-i7R" secondAttribute="bottom" constant="11.5" id="l1z-cZ-YGO"/>
                         <constraint firstItem="xhm-gq-SI8" firstAttribute="bottom" secondItem="alf-zb-Ho5" secondAttribute="bottom" id="nxG-PI-icK"/>
                         <constraint firstItem="nbx-We-i7R" firstAttribute="leading" secondItem="nu9-lF-pLL" secondAttribute="trailing" constant="29" id="u0h-0E-JBd"/>

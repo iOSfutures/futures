@@ -210,19 +210,19 @@ NSString *DynamicCell3 = @"DynamicCell3";
         CGRect frame = self.tabBarController.tabBar.frame;
         if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 667)
         {
-            frame.origin.y = 667;
+            frame.origin.y = 700;
         }
         else if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 812)
         {
-            frame.origin.y = 812;
+            frame.origin.y = 900;
         }
         else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 736)
         {
-            frame.origin.y = 736;
+            frame.origin.y = 800;
         }
         else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 896)
         {
-            frame.origin.y = 896;
+            frame.origin.y = 1000;
         }
         self.tabBarController.tabBar.frame = frame;
         self.navigationController.navigationBar.backgroundColor = UIColorWithRGBA(254, 162, 3, 1);

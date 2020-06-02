@@ -366,7 +366,7 @@
         }
         else if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 812)
         {
-            frame.origin.y = 738;
+            frame.origin.y = 742;
         }
         else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 736)
         {
@@ -374,7 +374,7 @@
         }
         else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 896)
         {
-            frame.origin.y = 822;
+            frame.origin.y = 816;
         }
         self.tabBarController.tabBar.frame = frame;
         self.navigationController.navigationBar.backgroundColor = UIColorWithRGBA(254, 162, 3, 0);

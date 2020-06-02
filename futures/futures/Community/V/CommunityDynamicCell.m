@@ -52,7 +52,7 @@
     if(dynamicModel.picture1)
     {
         self.contentImgView1.hidden = NO;
-        self.contentImgView1W.constant = 345;
+        self.contentImgView1W.constant = kScaleFrom_iPhone8_Width(345);
         self.contentImgView1H.constant = 167.5;
         [self.contentImgView1 sd_setImageWithURL:[NSURL URLWithString:dynamicModel.picture1]
         placeholderImage:[UIImage imageNamed:@"talk about_banner01_community"]];
@@ -61,7 +61,7 @@
         
         if(dynamicModel.picture2)
         {
-            self.contentImgView1W.constant = 165;
+            self.contentImgView1W.constant = kScaleFrom_iPhone8_Width(165);
             self.contentImgView2.hidden = NO;
             self.contentImgView2H.constant = 167.5;
             [self.contentImgView2 sd_setImageWithURL:[NSURL URLWithString:dynamicModel.picture2]

@@ -18,12 +18,17 @@
 
 @property (strong, nonatomic)NSArray *followsArray;
 
+@property (nonatomic, strong)NSNumber *userId;
+
 @end
 
 @implementation AttentionVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self getUserDefault];
+    
     self.title = _titleStr;
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:254/255.0 green:162/255.0 blue:3/255.0 alpha:1.0];
@@ -52,6 +57,15 @@
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
+- (void)getUserDefault
+{
+    //获取用户偏好
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    //读取userId
+    NSNumber *userId = [userDefault objectForKey:@"userId"];
+    _userId = userId;
+}
+
 - (void)backBtnClicked
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -59,6 +73,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    
+    [self getUserDefault];
+    
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     
     [UIView animateWithDuration:0.2 animations:^{
@@ -95,7 +112,7 @@
 
 -(void)getFollows{
     WEAKSELF
-    NSDictionary *dic = @{@"userId":@155,@"type":@1};
+    NSDictionary *dic = @{@"userId":_userId,@"type":@1};
     [ENDNetWorkManager getWithPathUrl:@"/user/follow/getUserFollowList" parameters:nil queryParams:dic Header:nil success:^(BOOL success, id result) {
         NSError *error;
         weakSelf.followsArray = [MTLJSONAdapter modelsOfClass:[UserModel class] fromJSONArray:result[@"data"][@"list"] error:&error];
@@ -108,7 +125,7 @@
 
 -(void)getFans{
     WEAKSELF
-    NSDictionary *dic = @{@"userId":@155,@"type":@2};
+    NSDictionary *dic = @{@"userId":_userId,@"type":@2};
     [ENDNetWorkManager getWithPathUrl:@"/user/follow/getUserFollowList" parameters:nil queryParams:dic Header:nil success:^(BOOL success, id result) {
         NSError *error;
         weakSelf.followsArray = [MTLJSONAdapter modelsOfClass:[UserModel class] fromJSONArray:result[@"data"][@"list"] error:&error];

@@ -126,7 +126,7 @@
 #pragma mark - time
 
 #define TimeForMatterStr @"yyyy-MM-dd HH:mm:ss"
-#define ProjectCategory @"game"
+#define ProjectCategory @"futures"
 
 #define TabbarBackViewColor UIColorFromRGB(0x252D40)
 

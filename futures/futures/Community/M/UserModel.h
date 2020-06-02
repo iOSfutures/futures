@@ -13,6 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UserModel : BaseModel
 
+
+@property (nonatomic, copy)NSString *phone;
+@property (nonatomic, copy)NSString *pwd;
+
 @property (nonatomic, copy)NSString *head;
 @property (nonatomic, copy)NSString *nickName;
 @property (nonatomic, strong)NSNumber *followCount;

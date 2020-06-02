@@ -1,21 +1,22 @@
 //
-//  MineInformationView.m
+//  MIneCodeView.m
 //  futures
 //
-//  Created by Ssiswent on 2020/5/25.
+//  Created by Ssiswent on 2020/6/1.
 //  Copyright © 2020 Francis. All rights reserved.
 //
 
-#import "MineInformationNameView.h"
+#import "MineCodeView.h"
 
-@interface MineInformationNameView()
-@property (weak, nonatomic) IBOutlet UITextField *nameTextF;
+@interface MineCodeView()
+
 @property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
 @property (weak, nonatomic) IBOutlet UIButton *confirmBtn;
+@property (weak, nonatomic) IBOutlet UITextField *codeTextF;
 
 @end
 
-@implementation MineInformationNameView
+@implementation MineCodeView
 
 - (void)awakeFromNib
 {
@@ -36,21 +37,38 @@
     gl.colors = @[(__bridge id)[UIColor colorWithRed:252/255.0 green:189/255.0 blue:38/255.0 alpha:1.0].CGColor,(__bridge id)[UIColor colorWithRed:255/255.0 green:88/255.0 blue:33/255.0 alpha:1.0].CGColor];
     gl.locations = @[@(0.0f),@(1.0f)];
     [_confirmBtn.layer addSublayer:gl];
+    
+    UIGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(codeImgViewClicked)];
+    [_codeImgView addGestureRecognizer:tap];
 }
+
+- (void)codeImgViewClicked
+{
+    if([self.delegate respondsToSelector:@selector(MineCodeViewDidClickCodeImgView:)])
+    {
+        [self.delegate MineCodeViewDidClickCodeImgView:self];
+    }
+}
+
 
 - (IBAction)cancelBtnClicked:(id)sender {
-    if([self.delegate respondsToSelector:@selector(mineInformationNameViewDidClickCancelBtn:)])
+    if([self.delegate respondsToSelector:@selector(MineCodeViewDidClickCancelBtn:)])
     {
-        [self.delegate mineInformationNameViewDidClickCancelBtn:self];
+        [self.delegate MineCodeViewDidClickCancelBtn:self];
     }
 }
+
 - (IBAction)confirmBtnClicked:(id)sender {
-    if([self.delegate respondsToSelector:@selector(mineInformationNameViewDidClickConfirmBtn:changedName:)])
+    if([self.delegate respondsToSelector:@selector(MineCodeViewDidClickConfirmBtn:inputCode:)])
     {
-        [self.delegate mineInformationNameViewDidClickConfirmBtn:self changedName:_nameTextF.text];
+        [self.delegate MineCodeViewDidClickConfirmBtn:self inputCode:_codeTextF.text];
     }
 }
-
-
+- (IBAction)changeBtnClicked:(id)sender {
+    if([self.delegate respondsToSelector:@selector(MineCodeViewDidClickChangeBtn:)])
+    {
+        [self.delegate MineCodeViewDidClickChangeBtn:self];
+    }
+}
 
 @end

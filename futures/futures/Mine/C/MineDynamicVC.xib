@@ -17,6 +17,7 @@
                 <outlet property="dynamicTableView" destination="S6p-XG-Lde" id="daC-jF-sYX"/>
                 <outlet property="editBtn" destination="aly-e1-TVJ" id="Glt-YK-mf6"/>
                 <outlet property="fanCountLabel" destination="4li-Uk-139" id="bxM-HG-je7"/>
+                <outlet property="fanView" destination="mBt-mv-L8U" id="e99-tb-dyt"/>
                 <outlet property="favoriteView" destination="alf-zb-Ho5" id="10g-FU-Xhy"/>
                 <outlet property="likeBtn" destination="E0H-93-xKm" id="N0V-k1-Yn0"/>
                 <outlet property="nameLabel" destination="nbx-We-i7R" id="IUi-Mr-Btq"/>

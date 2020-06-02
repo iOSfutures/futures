@@ -37,12 +37,15 @@
 
 @property (weak, nonatomic) IBOutlet UIView *AttentionView;
 @property (weak, nonatomic) IBOutlet UIView *favoriteView;
+@property (weak, nonatomic) IBOutlet UIView *fanView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintH;
 
 @property (strong , nonatomic) NSArray *dynamicsArray;
 
-@property (nonatomic, strong)UserModel *user;
+@property (strong, nonatomic)UserModel *user;
+
+@property (nonatomic, strong)NSNumber *userId;
 
 @end
 
@@ -52,6 +55,9 @@ NSString *DynamicCell3 = @"DynamicCell3";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self getUserDefault];
+    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back "] style:0 target:self action:@selector(backBtnClicked)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_share it_homepage"] style:0 target:self action:nil];
     
@@ -70,6 +76,7 @@ NSString *DynamicCell3 = @"DynamicCell3";
     
     [self clickAttentionGes];
     [self clickFavoriteGes];
+    [self clickFanGes];
     
 //    _user = UserModel.new;
 //    _user.userId = @155;
@@ -80,6 +87,15 @@ NSString *DynamicCell3 = @"DynamicCell3";
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
+- (void)getUserDefault
+{
+    //获取用户偏好
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    //读取userId
+    NSNumber *userId = [userDefault objectForKey:@"userId"];
+    _userId = userId;
+}
+
 - (void)clickAttentionGes {
     //添加手势
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAttentionGes:)];
@@ -88,6 +104,8 @@ NSString *DynamicCell3 = @"DynamicCell3";
 
 - (void)clickAttentionGes: (UITapGestureRecognizer *)tap {
     AttentionVC *attentionVC = [[AttentionVC alloc] init];
+    attentionVC.titleStr = @"wo的关注";
+    attentionVC.followsOrFans = @"follows";
     if (tap > 0) {
         [self.navigationController pushViewController:attentionVC animated:YES];
     }
@@ -105,6 +123,21 @@ NSString *DynamicCell3 = @"DynamicCell3";
     favoriteVC.titleStr = @"我的收藏";
     if (tap > 0) {
         [self.navigationController pushViewController:favoriteVC animated:YES];
+    }
+}
+
+- (void)clickFanGes {
+    //添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickFanGes:)];
+    [self.fanView addGestureRecognizer:tap];
+}
+
+- (void)clickFanGes: (UITapGestureRecognizer *)tap {
+    AttentionVC *attentionVC = [[AttentionVC alloc] init];
+    attentionVC.titleStr = @"wo的粉丝";
+    attentionVC.followsOrFans = @"Fans";
+    if (tap > 0) {
+        [self.navigationController pushViewController:attentionVC animated:YES];
     }
 }
 
@@ -168,6 +201,9 @@ NSString *DynamicCell3 = @"DynamicCell3";
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    
+    [self getUserDefault];
+    
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     
     [UIView animateWithDuration:0.2 animations:^{
@@ -199,8 +235,10 @@ NSString *DynamicCell3 = @"DynamicCell3";
 
 -(void)getDynamics{
     WEAKSELF
-    NSDictionary *dic = @{@"_orderByDesc":@"publishTime",@"userId":@155};
-    [ENDNetWorkManager postWithPathUrl:[NSString stringWithFormat:@"/user/talk/getTalkList/%d",_user.userId.intValue] parameters:dic queryParams:nil Header:nil success:^(BOOL success, id result) {
+    
+    NSDictionary *dic = @{@"_orderByDesc":@"publishTime",@"userId":_userId};
+//    [NSString stringWithFormat:@"/user/talk/getTalkList/%d",_user.userId.intValue]
+    [ENDNetWorkManager postWithPathUrl:@"/user/talk/getTalkList/155" parameters:dic queryParams:nil Header:nil success:^(BOOL success, id result) {
         NSError *error;
         weakSelf.dynamicsArray = [MTLJSONAdapter modelsOfClass:[CommunityDynamicModel class] fromJSONArray:result[@"data"][@"list"] error:&error];
         [weakSelf.dynamicTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
@@ -212,7 +250,7 @@ NSString *DynamicCell3 = @"DynamicCell3";
 
 -(void)getUser{
     WEAKSELF
-    NSDictionary *dic = @{@"userId":@155};
+    NSDictionary *dic = @{@"userId":_userId};
     [ENDNetWorkManager postWithPathUrl:@"/user/personal/queryUser" parameters:nil queryParams:dic Header:nil success:^(BOOL success, id result) {
         NSError *error;
         UserModel *user = [MTLJSONAdapter modelOfClass:[UserModel class] fromJSONDictionary:result[@"data"] error:&error];
@@ -221,7 +259,14 @@ NSString *DynamicCell3 = @"DynamicCell3";
         [weakSelf.avatarImgView sd_setImageWithURL:[NSURL URLWithString:user.head]
         placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
         weakSelf.nameLabel.text = user.nickName;
-        weakSelf.signatureLabel.text = user.signature;
+        if([user.signature isEqualToString:@""])
+        {
+            weakSelf.signatureLabel.text = @"这个人太懒了，什么都没留...";
+        }
+        else
+        {
+            weakSelf.signatureLabel.text = user.signature;
+        }
         weakSelf.user = user;
 //        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
     } failure:^(BOOL failuer, NSError *error) {

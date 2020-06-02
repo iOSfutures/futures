@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="HjD-Zg-HHe" userLabel="Mine Code View" customClass="MineCodeView">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="181"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入验证码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvA-sY-Vyp">
+                    <rect key="frame" x="127" y="20.5" width="86" height="13.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13.5" id="s0o-Sn-Oi3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.20069780949999999" green="0.20068871969999999" blue="0.2006948888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVD-4c-XOS" userLabel="CodeTextF">
+                    <rect key="frame" x="23" y="63" width="100" height="50"/>
+                    <color key="backgroundColor" red="0.93190222980000004" green="0.93186724190000003" blue="0.93189102410000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="HLU-ta-nAN"/>
+                        <constraint firstAttribute="width" constant="100" id="fdg-GN-d3d"/>
+                    </constraints>
+                    <color key="textColor" red="0.94446575639999997" green="0.65159273149999997" blue="0.23140901329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHs-nO-uTm" userLabel="CancelBtn">
+                    <rect key="frame" x="0.0" y="137" width="170" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="gen-eQ-4Uq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="取消"/>
+                    <connections>
+                        <action selector="cancelBtnClicked:" destination="HjD-Zg-HHe" eventType="touchUpInside" id="k7S-6M-Fkd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnq-1r-sXU" userLabel="ConfirmBtn">
+                    <rect key="frame" x="170" y="137" width="170" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="86b-4O-Pnq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="确定"/>
+                    <connections>
+                        <action selector="confirmBtnClicked:" destination="HjD-Zg-HHe" eventType="touchUpInside" id="HqZ-92-dot"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ya-Ym-fs1" userLabel="changeBtn">
+                    <rect key="frame" x="145" y="63" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="2Ya-Ym-fs1" secondAttribute="height" id="pUd-y8-QBZ"/>
+                    </constraints>
+                    <state key="normal" image="icon_huanyipi"/>
+                    <connections>
+                        <action selector="changeBtnClicked:" destination="HjD-Zg-HHe" eventType="touchUpInside" id="aQe-CW-eNX"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_report_pop-ups_community" translatesAutoresizingMaskIntoConstraints="NO" id="h0K-K4-UsY" userLabel="CodeImgView">
+                    <rect key="frame" x="217" y="63" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="xKM-Ho-7FR"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="iHs-nO-uTm" firstAttribute="width" secondItem="HjD-Zg-HHe" secondAttribute="width" multiplier="0.5" id="0Ca-4Z-gxc"/>
+                <constraint firstAttribute="trailing" secondItem="h0K-K4-UsY" secondAttribute="trailing" constant="23" id="1Pt-Sd-mC4"/>
+                <constraint firstItem="Lnq-1r-sXU" firstAttribute="leading" secondItem="iHs-nO-uTm" secondAttribute="trailing" id="6bg-lm-tq3"/>
+                <constraint firstItem="iHs-nO-uTm" firstAttribute="top" secondItem="qVD-4c-XOS" secondAttribute="bottom" constant="24" id="8CD-9N-Tbe"/>
+                <constraint firstItem="QvA-sY-Vyp" firstAttribute="centerX" secondItem="HjD-Zg-HHe" secondAttribute="centerX" id="BI2-O9-XoX"/>
+                <constraint firstItem="2Ya-Ym-fs1" firstAttribute="centerX" secondItem="HjD-Zg-HHe" secondAttribute="centerX" id="Kkb-s3-cpk"/>
+                <constraint firstItem="h0K-K4-UsY" firstAttribute="bottom" secondItem="qVD-4c-XOS" secondAttribute="bottom" id="Q3L-Xb-695"/>
+                <constraint firstItem="Lnq-1r-sXU" firstAttribute="trailing" secondItem="hxd-NC-WsR" secondAttribute="trailing" id="RGM-lz-XN5"/>
+                <constraint firstItem="2Ya-Ym-fs1" firstAttribute="top" secondItem="qVD-4c-XOS" secondAttribute="top" id="Sca-EM-Pfl"/>
+                <constraint firstItem="iHs-nO-uTm" firstAttribute="leading" secondItem="hxd-NC-WsR" secondAttribute="leading" id="Y7B-Ik-OK7"/>
+                <constraint firstItem="Lnq-1r-sXU" firstAttribute="top" secondItem="iHs-nO-uTm" secondAttribute="top" id="aPl-kq-ekO"/>
+                <constraint firstItem="2Ya-Ym-fs1" firstAttribute="bottom" secondItem="qVD-4c-XOS" secondAttribute="bottom" id="gbL-FG-rHe"/>
+                <constraint firstItem="qVD-4c-XOS" firstAttribute="top" secondItem="QvA-sY-Vyp" secondAttribute="bottom" constant="29" id="h7I-MD-91d"/>
+                <constraint firstItem="iHs-nO-uTm" firstAttribute="bottom" secondItem="hxd-NC-WsR" secondAttribute="bottom" id="inD-E3-yx2"/>
+                <constraint firstItem="qVD-4c-XOS" firstAttribute="leading" secondItem="HjD-Zg-HHe" secondAttribute="leading" constant="23" id="msM-Wo-HrZ"/>
+                <constraint firstItem="Lnq-1r-sXU" firstAttribute="bottom" secondItem="hxd-NC-WsR" secondAttribute="bottom" id="nDK-BG-kOm"/>
+                <constraint firstItem="h0K-K4-UsY" firstAttribute="top" secondItem="qVD-4c-XOS" secondAttribute="top" id="pCe-5g-RuC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="hxd-NC-WsR"/>
+            <connections>
+                <outlet property="cancelBtn" destination="iHs-nO-uTm" id="TvG-WJ-8Gc"/>
+                <outlet property="codeImgView" destination="h0K-K4-UsY" id="rEd-W2-Ad5"/>
+                <outlet property="codeTextF" destination="qVD-4c-XOS" id="o1z-X4-FDN"/>
+                <outlet property="confirmBtn" destination="Lnq-1r-sXU" id="JTb-1W-0AJ"/>
+            </connections>
+            <point key="canvasLocation" x="169.56521739130437" y="-49.888392857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_report_pop-ups_community" width="15.5" height="13.5"/>
+        <image name="icon_huanyipi" width="13" height="13"/>
+    </resources>
+</document>

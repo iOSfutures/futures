@@ -63,19 +63,19 @@
                     UIImageView *imageView = [UIImageView new];
                     if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 667)
                     {
-                        imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, kScaleFrom_iPhone6_Desgin(74));
+                        imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 74);
                     }
                     else if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 812)
                     {
-                        imageView.frame = CGRectMake(0, -20, SCREEN_WIDTH, kScaleFrom_iPhone6_Desgin(74));
+                        imageView.frame = CGRectMake(0, -20, SCREEN_WIDTH, 74);
                     }
                     else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 736)
                     {
-                        imageView.frame = CGRectMake(0, -20, SCREEN_WIDTH, kScaleFrom_iPhone6_Desgin(74));
+                        imageView.frame = CGRectMake(0, -10, SCREEN_WIDTH, 74);
                     }
                     else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 896)
                     {
-                        imageView.frame = CGRectMake(0, -20, SCREEN_WIDTH, kScaleFrom_iPhone6_Desgin(74));
+                        imageView.frame = CGRectMake(0, -20, SCREEN_WIDTH, 80);
                     }
                     imageView.image = [UIImage imageNamed:@"background_tob"];
                     [subView addSubview:imageView];

@@ -160,7 +160,7 @@
     NSDictionary *dict = @{
         @"userId" : _userId,
         @"content" : self.contentStr,
-        @"picture" : self.saveURL
+//        @"picture" : self.saveURL
     };
     [ENDNetWorkManager postWithPathUrl:@"/user/talk/publishTalk" parameters:nil queryParams:dict Header:nil success:^(BOOL success, id result) {
         [Toast makeText:weakSelf.view Message:@"发布说说成功" afterHideTime:DELAYTiME];

@@ -32,7 +32,6 @@
                 <outlet property="avatarImgView" destination="50f-Kf-0zO" id="5iZ-pJ-u69"/>
                 <outlet property="avatarLeft" destination="aOS-kK-G4l" id="d4l-9Q-miz"/>
                 <outlet property="avatarTop" destination="mlq-m3-sLO" id="b8e-XI-iiP"/>
-                <outlet property="bottomView" destination="Sm6-gs-UGS" id="Cwu-7s-LaC"/>
                 <outlet property="checkInImgView" destination="OwX-Rq-Mse" id="MmH-Pi-uQn"/>
                 <outlet property="fanCountLabel" destination="fVi-Yb-y1W" id="vEF-Qk-pTq"/>
                 <outlet property="fanView" destination="OnE-9b-a6B" id="btA-Wz-xIN"/>
@@ -286,18 +285,18 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XhN-0d-BZ5" userLabel="MineTableView">
-                    <rect key="frame" x="0.0" y="393.5" width="414" height="482.5"/>
+                    <rect key="frame" x="0.0" y="393.5" width="414" height="472.5"/>
                     <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="0.0" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="lVk-OG-FFQ"/>
                         <outlet property="delegate" destination="-1" id="lNp-7h-Wib"/>
                     </connections>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sm6-gs-UGS" userLabel="BottomView">
-                    <rect key="frame" x="0.0" y="876" width="414" height="20"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xx-w0-pz1" userLabel="BottomView">
+                    <rect key="frame" x="0.0" y="866" width="414" height="30"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="20" id="MVy-ad-QHy"/>
+                        <constraint firstAttribute="height" constant="30" id="CAV-Wc-D0i"/>
                     </constraints>
                 </view>
             </subviews>
@@ -308,12 +307,12 @@
                 <constraint firstItem="tSv-1A-fWM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6en-pN-R1V"/>
                 <constraint firstItem="tSv-1A-fWM" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.43928" id="JRi-cr-l5z"/>
                 <constraint firstItem="tSv-1A-fWM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="K4M-Mc-zjV"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="6Xx-w0-pz1" secondAttribute="trailing" id="Ng9-2w-oXj"/>
+                <constraint firstItem="6Xx-w0-pz1" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="OxL-x8-QJC"/>
+                <constraint firstAttribute="bottom" secondItem="6Xx-w0-pz1" secondAttribute="bottom" id="RgV-XW-Jcv"/>
+                <constraint firstItem="6Xx-w0-pz1" firstAttribute="top" secondItem="XhN-0d-BZ5" secondAttribute="bottom" id="WOQ-qX-tD8"/>
                 <constraint firstItem="XhN-0d-BZ5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aGb-rM-QTl"/>
                 <constraint firstAttribute="trailing" secondItem="XhN-0d-BZ5" secondAttribute="trailing" id="aqB-M3-usH"/>
-                <constraint firstAttribute="trailing" secondItem="Sm6-gs-UGS" secondAttribute="trailing" id="cGU-cC-vbh"/>
-                <constraint firstItem="Sm6-gs-UGS" firstAttribute="top" secondItem="XhN-0d-BZ5" secondAttribute="bottom" id="slX-xx-d5Z"/>
-                <constraint firstAttribute="bottom" secondItem="Sm6-gs-UGS" secondAttribute="bottom" id="tEN-6o-gPF"/>
-                <constraint firstItem="Sm6-gs-UGS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tvq-h1-JGC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>

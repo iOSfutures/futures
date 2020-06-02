@@ -86,6 +86,7 @@
 -(NSInteger)numberOfListsInlistContainerView:(JXCategoryListContainerView *)listContainerView{
     return  2;
 }
+
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
     if (index == 0)
     {

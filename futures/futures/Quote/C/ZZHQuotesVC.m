@@ -7,7 +7,7 @@
 //
 
 #import "ZZHQuotesVC.h"
-#import "ZZHQuoteTimeVC.h"
+//#import "ZZHQuoteTimeVC.h"
 #import "ZZHQuoteCalendarVC.h"
 #import "ZZHQuoteIndustryVC.h"
 #import "ZZHQuoteNewsVC.h"
@@ -15,6 +15,8 @@
 
 #import "UIColor+Hex.h"
 #import "JXCategoryTitleView.h"
+
+#import "CZ_NEWMarketVC.h"
 
 @interface ZZHQuotesVC ()
 @property (nonatomic, strong) JXCategoryTitleView *myCategoryView;
@@ -27,7 +29,7 @@
     
     //设置导航条的背景图片不为空，就可以隐藏背景
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    
+
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithHexString:@"#FEA203"];
     
     [super viewDidLoad];
@@ -73,11 +75,16 @@
 -(NSInteger)numberOfListsInlistContainerView:(JXCategoryListContainerView *)listContainerView{
     return  4;
 }
+
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
     if (index == 0)
     {
-        ZZHQuoteTimeVC *quoteTimeVC = [ZZHQuoteTimeVC new];
-        return quoteTimeVC;
+        CZ_NEWMarketVC *marketVC = CZ_NEWMarketVC.new;
+
+
+        return marketVC;
+//        ZZHQuoteCalendarVC *quoteCalendarVC = [ZZHQuoteCalendarVC new];
+//        return quoteCalendarVC;
     }
     else if(index == 1)
     {

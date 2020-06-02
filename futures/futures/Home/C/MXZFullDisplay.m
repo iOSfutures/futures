@@ -94,11 +94,8 @@
             cell = [[NSBundle mainBundle] loadNibNamed:@"MXZFullSecondSectionCell" owner:self options:nil].firstObject;
         }
         if(self.recommandModel != nil){
-            [cell.pic01 removeFromSuperview];
-            [cell.pic02 removeFromSuperview];
-            [cell.secondLabel removeFromSuperview];
-            [cell.thirdLabel removeFromSuperview];
             cell.firstLabel.text = self.recommandModel.content;
+            [cell.pic01 sd_setImageWithURL:[NSURL URLWithString:self.recommandModel.picture]];
         }
         return cell;
     }

@@ -66,7 +66,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *fanCountLabel;
 
 @property (nonatomic, strong)NSArray *mineArray;
-@property (nonatomic, strong)UserModel *user;
+
+@property (nonatomic, strong)NSNumber *userId;
 
 @end
 
@@ -109,6 +110,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self getUserDefault];
+    
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
@@ -120,6 +123,15 @@
     [self setGestures];
     
     [self getUser];
+}
+
+- (void)getUserDefault
+{
+    //获取用户偏好
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    //读取userId
+    NSNumber *userId = [userDefault objectForKey:@"userId"];
+    _userId = userId;
 }
 
 - (void)setGestures
@@ -320,6 +332,7 @@
         self.navigationController.navigationBar.backgroundColor = UIColorWithRGBA(254, 162, 3, 0);
         self.tabBarController.tabBar.hidden = NO;
     }];
+    [self getUserDefault];
     [self getUser];
 }
 
@@ -357,7 +370,7 @@
 
 -(void)getUser{
     WEAKSELF
-    NSDictionary *dic = @{@"userId":@155};
+    NSDictionary *dic = @{@"userId":_userId};
     [ENDNetWorkManager postWithPathUrl:@"/user/personal/queryUser" parameters:nil queryParams:dic Header:nil success:^(BOOL success, id result) {
         NSError *error;
         UserModel *user = [MTLJSONAdapter modelOfClass:[UserModel class] fromJSONDictionary:result[@"data"] error:&error];
@@ -366,8 +379,14 @@
         [weakSelf.avatarImgView sd_setImageWithURL:[NSURL URLWithString:user.head]
         placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
         weakSelf.nameLabel.text = user.nickName;
-        weakSelf.signatureLabel.text = user.signature;
-        weakSelf.user = user;
+        if([user.signature isEqualToString:@""])
+        {
+            weakSelf.signatureLabel.text = @"这个人太懒了，什么都没留...";
+        }
+        else
+        {
+            weakSelf.signatureLabel.text = user.signature;
+        }
 //        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
     } failure:^(BOOL failuer, NSError *error) {
         NSLog(@"%@",error.description);

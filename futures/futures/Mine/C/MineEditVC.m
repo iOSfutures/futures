@@ -364,7 +364,7 @@ NSString *MineProfileCellID = @"MineProfileCell";
 
 -(void)setUser{
     WEAKSELF
-    NSDictionary *dic = @{@"id":@155,@"nickName":_changedName};
+    NSDictionary *dic = @{@"id":_user.userId,@"nickName":_changedName};
     [ENDNetWorkManager putWithPathUrl:@"/user/personal/updateUser" parameters:dic queryParams:nil Header:nil success:^(BOOL success, id result) {
     } failure:^(BOOL failuer, NSError *error) {
         NSLog(@"%@",error.description);

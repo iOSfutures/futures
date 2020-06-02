@@ -13,8 +13,6 @@
 #import "ZZHQuotesVC.h"
 #import "MineVC.h"
 
-#import "UIColor+Hex.h"
-
 #import "CustomTBC.h"
 
 #import "UIImage+OriginalImage.h"
@@ -36,6 +34,20 @@
     
     [[UITextField appearance] setTintColor:[UIColor colorWithHexString:@"#FEA307"]];
     
+    
+    
+    [self setCustomTBC];
+    
+    self.window.rootViewController = self.customTBC;
+    [self.window makeKeyAndVisible];
+    
+    [self setStatusBar];
+    
+    return YES;
+}
+
+- (void)setCustomTBC
+{
     CustomTBC *customTBC = CustomTBC.new;
     self.customTBC = customTBC;
     
@@ -60,13 +72,13 @@
     MineVC *mineVC = [[MineVC alloc]init];
     UINavigationController *mineNav = [[UINavigationController alloc] initWithRootViewController:mineVC];
     [self addChildVC:mineNav title:@"我的" imgName:@"ic_mine_tob" selectedImgName:@"ic_mine_sstate_tob"];
-    
-    self.window.rootViewController = customTBC;
-    [self.window makeKeyAndVisible];
-    
-    [self setStatusBar];
-    
-    return YES;
+}
+
+- (void)addChildVC:(UINavigationController *)nav title:(NSString *)title imgName:(NSString *)imageName selectedImgName:(NSString *)selectedImgName
+{
+    nav.tabBarItem.title = title;
+    nav.tabBarItem.image = [UIImage imageNamed:imageName];
+    [self.customTBC addChildViewController:nav];
 }
 
 - (void)setStatusBar
@@ -89,13 +101,6 @@
     if ([self.customizedStatusBar respondsToSelector:@selector(setBackgroundColor:)]) {
         self.customizedStatusBar.backgroundColor = [UIColor colorWithHexString:@"#FEA203"];
     }
-}
-
-- (void)addChildVC:(UINavigationController *)nav title:(NSString *)title imgName:(NSString *)imageName selectedImgName:(NSString *)selectedImgName
-{
-    nav.tabBarItem.title = title;
-    nav.tabBarItem.image = [UIImage imageNamed:imageName];
-    [self.customTBC addChildViewController:nav];
 }
 
 @end

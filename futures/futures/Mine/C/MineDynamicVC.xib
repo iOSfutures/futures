@@ -109,8 +109,8 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxl-Ne-dRw" userLabel="AttentionCountLabel">
-                                    <rect key="frame" x="29.5" y="24" width="0.0" height="30"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxl-Ne-dRw" userLabel="AttentionCountLabel">
+                                    <rect key="frame" x="19.5" y="24" width="20" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="VPG-PD-nBx"/>
                                     </constraints>
@@ -148,8 +148,8 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4li-Uk-139" userLabel="FanCountLabel">
-                                    <rect key="frame" x="29.5" y="24" width="0.0" height="30"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4li-Uk-139" userLabel="FanCountLabel">
+                                    <rect key="frame" x="19.5" y="24" width="20" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="DF0-0A-Ii3"/>
                                     </constraints>

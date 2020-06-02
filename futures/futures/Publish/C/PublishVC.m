@@ -16,12 +16,17 @@
 @property (copy, nonatomic) NSString *contentStr;
 @property (strong, nonatomic) NSArray *picArray;
 @property (copy, nonatomic)  NSString *saveURL;
+@property (nonatomic, strong)NSNumber *userId;
+@property (nonatomic, assign)BOOL hasUserId;
 @end
 
 @implementation PublishVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self getUserDefault];
+    
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.backgroundColor = [UIColor colorWithHexString:@"#FEA203"];
     
@@ -33,6 +38,21 @@
     [self.tableView registerClass:[MXZFeedbackFirstCell class] forCellReuseIdentifier:@"MXZFeedbackFirstCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"MXZFeedbackSecondCell" bundle:nil] forCellReuseIdentifier:@"MXZFeedbackSecondCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"MXZFeedbackFourthCell" bundle:nil] forCellReuseIdentifier:@"MXZFeedbackFourthCell"];
+    
+    self.contentStr = @"";
+}
+
+- (void)getUserDefault
+{
+    //获取用户偏好
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    //读取userId
+    NSNumber *userId = [userDefault objectForKey:@"userId"];
+    if(userId != nil)
+    {
+        _userId = userId;
+        _hasUserId = YES;
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -68,12 +88,20 @@
         self.picArray = savePicArray;
     return cell;
     }
+    WEAKSELF
     MXZFeedbackFourthCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MXZFeedbackFourthCell"];
     cell.pubulishBlock = ^(){
         //点击提交按钮后,结束编辑
         [self.view endEditing:true];
         //将图片上传到服务器,获得图片的URL
-        [self uploadImg];
+        if(weakSelf.hasUserId)
+        {
+            [self uploadImg];
+        }
+        else
+        {
+            [Toast makeText:weakSelf.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
+        }
     };
     return cell;
 }
@@ -130,7 +158,7 @@
 -(void)publishMessage{
     WEAKSELF
     NSDictionary *dict = @{
-        @"userId" : @4160,
+        @"userId" : _userId,
         @"content" : self.contentStr,
         @"picture" : self.saveURL
     };
@@ -143,6 +171,11 @@
     }];
 }
 
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self getUserDefault];
+}
 
 
 @end

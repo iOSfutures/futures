@@ -208,11 +208,19 @@ NSString *DynamicCell3 = @"DynamicCell3";
     
     [UIView animateWithDuration:0.2 animations:^{
         CGRect frame = self.tabBarController.tabBar.frame;
-        if(SCREEN_WIDTH == 375)
+        if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 667)
         {
             frame.origin.y = 667;
         }
-        else if (SCREEN_WIDTH == 414)
+        else if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 812)
+        {
+            frame.origin.y = 812;
+        }
+        else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 736)
+        {
+            frame.origin.y = 736;
+        }
+        else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 896)
         {
             frame.origin.y = 896;
         }
@@ -222,16 +230,6 @@ NSString *DynamicCell3 = @"DynamicCell3";
     
     [self getUser];
 }
-
-//- (void)setHeaderView
-//{
-//    _attentionCountLabel.text = [NSString stringWithFormat:@"%d",_user.followCount.intValue];
-//    _fanCountLabel.text = [NSString stringWithFormat:@"%d",_user.fansCount.intValue];
-//    [_avatarImgView sd_setImageWithURL:[NSURL URLWithString:_user.head]
-//    placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
-//    _nameLabel.text = _user.nickName;
-//    _signatureLabel.text = _user.signature;
-//}
 
 -(void)getDynamics{
     WEAKSELF

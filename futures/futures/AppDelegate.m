@@ -34,8 +34,6 @@
     
     [[UITextField appearance] setTintColor:[UIColor colorWithHexString:@"#FEA307"]];
     
-    
-    
     [self setCustomTBC];
     
     self.window.rootViewController = self.customTBC;

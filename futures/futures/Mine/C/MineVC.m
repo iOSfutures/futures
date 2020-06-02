@@ -69,6 +69,7 @@
 
 @property (nonatomic, strong)NSNumber *userId;
 
+@property (nonatomic, assign)BOOL hasUserId;
 @end
 
 @implementation MineVC
@@ -121,8 +122,6 @@
     [self changeBottomViewBg];
     [self setLayer];
     [self setGestures];
-    
-    [self getUser];
 }
 
 - (void)getUserDefault
@@ -131,7 +130,12 @@
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     //读取userId
     NSNumber *userId = [userDefault objectForKey:@"userId"];
-    _userId = userId;
+    if(userId != nil)
+    {
+        _userId = userId;
+        _hasUserId = YES;
+        [self getUser];
+    }
 }
 
 - (void)setGestures
@@ -152,8 +156,16 @@
 
 - (void)avatarImgViewClicked
 {
-    MineDynamicVC *mineDynamicVC = MineDynamicVC.new;
-    [self.navigationController pushViewController:mineDynamicVC animated:YES];
+    if(_hasUserId)
+    {
+        MineDynamicVC *mineDynamicVC = MineDynamicVC.new;
+        [self.navigationController pushViewController:mineDynamicVC animated:YES];
+    }
+    else
+    {
+        [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
+    }
+    
 }
 
 - (void)clickAttentionGes {
@@ -163,11 +175,18 @@
 }
 
 - (void)clickAttentionGes: (UITapGestureRecognizer *)tap {
-    AttentionVC *attentionVC = [[AttentionVC alloc] init];
-    attentionVC.titleStr = @"wo的关注";
-    attentionVC.followsOrFans = @"follows";
-    if (tap > 0) {
-        [self.navigationController pushViewController:attentionVC animated:YES];
+    if(_hasUserId)
+    {
+        AttentionVC *attentionVC = [[AttentionVC alloc] init];
+        attentionVC.titleStr = @"wo的关注";
+        attentionVC.followsOrFans = @"follows";
+        if (tap > 0) {
+            [self.navigationController pushViewController:attentionVC animated:YES];
+        }
+    }
+    else
+    {
+        [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
     }
 }
 
@@ -178,11 +197,18 @@
 }
 
 - (void)clickFanGes: (UITapGestureRecognizer *)tap {
-    AttentionVC *attentionVC = [[AttentionVC alloc] init];
-    attentionVC.titleStr = @"wo的粉丝";
-    attentionVC.followsOrFans = @"Fans";
-    if (tap > 0) {
-        [self.navigationController pushViewController:attentionVC animated:YES];
+    if(_hasUserId)
+    {
+        AttentionVC *attentionVC = [[AttentionVC alloc] init];
+        attentionVC.titleStr = @"wo的粉丝";
+        attentionVC.followsOrFans = @"Fans";
+        if (tap > 0) {
+            [self.navigationController pushViewController:attentionVC animated:YES];
+        }
+    }
+    else
+    {
+        [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
     }
 }
 
@@ -193,11 +219,18 @@
 }
 
 - (void)clickFavoriteGes: (UITapGestureRecognizer *)tap {
-    MXZMessageCenterVC *favoriteVC = [[MXZMessageCenterVC alloc] init];
-    favoriteVC.labelStr = @"暂无收藏";
-    favoriteVC.titleStr = @"我的收藏";
-    if (tap > 0) {
-        [self.navigationController pushViewController:favoriteVC animated:YES];
+    if(_hasUserId)
+    {
+        MXZMessageCenterVC *favoriteVC = [[MXZMessageCenterVC alloc] init];
+        favoriteVC.labelStr = @"暂无收藏";
+        favoriteVC.titleStr = @"我的收藏";
+        if (tap > 0) {
+            [self.navigationController pushViewController:favoriteVC animated:YES];
+        }
+    }
+    else
+    {
+        [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
     }
 }
 
@@ -214,8 +247,15 @@
 }
 
 - (void)clickCheckInGes: (UITapGestureRecognizer *)tap {
-    MXZSignVC *signVC = MXZSignVC.new;
-    [self.navigationController pushViewController:signVC animated:YES];
+    if(_hasUserId)
+    {
+        MXZSignVC *signVC = MXZSignVC.new;
+        [self.navigationController pushViewController:signVC animated:YES];
+    }
+    else
+    {
+        [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
+    }
 }
 
 - (void)setLayer
@@ -320,11 +360,19 @@
 {
     [UIView animateWithDuration:0.2 animations:^{
         CGRect frame = self.tabBarController.tabBar.frame;
-        if(SCREEN_WIDTH == 375)
+        if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 667)
         {
             frame.origin.y = 593;
         }
-        else if (SCREEN_WIDTH == 414)
+        else if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 812)
+        {
+            frame.origin.y = 738;
+        }
+        else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 736)
+        {
+            frame.origin.y = 662;
+        }
+        else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 896)
         {
             frame.origin.y = 822;
         }
@@ -333,7 +381,6 @@
         self.tabBarController.tabBar.hidden = NO;
     }];
     [self getUserDefault];
-    [self getUser];
 }
 
 - (void)changeBottomViewBg
@@ -363,8 +410,15 @@
         [self.navigationController pushViewController:messageVC animated:YES];
     }
     else if (indexPath.section == 1 && indexPath.row == 0) {
-        MineDynamicVC *mineDynamicVC = MineDynamicVC.new;
-        [self.navigationController pushViewController:mineDynamicVC animated:YES];
+        if(_hasUserId)
+        {
+            MineDynamicVC *mineDynamicVC = MineDynamicVC.new;
+            [self.navigationController pushViewController:mineDynamicVC animated:YES];
+        }
+        else
+        {
+            [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
+        }
     }
 }
 

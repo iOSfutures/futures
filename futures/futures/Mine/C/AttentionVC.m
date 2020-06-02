@@ -80,11 +80,19 @@
     
     [UIView animateWithDuration:0.2 animations:^{
         CGRect frame = self.tabBarController.tabBar.frame;
-        if(SCREEN_WIDTH == 375)
+        if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 667)
         {
             frame.origin.y = 667;
         }
-        else if (SCREEN_WIDTH == 414)
+        else if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 812)
+        {
+            frame.origin.y = 812;
+        }
+        else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 736)
+        {
+            frame.origin.y = 736;
+        }
+        else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 896)
         {
             frame.origin.y = 896;
         }

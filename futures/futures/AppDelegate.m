@@ -17,6 +17,8 @@
 
 #import "UIImage+OriginalImage.h"
 
+#import <IQKeyboardManager.h>
+
 @interface AppDelegate ()
 
 @property(nonatomic, strong)CustomTBC *customTBC;
@@ -33,6 +35,11 @@
     self.window.backgroundColor = [UIColor systemBackgroundColor];
     
     [[UITextField appearance] setTintColor:[UIColor colorWithHexString:@"#FEA307"]];
+    
+    [IQKeyboardManager sharedManager];
+
+    //点击背景收回键盘
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     
     [self setCustomTBC];
     

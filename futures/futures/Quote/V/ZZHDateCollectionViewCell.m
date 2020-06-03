@@ -43,8 +43,6 @@
         self.numLabel.textColor = UIColor.blackColor;
         UIView *pointView = [UIView new];
         pointView.backgroundColor = UIColorWithRGBA(255, 255, 255, 0);
-        
-        
     }
 }
 @end

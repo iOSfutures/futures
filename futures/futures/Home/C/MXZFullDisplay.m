@@ -87,7 +87,7 @@
         if(cell == nil){
             cell = [[NSBundle mainBundle] loadNibNamed:@"MXZFullFirstSectionCell" owner:self options:nil].firstObject;
         }
-        [cell.headPic sd_setImageWithURL:[NSURL URLWithString:self.recommandModel.user.head]];
+        [cell.headPic sd_setImageWithURL:[NSURL URLWithString:self.recommandModel.user.head]placeholderImage:[UIImage imageNamed:@"user_hot chat_community"]];
         cell.nickNameLabel.text = self.recommandModel.user.nickName;
         return cell;
     }

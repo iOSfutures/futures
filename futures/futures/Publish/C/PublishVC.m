@@ -11,6 +11,8 @@
 #import "MXZFeedbackSecondCell.h"
 #import "MXZFeedbackFourthCell.h"
 
+#import "LoginVC.h"
+
 @interface PublishVC ()<UITableViewDelegate, UITableViewDataSource,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (copy, nonatomic) NSString *contentStr;
@@ -100,7 +102,9 @@
         }
         else
         {
-            [Toast makeText:weakSelf.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
+            LoginVC *loginVC = [LoginVC new];
+            [self.navigationController pushViewController:loginVC animated:YES];
+            [Toast makeText:loginVC.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
         }
     };
     return cell;

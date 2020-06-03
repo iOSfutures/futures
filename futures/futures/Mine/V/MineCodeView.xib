@@ -22,7 +22,7 @@
                     <color key="textColor" red="0.20069780949999999" green="0.20068871969999999" blue="0.2006948888" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVD-4c-XOS" userLabel="CodeTextF">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVD-4c-XOS" userLabel="CodeTextF">
                     <rect key="frame" x="23" y="63" width="100" height="50"/>
                     <color key="backgroundColor" red="0.93190222980000004" green="0.93186724190000003" blue="0.93189102410000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>

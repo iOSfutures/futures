@@ -90,8 +90,9 @@
 }
 
 - (void)leftClick {
-    LoginVC *vc = self.navigationController.childViewControllers[2];
-    [self.navigationController popToViewController:vc animated:YES];
+//    LoginVC *vc = self.navigationController.childViewControllers[2];
+//    [self.navigationController popToViewController:vc animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)registClicked:(id)sender {
     [self regist];

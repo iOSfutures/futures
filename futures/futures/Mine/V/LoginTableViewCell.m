@@ -16,7 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet ZXCountDownLabel *loginTimeLabel;
 
-@property (weak, nonatomic) IBOutlet UITextField *numTextF;
+
 
 @property (weak, nonatomic)UIView *coverView;
 @property (weak, nonatomic)MineCodeView *mineCodeView;
@@ -212,7 +212,6 @@
         NSLog(@"%@",error.description);
         [Toast makeText:weakSelf.coverView Message:@"发送验证码失败" afterHideTime:DELAYTiME];
     }];
-    
 }
 
 @end

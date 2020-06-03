@@ -16,7 +16,7 @@
 
 #import "UserModel.h"
 
-@interface LoginVC () <UITableViewDelegate, UITableViewDataSource, LoginTableViewCellDelegate>
+@interface LoginVC () <UITableViewDelegate, UITableViewDataSource, LoginTableViewCellDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *numLoginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *pwdLoginBtn;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -37,9 +37,8 @@ NSString *LoginID = @"LoginVC";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LoginTableViewCell class]) bundle:nil] forCellReuseIdentifier:LoginID];
-    
     
     _labelStr = @"获取验证码";
     _labelColor = [UIColor whiteColor];
@@ -77,13 +76,15 @@ NSString *LoginID = @"LoginVC";
     [self.bgView addSubview:pointView];
     
     self.loginBtn.enabled = NO;
+    
+    //启用右滑返回手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
-
-
 - (void)leftClick {
-    MXZSettingCenterVC *vc = self.navigationController.childViewControllers[1];
-    [self.navigationController popToViewController:vc animated:YES];
+//    MXZSettingCenterVC *vc = self.navigationController.childViewControllers[1];
+//    [self.navigationController popToViewController:vc animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)rightClick {
@@ -125,25 +126,46 @@ NSString *LoginID = @"LoginVC";
     }
 }
 
-
 #pragma mark - UITableViewViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 1;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+   
+    
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LoginTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LoginID];
     cell.isPwd = self.isPwd;
     if(self.isPwd == NO){
         cell.pwdTextF.placeholder = @"输入验证码";
-    }else{
+        cell.numTextF.keyboardType = UIKeyboardTypePhonePad;
+        cell.numTextF.secureTextEntry = NO;
+//        cell.numTextF.textContentType = UITextContentTypeTelephoneNumber;
+        cell.pwdTextF.keyboardType = UIKeyboardTypeNumberPad;
+        cell.pwdTextF.secureTextEntry = NO;
+        cell.pwdTextF.text = @"";
+//        cell.pwdTextF.textContentType = UITextContentTypeTelephoneNumber;
+        
+
+    }
+    else
+    {
         cell.pwdTextF.placeholder = @"输入密码";
+        cell.numTextF.keyboardType = UIKeyboardTypePhonePad;
+        cell.numTextF.secureTextEntry = NO;
+//        cell.numTextF.textContentType = UITextContentTypeTelephoneNumber;
+        cell.pwdTextF.keyboardType = UIKeyboardTypeASCIICapable;
+        cell.pwdTextF.secureTextEntry = YES;
+//        cell.pwdTextF.textContentType = UITextContentTypePassword;
+        cell.pwdTextF.text = @"";
+        
         //添加手势
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickGes:)];
         [cell.forgetpwdBtn addGestureRecognizer:tap];
-        
     }
     if(self.isPwd == NO){
         cell.forgetpwdBtn.hidden = YES;
@@ -211,6 +233,7 @@ NSString *LoginID = @"LoginVC";
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = YES;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 @end

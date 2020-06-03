@@ -21,6 +21,8 @@
 
 #import "UserModel.h"
 
+#import "LoginVC.h"
+
 @interface MineVC ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *avatarLeft;
@@ -163,7 +165,9 @@
     }
     else
     {
-        [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
+        LoginVC *loginVC = [LoginVC new];
+        [self.navigationController pushViewController:loginVC animated:YES];
+        [Toast makeText:loginVC.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
     }
     
 }
@@ -186,7 +190,9 @@
     }
     else
     {
-        [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
+        LoginVC *loginVC = [LoginVC new];
+        [self.navigationController pushViewController:loginVC animated:YES];
+        [Toast makeText:loginVC.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
     }
 }
 
@@ -208,7 +214,9 @@
     }
     else
     {
-        [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
+        LoginVC *loginVC = [LoginVC new];
+        [self.navigationController pushViewController:loginVC animated:YES];
+        [Toast makeText:loginVC.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
     }
 }
 
@@ -230,7 +238,9 @@
     }
     else
     {
-        [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
+        LoginVC *loginVC = [LoginVC new];
+        [self.navigationController pushViewController:loginVC animated:YES];
+        [Toast makeText:loginVC.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
     }
 }
 
@@ -254,7 +264,9 @@
     }
     else
     {
-        [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
+        LoginVC *loginVC = [LoginVC new];
+        [self.navigationController pushViewController:loginVC animated:YES];
+        [Toast makeText:loginVC.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
     }
 }
 
@@ -293,6 +305,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = UITableViewCell.new;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if(indexPath.section == 0)
     {
         MineModel *mineModel = self.mineArray[indexPath.row];
@@ -417,7 +430,9 @@
         }
         else
         {
-            [Toast makeText:self.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
+            LoginVC *loginVC = [LoginVC new];
+            [self.navigationController pushViewController:loginVC animated:YES];
+            [Toast makeText:loginVC.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
         }
     }
 }

@@ -15,7 +15,7 @@
 #import "UIImage+OriginalImage.h"
 #import "MXZDiscussModel.h"
 
-@interface MXZFullDisplay ()<UITableViewDelegate, UITableViewDataSource>
+@interface MXZFullDisplay ()<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *displayTableview;
 @property (strong, nonatomic) NSArray *discussArray;
 @end
@@ -29,11 +29,15 @@
     [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullThirdSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullThirdSectionCell"];
     [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullFourthSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullFourthSectionCell"];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
+    
+    //启用右滑返回手势
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.tabBarController.tabBar.hidden = YES;
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     [self getDiscussModel];
 }
 
@@ -83,7 +87,7 @@
         if(cell == nil){
             cell = [[NSBundle mainBundle] loadNibNamed:@"MXZFullFirstSectionCell" owner:self options:nil].firstObject;
         }
-        [cell.headPic sd_setImageWithURL:[NSURL URLWithString:self.recommandModel.user.head]];
+        [cell.headPic sd_setImageWithURL:[NSURL URLWithString:self.recommandModel.user.head]placeholderImage:[UIImage imageNamed:@"user_hot chat_community"]];
         cell.nickNameLabel.text = self.recommandModel.user.nickName;
         return cell;
     }

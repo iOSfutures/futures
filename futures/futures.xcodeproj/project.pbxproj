@@ -109,16 +109,35 @@
 		15CDFAE32475036200B2811F /* MXZFullThirdSectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CDFAE12475036200B2811F /* MXZFullThirdSectionHeadView.xib */; };
 		18132965247E6C22009FEE55 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18132964247E6C22009FEE55 /* BaseModel.m */; };
 		181F5036246B908500CCCBDB /* CustomTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F5035246B908500CCCBDB /* CustomTBC.m */; };
+		1828C5C52486358E00462796 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5722486358D00462796 /* BaseViewController.m */; };
+		1828C5C62486358E00462796 /* YKLineChartViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5742486358D00462796 /* YKLineChartViewBase.m */; };
+		1828C5C72486358E00462796 /* YKLineDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5752486358D00462796 /* YKLineDataSet.m */; };
+		1828C5C82486358E00462796 /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5762486358D00462796 /* NetWork.m */; };
+		1828C5C92486358E00462796 /* ZCBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5782486358D00462796 /* ZCBaseView.m */; };
+		1828C5CA2486358E00462796 /* YKTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5792486358D00462796 /* YKTimeLineView.m */; };
+		1828C5CB2486358E00462796 /* QHLoctionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C57C2486358D00462796 /* QHLoctionModel.m */; };
+		1828C5D22486358E00462796 /* QHDHHeadCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C58A2486358D00462796 /* QHDHHeadCollectionViewCell.m */; };
+		1828C5D32486358E00462796 /* YKViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C58B2486358D00462796 /* YKViewBase.m */; };
+		1828C5D42486358E00462796 /* ZCMakeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C58E2486358D00462796 /* ZCMakeTableViewCell.m */; };
+		1828C5D52486358E00462796 /* QHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C58F2486358D00462796 /* QHDetailViewController.m */; };
+		1828C5D62486358E00462796 /* YKLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5902486358D00462796 /* YKLineChartView.m */; };
+		1828C5D72486358E00462796 /* ZCManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5912486358D00462796 /* ZCManage.m */; };
+		1828C5D82486358E00462796 /* UIButton+LXMImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5932486358D00462796 /* UIButton+LXMImagePosition.m */; };
+		1828C5DB2486358E00462796 /* QHDataCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C59A2486358D00462796 /* QHDataCollectionViewCell.m */; };
+		1828C5DC2486358E00462796 /* CZ_NEWMarketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C59C2486358D00462796 /* CZ_NEWMarketVC.m */; };
+		1828C5DD2486358E00462796 /* BusinessProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C59E2486358D00462796 /* BusinessProcess.m */; };
+		1828C5E42486358E00462796 /* TopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5AF2486358E00462796 /* TopView.m */; };
+		1828C5E52486358E00462796 /* ZCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5B92486358E00462796 /* ZCBaseViewController.m */; };
+		1828C5E62486358E00462796 /* MVPKlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5BC2486358E00462796 /* MVPKlineView.m */; };
+		1828C5E72486358E00462796 /* YKLineEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5C12486358E00462796 /* YKLineEntity.m */; };
 		183B78BF247E533000D23A59 /* ZZHQuoteIndustryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78B2247E532E00D23A59 /* ZZHQuoteIndustryVC.xib */; };
 		183B78C0247E533000D23A59 /* ZZHQuoteNewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78B3247E532F00D23A59 /* ZZHQuoteNewsVC.xib */; };
 		183B78C1247E533000D23A59 /* ZZHQuoteCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78B4247E532F00D23A59 /* ZZHQuoteCalendarVC.m */; };
-		183B78C2247E533000D23A59 /* ZZHQuoteTimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78B5247E532F00D23A59 /* ZZHQuoteTimeVC.m */; };
 		183B78C3247E533000D23A59 /* ZZHQuotesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78B6247E532F00D23A59 /* ZZHQuotesVC.xib */; };
 		183B78C4247E533000D23A59 /* ZZHQuoteIndustryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78B8247E532F00D23A59 /* ZZHQuoteIndustryVC.m */; };
 		183B78C5247E533000D23A59 /* ZZHQuoteNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78BA247E533000D23A59 /* ZZHQuoteNewsVC.m */; };
 		183B78C6247E533000D23A59 /* ZZHQuoteCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78BB247E533000D23A59 /* ZZHQuoteCalendarVC.xib */; };
 		183B78C7247E533000D23A59 /* ZZHQuotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78BD247E533000D23A59 /* ZZHQuotesVC.m */; };
-		183B78C8247E533000D23A59 /* ZZHQuoteTimeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78BE247E533000D23A59 /* ZZHQuoteTimeVC.xib */; };
 		183B78DB247E535300D23A59 /* ZZHDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78CA247E535000D23A59 /* ZZHDateTableViewCell.m */; };
 		183B78DC247E535300D23A59 /* ZZHTimeLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78CB247E535000D23A59 /* ZZHTimeLineTableViewCell.xib */; };
 		183B78DD247E535300D23A59 /* ZZHImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78CC247E535100D23A59 /* ZZHImageTableViewCell.m */; };
@@ -369,21 +388,62 @@
 		18132964247E6C22009FEE55 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		181F5034246B908500CCCBDB /* CustomTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTBC.h; sourceTree = "<group>"; };
 		181F5035246B908500CCCBDB /* CustomTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTBC.m; sourceTree = "<group>"; };
+		1828C5712486358D00462796 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		1828C5722486358D00462796 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		1828C5742486358D00462796 /* YKLineChartViewBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKLineChartViewBase.m; sourceTree = "<group>"; };
+		1828C5752486358D00462796 /* YKLineDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKLineDataSet.m; sourceTree = "<group>"; };
+		1828C5762486358D00462796 /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
+		1828C5772486358D00462796 /* TopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopView.h; sourceTree = "<group>"; };
+		1828C5782486358D00462796 /* ZCBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCBaseView.m; sourceTree = "<group>"; };
+		1828C5792486358D00462796 /* YKTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKTimeLineView.m; sourceTree = "<group>"; };
+		1828C57A2486358D00462796 /* MacroQiHuo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroQiHuo.h; sourceTree = "<group>"; };
+		1828C57B2486358D00462796 /* BusinessProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessProcess.h; sourceTree = "<group>"; };
+		1828C57C2486358D00462796 /* QHLoctionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHLoctionModel.m; sourceTree = "<group>"; };
+		1828C58A2486358D00462796 /* QHDHHeadCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHDHHeadCollectionViewCell.m; sourceTree = "<group>"; };
+		1828C58B2486358D00462796 /* YKViewBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKViewBase.m; sourceTree = "<group>"; };
+		1828C58C2486358D00462796 /* ZCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBaseViewController.h; sourceTree = "<group>"; };
+		1828C58D2486358D00462796 /* MVPKlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVPKlineView.h; sourceTree = "<group>"; };
+		1828C58E2486358D00462796 /* ZCMakeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMakeTableViewCell.m; sourceTree = "<group>"; };
+		1828C58F2486358D00462796 /* QHDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHDetailViewController.m; sourceTree = "<group>"; };
+		1828C5902486358D00462796 /* YKLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKLineChartView.m; sourceTree = "<group>"; };
+		1828C5912486358D00462796 /* ZCManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCManage.m; sourceTree = "<group>"; };
+		1828C5932486358D00462796 /* UIButton+LXMImagePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LXMImagePosition.m"; sourceTree = "<group>"; };
+		1828C5992486358D00462796 /* UIButton+LXMImagePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LXMImagePosition.h"; sourceTree = "<group>"; };
+		1828C59A2486358D00462796 /* QHDataCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHDataCollectionViewCell.m; sourceTree = "<group>"; };
+		1828C59B2486358D00462796 /* YKLineEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineEntity.h; sourceTree = "<group>"; };
+		1828C59C2486358D00462796 /* CZ_NEWMarketVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZ_NEWMarketVC.m; sourceTree = "<group>"; };
+		1828C59D2486358D00462796 /* QHLoctionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHLoctionModel.h; sourceTree = "<group>"; };
+		1828C59E2486358D00462796 /* BusinessProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessProcess.m; sourceTree = "<group>"; };
+		1828C5AD2486358E00462796 /* YKTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKTimeLineView.h; sourceTree = "<group>"; };
+		1828C5AE2486358E00462796 /* ZCBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBaseView.h; sourceTree = "<group>"; };
+		1828C5AF2486358E00462796 /* TopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopView.m; sourceTree = "<group>"; };
+		1828C5B02486358E00462796 /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
+		1828C5B12486358E00462796 /* YKLineDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineDataSet.h; sourceTree = "<group>"; };
+		1828C5B82486358E00462796 /* YKLineChartViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineChartViewBase.h; sourceTree = "<group>"; };
+		1828C5B92486358E00462796 /* ZCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCBaseViewController.m; sourceTree = "<group>"; };
+		1828C5BA2486358E00462796 /* YKViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKViewBase.h; sourceTree = "<group>"; };
+		1828C5BB2486358E00462796 /* QHDHHeadCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHDHHeadCollectionViewCell.h; sourceTree = "<group>"; };
+		1828C5BC2486358E00462796 /* MVPKlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVPKlineView.m; sourceTree = "<group>"; };
+		1828C5BD2486358E00462796 /* ZCMakeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCMakeTableViewCell.h; sourceTree = "<group>"; };
+		1828C5BE2486358E00462796 /* QHDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHDetailViewController.h; sourceTree = "<group>"; };
+		1828C5BF2486358E00462796 /* YKLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineChart.h; sourceTree = "<group>"; };
+		1828C5C02486358E00462796 /* CZ_NEWMarketVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZ_NEWMarketVC.h; sourceTree = "<group>"; };
+		1828C5C12486358E00462796 /* YKLineEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKLineEntity.m; sourceTree = "<group>"; };
+		1828C5C22486358E00462796 /* QHDataCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHDataCollectionViewCell.h; sourceTree = "<group>"; };
+		1828C5C32486358E00462796 /* ZCManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCManage.h; sourceTree = "<group>"; };
+		1828C5C42486358E00462796 /* YKLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineChartView.h; sourceTree = "<group>"; };
 		183B78B0247E532E00D23A59 /* ZZHQuotesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuotesVC.h; sourceTree = "<group>"; };
 		183B78B1247E532E00D23A59 /* ZZHQuoteCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteCalendarVC.h; sourceTree = "<group>"; };
 		183B78B2247E532E00D23A59 /* ZZHQuoteIndustryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteIndustryVC.xib; sourceTree = "<group>"; };
 		183B78B3247E532F00D23A59 /* ZZHQuoteNewsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteNewsVC.xib; sourceTree = "<group>"; };
 		183B78B4247E532F00D23A59 /* ZZHQuoteCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteCalendarVC.m; sourceTree = "<group>"; };
-		183B78B5247E532F00D23A59 /* ZZHQuoteTimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteTimeVC.m; sourceTree = "<group>"; };
 		183B78B6247E532F00D23A59 /* ZZHQuotesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuotesVC.xib; sourceTree = "<group>"; };
-		183B78B7247E532F00D23A59 /* ZZHQuoteTimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteTimeVC.h; sourceTree = "<group>"; };
 		183B78B8247E532F00D23A59 /* ZZHQuoteIndustryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteIndustryVC.m; sourceTree = "<group>"; };
 		183B78B9247E533000D23A59 /* ZZHQuoteNewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteNewsVC.h; sourceTree = "<group>"; };
 		183B78BA247E533000D23A59 /* ZZHQuoteNewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteNewsVC.m; sourceTree = "<group>"; };
 		183B78BB247E533000D23A59 /* ZZHQuoteCalendarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteCalendarVC.xib; sourceTree = "<group>"; };
 		183B78BC247E533000D23A59 /* ZZHQuoteIndustryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteIndustryVC.h; sourceTree = "<group>"; };
 		183B78BD247E533000D23A59 /* ZZHQuotesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuotesVC.m; sourceTree = "<group>"; };
-		183B78BE247E533000D23A59 /* ZZHQuoteTimeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteTimeVC.xib; sourceTree = "<group>"; };
 		183B78C9247E535000D23A59 /* ZZHDateCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHDateCollectionViewCell.h; sourceTree = "<group>"; };
 		183B78CA247E535000D23A59 /* ZZHDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHDateTableViewCell.m; sourceTree = "<group>"; };
 		183B78CB247E535000D23A59 /* ZZHTimeLineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHTimeLineTableViewCell.xib; sourceTree = "<group>"; };
@@ -787,6 +847,81 @@
 			path = futures;
 			sourceTree = "<group>";
 		};
+		1828C5702486352C00462796 /* thirdControl */ = {
+			isa = PBXGroup;
+			children = (
+				1828C5712486358D00462796 /* BaseViewController.h */,
+				1828C5722486358D00462796 /* BaseViewController.m */,
+				1828C5732486358D00462796 /* QIHUO */,
+			);
+			path = thirdControl;
+			sourceTree = "<group>";
+		};
+		1828C5732486358D00462796 /* QIHUO */ = {
+			isa = PBXGroup;
+			children = (
+				1828C57B2486358D00462796 /* BusinessProcess.h */,
+				1828C59E2486358D00462796 /* BusinessProcess.m */,
+				1828C5C02486358E00462796 /* CZ_NEWMarketVC.h */,
+				1828C59C2486358D00462796 /* CZ_NEWMarketVC.m */,
+				1828C57A2486358D00462796 /* MacroQiHuo.h */,
+				1828C59F2486358D00462796 /* Manager */,
+				1828C58D2486358D00462796 /* MVPKlineView.h */,
+				1828C5BC2486358E00462796 /* MVPKlineView.m */,
+				1828C5B02486358E00462796 /* NetWork.h */,
+				1828C5762486358D00462796 /* NetWork.m */,
+				1828C5C22486358E00462796 /* QHDataCollectionViewCell.h */,
+				1828C59A2486358D00462796 /* QHDataCollectionViewCell.m */,
+				1828C5BE2486358E00462796 /* QHDetailViewController.h */,
+				1828C58F2486358D00462796 /* QHDetailViewController.m */,
+				1828C5BB2486358E00462796 /* QHDHHeadCollectionViewCell.h */,
+				1828C58A2486358D00462796 /* QHDHHeadCollectionViewCell.m */,
+				1828C59D2486358D00462796 /* QHLoctionModel.h */,
+				1828C57C2486358D00462796 /* QHLoctionModel.m */,
+				1828C5922486358D00462796 /* ThirdPart */,
+				1828C5772486358D00462796 /* TopView.h */,
+				1828C5AF2486358E00462796 /* TopView.m */,
+				1828C5BF2486358E00462796 /* YKLineChart.h */,
+				1828C5C42486358E00462796 /* YKLineChartView.h */,
+				1828C5902486358D00462796 /* YKLineChartView.m */,
+				1828C5B82486358E00462796 /* YKLineChartViewBase.h */,
+				1828C5742486358D00462796 /* YKLineChartViewBase.m */,
+				1828C5B12486358E00462796 /* YKLineDataSet.h */,
+				1828C5752486358D00462796 /* YKLineDataSet.m */,
+				1828C59B2486358D00462796 /* YKLineEntity.h */,
+				1828C5C12486358E00462796 /* YKLineEntity.m */,
+				1828C5AD2486358E00462796 /* YKTimeLineView.h */,
+				1828C5792486358D00462796 /* YKTimeLineView.m */,
+				1828C5BA2486358E00462796 /* YKViewBase.h */,
+				1828C58B2486358D00462796 /* YKViewBase.m */,
+				1828C5AE2486358E00462796 /* ZCBaseView.h */,
+				1828C5782486358D00462796 /* ZCBaseView.m */,
+				1828C58C2486358D00462796 /* ZCBaseViewController.h */,
+				1828C5B92486358E00462796 /* ZCBaseViewController.m */,
+				1828C5BD2486358E00462796 /* ZCMakeTableViewCell.h */,
+				1828C58E2486358D00462796 /* ZCMakeTableViewCell.m */,
+				1828C5C32486358E00462796 /* ZCManage.h */,
+				1828C5912486358D00462796 /* ZCManage.m */,
+			);
+			path = QIHUO;
+			sourceTree = "<group>";
+		};
+		1828C5922486358D00462796 /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				1828C5932486358D00462796 /* UIButton+LXMImagePosition.m */,
+				1828C5992486358D00462796 /* UIButton+LXMImagePosition.h */,
+			);
+			path = ThirdPart;
+			sourceTree = "<group>";
+		};
+		1828C59F2486358D00462796 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		185AC2AE246E8B60006EC3E6 /* Quote */ = {
 			isa = PBXGroup;
 			children = (
@@ -845,9 +980,6 @@
 				183B78BC247E533000D23A59 /* ZZHQuoteIndustryVC.h */,
 				183B78B8247E532F00D23A59 /* ZZHQuoteIndustryVC.m */,
 				183B78B2247E532E00D23A59 /* ZZHQuoteIndustryVC.xib */,
-				183B78B7247E532F00D23A59 /* ZZHQuoteTimeVC.h */,
-				183B78B5247E532F00D23A59 /* ZZHQuoteTimeVC.m */,
-				183B78BE247E533000D23A59 /* ZZHQuoteTimeVC.xib */,
 				183B78B9247E533000D23A59 /* ZZHQuoteNewsVC.h */,
 				183B78BA247E533000D23A59 /* ZZHQuoteNewsVC.m */,
 				183B78B3247E532F00D23A59 /* ZZHQuoteNewsVC.xib */,
@@ -1030,6 +1162,7 @@
 		18B55133246BCBF500E80DEB /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				1828C5702486352C00462796 /* thirdControl */,
 				1526D6BF247E0A7C006A2556 /* Tools */,
 				1526D6B9247E07F7006A2556 /* Macro */,
 				1526D6A6247E07E6006A2556 /* NetWorkManager */,
@@ -1197,7 +1330,6 @@
 				1846879E247D1D2C007BC2FC /* MineEditVC.xib in Resources */,
 				152636A6246E771D00D01BE0 /* MXZHomeFourthSectionHeadView.xib in Resources */,
 				184687A8247D1D53007BC2FC /* MXZHomeIndustryVC.xib in Resources */,
-				183B78C8247E533000D23A59 /* ZZHQuoteTimeVC.xib in Resources */,
 				183B78C3247E533000D23A59 /* ZZHQuotesVC.xib in Resources */,
 				188FC3262484972C0004FF40 /* LoginTableViewCell.xib in Resources */,
 				1846879B247D1D2C007BC2FC /* AttentionTableViewCell.xib in Resources */,
@@ -1280,8 +1412,10 @@
 				15A6F1C4247524E2002C0930 /* MXZFullThirdSectionCell.m in Sources */,
 				1517AC83247D1360007BC789 /* MXZFeedbackFourthCell.m in Sources */,
 				18A584882472544400C0437F /* ListViewController.m in Sources */,
+				1828C5D42486358E00462796 /* ZCMakeTableViewCell.m in Sources */,
 				1526D6B3247E07E6006A2556 /* ENDLCPNetWorkGET.m in Sources */,
 				1517AC6C247CA579007BC789 /* MXZFeedbackVC.m in Sources */,
+				1828C5D22486358E00462796 /* QHDHHeadCollectionViewCell.m in Sources */,
 				181F5036246B908500CCCBDB /* CustomTBC.m in Sources */,
 				1564961E2477CA56006745E8 /* MXZQuestionWeekItem.m in Sources */,
 				18C2DE222473BB1C00116E2E /* CommunityTopicCell.m in Sources */,
@@ -1290,12 +1424,14 @@
 				157A716B2477A282003D0081 /* MXZAnswerVC.m in Sources */,
 				1846879D247D1D2C007BC2FC /* AttentionVC.m in Sources */,
 				152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */,
-				183B78C2247E533000D23A59 /* ZZHQuoteTimeVC.m in Sources */,
+				1828C5D52486358E00462796 /* QHDetailViewController.m in Sources */,
 				188FC3272484972C0004FF40 /* LoginTableViewCell.m in Sources */,
 				183B78C5247E533000D23A59 /* ZZHQuoteNewsVC.m in Sources */,
+				1828C5CB2486358E00462796 /* QHLoctionModel.m in Sources */,
 				18E8AC752474BDA300E3D7C4 /* CommunityFriendViewCell.m in Sources */,
 				1526D6B6247E07E6006A2556 /* ENDNetWorkDELETE.m in Sources */,
 				1526D6E0247E0E24006A2556 /* Reachability.m in Sources */,
+				1828C5DD2486358E00462796 /* BusinessProcess.m in Sources */,
 				151A95AF247BB82F007F3AAB /* MXZMessageCenterVC.m in Sources */,
 				1866EA03247DF89D002C0E05 /* MineEditProfileCell.m in Sources */,
 				1526D6B4247E07E6006A2556 /* ENDNetWorkPOST.m in Sources */,
@@ -1305,6 +1441,7 @@
 				1517AC7E247D108C007BC789 /* MXZFeedbackThirdCell.m in Sources */,
 				1526D6D5247E0A7C006A2556 /* EGHViewsTool.m in Sources */,
 				18C2DE182473788900116E2E /* CommunityBannerViewCell.m in Sources */,
+				1828C5D32486358E00462796 /* YKViewBase.m in Sources */,
 				183B78C4247E533000D23A59 /* ZZHQuoteIndustryVC.m in Sources */,
 				18E8AC8A247519D100E3D7C4 /* CommunityDynamicModel.m in Sources */,
 				18BD94F5247290D5005A84B5 /* CommunityVC.m in Sources */,
@@ -1312,16 +1449,22 @@
 				151AC1942472595D00EAE0BD /* ZKCycleScrollViewFlowLayout.m in Sources */,
 				18E8AC792474C60E00E3D7C4 /* CommunityFriendModel.m in Sources */,
 				15263699246E771D00D01BE0 /* MXZHomeQuoteVC.m in Sources */,
+				1828C5C92486358E00462796 /* ZCBaseView.m in Sources */,
 				18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */,
 				183B78DE247E535300D23A59 /* ZZHTimeLineTableViewCell.m in Sources */,
 				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,
 				183B78DF247E535300D23A59 /* ZZHDateCollectionViewCell.m in Sources */,
+				1828C5C82486358E00462796 /* NetWork.m in Sources */,
 				1526D6D2247E0A7C006A2556 /* EGHImagePickerVCManager.m in Sources */,
 				1526D6D4247E0A7C006A2556 /* ENDGradientLabel.m in Sources */,
 				188FC321248495A00004FF40 /* forgetPwdVC.m in Sources */,
+				1828C5DB2486358E00462796 /* QHDataCollectionViewCell.m in Sources */,
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
 				188FC32A2484AF790004FF40 /* MineCodeView.m in Sources */,
+				1828C5D72486358E00462796 /* ZCManage.m in Sources */,
+				1828C5CA2486358E00462796 /* YKTimeLineView.m in Sources */,
 				15CDFAD12474C2FB00B2811F /* MXZFullDisplay.m in Sources */,
+				1828C5DC2486358E00462796 /* CZ_NEWMarketVC.m in Sources */,
 				152636A7246E771D00D01BE0 /* MXZHomeFifthSectionCell.m in Sources */,
 				18468789247D1D0D007BC2FC /* ZZHNewsImageModel.m in Sources */,
 				1846879C247D1D2C007BC2FC /* AttentionTableViewCell.m in Sources */,
@@ -1334,15 +1477,19 @@
 				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
 				15A6F1C0247513F7002C0930 /* MXZFullThirdSectionHeadView.m in Sources */,
 				183B78DD247E535300D23A59 /* ZZHImageTableViewCell.m in Sources */,
+				1828C5E52486358E00462796 /* ZCBaseViewController.m in Sources */,
 				152636A2246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m in Sources */,
 				1517AC75247CC7D2007BC789 /* MXZFeedbackFirstCell.m in Sources */,
 				1526D6E1247E0E24006A2556 /* LCPReachability.m in Sources */,
 				1526D6DA247E0A7C006A2556 /* EGHCodeTool.m in Sources */,
+				1828C5E62486358E00462796 /* MVPKlineView.m in Sources */,
+				1828C5C62486358E00462796 /* YKLineChartViewBase.m in Sources */,
 				184687A2247D1D2C007BC2FC /* MineEditVC.m in Sources */,
 				151AC199247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m in Sources */,
 				156496222477D1D6006745E8 /* MXZAnswerABCButton.m in Sources */,
 				157A71762477B393003D0081 /* MXZAnswerWeekItem.m in Sources */,
 				151A95B4247BBA3B007F3AAB /* MXZAboutUsVC.m in Sources */,
+				1828C5C72486358E00462796 /* YKLineDataSet.m in Sources */,
 				157A7163247676CE003D0081 /* MXZSignPopView.m in Sources */,
 				1526D6D7247E0A7C006A2556 /* Toast.m in Sources */,
 				15CDFADB2474D49800B2811F /* MXZFullSecondSectionCell.m in Sources */,
@@ -1356,16 +1503,20 @@
 				1517AC70247CB83E007BC789 /* MXZFeedbackBtn.m in Sources */,
 				1526D6D9247E0A7C006A2556 /* NSString+DealError.m in Sources */,
 				184687A7247D1D53007BC2FC /* MXZHomeIndustryVC.m in Sources */,
+				1828C5D62486358E00462796 /* YKLineChartView.m in Sources */,
 				183B78C1247E533000D23A59 /* ZZHQuoteCalendarVC.m in Sources */,
 				183B78DB247E535300D23A59 /* ZZHDateTableViewCell.m in Sources */,
 				18699CFD247B544F000A1022 /* UIImage+Image.m in Sources */,
 				15A6F1C92475276E002C0930 /* MXZFullThirdCollectionCell.m in Sources */,
+				1828C5E42486358E00462796 /* TopView.m in Sources */,
 				183B78E2247E535300D23A59 /* ZZHDateHeadCell.m in Sources */,
+				1828C5D82486358E00462796 /* UIButton+LXMImagePosition.m in Sources */,
 				151A95AA247BA995007F3AAB /* MXZSettingCenterVC.m in Sources */,
 				15AA6EFD247F4D7800F416CF /* MXZHomeThirdSectionHeadView.m in Sources */,
 				15A6F1CE24752C15002C0930 /* MXZFullFourthSectionCell.m in Sources */,
 				1526D6D8247E0A7C006A2556 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				152636A5246E771D00D01BE0 /* MXZHomeFourthSectionCell.m in Sources */,
+				1828C5E72486358E00462796 /* YKLineEntity.m in Sources */,
 				1526D6D3247E0A7C006A2556 /* TimerTool.m in Sources */,
 				18C2DE2B2473DD9700116E2E /* CommunityFriendCell.m in Sources */,
 				151AC1932472595D00EAE0BD /* ZKCycleScrollView.m in Sources */,
@@ -1376,6 +1527,7 @@
 				18E8AC872474F4CC00E3D7C4 /* CommunityTopicHeaderView.m in Sources */,
 				154C26B7247B8CEF00A9162D /* MXZAnswerTomorrowItem.m in Sources */,
 				183B78E0247E535300D23A59 /* ZZHCollectionViewCell.m in Sources */,
+				1828C5C52486358E00462796 /* BaseViewController.m in Sources */,
 				185901522469462800CA7A68 /* UIImage+OriginalImage.m in Sources */,
 				156FEAFE2480E0D200FCA75F /* MXZRecommandTalkModel.m in Sources */,
 				1526D6D6247E0A7C006A2556 /* StringAndLabelDealTool.m in Sources */,

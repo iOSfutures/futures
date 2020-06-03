@@ -18,6 +18,9 @@
 
 #import "CommunityTopicHeaderView.h"
 
+#import "MXZFullDisplay.h"
+#import "MXZRecommandTalkModel.h"
+
 @interface CommunityChildAVC ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -167,7 +170,6 @@ NSString *DynamicCell = @"DynamicCell";
     [ENDNetWorkManager getWithPathUrl:@"/admin/getFinanceAffairs" parameters:nil queryParams:dic Header:nil success:^(BOOL success, id result) {
         NSError *error;
         weakSelf.topicsArray = [MTLJSONAdapter modelsOfClass:[CommunityTopicModel class] fromJSONArray:result[@"data"] error:&error];
-        NSLog(@"话题：%@",weakSelf.topicsArray);
         [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
     } failure:^(BOOL failuer, NSError *error) {
         NSLog(@"%@",error.description);
@@ -180,7 +182,6 @@ NSString *DynamicCell = @"DynamicCell";
     [ENDNetWorkManager getWithPathUrl:@"/user/talk/getRecommandTalk" parameters:nil queryParams:nil Header:nil success:^(BOOL success, id result) {
         NSError *error;
         weakSelf.dynamicsArray = [MTLJSONAdapter modelsOfClass:[CommunityDynamicModel class] fromJSONArray:result[@"data"][@"list"] error:&error];
-        
         [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:3] withRowAnimation:UITableViewRowAnimationFade];
         
     } failure:^(BOOL failuer, NSError *error) {
@@ -189,12 +190,19 @@ NSString *DynamicCell = @"DynamicCell";
     }];
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    UserModel *model = _topicsArray[indexPath];
-//    UIViewController *vc = UIViewController.new;
-//    vc.model = model;
-//    [self.navigationController pushViewController:vc animated:YES];
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section == 3)
+    {
+        CommunityDynamicModel *model = _dynamicsArray[indexPath.row];
+        MXZRecommandTalkModel *mxzModel = MXZRecommandTalkModel.new;
+        mxzModel.content = model.content;
+        mxzModel.picture = model.picture1;
+        mxzModel.user = model.user;
+        MXZFullDisplay *vc = MXZFullDisplay.new;
+        vc.recommandModel = mxzModel;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
 
 @end

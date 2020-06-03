@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong)UIColor *bgColor;
 @property (nonatomic, strong)UIColor *labelColor;
 
+@property (weak, nonatomic) IBOutlet UITextField *numTextF;
 @property (weak, nonatomic) IBOutlet UITextField *pwdTextF;
 
 @property (nonatomic, assign) BOOL isPwd;

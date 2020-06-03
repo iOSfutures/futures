@@ -78,6 +78,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [[UITableViewCell alloc]init];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.section == 0) {
         cell.textLabel.text = self.labelArray[indexPath.row];
     }

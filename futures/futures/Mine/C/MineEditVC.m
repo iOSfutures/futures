@@ -128,6 +128,7 @@ NSString *MineProfileCellID = @"MineProfileCell";
 {
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     if(indexPath.section == 0)
     {

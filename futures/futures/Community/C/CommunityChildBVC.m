@@ -12,6 +12,10 @@
 
 #import "CommunityDynamicModel.h"
 
+#import "MXZRecommandTalkModel.h"
+
+#import "MXZFullDisplay.h"
+
 @interface CommunityChildBVC ()<UITableViewDataSource, UITableViewDelegate>
 
 
@@ -67,7 +71,25 @@ NSString *FriendID2 = @"Friend2";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if(indexPath.row != 2)
+    {
+        CommunityDynamicModel *model = CommunityDynamicModel.new;
+        if(indexPath.row < 2)
+        {
+            model = _dynamicsArray[indexPath.row];
+        }
+        else
+        {
+            model = _dynamicsArray[indexPath.row - 1];
+        }
+        MXZRecommandTalkModel *mxzModel = MXZRecommandTalkModel.new;
+        mxzModel.content = model.content;
+        mxzModel.picture = model.picture1;
+        mxzModel.user = model.user;
+        MXZFullDisplay *vc = MXZFullDisplay.new;
+        vc.recommandModel = mxzModel;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 -(void)getDynamics{

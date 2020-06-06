@@ -79,6 +79,7 @@
 		1564961E2477CA56006745E8 /* MXZQuestionWeekItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1564961C2477CA56006745E8 /* MXZQuestionWeekItem.m */; };
 		1564961F2477CA56006745E8 /* MXZQuestionWeekItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1564961D2477CA56006745E8 /* MXZQuestionWeekItem.xib */; };
 		156496222477D1D6006745E8 /* MXZAnswerABCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 156496212477D1D6006745E8 /* MXZAnswerABCButton.m */; };
+		1568DB70248B789A008CF3B0 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1568DB6F248B789A008CF3B0 /* NetworkTool.swift */; };
 		156FEAFE2480E0D200FCA75F /* MXZRecommandTalkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FEAFD2480E0D200FCA75F /* MXZRecommandTalkModel.m */; };
 		157A7163247676CE003D0081 /* MXZSignPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 157A7161247676CE003D0081 /* MXZSignPopView.m */; };
 		157A7164247676CE003D0081 /* MXZSignPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157A7162247676CE003D0081 /* MXZSignPopView.xib */; };
@@ -341,6 +342,8 @@
 		1564961D2477CA56006745E8 /* MXZQuestionWeekItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZQuestionWeekItem.xib; sourceTree = "<group>"; };
 		156496202477D1D6006745E8 /* MXZAnswerABCButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZAnswerABCButton.h; sourceTree = "<group>"; };
 		156496212477D1D6006745E8 /* MXZAnswerABCButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZAnswerABCButton.m; sourceTree = "<group>"; };
+		1568DB6E248B7899008CF3B0 /* futures-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "futures-Bridging-Header.h"; sourceTree = "<group>"; };
+		1568DB6F248B789A008CF3B0 /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
 		156FEAFC2480E0D200FCA75F /* MXZRecommandTalkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZRecommandTalkModel.h; sourceTree = "<group>"; };
 		156FEAFD2480E0D200FCA75F /* MXZRecommandTalkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZRecommandTalkModel.m; sourceTree = "<group>"; };
 		157A7160247676CE003D0081 /* MXZSignPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZSignPopView.h; sourceTree = "<group>"; };
@@ -841,8 +844,10 @@
 				154DFC6F2468F4B00098498C /* Assets.xcassets */,
 				154DFC712468F4B00098498C /* LaunchScreen.storyboard */,
 				154DFC742468F4B00098498C /* Info.plist */,
+				1568DB6F248B789A008CF3B0 /* NetworkTool.swift */,
 				154DFC752468F4B00098498C /* main.m */,
 				18B55133246BCBF500E80DEB /* SupportFile */,
+				1568DB6E248B7899008CF3B0 /* futures-Bridging-Header.h */,
 			);
 			path = futures;
 			sourceTree = "<group>";
@@ -1248,6 +1253,7 @@
 				TargetAttributes = {
 					154DFC5F2468F4AE0098498C = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -1489,6 +1495,7 @@
 				156496222477D1D6006745E8 /* MXZAnswerABCButton.m in Sources */,
 				157A71762477B393003D0081 /* MXZAnswerWeekItem.m in Sources */,
 				151A95B4247BBA3B007F3AAB /* MXZAboutUsVC.m in Sources */,
+				1568DB70248B789A008CF3B0 /* NetworkTool.swift in Sources */,
 				1828C5C72486358E00462796 /* YKLineDataSet.m in Sources */,
 				157A7163247676CE003D0081 /* MXZSignPopView.m in Sources */,
 				1526D6D7247E0A7C006A2556 /* Toast.m in Sources */,
@@ -1664,6 +1671,7 @@
 			baseConfigurationReference = 2918599DF26764A44CB6CA12 /* Pods-futures.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A84QXBXH2V;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1675,6 +1683,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ssiswent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "futures/futures-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1684,6 +1695,7 @@
 			baseConfigurationReference = 1E8A6C0CB72502A19B418054 /* Pods-futures.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A84QXBXH2V;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1695,6 +1707,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ssiswent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "futures/futures-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

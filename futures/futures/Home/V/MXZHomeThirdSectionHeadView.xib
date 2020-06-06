@@ -16,8 +16,8 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联合国内多家机构,以丰富的行情" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zd-jm-U4q">
                     <rect key="frame" x="119.5" y="3.5" width="175.5" height="14.5"/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="TSK-p4-9rM"/>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="XzG-jh-9qh"/>
+                        <constraint firstAttribute="width" constant="175.5" id="hHT-MK-4ny"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="textColor"/>
@@ -35,6 +35,7 @@
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="1Yq-ib-Jx0"/>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="2mb-0v-3Y9"/>
+                        <constraint firstAttribute="width" constant="175.5" id="JCe-Ri-Jf5"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="textColor"/>
@@ -43,6 +44,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联合国内多家机构,以丰富的行情" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2w-P6-x3f">
                     <rect key="frame" x="119.5" y="21.5" width="175.5" height="14.5"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="175.5" id="08P-wh-eEK"/>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="5dK-l8-vIw"/>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="UJh-f5-mCW"/>
                     </constraints>

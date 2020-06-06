@@ -24,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"全文展示";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullFirstSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullFirstSectionCell"];
     [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullSecondSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullSecondSectionCell"];
     [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullThirdSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullThirdSectionCell"];

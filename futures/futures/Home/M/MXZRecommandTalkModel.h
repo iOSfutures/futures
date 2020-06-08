@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, copy) NSString *content;
 @property(nonatomic, copy) NSString *picture;
+@property(nonatomic, assign) NSInteger recommandCount;
 
 @property (nonatomic, strong)UserModel *user;
 @end

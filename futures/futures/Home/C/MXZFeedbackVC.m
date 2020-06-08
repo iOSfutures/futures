@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"日历数据";
+    self.navigationItem.title = self.navTitle;
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
     
@@ -65,9 +65,9 @@
 {
     if(indexPath.section == 0){
     MXZFeedbackFirstCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MXZFeedbackFirstCell"];
-    [cell.btnA setTitle:@"功能建议" forState:UIControlStateNormal];
-    [cell.btnB setTitle:@"bug反馈" forState:UIControlStateNormal];
-    [cell.btnC setTitle:@"其他" forState:UIControlStateNormal];
+        [cell.btnA setTitle:self.str1 forState:UIControlStateNormal];
+        [cell.btnB setTitle:self.str2 forState:UIControlStateNormal];
+        [cell.btnC setTitle:self.str3 forState:UIControlStateNormal];
     return cell;
     }
     else if (indexPath.section == 1){

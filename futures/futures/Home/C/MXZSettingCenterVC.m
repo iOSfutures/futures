@@ -112,6 +112,10 @@
     if (indexPath.section == 0 && indexPath.row == 2) {
         //跳转到意见反馈界面
         MXZFeedbackVC *feedbackVC = [[MXZFeedbackVC alloc]init];
+        feedbackVC.navTitle = @"问题反馈";
+        feedbackVC.str1 = @"功能建议";
+        feedbackVC.str2 = @"bug反馈";
+        feedbackVC.str3 = @"其他";
         [self.navigationController pushViewController:feedbackVC animated:YES];
     }
     else if (indexPath.section == 0 && indexPath.row == 0) {

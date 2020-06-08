@@ -10,7 +10,6 @@
 #import "MXZFeedbackFirstCell.h"
 #import "MXZFeedbackSecondCell.h"
 #import "MXZFeedbackFourthCell.h"
-
 #import "LoginVC.h"
 
 @interface PublishVC ()<UITableViewDelegate, UITableViewDataSource,UITextViewDelegate>
@@ -102,6 +101,7 @@
         }
         else
         {
+            //跳转到登录界面
             LoginVC *loginVC = [LoginVC new];
             [self.navigationController pushViewController:loginVC animated:YES];
             [Toast makeText:loginVC.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
@@ -121,7 +121,7 @@
         titleLabel.text = @"分类标签";
     }
     else if (section == 1){
-        titleLabel.text = @"我要反馈";
+        titleLabel.text = @"发布内容";
     }
     [headView addSubview:titleLabel];
     return headView;
@@ -137,24 +137,19 @@
     return 0.001;
 }
 
+
 //上传图片
 -(void)uploadImg{
     WEAKSELF
     NSDictionary *dict = @{
         @"file" : self.picArray[0]
     };
-    
-    [ENDNetWorkManager postFormWithPathUrl:@"http://image.yysc.online/upload" parameters:nil queryParams:dict Header:nil success:^(BOOL success, id result) {
-        NSLog(@"result:%@", result);
-        NSString *URL = [[NSString alloc]initWithData:result encoding:NSUTF8StringEncoding];
-        weakSelf.saveURL = URL;
+    [NetworkTool.shared postReturnString:@"http://image.yysc.online/upload" fileName:@"testImg" image:self.picArray[0] viewcontroller:self params:dict success:^(id _Nonnull resopnse) {
+        self.saveURL = resopnse;
         //上传图片成功后才publishMessage
         [self publishMessage];
-    } failure:^(BOOL failuer, NSError *error) {
-//        [Toast makeText:weakSelf.view Message:@"上传图片失败" afterHideTime:DELAYTiME];
-        NSLog(@"error:%@", error);
-        self.saveURL = @"http://image.yysc.online/files/2020/5/1/ad4c4e590953f15463064bcf5c39a1b9.jpg";
-        [self publishMessage];
+    } failture:^(NSError * _Nonnull error) {
+        [Toast makeText:weakSelf.view Message:@"上传图片失败" afterHideTime:DELAYTiME];
     }];
 }
 
@@ -164,7 +159,7 @@
     NSDictionary *dict = @{
         @"userId" : _userId,
         @"content" : self.contentStr,
-//        @"picture" : self.saveURL
+        @"picture" : self.saveURL
     };
     [ENDNetWorkManager postWithPathUrl:@"/user/talk/publishTalk" parameters:nil queryParams:dict Header:nil success:^(BOOL success, id result) {
         [Toast makeText:weakSelf.view Message:@"发布说说成功" afterHideTime:DELAYTiME];
@@ -178,6 +173,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self getUserDefault];
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 

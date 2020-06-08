@@ -27,7 +27,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MXZFullThirdCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MXZFullThirdCollectionCell" forIndexPath:indexPath];
-    cell.itemImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"14270%d", (int)indexPath.item+1]];
+    cell.itemImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"14270%d", (int)(arc4random()%3+1)]];
     return cell;
 }
 

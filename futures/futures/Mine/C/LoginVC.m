@@ -223,7 +223,7 @@ NSString *LoginID = @"LoginVC";
         NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
         //记录userId
         [userDefault setObject:user.userId forKey:@"userId"];
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [self.navigationController popViewControllerAnimated:YES];
     } failure:^(BOOL failuer, NSError *error) {
         NSLog(@"%@",error.description);
         [Toast makeText:weakSelf.view Message:@"登录失败" afterHideTime:DELAYTiME];

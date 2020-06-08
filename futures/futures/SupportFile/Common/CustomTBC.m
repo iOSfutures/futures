@@ -19,6 +19,7 @@
     
     //获取用户偏好
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    
     //初始化userId
     if([userDefault objectForKey:@"userId"] == nil)
     {

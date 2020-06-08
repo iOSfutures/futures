@@ -8,9 +8,13 @@
 
 #import "ZZHDateHeadCell.h"
 #import "ZZHDateCollectionViewCell.h"
+#import "CalendarDateDataModel.h"
 
 @interface ZZHDateHeadCell () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *headCollectionView;
+
+@property (nonatomic, strong) CalendarDateDataModel *carlendarModel;
+@property (nonatomic, strong) DateModel *selectedModel;
 
 @end
 
@@ -32,7 +36,16 @@ CGFloat wid = 10;
     
     //设置默认选中某个cell
     [self.headCollectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionNone];
+    
+    DateModel *model = [DateModel new];
+    [model now];
+    model.beforNowDays = 15;
+    model.affterNowDays = 15;
+    _carlendarModel = [[CalendarDateDataModel alloc] initWithDateRangeArr:@[model.startTimeString,model.endTimeString]];
+    _selectedModel = _carlendarModel.nowDay;
+
 }
+
 
 #pragma mark - UICollectionViewDataSource
 //设置容器中有多少个组
@@ -49,6 +62,11 @@ CGFloat wid = 10;
 //获取cell视图，内部通过去缓存池中取，如果缓存池中没有，就自动创建一个新的cell
     ZZHDateCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:dateHeadCellID forIndexPath:indexPath];
 
+    NSArray *weakArr = @[@"日",@"一",@"二",@"三",@"四",@"五",@"六"];
+    //_selectedModel.comps.weekday == 2
+    cell.dateLabel.text = weakArr[indexPath.item];
+//    cell.dateLabel.text = weakArr[indexPath.item];
+    cell.numLabel.text = [NSString stringWithFormat:@"%ld",_selectedModel.day.integerValue];
     return cell;
 }
 

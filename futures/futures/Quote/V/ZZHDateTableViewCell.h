@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuoteCalendarModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,6 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UIButton *showBtn;
+@property (weak, nonatomic) IBOutlet UILabel *affectLabel;
+@property (weak, nonatomic) IBOutlet UILabel *previousLabel;
+@property (weak, nonatomic) IBOutlet UILabel *consensusLabel;
+
+
+@property (nonatomic, strong) QuoteCalendarModel *calendarModel;
+
 @end
 
 NS_ASSUME_NONNULL_END

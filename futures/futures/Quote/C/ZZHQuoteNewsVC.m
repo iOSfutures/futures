@@ -10,11 +10,12 @@
 #import "ZZHTimeLineTableViewCell.h"
 #import "ZZHImageTableViewCell.h"
 
+#import "QuoteNewModel.h"
 #import "UIImage+OriginalImage.h"
 
 @interface ZZHQuoteNewsVC () <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataArr;
+@property (nonatomic, strong) NSArray *topicsArray;
 
 
 @end
@@ -45,6 +46,8 @@ NSString *TimeLineID = @"TimeLine";
     
     //启用右滑返回手势
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    
+    [self getTopics];
 }
 
 -(UIView *)listView{
@@ -55,37 +58,52 @@ NSString *TimeLineID = @"TimeLine";
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)getTopics{
+    WEAKSELF
+    NSDate *todayDate = [NSDate date];
+    NSDictionary *dic = @{@"date":todayDate};
+    [ENDNetWorkManager getWithPathUrl:@"/admin/getFinanceTalk" parameters:nil queryParams:dic Header:nil success:^(BOOL success, id result) {
+        NSError *error;
+        weakSelf.topicsArray = [MTLJSONAdapter modelsOfClass:[QuoteNewModel class] fromJSONArray:result[@"data"] error:&error];
+        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
+//        [weakSelf.tableView reloadData];
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf.view Message:@"请求话题失败" afterHideTime:DELAYTiME];
+    }];
+}
+
 #pragma mark - UITableViewViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    if (section == 0) {
+        return 1;
+    }
+    else
+        return _topicsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    if(indexPath.row == 0)
-    {
+    if (indexPath.section == 0) {
         ZZHImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ZZHImageCellID];
         return cell;
-    }else {
+    }
+    else {
         ZZHTimeLineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TimeLineID];
-
-        if (indexPath.row == 1) {
-               cell.topLine.hidden = YES;
-           }
+        cell.quoteNewModel = self.topicsArray[indexPath.row];
         return cell;
     }
 }
 
-//禁止下拉,允许上拉
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (self.tableView.contentOffset.y > 0) {
-        self.tableView.bounces = YES;
-    } else if (self.tableView.contentOffset.y < 0) {
-        self.tableView.bounces = NO;
-    }
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+        return 0.01f;
 }
+
 
 - (void)viewWillAppear:(BOOL)animated
 {

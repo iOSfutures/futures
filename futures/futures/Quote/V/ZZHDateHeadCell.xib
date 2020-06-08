@@ -50,7 +50,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019年" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gie-vv-cw3">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019年" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gie-vv-cw3" userLabel="年份">
                         <rect key="frame" x="85.5" y="28.5" width="41" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
@@ -76,6 +76,8 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="headCollectionView" destination="gmb-Mc-jk3" id="MxS-5w-8qd"/>
+                <outlet property="monthLabel" destination="eLg-bH-lph" id="qYG-az-CBz"/>
+                <outlet property="yearLabel" destination="Gie-vv-cw3" id="zQ3-PO-h1z"/>
             </connections>
             <point key="canvasLocation" x="-543" y="132"/>
         </tableViewCell>

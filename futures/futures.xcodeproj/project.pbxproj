@@ -132,24 +132,14 @@
 		1828C5E62486358E00462796 /* MVPKlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5BC2486358E00462796 /* MVPKlineView.m */; };
 		1828C5E72486358E00462796 /* YKLineEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828C5C12486358E00462796 /* YKLineEntity.m */; };
 		183B78BF247E533000D23A59 /* ZZHQuoteIndustryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78B2247E532E00D23A59 /* ZZHQuoteIndustryVC.xib */; };
-		183B78C0247E533000D23A59 /* ZZHQuoteNewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78B3247E532F00D23A59 /* ZZHQuoteNewsVC.xib */; };
-		183B78C1247E533000D23A59 /* ZZHQuoteCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78B4247E532F00D23A59 /* ZZHQuoteCalendarVC.m */; };
 		183B78C3247E533000D23A59 /* ZZHQuotesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78B6247E532F00D23A59 /* ZZHQuotesVC.xib */; };
 		183B78C4247E533000D23A59 /* ZZHQuoteIndustryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78B8247E532F00D23A59 /* ZZHQuoteIndustryVC.m */; };
-		183B78C5247E533000D23A59 /* ZZHQuoteNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78BA247E533000D23A59 /* ZZHQuoteNewsVC.m */; };
-		183B78C6247E533000D23A59 /* ZZHQuoteCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78BB247E533000D23A59 /* ZZHQuoteCalendarVC.xib */; };
 		183B78C7247E533000D23A59 /* ZZHQuotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78BD247E533000D23A59 /* ZZHQuotesVC.m */; };
-		183B78DB247E535300D23A59 /* ZZHDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78CA247E535000D23A59 /* ZZHDateTableViewCell.m */; };
-		183B78DC247E535300D23A59 /* ZZHTimeLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78CB247E535000D23A59 /* ZZHTimeLineTableViewCell.xib */; };
 		183B78DD247E535300D23A59 /* ZZHImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78CC247E535100D23A59 /* ZZHImageTableViewCell.m */; };
-		183B78DE247E535300D23A59 /* ZZHTimeLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78CD247E535100D23A59 /* ZZHTimeLineTableViewCell.m */; };
 		183B78DF247E535300D23A59 /* ZZHDateCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78D0247E535100D23A59 /* ZZHDateCollectionViewCell.m */; };
 		183B78E0247E535300D23A59 /* ZZHCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78D2247E535100D23A59 /* ZZHCollectionViewCell.m */; };
 		183B78E1247E535300D23A59 /* ZZHImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78D4247E535200D23A59 /* ZZHImageTableViewCell.xib */; };
-		183B78E2247E535300D23A59 /* ZZHDateHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B78D5247E535200D23A59 /* ZZHDateHeadCell.m */; };
-		183B78E3247E535300D23A59 /* ZZHDateHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78D6247E535200D23A59 /* ZZHDateHeadCell.xib */; };
 		183B78E4247E535300D23A59 /* ZZHDateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78D7247E535200D23A59 /* ZZHDateCollectionViewCell.xib */; };
-		183B78E5247E535300D23A59 /* ZZHDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78D8247E535200D23A59 /* ZZHDateTableViewCell.xib */; };
 		183B78E6247E535300D23A59 /* ZZHCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B78DA247E535300D23A59 /* ZZHCollectionViewCell.xib */; };
 		18468789247D1D0D007BC2FC /* ZZHNewsImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468786247D1D0D007BC2FC /* ZZHNewsImageModel.m */; };
 		1846878A247D1D0D007BC2FC /* ZZHQuoteDateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18468787247D1D0D007BC2FC /* ZZHQuoteDateModel.m */; };
@@ -205,6 +195,20 @@
 		18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE262473C97300116E2E /* CommunityTopicModel.m */; };
 		18C2DE2B2473DD9700116E2E /* CommunityFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2DE292473DD9700116E2E /* CommunityFriendCell.m */; };
 		18C2DE2C2473DD9700116E2E /* CommunityFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C2DE2A2473DD9700116E2E /* CommunityFriendCell.xib */; };
+		18D4F0C2248E407E007865DE /* SigninModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D4F0C1248E407E007865DE /* SigninModel.m */; };
+		18D4F0C9248E4087007865DE /* QuoteNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D4F0C4248E4086007865DE /* QuoteNewModel.m */; };
+		18D4F0CA248E4087007865DE /* CalendarDateDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D4F0C5248E4086007865DE /* CalendarDateDataModel.m */; };
+		18D4F0CB248E4087007865DE /* QuoteCalendarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D4F0C7248E4087007865DE /* QuoteCalendarModel.m */; };
+		18D4F0CF248E40EA007865DE /* ZZHQuoteNewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D4F0CD248E40EA007865DE /* ZZHQuoteNewsVC.xib */; };
+		18D4F0D0248E40EA007865DE /* ZZHQuoteNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D4F0CE248E40EA007865DE /* ZZHQuoteNewsVC.m */; };
+		18D4F0D4248E40FD007865DE /* ZZHQuoteCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D4F0D2248E40FD007865DE /* ZZHQuoteCalendarVC.m */; };
+		18D4F0D5248E40FD007865DE /* ZZHQuoteCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D4F0D3248E40FD007865DE /* ZZHQuoteCalendarVC.xib */; };
+		18D4F0D9248E4121007865DE /* ZZHTimeLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D4F0D7248E4120007865DE /* ZZHTimeLineTableViewCell.m */; };
+		18D4F0DA248E4121007865DE /* ZZHTimeLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D4F0D8248E4121007865DE /* ZZHTimeLineTableViewCell.xib */; };
+		18D4F0DE248E413D007865DE /* ZZHDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D4F0DB248E413C007865DE /* ZZHDateTableViewCell.xib */; };
+		18D4F0DF248E413D007865DE /* ZZHDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D4F0DC248E413C007865DE /* ZZHDateTableViewCell.m */; };
+		18D4F0E3248E4154007865DE /* ZZHDateHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D4F0E1248E4154007865DE /* ZZHDateHeadCell.m */; };
+		18D4F0E4248E4154007865DE /* ZZHDateHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D4F0E2248E4154007865DE /* ZZHDateHeadCell.xib */; };
 		18E8AC752474BDA300E3D7C4 /* CommunityFriendViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8AC732474BDA300E3D7C4 /* CommunityFriendViewCell.m */; };
 		18E8AC762474BDA300E3D7C4 /* CommunityFriendViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E8AC742474BDA300E3D7C4 /* CommunityFriendViewCell.xib */; };
 		18E8AC792474C60E00E3D7C4 /* CommunityFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8AC782474C60E00E3D7C4 /* CommunityFriendModel.m */; };
@@ -439,34 +443,19 @@
 		1828C5C32486358E00462796 /* ZCManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCManage.h; sourceTree = "<group>"; };
 		1828C5C42486358E00462796 /* YKLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineChartView.h; sourceTree = "<group>"; };
 		183B78B0247E532E00D23A59 /* ZZHQuotesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuotesVC.h; sourceTree = "<group>"; };
-		183B78B1247E532E00D23A59 /* ZZHQuoteCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteCalendarVC.h; sourceTree = "<group>"; };
 		183B78B2247E532E00D23A59 /* ZZHQuoteIndustryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteIndustryVC.xib; sourceTree = "<group>"; };
-		183B78B3247E532F00D23A59 /* ZZHQuoteNewsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteNewsVC.xib; sourceTree = "<group>"; };
-		183B78B4247E532F00D23A59 /* ZZHQuoteCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteCalendarVC.m; sourceTree = "<group>"; };
 		183B78B6247E532F00D23A59 /* ZZHQuotesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuotesVC.xib; sourceTree = "<group>"; };
 		183B78B8247E532F00D23A59 /* ZZHQuoteIndustryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteIndustryVC.m; sourceTree = "<group>"; };
-		183B78B9247E533000D23A59 /* ZZHQuoteNewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteNewsVC.h; sourceTree = "<group>"; };
-		183B78BA247E533000D23A59 /* ZZHQuoteNewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteNewsVC.m; sourceTree = "<group>"; };
-		183B78BB247E533000D23A59 /* ZZHQuoteCalendarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteCalendarVC.xib; sourceTree = "<group>"; };
 		183B78BC247E533000D23A59 /* ZZHQuoteIndustryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteIndustryVC.h; sourceTree = "<group>"; };
 		183B78BD247E533000D23A59 /* ZZHQuotesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuotesVC.m; sourceTree = "<group>"; };
 		183B78C9247E535000D23A59 /* ZZHDateCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHDateCollectionViewCell.h; sourceTree = "<group>"; };
-		183B78CA247E535000D23A59 /* ZZHDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHDateTableViewCell.m; sourceTree = "<group>"; };
-		183B78CB247E535000D23A59 /* ZZHTimeLineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHTimeLineTableViewCell.xib; sourceTree = "<group>"; };
 		183B78CC247E535100D23A59 /* ZZHImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHImageTableViewCell.m; sourceTree = "<group>"; };
-		183B78CD247E535100D23A59 /* ZZHTimeLineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHTimeLineTableViewCell.m; sourceTree = "<group>"; };
 		183B78CE247E535100D23A59 /* ZZHCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHCollectionViewCell.h; sourceTree = "<group>"; };
-		183B78CF247E535100D23A59 /* ZZHTimeLineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHTimeLineTableViewCell.h; sourceTree = "<group>"; };
 		183B78D0247E535100D23A59 /* ZZHDateCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHDateCollectionViewCell.m; sourceTree = "<group>"; };
-		183B78D1247E535100D23A59 /* ZZHDateHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHDateHeadCell.h; sourceTree = "<group>"; };
 		183B78D2247E535100D23A59 /* ZZHCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHCollectionViewCell.m; sourceTree = "<group>"; };
 		183B78D3247E535200D23A59 /* ZZHImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHImageTableViewCell.h; sourceTree = "<group>"; };
 		183B78D4247E535200D23A59 /* ZZHImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHImageTableViewCell.xib; sourceTree = "<group>"; };
-		183B78D5247E535200D23A59 /* ZZHDateHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHDateHeadCell.m; sourceTree = "<group>"; };
-		183B78D6247E535200D23A59 /* ZZHDateHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHDateHeadCell.xib; sourceTree = "<group>"; };
 		183B78D7247E535200D23A59 /* ZZHDateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHDateCollectionViewCell.xib; sourceTree = "<group>"; };
-		183B78D8247E535200D23A59 /* ZZHDateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHDateTableViewCell.xib; sourceTree = "<group>"; };
-		183B78D9247E535300D23A59 /* ZZHDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHDateTableViewCell.h; sourceTree = "<group>"; };
 		183B78DA247E535300D23A59 /* ZZHCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHCollectionViewCell.xib; sourceTree = "<group>"; };
 		18468785247D1D0D007BC2FC /* ZZHNewsImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHNewsImageModel.h; sourceTree = "<group>"; };
 		18468786247D1D0D007BC2FC /* ZZHNewsImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHNewsImageModel.m; sourceTree = "<group>"; };
@@ -555,6 +544,29 @@
 		18C2DE282473DD9700116E2E /* CommunityFriendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityFriendCell.h; sourceTree = "<group>"; };
 		18C2DE292473DD9700116E2E /* CommunityFriendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityFriendCell.m; sourceTree = "<group>"; };
 		18C2DE2A2473DD9700116E2E /* CommunityFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityFriendCell.xib; sourceTree = "<group>"; };
+		18D4F0C0248E407E007865DE /* SigninModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninModel.h; sourceTree = "<group>"; };
+		18D4F0C1248E407E007865DE /* SigninModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninModel.m; sourceTree = "<group>"; };
+		18D4F0C3248E4086007865DE /* QuoteCalendarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteCalendarModel.h; sourceTree = "<group>"; };
+		18D4F0C4248E4086007865DE /* QuoteNewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteNewModel.m; sourceTree = "<group>"; };
+		18D4F0C5248E4086007865DE /* CalendarDateDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDateDataModel.m; sourceTree = "<group>"; };
+		18D4F0C6248E4087007865DE /* QuoteNewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteNewModel.h; sourceTree = "<group>"; };
+		18D4F0C7248E4087007865DE /* QuoteCalendarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteCalendarModel.m; sourceTree = "<group>"; };
+		18D4F0C8248E4087007865DE /* CalendarDateDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDateDataModel.h; sourceTree = "<group>"; };
+		18D4F0CC248E40E9007865DE /* ZZHQuoteNewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteNewsVC.h; sourceTree = "<group>"; };
+		18D4F0CD248E40EA007865DE /* ZZHQuoteNewsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteNewsVC.xib; sourceTree = "<group>"; };
+		18D4F0CE248E40EA007865DE /* ZZHQuoteNewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteNewsVC.m; sourceTree = "<group>"; };
+		18D4F0D1248E40FD007865DE /* ZZHQuoteCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHQuoteCalendarVC.h; sourceTree = "<group>"; };
+		18D4F0D2248E40FD007865DE /* ZZHQuoteCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHQuoteCalendarVC.m; sourceTree = "<group>"; };
+		18D4F0D3248E40FD007865DE /* ZZHQuoteCalendarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHQuoteCalendarVC.xib; sourceTree = "<group>"; };
+		18D4F0D6248E4120007865DE /* ZZHTimeLineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHTimeLineTableViewCell.h; sourceTree = "<group>"; };
+		18D4F0D7248E4120007865DE /* ZZHTimeLineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHTimeLineTableViewCell.m; sourceTree = "<group>"; };
+		18D4F0D8248E4121007865DE /* ZZHTimeLineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHTimeLineTableViewCell.xib; sourceTree = "<group>"; };
+		18D4F0DB248E413C007865DE /* ZZHDateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHDateTableViewCell.xib; sourceTree = "<group>"; };
+		18D4F0DC248E413C007865DE /* ZZHDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHDateTableViewCell.m; sourceTree = "<group>"; };
+		18D4F0DD248E413C007865DE /* ZZHDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHDateTableViewCell.h; sourceTree = "<group>"; };
+		18D4F0E0248E4154007865DE /* ZZHDateHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZHDateHeadCell.h; sourceTree = "<group>"; };
+		18D4F0E1248E4154007865DE /* ZZHDateHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZHDateHeadCell.m; sourceTree = "<group>"; };
+		18D4F0E2248E4154007865DE /* ZZHDateHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZHDateHeadCell.xib; sourceTree = "<group>"; };
 		18E8AC722474BDA300E3D7C4 /* CommunityFriendViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityFriendViewCell.h; sourceTree = "<group>"; };
 		18E8AC732474BDA300E3D7C4 /* CommunityFriendViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityFriendViewCell.m; sourceTree = "<group>"; };
 		18E8AC742474BDA300E3D7C4 /* CommunityFriendViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityFriendViewCell.xib; sourceTree = "<group>"; };
@@ -940,8 +952,8 @@
 		185AC2AE246E8B60006EC3E6 /* Quote */ = {
 			isa = PBXGroup;
 			children = (
-				185AC2B1246E8B78006EC3E6 /* C */,
 				185AC2B0246E8B73006EC3E6 /* V */,
+				185AC2B1246E8B78006EC3E6 /* C */,
 				185AC2AF246E8B6F006EC3E6 /* M */,
 			);
 			path = Quote;
@@ -954,6 +966,14 @@
 				18468786247D1D0D007BC2FC /* ZZHNewsImageModel.m */,
 				18468788247D1D0D007BC2FC /* ZZHQuoteDateModel.h */,
 				18468787247D1D0D007BC2FC /* ZZHQuoteDateModel.m */,
+				18D4F0C0248E407E007865DE /* SigninModel.h */,
+				18D4F0C1248E407E007865DE /* SigninModel.m */,
+				18D4F0C3248E4086007865DE /* QuoteCalendarModel.h */,
+				18D4F0C7248E4087007865DE /* QuoteCalendarModel.m */,
+				18D4F0C6248E4087007865DE /* QuoteNewModel.h */,
+				18D4F0C4248E4086007865DE /* QuoteNewModel.m */,
+				18D4F0C8248E4087007865DE /* CalendarDateDataModel.h */,
+				18D4F0C5248E4086007865DE /* CalendarDateDataModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -967,18 +987,18 @@
 				183B78C9247E535000D23A59 /* ZZHDateCollectionViewCell.h */,
 				183B78D0247E535100D23A59 /* ZZHDateCollectionViewCell.m */,
 				183B78D7247E535200D23A59 /* ZZHDateCollectionViewCell.xib */,
-				183B78D1247E535100D23A59 /* ZZHDateHeadCell.h */,
-				183B78D5247E535200D23A59 /* ZZHDateHeadCell.m */,
-				183B78D6247E535200D23A59 /* ZZHDateHeadCell.xib */,
-				183B78D9247E535300D23A59 /* ZZHDateTableViewCell.h */,
-				183B78CA247E535000D23A59 /* ZZHDateTableViewCell.m */,
-				183B78D8247E535200D23A59 /* ZZHDateTableViewCell.xib */,
+				18D4F0E0248E4154007865DE /* ZZHDateHeadCell.h */,
+				18D4F0E1248E4154007865DE /* ZZHDateHeadCell.m */,
+				18D4F0E2248E4154007865DE /* ZZHDateHeadCell.xib */,
+				18D4F0DD248E413C007865DE /* ZZHDateTableViewCell.h */,
+				18D4F0DC248E413C007865DE /* ZZHDateTableViewCell.m */,
+				18D4F0DB248E413C007865DE /* ZZHDateTableViewCell.xib */,
 				183B78D3247E535200D23A59 /* ZZHImageTableViewCell.h */,
 				183B78CC247E535100D23A59 /* ZZHImageTableViewCell.m */,
 				183B78D4247E535200D23A59 /* ZZHImageTableViewCell.xib */,
-				183B78CF247E535100D23A59 /* ZZHTimeLineTableViewCell.h */,
-				183B78CD247E535100D23A59 /* ZZHTimeLineTableViewCell.m */,
-				183B78CB247E535000D23A59 /* ZZHTimeLineTableViewCell.xib */,
+				18D4F0D6248E4120007865DE /* ZZHTimeLineTableViewCell.h */,
+				18D4F0D7248E4120007865DE /* ZZHTimeLineTableViewCell.m */,
+				18D4F0D8248E4121007865DE /* ZZHTimeLineTableViewCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -989,15 +1009,15 @@
 				183B78B0247E532E00D23A59 /* ZZHQuotesVC.h */,
 				183B78BD247E533000D23A59 /* ZZHQuotesVC.m */,
 				183B78B6247E532F00D23A59 /* ZZHQuotesVC.xib */,
-				183B78B1247E532E00D23A59 /* ZZHQuoteCalendarVC.h */,
-				183B78B4247E532F00D23A59 /* ZZHQuoteCalendarVC.m */,
-				183B78BB247E533000D23A59 /* ZZHQuoteCalendarVC.xib */,
 				183B78BC247E533000D23A59 /* ZZHQuoteIndustryVC.h */,
 				183B78B8247E532F00D23A59 /* ZZHQuoteIndustryVC.m */,
 				183B78B2247E532E00D23A59 /* ZZHQuoteIndustryVC.xib */,
-				183B78B9247E533000D23A59 /* ZZHQuoteNewsVC.h */,
-				183B78BA247E533000D23A59 /* ZZHQuoteNewsVC.m */,
-				183B78B3247E532F00D23A59 /* ZZHQuoteNewsVC.xib */,
+				18D4F0D1248E40FD007865DE /* ZZHQuoteCalendarVC.h */,
+				18D4F0D2248E40FD007865DE /* ZZHQuoteCalendarVC.m */,
+				18D4F0D3248E40FD007865DE /* ZZHQuoteCalendarVC.xib */,
+				18D4F0CC248E40E9007865DE /* ZZHQuoteNewsVC.h */,
+				18D4F0CE248E40EA007865DE /* ZZHQuoteNewsVC.m */,
+				18D4F0CD248E40EA007865DE /* ZZHQuoteNewsVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1300,15 +1320,16 @@
 				183B78E6247E535300D23A59 /* ZZHCollectionViewCell.xib in Resources */,
 				152636A3246E771D00D01BE0 /* MXZHomeThirdSectionHeadView.xib in Resources */,
 				152636A9246E771D00D01BE0 /* MXZHomeSecondSectionFootView.xib in Resources */,
-				183B78C6247E533000D23A59 /* ZZHQuoteCalendarVC.xib in Resources */,
 				151AC19B247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib in Resources */,
 				18E8AC762474BDA300E3D7C4 /* CommunityFriendViewCell.xib in Resources */,
+				18D4F0D5248E40FD007865DE /* ZZHQuoteCalendarVC.xib in Resources */,
 				1517AC84247D1360007BC789 /* MXZFeedbackFourthCell.xib in Resources */,
 				188FC320248495A00004FF40 /* forgetPwdVC.xib in Resources */,
 				151A95AB247BA995007F3AAB /* MXZSettingCenterVC.xib in Resources */,
 				15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */,
 				151AC1A024726AAF00EAE0BD /* MXZIndustryTableViewCell.xib in Resources */,
 				183B78E4247E535300D23A59 /* ZZHDateCollectionViewCell.xib in Resources */,
+				18D4F0DA248E4121007865DE /* ZZHTimeLineTableViewCell.xib in Resources */,
 				183B78BF247E533000D23A59 /* ZZHQuoteIndustryVC.xib in Resources */,
 				157A716C2477A282003D0081 /* MXZAnswerVC.xib in Resources */,
 				15A6F1BD2475083A002C0930 /* MXZFullDisplay.xib in Resources */,
@@ -1318,7 +1339,6 @@
 				15A6F1C5247524E2002C0930 /* MXZFullThirdSectionCell.xib in Resources */,
 				151AC19A247259A500EAE0BD /* MXZHomeNavSearchView.xib in Resources */,
 				1564961F2477CA56006745E8 /* MXZQuestionWeekItem.xib in Resources */,
-				183B78C0247E533000D23A59 /* ZZHQuoteNewsVC.xib in Resources */,
 				188FC31E248495A00004FF40 /* RegisterVC.xib in Resources */,
 				152636A4246E771D00D01BE0 /* MXZHomeFourthCollectionCell.xib in Resources */,
 				157A71712477A526003D0081 /* MXZAnswerCell.xib in Resources */,
@@ -1328,7 +1348,6 @@
 				1517AC6D247CA579007BC789 /* MXZFeedbackVC.xib in Resources */,
 				1866EA04247DF89D002C0E05 /* MineEditProfileCell.xib in Resources */,
 				18C2DE232473BB1C00116E2E /* CommunityTopicCell.xib in Resources */,
-				183B78DC247E535300D23A59 /* ZZHTimeLineTableViewCell.xib in Resources */,
 				157A7164247676CE003D0081 /* MXZSignPopView.xib in Resources */,
 				18E8AC822474D51D00E3D7C4 /* CommunityBannerCell.xib in Resources */,
 				1859014224692D8B00CA7A68 /* PublishVC.xib in Resources */,
@@ -1336,6 +1355,7 @@
 				18C2DE192473788900116E2E /* CommunityBannerViewCell.xib in Resources */,
 				18C2DE2C2473DD9700116E2E /* CommunityFriendCell.xib in Resources */,
 				151A95B0247BB82F007F3AAB /* MXZMessageCenterVC.xib in Resources */,
+				18D4F0CF248E40EA007865DE /* ZZHQuoteNewsVC.xib in Resources */,
 				1517AC72247CBC3A007BC789 /* MXZFeedbackBtn.xib in Resources */,
 				188FC32C2484AF880004FF40 /* MineCodeView.xib in Resources */,
 				154C26B8247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib in Resources */,
@@ -1348,12 +1368,14 @@
 				183B78E1247E535300D23A59 /* ZZHImageTableViewCell.xib in Resources */,
 				188FC322248495A00004FF40 /* LoginVC.xib in Resources */,
 				1846879F247D1D2C007BC2FC /* MineDynamicVC.xib in Resources */,
+				18D4F0E4248E4154007865DE /* ZZHDateHeadCell.xib in Resources */,
 				15CDFAE32475036200B2811F /* MXZFullThirdSectionHeadView.xib in Resources */,
 				184687A0247D1D2C007BC2FC /* MineVC.xib in Resources */,
 				1846879E247D1D2C007BC2FC /* MineEditVC.xib in Resources */,
 				152636A6246E771D00D01BE0 /* MXZHomeFourthSectionHeadView.xib in Resources */,
 				184687A8247D1D53007BC2FC /* MXZHomeIndustryVC.xib in Resources */,
 				183B78C3247E533000D23A59 /* ZZHQuotesVC.xib in Resources */,
+				18D4F0DE248E413D007865DE /* ZZHDateTableViewCell.xib in Resources */,
 				188FC3262484972C0004FF40 /* LoginTableViewCell.xib in Resources */,
 				1846879B247D1D2C007BC2FC /* AttentionTableViewCell.xib in Resources */,
 				15A6F1CF24752C15002C0930 /* MXZFullFourthSectionCell.xib in Resources */,
@@ -1363,8 +1385,6 @@
 				157A71732477B14F003D0081 /* MXZAnswerWeekItem.xib in Resources */,
 				15CDFAD72474C95900B2811F /* MXZFullFirstSectionCell.xib in Resources */,
 				18AA2BC3246E23B1000801B1 /* CommunityChildBVC.xib in Resources */,
-				183B78E3247E535300D23A59 /* ZZHDateHeadCell.xib in Resources */,
-				183B78E5247E535300D23A59 /* ZZHDateTableViewCell.xib in Resources */,
 				1517AC7A247D0497007BC789 /* MXZFeedbackSecondCell.xib in Resources */,
 				15CDFADE2474F83800B2811F /* MXZFullSecondSectionFootView.xib in Resources */,
 				152636AA246E771D00D01BE0 /* MXZHomeSecondSectionCell.xib in Resources */,
@@ -1429,6 +1449,7 @@
 				15593E00247622FA007B3141 /* MXZSignVC.m in Sources */,
 				183B78C7247E533000D23A59 /* ZZHQuotesVC.m in Sources */,
 				189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */,
+				18D4F0C9248E4087007865DE /* QuoteNewModel.m in Sources */,
 				18699D0E247B998A000A1022 /* MineInformationNameView.m in Sources */,
 				15CDFAD62474C95900B2811F /* MXZFullFirstSectionCell.m in Sources */,
 				184687AA247D1D98007BC2FC /* MXZHomeVC.m in Sources */,
@@ -1449,7 +1470,6 @@
 				152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */,
 				1828C5D52486358E00462796 /* QHDetailViewController.m in Sources */,
 				188FC3272484972C0004FF40 /* LoginTableViewCell.m in Sources */,
-				183B78C5247E533000D23A59 /* ZZHQuoteNewsVC.m in Sources */,
 				1828C5CB2486358E00462796 /* QHLoctionModel.m in Sources */,
 				18E8AC752474BDA300E3D7C4 /* CommunityFriendViewCell.m in Sources */,
 				1526D6B6247E07E6006A2556 /* ENDNetWorkDELETE.m in Sources */,
@@ -1457,6 +1477,7 @@
 				1828C5DD2486358E00462796 /* BusinessProcess.m in Sources */,
 				151A95AF247BB82F007F3AAB /* MXZMessageCenterVC.m in Sources */,
 				1866EA03247DF89D002C0E05 /* MineEditProfileCell.m in Sources */,
+				18D4F0C2248E407E007865DE /* SigninModel.m in Sources */,
 				1526D6B4247E07E6006A2556 /* ENDNetWorkPOST.m in Sources */,
 				18AA2BC2246E23B1000801B1 /* CommunityChildBVC.m in Sources */,
 				1526D6B7247E07E6006A2556 /* ENDNetWorkPUT.m in Sources */,
@@ -1474,18 +1495,19 @@
 				15263699246E771D00D01BE0 /* MXZHomeQuoteVC.m in Sources */,
 				1828C5C92486358E00462796 /* ZCBaseView.m in Sources */,
 				18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */,
-				183B78DE247E535300D23A59 /* ZZHTimeLineTableViewCell.m in Sources */,
 				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,
 				183B78DF247E535300D23A59 /* ZZHDateCollectionViewCell.m in Sources */,
 				1828C5C82486358E00462796 /* NetWork.m in Sources */,
 				1526D6D2247E0A7C006A2556 /* EGHImagePickerVCManager.m in Sources */,
 				1526D6D4247E0A7C006A2556 /* ENDGradientLabel.m in Sources */,
+				18D4F0CB248E4087007865DE /* QuoteCalendarModel.m in Sources */,
 				188FC321248495A00004FF40 /* forgetPwdVC.m in Sources */,
 				1828C5DB2486358E00462796 /* QHDataCollectionViewCell.m in Sources */,
 				154DFC652468F4AE0098498C /* AppDelegate.m in Sources */,
 				188FC32A2484AF790004FF40 /* MineCodeView.m in Sources */,
 				1828C5D72486358E00462796 /* ZCManage.m in Sources */,
 				1828C5CA2486358E00462796 /* YKTimeLineView.m in Sources */,
+				18D4F0D4248E40FD007865DE /* ZZHQuoteCalendarVC.m in Sources */,
 				15CDFAD12474C2FB00B2811F /* MXZFullDisplay.m in Sources */,
 				1828C5DC2486358E00462796 /* CZ_NEWMarketVC.m in Sources */,
 				152636A7246E771D00D01BE0 /* MXZHomeFifthSectionCell.m in Sources */,
@@ -1498,6 +1520,7 @@
 				184687A3247D1D2C007BC2FC /* MineVC.m in Sources */,
 				15AA6EF7247F459300F416CF /* MXZFinanceAffairModel.m in Sources */,
 				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
+				18D4F0DF248E413D007865DE /* ZZHDateTableViewCell.m in Sources */,
 				15A6F1C0247513F7002C0930 /* MXZFullThirdSectionHeadView.m in Sources */,
 				CBFD7128248E2A9800E8E009 /* MyTZimgPickerC.m in Sources */,
 				183B78DD247E535300D23A59 /* ZZHImageTableViewCell.m in Sources */,
@@ -1513,6 +1536,7 @@
 				CBFD7125248E21E000E8E009 /* MyImgPickerC.m in Sources */,
 				156496222477D1D6006745E8 /* MXZAnswerABCButton.m in Sources */,
 				157A71762477B393003D0081 /* MXZAnswerWeekItem.m in Sources */,
+				18D4F0CA248E4087007865DE /* CalendarDateDataModel.m in Sources */,
 				151A95B4247BBA3B007F3AAB /* MXZAboutUsVC.m in Sources */,
 				1568DB70248B789A008CF3B0 /* NetworkTool.swift in Sources */,
 				1828C5C72486358E00462796 /* YKLineDataSet.m in Sources */,
@@ -1528,18 +1552,17 @@
 				154DFC762468F4B00098498C /* main.m in Sources */,
 				1517AC70247CB83E007BC789 /* MXZFeedbackBtn.m in Sources */,
 				1526D6D9247E0A7C006A2556 /* NSString+DealError.m in Sources */,
+				18D4F0D0248E40EA007865DE /* ZZHQuoteNewsVC.m in Sources */,
 				184687A7247D1D53007BC2FC /* MXZHomeIndustryVC.m in Sources */,
 				1828C5D62486358E00462796 /* YKLineChartView.m in Sources */,
-				183B78C1247E533000D23A59 /* ZZHQuoteCalendarVC.m in Sources */,
-				183B78DB247E535300D23A59 /* ZZHDateTableViewCell.m in Sources */,
 				18699CFD247B544F000A1022 /* UIImage+Image.m in Sources */,
 				15A6F1C92475276E002C0930 /* MXZFullThirdCollectionCell.m in Sources */,
 				1828C5E42486358E00462796 /* TopView.m in Sources */,
-				183B78E2247E535300D23A59 /* ZZHDateHeadCell.m in Sources */,
 				1828C5D82486358E00462796 /* UIButton+LXMImagePosition.m in Sources */,
 				151A95AA247BA995007F3AAB /* MXZSettingCenterVC.m in Sources */,
 				15AA6EFD247F4D7800F416CF /* MXZHomeThirdSectionHeadView.m in Sources */,
 				15A6F1CE24752C15002C0930 /* MXZFullFourthSectionCell.m in Sources */,
+				18D4F0E3248E4154007865DE /* ZZHDateHeadCell.m in Sources */,
 				CBAC7855248DCB0200C36B81 /* CommunityDynamicListModel.m in Sources */,
 				1526D6D8247E0A7C006A2556 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				152636A5246E771D00D01BE0 /* MXZHomeFourthSectionCell.m in Sources */,
@@ -1547,6 +1570,7 @@
 				1526D6D3247E0A7C006A2556 /* TimerTool.m in Sources */,
 				18C2DE2B2473DD9700116E2E /* CommunityFriendCell.m in Sources */,
 				151AC1932472595D00EAE0BD /* ZKCycleScrollView.m in Sources */,
+				18D4F0D9248E4121007865DE /* ZZHTimeLineTableViewCell.m in Sources */,
 				157A71702477A526003D0081 /* MXZAnswerCell.m in Sources */,
 				15593DFC2476123B007B3141 /* MXZHomeNavSearchView.m in Sources */,
 				18E8AC7D2474D2A800E3D7C4 /* CommunityDynamicCell.m in Sources */,

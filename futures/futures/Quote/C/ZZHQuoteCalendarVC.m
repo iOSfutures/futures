@@ -10,17 +10,17 @@
 
 #import "ZZHDateTableViewCell.h"
 #import "ZZHDateHeadCell.h"
+#import "QuoteCalendarModel.h"
 
 #import "UIColor+Hex.h"
 #import "UIImage+OriginalImage.h"
+
 
 @interface ZZHQuoteCalendarVC () <UITableViewDelegate,UITableViewDataSource, UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic,strong) NSArray *weekDayArray;
-// 数据数组
-@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic,strong) NSArray *calendarArray;
 
 @end
 
@@ -38,7 +38,6 @@ NSString *TableViewID = @"TableView";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
     
-    _weekDayArray = @[@"日",@"一",@"二",@"三",@"四",@"五",@"六"];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -61,6 +60,27 @@ NSString *TableViewID = @"TableView";
     //启用右滑返回手势
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
 
+//    NSDate *todayDate = [NSDate date];
+//    NSLog(@"!!!!!!%@",todayDate);
+    
+    [self getCanlendar];
+}
+
+//请求数据
+- (void)getCanlendar {
+    WEAKSELF
+    NSDate *todayDate = [NSDate date];
+    NSDictionary *dic = @{@"date":todayDate};
+    [ENDNetWorkManager getWithPathUrl:@"/admin/getFinanceCalender" parameters:nil queryParams:dic Header:nil success:^(BOOL success, id result) {
+        NSError *error;
+        weakSelf.calendarArray = [MTLJSONAdapter modelsOfClass:[QuoteCalendarModel class] fromJSONArray:result[@"data"] error:&error];
+        //刷新第2个section
+//        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:2] withRowAnimation:UITableViewRowAnimationFade];
+        [weakSelf.tableView reloadData];
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf.view Message:@"请求失败" afterHideTime:DELAYTiME];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -84,19 +104,28 @@ NSString *TableViewID = @"TableView";
     return self.view;
 }
 
-#pragma mark - UITableViewViewDataSource 
+#pragma mark - UITableViewViewDataSource
+-  (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    if (section == 0) {
+        return 1;
+    }
+    else
+    return _calendarArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         ZZHDateHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:CollectionTableViewID];
         return cell;
-    } else {
+    }
+    else {
         ZZHDateTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableViewID];
         //对cell的LayoutMargins属性的设置
         //2.调整(iOS8以上)tableView边距
@@ -107,8 +136,17 @@ NSString *TableViewID = @"TableView";
             if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
                 [cell setLayoutMargins:UIEdgeInsetsZero];
             }
+        cell.calendarModel = self.calendarArray[indexPath.row];
         return cell;
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 132;
+    }
+    else
+        return UITableViewAutomaticDimension;
 }
 
 @end

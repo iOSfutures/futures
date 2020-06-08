@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong ,nonatomic) MXZRecommandTalkModel *recommandModel;
 @property (assign, nonatomic) NSInteger cellNum;
 @property (copy, nonatomic) void (^shieldBlock)(NSInteger shieldNum);
+
+@property (assign, nonatomic) BOOL rightBarBtnHidden;
 @end
 
 NS_ASSUME_NONNULL_END

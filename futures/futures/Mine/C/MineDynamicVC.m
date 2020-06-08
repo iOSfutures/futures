@@ -17,6 +17,9 @@
 
 #import "UserModel.h"
 
+#import "MXZRecommandTalkModel.h"
+#import "MXZFullDisplay.h"
+
 #define oriOffsetY -335.5
 #define oriH 293
 
@@ -41,7 +44,7 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintH;
 
-@property (strong , nonatomic) NSArray *dynamicsArray;
+@property (strong , nonatomic) NSMutableArray *dynamicsArray;
 
 @property (strong, nonatomic)UserModel *user;
 
@@ -76,7 +79,7 @@ NSString *DynamicCell3 = @"DynamicCell3";
     [self clickAttentionGes];
     [self clickFavoriteGes];
     [self clickFanGes];
-
+    
     [self getUser];
     [self getDynamics];
     
@@ -155,6 +158,21 @@ NSString *DynamicCell3 = @"DynamicCell3";
     CommunityDynamicCell *cell = [tableView dequeueReusableCellWithIdentifier:DynamicCell3];
     cell.dynamicModel = self.dynamicsArray[indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CommunityDynamicModel *model = _dynamicsArray[indexPath.row];
+    MXZRecommandTalkModel *mxzModel = MXZRecommandTalkModel.new;
+    mxzModel.content = model.content;
+    mxzModel.picture = model.picture1;
+    mxzModel.user = model.user;
+    mxzModel.recommandCount = indexPath.row%5;
+    MXZFullDisplay *vc = MXZFullDisplay.new;
+    vc.cellNum = indexPath.row;
+    vc.recommandModel = mxzModel;
+    vc.rightBarBtnHidden = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)setLayer
@@ -237,7 +255,7 @@ NSString *DynamicCell3 = @"DynamicCell3";
     WEAKSELF
     
     NSDictionary *dic = @{@"_orderByDesc":@"publishTime",@"userId":_userId};
-//    [NSString stringWithFormat:@"/user/talk/getTalkList/%d",_user.userId.intValue]
+    //    [NSString stringWithFormat:@"/user/talk/getTalkList/%d",_user.userId.intValue]
     [ENDNetWorkManager postWithPathUrl:@"/user/talk/getTalkList/155" parameters:dic queryParams:nil Header:nil success:^(BOOL success, id result) {
         NSError *error;
         weakSelf.dynamicsArray = [MTLJSONAdapter modelsOfClass:[CommunityDynamicModel class] fromJSONArray:result[@"data"][@"list"] error:&error];
@@ -257,7 +275,7 @@ NSString *DynamicCell3 = @"DynamicCell3";
         weakSelf.attentionCountLabel.text = [NSString stringWithFormat:@"%d",user.followCount.intValue];
         weakSelf.fanCountLabel.text = [NSString stringWithFormat:@"%d",user.fansCount.intValue];
         [weakSelf.avatarImgView sd_setImageWithURL:[NSURL URLWithString:user.head]
-        placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
+                                  placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
         weakSelf.nameLabel.text = user.nickName;
         if([user.signature isEqualToString:@""])
         {
@@ -268,7 +286,7 @@ NSString *DynamicCell3 = @"DynamicCell3";
             weakSelf.signatureLabel.text = user.signature;
         }
         weakSelf.user = user;
-//        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
+        //        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
     } failure:^(BOOL failuer, NSError *error) {
         NSLog(@"%@",error.description);
         [Toast makeText:weakSelf.view Message:@"请求用户数据失败" afterHideTime:DELAYTiME];

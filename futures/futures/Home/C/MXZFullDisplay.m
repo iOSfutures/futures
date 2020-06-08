@@ -46,9 +46,11 @@
     reportButton.target = self;
     reportButton.action = @selector(reportClick);
     
-    
-    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:reportButton, shieldButton, nil]];
-    
+    if(!_rightBarBtnHidden)
+    {
+        [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:reportButton, shieldButton, nil]];
+
+    }
 }
 
 -(void)shieldClick{

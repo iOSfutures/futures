@@ -105,6 +105,10 @@
         default:
             break;
     }
+    if (indexPath.section >= 4) {
+        cell.nonSubtitle = YES;
+        cell.timeLabel.text = @"昨天";
+    }
     return cell;
 }
 

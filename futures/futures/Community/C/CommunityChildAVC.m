@@ -275,8 +275,15 @@ NSString *DynamicCell = @"DynamicCell";
         mxzModel.user = model.user;
         mxzModel.recommandCount = indexPath.row%5;
         MXZFullDisplay *vc = MXZFullDisplay.new;
+        vc.cellNum = indexPath.row;
         vc.recommandModel = mxzModel;
         [self.navigationController pushViewController:vc animated:YES];
+        WEAKSELF
+        vc.shieldBlock = ^(NSInteger shieldNum){
+            [weakSelf.dynamicsArray removeObjectAtIndex:shieldNum];
+            [weakSelf.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:shieldNum inSection:3]] withRowAnimation:UITableViewRowAnimationTop];
+            
+        };
     }
 }
 

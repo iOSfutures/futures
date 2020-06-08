@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CZ_NEWMarketVC :BaseViewController<JXCategoryListContentViewDelegate>
 
 // <ZJScrollPageViewChildVcDelegate>
+@property (nonatomic, assign, getter=isTabBarHidden)BOOL tabBarHidden;
 
 @property (nonatomic, copy) NSString *navTitle;
 @end

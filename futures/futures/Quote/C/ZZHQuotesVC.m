@@ -80,7 +80,7 @@
     if (index == 0)
     {
         CZ_NEWMarketVC *marketVC = CZ_NEWMarketVC.new;
-
+        marketVC.tabBarHidden = NO;
 
         return marketVC;
 //        ZZHQuoteCalendarVC *quoteCalendarVC = [ZZHQuoteCalendarVC new];

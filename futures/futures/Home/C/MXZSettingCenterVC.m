@@ -126,6 +126,11 @@
         MXZAboutUsVC *aboutVC = [[MXZAboutUsVC alloc]init];
         [self.navigationController pushViewController:aboutVC animated:YES];
     }
+    else if (indexPath.section == 1 && indexPath.row == 1){
+        //清空userId
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end

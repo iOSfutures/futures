@@ -52,7 +52,10 @@
 }
 
 -(void)shieldClick{
-    
+    if (_shieldBlock) {
+        _shieldBlock(self.cellNum);
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)reportClick{

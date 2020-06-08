@@ -29,6 +29,7 @@
 #import "ZZHQuoteNewsVC.h"
 #import "MXZRecommandTalkModel.h"
 #import "LoginVC.h"
+#import "CZ_NEWMarketVC.h"
 
 
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
@@ -37,7 +38,7 @@
 @interface MXZHomeVC ()<UITableViewDelegate, UITableViewDataSource, NSURLSessionDataDelegate, ZKCycleScrollViewDelegate, ZKCycleScrollViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 @property (strong, nonatomic) NSArray *affairsArray;
-@property (strong, nonatomic) NSArray *recommandTalkArray;
+@property (strong, nonatomic) NSMutableArray *recommandTalkArray;
 @property (strong, nonatomic) MXZHomeThirdSectionHeadView *homeThirdSectionHeadView;
 @property (nonatomic, assign) BOOL hasUserId;
 @end
@@ -86,6 +87,7 @@
         }
     }];
     [self setNavBarView];
+    [self getRecommandTalkModel];
 
     //为homeTableView注册cell
     [self.homeTableView registerNib:[UINib nibWithNibName:@"MXZHomeSecondSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZHomeSecondSectionCell"];
@@ -99,8 +101,8 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     NSString *port = [NSString stringWithFormat:@"/admin/getFinanceAffairs?date"];
+    self.tabBarController.tabBar.hidden = NO;
     [self getData:port];
-    [self getRecommandTalkModel];
     [self getUserDefault];
 }
 
@@ -295,7 +297,8 @@
 }
 
 -(void)quoteBtnClick{
-    MXZHomeQuoteVC *quoteVC = [[MXZHomeQuoteVC alloc]init];
+    CZ_NEWMarketVC *quoteVC = [[CZ_NEWMarketVC alloc]init];
+    quoteVC.tabBarHidden = YES;
     [self.navigationController pushViewController:quoteVC animated:YES];
 }
 
@@ -443,6 +446,8 @@
             cell = [[NSBundle mainBundle] loadNibNamed:@"MXZHomeFifthSectionCell" owner:self options:nil].firstObject;
         }
         
+        
+        
         cell.recommandModel = self.recommandTalkArray[indexPath.row];
         cell.recommandModel.recommandCount = indexPath.row%5;
         return cell;
@@ -561,8 +566,15 @@
 {
     if (indexPath.section == 4) {
         MXZFullDisplay *titleVC = [[MXZFullDisplay alloc]init];
+        titleVC.cellNum = indexPath.row;
         titleVC.recommandModel = self.recommandTalkArray[indexPath.row];
         [self.navigationController pushViewController:titleVC animated:YES];
+        WEAKSELF
+        titleVC.shieldBlock = ^(NSInteger shieldNum){
+            [weakSelf.recommandTalkArray removeObjectAtIndex:shieldNum];
+            [weakSelf.homeTableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:shieldNum inSection:4]] withRowAnimation:UITableViewRowAnimationTop];
+            
+        };
     }
 }
 

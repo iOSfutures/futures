@@ -15,6 +15,7 @@
 #import "QHDetailViewController.h"
 #import "NetWork.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+#import "UIImage+OriginalImage.h"
 
 #define ColorBlue [UIColor colorWithRed:113/255.0 green:103/255.0 blue:252/255.0 alpha:1/1.0]
 @interface CZ_NEWMarketVC ()<UITableViewDelegate,UITableViewDataSource,UITabBarControllerDelegate>{
@@ -98,7 +99,9 @@ static NSString *cellid = @"cellID";
             make.bottom.mas_equalTo(self.view.mas_bottom).offset(-10);
         }
     }];
-    self.title = @"行情列表";
+    self.navigationItem.title = @"日历数据";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
 //    [self.view addSubview:self.topDown];
     
 //    [super backNavigationStyle:RGB(150, 174, 255)];
@@ -118,6 +121,11 @@ static NSString *cellid = @"cellID";
 //    self.navigationController.navigationBar.shadowImage = nil;
     
 }
+
+-(void)backPreView{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (UIImage*)createImageWithColor:(UIColor*)color {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
@@ -133,6 +141,7 @@ static NSString *cellid = @"cellID";
     [super viewWillAppear:YES];
 //    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColor.whiteColor}];
     self.tabBarController.delegate = self;
+    self.tabBarController.tabBar.hidden = self.tabBarHidden;
 
 
 //    [self navigationSetUp];

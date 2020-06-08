@@ -298,7 +298,7 @@
     }
     else
     {
-        return 1;
+        return 0;
     }
 }
 
@@ -315,12 +315,6 @@
     else if(indexPath.section == 1)
     {
         MineModel *mineModel = self.mineArray[indexPath.row + 3];
-        cell.imageView.image = [UIImage imageNamed:mineModel.imageName];
-        cell.textLabel.text = mineModel.text;
-    }
-    else
-    {
-        MineModel *mineModel = self.mineArray[indexPath.row + 5];
         cell.imageView.image = [UIImage imageNamed:mineModel.imageName];
         cell.textLabel.text = mineModel.text;
     }

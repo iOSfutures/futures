@@ -20,7 +20,7 @@
     //获取用户偏好
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     //清空userId
-    [userDefault setObject:nil forKey:@"userId"];
+//    [userDefault setObject:nil forKey:@"userId"];
     
     //去掉原生tabbar分割线
     [self.tabBar setShadowImage:[UIImage new]];

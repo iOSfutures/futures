@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MXZFullDisplay : UIViewController
 @property (strong ,nonatomic) MXZRecommandTalkModel *recommandModel;
+@property (assign, nonatomic) NSInteger cellNum;
+@property (copy, nonatomic) void (^shieldBlock)(NSInteger shieldNum);
 @end
 
 NS_ASSUME_NONNULL_END

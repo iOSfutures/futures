@@ -18,13 +18,12 @@
     [super viewDidLoad];
     
     //获取用户偏好
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    
+//    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
     //初始化userId
-    if([userDefault objectForKey:@"userId"] == nil)
-    {
-        [userDefault setObject:nil forKey:@"userId"];
-    }
+//    if([userDefault objectForKey:@"userId"] == nil)
+//    {
+//        [userDefault setObject:nil forKey:@"userId"];
+//    }
     
     //去掉原生tabbar分割线
     [self.tabBar setShadowImage:[UIImage new]];

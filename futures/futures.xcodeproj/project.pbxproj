@@ -216,6 +216,8 @@
 		18E8AC8A247519D100E3D7C4 /* CommunityDynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8AC89247519D000E3D7C4 /* CommunityDynamicModel.m */; };
 		43596A819B66D10178A0882C /* Pods_futures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66967DA234F0732F071AFCD /* Pods_futures.framework */; };
 		CBAC7855248DCB0200C36B81 /* CommunityDynamicListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7854248DCB0200C36B81 /* CommunityDynamicListModel.m */; };
+		CBFD7125248E21E000E8E009 /* MyImgPickerC.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFD7124248E21E000E8E009 /* MyImgPickerC.m */; };
+		CBFD7128248E2A9800E8E009 /* MyTZimgPickerC.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFD7127248E2A9800E8E009 /* MyTZimgPickerC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -572,6 +574,11 @@
 		C66967DA234F0732F071AFCD /* Pods_futures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_futures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBAC7853248DCB0200C36B81 /* CommunityDynamicListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityDynamicListModel.h; sourceTree = "<group>"; };
 		CBAC7854248DCB0200C36B81 /* CommunityDynamicListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityDynamicListModel.m; sourceTree = "<group>"; };
+		CBFD7122248E1F9500E8E009 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CBFD7123248E21E000E8E009 /* MyImgPickerC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyImgPickerC.h; sourceTree = "<group>"; };
+		CBFD7124248E21E000E8E009 /* MyImgPickerC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyImgPickerC.m; sourceTree = "<group>"; };
+		CBFD7126248E2A9800E8E009 /* MyTZimgPickerC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTZimgPickerC.h; sourceTree = "<group>"; };
+		CBFD7127248E2A9800E8E009 /* MyTZimgPickerC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTZimgPickerC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1089,6 +1096,10 @@
 				188FC3182484959C0004FF40 /* forgetPwdVC.h */,
 				188FC31B2484959E0004FF40 /* forgetPwdVC.m */,
 				188FC3192484959C0004FF40 /* forgetPwdVC.xib */,
+				CBFD7123248E21E000E8E009 /* MyImgPickerC.h */,
+				CBFD7124248E21E000E8E009 /* MyImgPickerC.m */,
+				CBFD7126248E2A9800E8E009 /* MyTZimgPickerC.h */,
+				CBFD7127248E2A9800E8E009 /* MyTZimgPickerC.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1269,6 +1280,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 154DFC572468F4AE0098498C;
 			productRefGroup = 154DFC612468F4AE0098498C /* Products */;
@@ -1487,6 +1499,7 @@
 				15AA6EF7247F459300F416CF /* MXZFinanceAffairModel.m in Sources */,
 				185AC2AD246E899D006EC3E6 /* UIColor+Hex.m in Sources */,
 				15A6F1C0247513F7002C0930 /* MXZFullThirdSectionHeadView.m in Sources */,
+				CBFD7128248E2A9800E8E009 /* MyTZimgPickerC.m in Sources */,
 				183B78DD247E535300D23A59 /* ZZHImageTableViewCell.m in Sources */,
 				1828C5E52486358E00462796 /* ZCBaseViewController.m in Sources */,
 				152636A2246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m in Sources */,
@@ -1497,6 +1510,7 @@
 				1828C5C62486358E00462796 /* YKLineChartViewBase.m in Sources */,
 				184687A2247D1D2C007BC2FC /* MineEditVC.m in Sources */,
 				151AC199247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.m in Sources */,
+				CBFD7125248E21E000E8E009 /* MyImgPickerC.m in Sources */,
 				156496222477D1D6006745E8 /* MXZAnswerABCButton.m in Sources */,
 				157A71762477B393003D0081 /* MXZAnswerWeekItem.m in Sources */,
 				151A95B4247BBA3B007F3AAB /* MXZAboutUsVC.m in Sources */,
@@ -1555,6 +1569,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				154DFC722468F4B00098498C /* Base */,
+				CBFD7122248E1F9500E8E009 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1566,6 +1581,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1624,6 +1640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

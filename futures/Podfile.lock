@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Alamofire (4.9.1)
   - BRPickerView (2.6.2):
     - BRPickerView/AddressPickerView (= 2.6.2)
     - BRPickerView/Base (= 2.6.2)
@@ -40,10 +41,12 @@ PODS:
   - SDWebImage/Core (5.0.6)
   - SVProgressHUD (2.2.5)
   - TYCyclePagerView (1.2.0)
+  - TZImagePickerController (3.3.2)
   - ZXCountDownView (1.0.6)
 
 DEPENDENCIES:
   - AFNetworking (<= 3.2.1)
+  - Alamofire (~> 4.9.1)
   - BRPickerView
   - IQKeyboardManager
   - JXCategoryView
@@ -55,11 +58,13 @@ DEPENDENCIES:
   - SDWebImage (~> 5.0.6)
   - SVProgressHUD (~> 2.2.5)
   - TYCyclePagerView
+  - TZImagePickerController
   - ZXCountDownView
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - AFNetworking
+    - Alamofire
     - BRPickerView
     - IQKeyboardManager
     - JXCategoryView
@@ -71,10 +76,12 @@ SPEC REPOS:
     - SDWebImage
     - SVProgressHUD
     - TYCyclePagerView
+    - TZImagePickerController
     - ZXCountDownView
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BRPickerView: ed57c158a1e5e6b71b98347a03d1227a70f674d4
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
@@ -86,8 +93,9 @@ SPEC CHECKSUMS:
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TYCyclePagerView: 2b051dade0615c70784aa34f40c646feeddb7344
+  TZImagePickerController: 36ca728ec681228918aa82e993aaab1962281b72
   ZXCountDownView: 486d888558551210c6790855ec24e82853a31d9e
 
-PODFILE CHECKSUM: 7c11182304f0e2e33cc44e320f6598b7f8043027
+PODFILE CHECKSUM: eb2f94c12bd3f43465565bb37eda98d3321836df
 
 COCOAPODS: 1.9.3

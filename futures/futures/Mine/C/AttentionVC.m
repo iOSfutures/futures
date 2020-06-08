@@ -11,6 +11,8 @@
 #import "AttentionTableViewCell.h"
 #import "UIImage+OriginalImage.h"
 
+#import "MXZMessageCenterVC.h"
+
 #import "UserModel.h"
 
 @interface AttentionVC () <UITableViewDelegate,UITableViewDataSource, UIGestureRecognizerDelegate>
@@ -45,10 +47,24 @@
     if([_followsOrFans isEqualToString:@"follows"])
     {
         [self getFollows];
+        if(self.followsArray.count == 0)
+        {
+            [self.view removeFromSuperview];
+            MXZMessageCenterVC *noFollowsVC = MXZMessageCenterVC.new;
+            noFollowsVC.labelStr = @"暂无关注";
+            [self.view addSubview:noFollowsVC.view];
+        }
     }
     else if([_followsOrFans isEqualToString:@"Fans"])
     {
         [self getFans];
+        if(self.followsArray.count == 0)
+        {
+            [self.view removeFromSuperview];
+            MXZMessageCenterVC *noFansVC = MXZMessageCenterVC.new;
+            noFansVC.labelStr = @"暂无粉丝";
+            [self.view addSubview:noFansVC.view];
+        }
     }
     
     

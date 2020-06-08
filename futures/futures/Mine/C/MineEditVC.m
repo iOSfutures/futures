@@ -18,7 +18,7 @@
 
 #import <BRPickerView.h>
 
-@interface MineEditVC ()<UITableViewDataSource, UITableViewDelegate, MineInformationNameViewDelegate, MineInformationSexViewDelegate>
+@interface MineEditVC ()<UITableViewDataSource, UITableViewDelegate, MineInformationNameViewDelegate, MineInformationSexViewDelegate, MineEditProfileCellDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImgView;
 
 @property (weak, nonatomic) IBOutlet UITableView *mineEditTableView;
@@ -27,7 +27,10 @@
 @property (weak, nonatomic)MineInformationNameView *mineInformationNameView;
 @property (weak, nonatomic)MineInformationSexView *mineInformationSexView;
 
+@property (copy, nonatomic)NSString *originName;
+@property (copy, nonatomic)NSString *originSignature;
 @property (copy, nonatomic)NSString *changedName;
+@property (copy, nonatomic)NSString *changedSignature;
 
 
 @end
@@ -105,6 +108,40 @@ NSString *MineProfileCellID = @"MineProfileCell";
     [self presentViewController:alertC animated:YES completion:nil];
 }
 
+#pragma mark - InformationDelegate
+
+- (void)mineInformationNameViewDidClickCancelBtn:(MineInformationNameView *)mineInformationNameView
+{
+    [self removeCoverView:mineInformationNameView];
+}
+
+- (void)mineInformationNameViewDidClickConfirmBtn:(MineInformationNameView *)mineInformationNameView changedName:(NSString *)changedName
+{
+    _changedName = changedName;
+    [self setUser];
+    NSArray *indexPaths = @[[NSIndexPath indexPathForRow:0 inSection:0]];
+    [self.mineEditTableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self removeCoverView:mineInformationNameView];
+}
+
+- (void)mineInformationSexViewDidClickCancelBtn:(MineInformationSexView *)mineInformationSexView
+{
+    [self removeCoverView:mineInformationSexView];
+}
+
+- (void)mineInformationSexViewDidClickConfirmBtn:(MineInformationSexView *)mineInformationSexView
+{
+    [self removeCoverView:mineInformationSexView];
+}
+
+- (void)mineEditProfileCellDidEndEditing:(MineEditProfileCell *)mineEditProfileCell changedSignature:(NSString *)changedSignature
+{
+    _changedSignature = changedSignature;
+    [self setUser];
+    NSArray *indexPaths = @[[NSIndexPath indexPathForRow:3 inSection:0]];
+    [self.mineEditTableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 #pragma mark - TableViewDelegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -137,7 +174,11 @@ NSString *MineProfileCellID = @"MineProfileCell";
         if(indexPath.row == 0)
         {
             cell.textLabel.text = @"昵称";
-            cell.detailTextLabel.text = _changedName;
+            cell.detailTextLabel.text = _user.nickName;
+            if(_changedName)
+            {
+                cell.detailTextLabel.text = _changedName;
+            }
             return cell;
         }
         else if(indexPath.row == 1)
@@ -156,6 +197,12 @@ NSString *MineProfileCellID = @"MineProfileCell";
         {
             MineEditProfileCell *profileCell = [tableView dequeueReusableCellWithIdentifier:MineProfileCellID];
             profileCell.user = _user;
+            profileCell.delegate = self;
+            profileCell.signatureTextF.text = _user.signature;
+            if(_changedSignature)
+            {
+                profileCell.signatureTextF.text = _changedSignature;
+            }
             return profileCell;
         }
     }
@@ -272,29 +319,6 @@ NSString *MineProfileCellID = @"MineProfileCell";
     
 }
 
-- (void)mineInformationNameViewDidClickCancelBtn:(MineInformationNameView *)mineInformationNameView
-{
-    [self removeCoverView:mineInformationNameView];
-}
-
-- (void)mineInformationNameViewDidClickConfirmBtn:(MineInformationNameView *)mineInformationNameView changedName:(NSString *)changedName
-{
-    _changedName = changedName;
-    [self setUser];
-    NSArray *indexPaths = @[[NSIndexPath indexPathForRow:0 inSection:0]];
-    [self.mineEditTableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self removeCoverView:mineInformationNameView];
-}
-
-- (void)mineInformationSexViewDidClickCancelBtn:(MineInformationSexView *)mineInformationSexView
-{
-    [self removeCoverView:mineInformationSexView];
-}
-
-- (void)mineInformationSexViewDidClickConfirmBtn:(MineInformationSexView *)mineInformationSexView
-{
-    [self removeCoverView:mineInformationSexView];
-}
 
 - (void)removeCoverView:(UIView *)view
 {
@@ -365,7 +389,25 @@ NSString *MineProfileCellID = @"MineProfileCell";
 
 -(void)setUser{
     WEAKSELF
-    NSDictionary *dic = @{@"id":_user.userId,@"nickName":_changedName};
+    NSString *changeSignature;
+    NSString *changedName;
+    if(_changedName == nil)
+    {
+        changedName = _user.nickName;
+    }
+    else
+    {
+        changedName = _changedName;
+    }
+    if(_changedSignature == nil)
+    {
+        changeSignature = _user.signature;
+    }
+    else
+    {
+        changeSignature = _changedSignature;
+    }
+    NSDictionary *dic = @{@"id":_user.userId,@"nickName":changedName,@"signature":changeSignature};
     [ENDNetWorkManager putWithPathUrl:@"/user/personal/updateUser" parameters:dic queryParams:nil Header:nil success:^(BOOL success, id result) {
     } failure:^(BOOL failuer, NSError *error) {
         NSLog(@"%@",error.description);

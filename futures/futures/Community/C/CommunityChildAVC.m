@@ -15,21 +15,40 @@
 
 #import "CommunityTopicModel.h"
 #import "CommunityDynamicModel.h"
+#import "CommunityDynamicListModel.h"
 
 #import "CommunityTopicHeaderView.h"
 
 #import "MXZFullDisplay.h"
 #import "MXZRecommandTalkModel.h"
 
+#import <MJRefresh.h>
+
 @interface CommunityChildAVC ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong , nonatomic) NSArray *topicsArray;
-@property (strong , nonatomic) NSArray *dynamicsArray;
+@property (strong , nonatomic) NSMutableArray *dynamicsArray;
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
+@property (nonatomic, strong) CommunityDynamicListModel *listModel;
+
+@property (assign, nonatomic) NSInteger pageNumber;
+@property (nonatomic, assign) BOOL loadMore;
 
 @end
 
 @implementation CommunityChildAVC
+
+- (NSMutableArray *)dynamicsArray
+{
+    if(_dynamicsArray == nil)
+    {
+        NSMutableArray *array = NSMutableArray.new;
+        _dynamicsArray = array;
+    }
+    return _dynamicsArray;
+}
 
 NSString *BannerID = @"Banner";
 NSString *FriendID = @"Friend";
@@ -40,18 +59,48 @@ NSString *DynamicCell = @"DynamicCell";
     //    [super viewDidLoad];
     //    [self.view bringSubviewToFront:self.tableView];
     
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityBannerCell class]) bundle:nil] forCellReuseIdentifier:BannerID];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityFriendCell class]) bundle:nil] forCellReuseIdentifier:FriendID];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityTopicCell class]) bundle:nil] forCellReuseIdentifier:TopicCellID];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityDynamicCell class]) bundle:nil]forCellReuseIdentifier:DynamicCell];
+    [self registTableView];
     
     [self getTopics];
-    [self getDynamics];
     
+    [self setMJRefresh];
 }
 
 -(UIView *)listView{
     return self.view;
+}
+
+- (void)registTableView
+{
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityBannerCell class]) bundle:nil] forCellReuseIdentifier:BannerID];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityFriendCell class]) bundle:nil] forCellReuseIdentifier:FriendID];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityTopicCell class]) bundle:nil] forCellReuseIdentifier:TopicCellID];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityDynamicCell class]) bundle:nil]forCellReuseIdentifier:DynamicCell];
+}
+
+- (void)setMJRefresh
+{
+    _tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            WEAKSELF
+            weakSelf.loadMore = NO;
+            weakSelf.pageNumber = 1;
+    //        [weakSelf.tableView.mj_header endRefreshing];
+            [weakSelf getDynamics];
+        }];
+        
+        // 设置自动切换透明度(在导航栏下面自动隐藏)
+        _tableView.mj_header.automaticallyChangeAlpha = NO;
+        
+        // 上拉刷新
+        _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            WEAKSELF
+            weakSelf.loadMore = YES;
+            weakSelf.pageNumber ++;
+    //        [weakSelf.tableView.mj_footer endRefreshing];
+            [weakSelf getDynamics];
+        }];
+        
+        [self.tableView.mj_header beginRefreshing];
 }
 
 #pragma mark - TableViewDataSource
@@ -179,13 +228,38 @@ NSString *DynamicCell = @"DynamicCell";
 
 -(void)getDynamics{
     WEAKSELF
-    [ENDNetWorkManager getWithPathUrl:@"/user/talk/getRecommandTalk" parameters:nil queryParams:nil Header:nil success:^(BOOL success, id result) {
+    NSDictionary *dic = @{@"pageNumber":@(_pageNumber)};
+    [ENDNetWorkManager getWithPathUrl:@"/user/talk/getRecommandTalk" parameters:nil queryParams:dic Header:nil success:^(BOOL success, id result) {
         NSError *error;
-        weakSelf.dynamicsArray = [MTLJSONAdapter modelsOfClass:[CommunityDynamicModel class] fromJSONArray:result[@"data"][@"list"] error:&error];
+        weakSelf.listModel = [MTLJSONAdapter modelOfClass:[CommunityDynamicListModel class] fromJSONDictionary:result[@"data"] error:&error];
+        if (!weakSelf.loadMore) {
+            [weakSelf.dynamicsArray removeAllObjects];
+        }
+        [weakSelf.dynamicsArray addObjectsFromArray:weakSelf.listModel.dynamicsArray];
         [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:3] withRowAnimation:UITableViewRowAnimationFade];
-        
+        if (!weakSelf.loadMore) {
+            [weakSelf.tableView.mj_header endRefreshing];
+        }
+        else
+        {
+            if (weakSelf.listModel.hasMore)
+            {
+                [weakSelf.tableView.mj_footer endRefreshing];
+            }
+            else
+            {
+                [weakSelf.tableView.mj_footer endRefreshingWithNoMoreData];
+            }
+        }
     } failure:^(BOOL failuer, NSError *error) {
         NSLog(@"%@",error.description);
+        if (weakSelf.loadMore) {
+            if (weakSelf.pageNumber >2) {
+                weakSelf.pageNumber --;
+            }
+        }
+        [weakSelf.tableView.mj_header endRefreshing];
+        [weakSelf.tableView.mj_footer endRefreshing];
         [Toast makeText:weakSelf.view Message:@"请求推荐说说失败" afterHideTime:DELAYTiME];
     }];
 }

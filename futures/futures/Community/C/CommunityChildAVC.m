@@ -282,7 +282,6 @@ NSString *DynamicCell = @"DynamicCell";
         vc.shieldBlock = ^(NSInteger shieldNum){
             [weakSelf.dynamicsArray removeObjectAtIndex:shieldNum];
             [weakSelf.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:shieldNum inSection:3]] withRowAnimation:UITableViewRowAnimationTop];
-            
         };
     }
 }

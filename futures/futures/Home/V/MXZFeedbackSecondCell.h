@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *picImage;
 
 @property (copy, nonatomic) void (^textBlock)(NSString *);
+@property (copy, nonatomic) void (^addImgBlock)(MXZFeedbackSecondCell *selfCell);
 
 @end
 

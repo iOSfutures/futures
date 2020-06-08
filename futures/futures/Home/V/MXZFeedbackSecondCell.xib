@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,6 +34,9 @@
                             <constraint firstAttribute="height" constant="65" id="yPm-71-ykx"/>
                         </constraints>
                         <state key="normal" image="ic_photo_gray"/>
+                        <connections>
+                            <action selector="addImg:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Z4U-hG-fKT"/>
+                        </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="142701" translatesAutoresizingMaskIntoConstraints="NO" id="ffD-p2-bmX">
                         <rect key="frame" x="90" y="180" width="65" height="65"/>
@@ -41,14 +45,6 @@
                             <constraint firstAttribute="width" constant="65" id="rsC-DS-FAx"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUc-nG-LzZ">
-                        <rect key="frame" x="147.5" y="173" width="15" height="15"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="15" id="91f-ca-JqP"/>
-                            <constraint firstAttribute="width" constant="15" id="LDN-Di-IlQ"/>
-                        </constraints>
-                        <state key="normal" image="ic_delete"/>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="r8D-vM-wuE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="24z-XI-rrU"/>
@@ -56,10 +52,8 @@
                     <constraint firstItem="ffD-p2-bmX" firstAttribute="top" secondItem="r8D-vM-wuE" secondAttribute="bottom" constant="20" id="PFa-0S-W6r"/>
                     <constraint firstItem="ffD-p2-bmX" firstAttribute="leading" secondItem="UNn-fD-vn2" secondAttribute="trailing" constant="10" id="VK7-P1-AeA"/>
                     <constraint firstAttribute="trailing" secondItem="r8D-vM-wuE" secondAttribute="trailing" constant="15" id="fXf-pU-cOY"/>
-                    <constraint firstItem="uUc-nG-LzZ" firstAttribute="trailing" secondItem="ffD-p2-bmX" secondAttribute="trailing" constant="7.5" id="g9N-Dh-t96"/>
                     <constraint firstAttribute="bottom" secondItem="UNn-fD-vn2" secondAttribute="bottom" id="h0z-el-AFI"/>
                     <constraint firstItem="r8D-vM-wuE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="kTV-Oe-MHB"/>
-                    <constraint firstItem="uUc-nG-LzZ" firstAttribute="top" secondItem="r8D-vM-wuE" secondAttribute="bottom" constant="13" id="tin-EE-3iY"/>
                     <constraint firstItem="UNn-fD-vn2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="zwX-ee-8ix"/>
                 </constraints>
             </tableViewCellContentView>
@@ -74,7 +68,6 @@
     </objects>
     <resources>
         <image name="142701" width="115" height="84"/>
-        <image name="ic_delete" width="15" height="15"/>
         <image name="ic_photo_gray" width="34.5" height="31.5"/>
     </resources>
 </document>

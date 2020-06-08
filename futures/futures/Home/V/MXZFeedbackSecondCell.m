@@ -18,6 +18,7 @@
     _addPicBtn.layer.cornerRadius = 6;
     _addPicBtn.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:0.7];
     self.contentTextView.delegate = self;
+    self.picImage.hidden = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -36,5 +37,12 @@
 -(BOOL)textViewShouldEndEditing:(UITextView *)textView{
     return YES;
 }
+
+- (IBAction)addImg:(id)sender {
+    if (_addImgBlock) {
+        _addImgBlock(self);
+    }
+}
+
 
 @end

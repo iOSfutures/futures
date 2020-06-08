@@ -39,6 +39,8 @@
 
 @property (nonatomic, strong) MyImgPickerC *imagePickerVc;
 
+@property (copy, nonatomic)  NSString *saveURL;
+
 @end
 
 @implementation MineEditVC
@@ -114,25 +116,20 @@ NSString *MineProfileCellID = @"MineProfileCell";
         [self pushTZImagePickerController];
 
     }];
-    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"保存图片" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        //点击按钮要执行的方法
-    }];
-    UIAlertAction *action4 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //点击按钮要执行的方法
     }];
     
     UIColor *alertTextColor = [UIColor colorWithHexString:@"#FEA203"];
     [action1 setValue:alertTextColor forKey:@"titleTextColor"];
     [action2 setValue:alertTextColor forKey:@"titleTextColor"];
-    [action3 setValue:alertTextColor forKey:@"titleTextColor"];
-    [action4 setValue:[UIColor colorWithHexString:@"#333333"] forKey:@"titleTextColor"];
+    [action3 setValue:[UIColor colorWithHexString:@"#333333"] forKey:@"titleTextColor"];
     
     
     //3.添加按钮
     [alertC addAction:action1];
     [alertC addAction:action2];
     [alertC addAction:action3];
-    [alertC addAction:action4];
     
     //4.显示弹窗(相当于show)
     //这种方法，开头必须是控制器
@@ -199,7 +196,6 @@ NSString *MineProfileCellID = @"MineProfileCell";
      imagePickerVc.naviBgColor = [UIColor colorWithHexString:@"#FEA203"];
      imagePickerVc.navigationBar.translucent = NO;
     
-#pragma mark - 五类个性化设置，这些参数都可以不传，此时会走默认设置
     imagePickerVc.isSelectOriginalPhoto = YES;
     imagePickerVc.needShowStatusBar = NO;
     imagePickerVc.allowTakePicture = NO; // 在内部显示拍照按钮
@@ -226,12 +222,29 @@ NSString *MineProfileCellID = @"MineProfileCell";
 //    imagePickerVc.scaleAspectFillCrop = YES;
     
     // 你可以通过block或者代理，来得到用户选择的照片.
+    WEAKSELF
     [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
-
+        UIImage *selectedImg = photos[0];
+        weakSelf.avatarImgView.image = selectedImg;
+        [self uploadImg:selectedImg];
     }];
     
     imagePickerVc.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:imagePickerVc animated:YES completion:nil];
+}
+
+//上传图片:resopnse是地址
+-(void)uploadImg:(UIImage *)img{
+    WEAKSELF
+    NSDictionary *dict = @{
+        @"file" : img
+    };
+    [NetworkTool.shared postReturnString:@"http://image.yysc.online/upload" fileName:@"testImg" image:img viewcontroller:self params:dict success:^(id _Nonnull resopnse) {
+        self.saveURL = resopnse;
+        [self setUserHead];
+    } failture:^(NSError * _Nonnull error) {
+        [Toast makeText:weakSelf.view Message:@"上传图片失败" afterHideTime:DELAYTiME];
+    }];
 }
 
 #pragma mark - InformationDelegate
@@ -441,8 +454,6 @@ NSString *MineProfileCellID = @"MineProfileCell";
             [datePickerView show];
         }
     }
-    
-    
 }
 
 
@@ -538,6 +549,16 @@ NSString *MineProfileCellID = @"MineProfileCell";
     } failure:^(BOOL failuer, NSError *error) {
         NSLog(@"%@",error.description);
         [Toast makeText:weakSelf.view Message:@"上传用户资料失败" afterHideTime:DELAYTiME];
+    }];
+}
+
+-(void)setUserHead{
+    WEAKSELF
+    NSDictionary *dic = @{@"id":_user.userId,@"head":self.saveURL};
+    [ENDNetWorkManager putWithPathUrl:@"/user/personal/updateUser" parameters:dic queryParams:nil Header:nil success:^(BOOL success, id result) {
+    } failure:^(BOOL failuer, NSError *error) {
+        NSLog(@"%@",error.description);
+        [Toast makeText:weakSelf.view Message:@"上传用户头像失败" afterHideTime:DELAYTiME];
     }];
 }
 

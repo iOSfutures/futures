@@ -42,6 +42,7 @@
     self.myCategoryView.titleColor = UIColorWithRGBA(255, 255, 255, 0.6);
     self.myCategoryView.titleSelectedColor = UIColorWithRGBA(255, 255, 255, 1);
     self.myCategoryView.listContainer.contentScrollView.scrollEnabled = NO;
+    
     JXCategoryIndicatorLineView *lineView = [[JXCategoryIndicatorLineView alloc] init];
     lineView.indicatorWidth = 10;
     lineView.indicatorHeight = 2;

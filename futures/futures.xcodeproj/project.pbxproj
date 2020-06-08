@@ -215,6 +215,7 @@
 		18E8AC872474F4CC00E3D7C4 /* CommunityTopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8AC862474F4CC00E3D7C4 /* CommunityTopicHeaderView.m */; };
 		18E8AC8A247519D100E3D7C4 /* CommunityDynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E8AC89247519D000E3D7C4 /* CommunityDynamicModel.m */; };
 		43596A819B66D10178A0882C /* Pods_futures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66967DA234F0732F071AFCD /* Pods_futures.framework */; };
+		CBAC7855248DCB0200C36B81 /* CommunityDynamicListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7854248DCB0200C36B81 /* CommunityDynamicListModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -569,6 +570,8 @@
 		1E8A6C0CB72502A19B418054 /* Pods-futures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-futures.release.xcconfig"; path = "Target Support Files/Pods-futures/Pods-futures.release.xcconfig"; sourceTree = "<group>"; };
 		2918599DF26764A44CB6CA12 /* Pods-futures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-futures.debug.xcconfig"; path = "Target Support Files/Pods-futures/Pods-futures.debug.xcconfig"; sourceTree = "<group>"; };
 		C66967DA234F0732F071AFCD /* Pods_futures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_futures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBAC7853248DCB0200C36B81 /* CommunityDynamicListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityDynamicListModel.h; sourceTree = "<group>"; };
+		CBAC7854248DCB0200C36B81 /* CommunityDynamicListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityDynamicListModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1199,6 +1202,8 @@
 				18E8AC89247519D000E3D7C4 /* CommunityDynamicModel.m */,
 				184B789F247F94B000BFCB45 /* UserModel.h */,
 				184B78A0247F94B000BFCB45 /* UserModel.m */,
+				CBAC7853248DCB0200C36B81 /* CommunityDynamicListModel.h */,
+				CBAC7854248DCB0200C36B81 /* CommunityDynamicListModel.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -1521,6 +1526,7 @@
 				151A95AA247BA995007F3AAB /* MXZSettingCenterVC.m in Sources */,
 				15AA6EFD247F4D7800F416CF /* MXZHomeThirdSectionHeadView.m in Sources */,
 				15A6F1CE24752C15002C0930 /* MXZFullFourthSectionCell.m in Sources */,
+				CBAC7855248DCB0200C36B81 /* CommunityDynamicListModel.m in Sources */,
 				1526D6D8247E0A7C006A2556 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				152636A5246E771D00D01BE0 /* MXZHomeFourthSectionCell.m in Sources */,
 				1828C5E72486358E00462796 /* YKLineEntity.m in Sources */,
@@ -1677,11 +1683,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = futures/SupportFile/PrefixHeader.pch;
 				INFOPLIST_FILE = futures/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ssiswent;
+				PRODUCT_BUNDLE_IDENTIFIER = Ssiswent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "futures/futures-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1701,11 +1708,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = futures/SupportFile/PrefixHeader.pch;
 				INFOPLIST_FILE = futures/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ssiswent;
+				PRODUCT_BUNDLE_IDENTIFIER = Ssiswent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "futures/futures-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

@@ -69,17 +69,14 @@ NSString *DynamicCell3 = @"DynamicCell3";
     
     [self.dynamicTableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommunityDynamicCell class]) bundle:nil]forCellReuseIdentifier:DynamicCell3];
     
-//    [self setHeaderView];
     
     [self setLayer];
-    [self setFadeStyle];
+    [self setContentInset];
     
     [self clickAttentionGes];
     [self clickFavoriteGes];
     [self clickFanGes];
-    
-//    _user = UserModel.new;
-//    _user.userId = @155;
+
     [self getUser];
     [self getDynamics];
     
@@ -176,9 +173,14 @@ NSString *DynamicCell3 = @"DynamicCell3";
     _editBtn.layer.masksToBounds = YES;
 }
 
-- (void)setFadeStyle
+- (void)setContentInset
 {
-    self.dynamicTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    if (@available(iOS 11.0, *)) {
+        self.dynamicTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // Fallback on earlier versions
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     self.dynamicTableView.contentInset = UIEdgeInsetsMake(335.5, 0, 0, 0);
 }
 

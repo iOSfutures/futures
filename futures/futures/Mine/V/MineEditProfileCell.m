@@ -9,19 +9,30 @@
 #import "MineEditProfileCell.h"
 #import "UserModel.h"
 
-@interface MineEditProfileCell()
-
-@property (weak, nonatomic) IBOutlet UITextField *signatureTextF;
-
+@interface MineEditProfileCell()<UITextFieldDelegate>
 
 @end
 
 @implementation MineEditProfileCell
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.signatureTextF.delegate = self;
+}
+
 - (void)setUser:(UserModel *)user
 {
     _user = user;
-    _signatureTextF.text = user.signature;
+    self.signatureTextF.text = user.signature;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if([self.delegate respondsToSelector:@selector(mineEditProfileCellDidEndEditing:changedSignature:)])
+    {
+        [self.delegate mineEditProfileCellDidEndEditing:self changedSignature:self.signatureTextF.text];
+    }
 }
 
 @end

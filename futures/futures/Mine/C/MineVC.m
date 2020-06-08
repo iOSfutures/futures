@@ -138,6 +138,17 @@
         _hasUserId = YES;
         [self getUser];
     }
+    else
+    {
+        _hasUserId = NO;
+        self.attentionCountLabel.text = @"0";
+        self.fanCountLabel.text = @"0";
+        self.avatarImgView.image = [UIImage imageNamed:@"wallhaven-oxv6gl"];
+        self.nameLabel.text = @"快去取个昵称吧~";
+        
+        self.signatureLabel.text = @"这个人太懒了，什么都没留...";
+        
+    }
 }
 
 - (void)setGestures
@@ -150,7 +161,7 @@
     [self clickAvatarGes];
 }
 
- - (void)clickAvatarGes
+- (void)clickAvatarGes
 {
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(avatarImgViewClicked)];
     [_avatarImgView addGestureRecognizer:tap];
@@ -440,7 +451,7 @@
         weakSelf.attentionCountLabel.text = [NSString stringWithFormat:@"%d",user.followCount.intValue];
         weakSelf.fanCountLabel.text = [NSString stringWithFormat:@"%d",user.fansCount.intValue];
         [weakSelf.avatarImgView sd_setImageWithURL:[NSURL URLWithString:user.head]
-        placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
+                                  placeholderImage:[UIImage imageNamed:@"wallhaven-oxv6gl"]];
         weakSelf.nameLabel.text = user.nickName;
         if([user.signature isEqualToString:@""])
         {
@@ -450,7 +461,7 @@
         {
             weakSelf.signatureLabel.text = user.signature;
         }
-//        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
+        //        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
     } failure:^(BOOL failuer, NSError *error) {
         NSLog(@"%@",error.description);
         [Toast makeText:weakSelf.view Message:@"请求用户数据失败" afterHideTime:DELAYTiME];

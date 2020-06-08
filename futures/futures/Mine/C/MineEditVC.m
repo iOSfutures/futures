@@ -189,6 +189,13 @@ NSString *MineProfileCellID = @"MineProfileCell";
     }
 }
 
+- (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    UIImage *photo = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.avatarImgView.image = photo;
+    [self uploadImg:photo];
+}
+
 #pragma mark - TZImagePickerController
 
 - (void)pushTZImagePickerController {

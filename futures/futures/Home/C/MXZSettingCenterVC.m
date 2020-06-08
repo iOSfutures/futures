@@ -120,6 +120,8 @@
     }
     else if (indexPath.section == 0 && indexPath.row == 0) {
         LoginVC *loginVC = [LoginVC new];
+//        loginVC.modalPresentationStyle = UIModalPresentationFullScreen;
+//        [self presentViewController:loginVC animated:YES completion:nil];
         [self.navigationController pushViewController:loginVC animated:YES];
     }
     else if (indexPath.section == 1 && indexPath.row == 0){
@@ -128,7 +130,8 @@
     }
     else if (indexPath.section == 1 && indexPath.row == 1){
         //清空userId
-        
+        NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+        [userDefault setObject:nil forKey:@"userId"];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

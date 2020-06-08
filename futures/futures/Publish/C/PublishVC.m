@@ -298,6 +298,14 @@
     }
 }
 
+- (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    UIImage *photo = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.selectedImg = photo;
+    self.feedbackCell.picImage.image = self.selectedImg;
+    self.feedbackCell.picImage.hidden = NO;
+}
+
 #pragma mark - TZImagePickerController
 
 - (void)pushTZImagePickerController {
@@ -335,7 +343,6 @@
     [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
         UIImage *selectedImg = photos[0];
         weakSelf.selectedImg = selectedImg;
-
         self.feedbackCell.picImage.image = self.selectedImg;
         self.feedbackCell.picImage.hidden = NO;
     }];

@@ -11,7 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MXZFeedbackVC : UIViewController
-
+@property (strong, nonatomic) NSString *navTitle;
+@property (strong, nonatomic) NSString *str1;
+@property (strong, nonatomic) NSString *str2;
+@property (strong, nonatomic) NSString *str3;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -28,6 +28,7 @@
 #import "ZZHQuoteCalendarVC.h"
 #import "ZZHQuoteNewsVC.h"
 #import "MXZRecommandTalkModel.h"
+#import "LoginVC.h"
 
 
 #define SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
@@ -38,6 +39,7 @@
 @property (strong, nonatomic) NSArray *affairsArray;
 @property (strong, nonatomic) NSArray *recommandTalkArray;
 @property (strong, nonatomic) MXZHomeThirdSectionHeadView *homeThirdSectionHeadView;
+@property (nonatomic, assign) BOOL hasUserId;
 @end
 
 @implementation MXZHomeVC
@@ -99,6 +101,7 @@
     NSString *port = [NSString stringWithFormat:@"/admin/getFinanceAffairs?date"];
     [self getData:port];
     [self getRecommandTalkModel];
+    [self getUserDefault];
 }
 
 -(void)getBackView:(UIView*)superView getViewBlock:(void(^)(UIView *view))Blcok
@@ -297,8 +300,31 @@
 }
 
 -(void)qiandaoBtnClick{
-    MXZSignVC *signVC = [[MXZSignVC alloc]init];
-    [self.navigationController pushViewController:signVC animated:YES];
+    if(self.hasUserId)
+    {
+        MXZSignVC *signVC = [[MXZSignVC alloc]init];
+        [self.navigationController pushViewController:signVC animated:YES];
+    }
+    else
+    {
+        //跳转到登录界面
+        LoginVC *loginVC = [LoginVC new];
+        [self.navigationController pushViewController:loginVC animated:YES];
+        [Toast makeText:loginVC.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
+    }
+    
+}
+
+- (void)getUserDefault
+{
+    //获取用户偏好
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    //读取userId
+    NSNumber *userId = [userDefault objectForKey:@"userId"];
+    if(userId != nil)
+    {
+        _hasUserId = YES;
+    }
 }
 
 -(void)setQiandaoBtn:(UIView *)fView{
@@ -416,7 +442,9 @@
         if(cell == nil){
             cell = [[NSBundle mainBundle] loadNibNamed:@"MXZHomeFifthSectionCell" owner:self options:nil].firstObject;
         }
+        
         cell.recommandModel = self.recommandTalkArray[indexPath.row];
+        cell.recommandModel.recommandCount = indexPath.row%5;
         return cell;
     }
     

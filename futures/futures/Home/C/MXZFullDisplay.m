@@ -14,6 +14,7 @@
 #import "MXZFullFourthSectionCell.h"
 #import "UIImage+OriginalImage.h"
 #import "MXZDiscussModel.h"
+#import "MXZFeedbackVC.h"
 
 @interface MXZFullDisplay ()<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *displayTableview;
@@ -24,16 +25,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNavBar];
+    [self registerTableCell];
+    
+}
+
+-(void)setNavBar{
     self.navigationItem.title = @"全文展示";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullFirstSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullFirstSectionCell"];
-    [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullSecondSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullSecondSectionCell"];
-    [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullThirdSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullThirdSectionCell"];
-    [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullFourthSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullFourthSectionCell"];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back_black"] style:UIBarButtonItemStyleDone target:self action:@selector(backPreView)];
     
     //启用右滑返回手势
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    
+    UIBarButtonItem *shieldButton = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_shield"] style:UIBarButtonItemStylePlain target:self action:nil];
+    shieldButton.target = self;
+    shieldButton.action = @selector(shieldClick);
+    
+    UIBarButtonItem *reportButton = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_report"] style:UIBarButtonItemStylePlain target:self action:nil];
+    reportButton.target = self;
+    reportButton.action = @selector(reportClick);
+    
+    
+    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:reportButton, shieldButton, nil]];
+    
+}
+
+-(void)shieldClick{
+    
+}
+
+-(void)reportClick{
+    MXZFeedbackVC *feedbackVC = [[MXZFeedbackVC alloc]init];
+    feedbackVC.navTitle = @"举报中心";
+    feedbackVC.str1 = @"涉黄";
+    feedbackVC.str2 = @"垃圾内容";
+    feedbackVC.str3 = @"其他";
+    [self.navigationController pushViewController:feedbackVC animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -51,6 +79,13 @@
 
 -(void)backPreView{
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)registerTableCell{
+    [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullFirstSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullFirstSectionCell"];
+    [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullSecondSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullSecondSectionCell"];
+    [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullThirdSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullThirdSectionCell"];
+    [self.displayTableview registerNib:[UINib nibWithNibName:@"MXZFullFourthSectionCell" bundle:nil] forCellReuseIdentifier:@"MXZFullFourthSectionCell"];
 }
 
 #pragma mark getDiscuss
@@ -76,7 +111,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(section == 3){
-        return self.discussArray.count;
+        return self.discussArray.count/5;
     }
     return 1;
 }
@@ -119,7 +154,7 @@
         if(cell == nil){
             cell = [[NSBundle mainBundle] loadNibNamed:@"MXZFullFourthSectionCell" owner:self options:nil].firstObject;
         }
-        cell.discussModel = self.discussArray[indexPath.row];
+        cell.discussModel = self.discussArray[indexPath.row + self.recommandModel.recommandCount*(self.discussArray.count/5)];
         return cell;
     }
     

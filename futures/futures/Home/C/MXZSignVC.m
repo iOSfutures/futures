@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *signBtn;
 @property (strong, nonatomic) UIView *bgView;
 @property (strong, nonatomic) UIView *redPacket;
+@property (assign, nonatomic) NSNumber *haveSign;
+@property (nonatomic, strong)NSNumber *userId;
 @end
 
 @implementation MXZSignVC
@@ -37,6 +39,11 @@
 - (void)viewWillAppear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = YES;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    [self getUserDefault];
+    [self getSignEnable];
+    
+    
+    //历史签到
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -45,6 +52,19 @@
 
 -(void)backPreView{
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+- (void)getUserDefault
+{
+    //获取用户偏好
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    //读取userId
+    NSNumber *userId = [userDefault objectForKey:@"userId"];
+    if(userId != nil)
+    {
+        _userId = userId;
+    }
 }
 
 - (void)popCoverview{
@@ -64,6 +84,9 @@
     //实现弹出方法
     
     [[UIApplication sharedApplication].keyWindow addSubview:_coverView];
+    
+    //post今天已经签到
+    [self postSigned];
 }
 
 -(void)confirmBtnClick{
@@ -83,14 +106,30 @@
          [[UIApplication sharedApplication].keyWindow addSubview:_bgView];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)getSignEnable{
+    NSDictionary *dict = @{@"userId" : _userId};
+    [NetworkTool.shared get:@"http://api.yysc.online/user/sign/hasSign" viewcontroller:self params:dict success:^(id _Nonnull response) {
+        self.haveSign = response[@"data"];
+        //今天是否可以签到
+        if ([self.haveSign  isEqual: @(NO)]) {
+            self.signBtn.enabled = YES;
+        }
+        else{
+            self.signBtn.enabled = NO;
+        }
+        NSLog(@"%@",response);
+    } failture:^(NSError * _Nonnull error) {
+        self.signBtn.enabled = NO;
+    }];
 }
-*/
+
+-(void)postSigned{
+    NSDictionary *dict = @{@"userId" : _userId};
+    [NetworkTool.shared post:@"http://api.yysc.online/user/sign/signNow" viewcontroller:self params:dict success:^(id _Nonnull response) {
+        
+    } failture:^(NSError * _Nonnull error) {
+        
+    }];
+}
 
 @end

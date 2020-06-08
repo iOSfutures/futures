@@ -101,6 +101,7 @@
         }
         else
         {
+            //跳转到登录界面
             LoginVC *loginVC = [LoginVC new];
             [self.navigationController pushViewController:loginVC animated:YES];
             [Toast makeText:loginVC.view Message:@"请先注册或登录" afterHideTime:DELAYTiME];
@@ -120,7 +121,7 @@
         titleLabel.text = @"分类标签";
     }
     else if (section == 1){
-        titleLabel.text = @"我要反馈";
+        titleLabel.text = @"发布内容";
     }
     [headView addSubview:titleLabel];
     return headView;
@@ -172,6 +173,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self getUserDefault];
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 

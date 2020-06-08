@@ -199,6 +199,7 @@ NSString *DynamicCell = @"DynamicCell";
         mxzModel.content = model.content;
         mxzModel.picture = model.picture1;
         mxzModel.user = model.user;
+        mxzModel.recommandCount = indexPath.row%5;
         MXZFullDisplay *vc = MXZFullDisplay.new;
         vc.recommandModel = mxzModel;
         [self.navigationController pushViewController:vc animated:YES];

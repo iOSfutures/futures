@@ -31,13 +31,7 @@
 		151AC19B247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151AC197247259A500EAE0BD /* MXZHomeFirstSectionCollectionViewCell.xib */; };
 		151AC19F24726AAF00EAE0BD /* MXZIndustryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 151AC19D24726AAF00EAE0BD /* MXZIndustryTableViewCell.m */; };
 		151AC1A024726AAF00EAE0BD /* MXZIndustryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151AC19E24726AAF00EAE0BD /* MXZIndustryTableViewCell.xib */; };
-		15263696246E771D00D01BE0 /* MXZHomeQuoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263677246E771D00D01BE0 /* MXZHomeQuoteVC.xib */; };
-		15263697246E771D00D01BE0 /* MXZHomeExpressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263678246E771D00D01BE0 /* MXZHomeExpressVC.xib */; };
-		15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1526367A246E771D00D01BE0 /* MXZHomeCalendarVC.xib */; };
-		15263699246E771D00D01BE0 /* MXZHomeQuoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526367C246E771D00D01BE0 /* MXZHomeQuoteVC.m */; };
-		1526369C246E771D00D01BE0 /* MXZHomeExpressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15263680246E771D00D01BE0 /* MXZHomeExpressVC.m */; };
 		1526369D246E771D00D01BE0 /* MXZHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263681246E771D00D01BE0 /* MXZHomeVC.xib */; };
-		1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15263683246E771D00D01BE0 /* MXZHomeCalendarVC.m */; };
 		152636A0246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15263687246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib */; };
 		152636A1246E771D00D01BE0 /* MXZHomeSecondSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15263689246E771D00D01BE0 /* MXZHomeSecondSectionCell.m */; };
 		152636A2246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1526368A246E771D00D01BE0 /* MXZHomeFourthCollectionCell.m */; };
@@ -100,7 +94,6 @@
 		15A6F1D124753351002C0930 /* MXZFullFourthSectionFootVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A6F1D024753351002C0930 /* MXZFullFourthSectionFootVIew.xib */; };
 		15AA6EF7247F459300F416CF /* MXZFinanceAffairModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA6EF6247F459300F416CF /* MXZFinanceAffairModel.m */; };
 		15AA6EFD247F4D7800F416CF /* MXZHomeThirdSectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA6EFC247F4D7800F416CF /* MXZHomeThirdSectionHeadView.m */; };
-		15CDF74F2473BAFD00B2811F /* MXZTtileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CDF74E2473BAFD00B2811F /* MXZTtileVC.m */; };
 		15CDFAD12474C2FB00B2811F /* MXZFullDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CDFACF2474C2FB00B2811F /* MXZFullDisplay.m */; };
 		15CDFAD62474C95900B2811F /* MXZFullFirstSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CDFAD42474C95900B2811F /* MXZFullFirstSectionCell.m */; };
 		15CDFAD72474C95900B2811F /* MXZFullFirstSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15CDFAD52474C95900B2811F /* MXZFullFirstSectionCell.xib */; };
@@ -262,17 +255,8 @@
 		151AC19C24726AAF00EAE0BD /* MXZIndustryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZIndustryTableViewCell.h; sourceTree = "<group>"; };
 		151AC19D24726AAF00EAE0BD /* MXZIndustryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZIndustryTableViewCell.m; sourceTree = "<group>"; };
 		151AC19E24726AAF00EAE0BD /* MXZIndustryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MXZIndustryTableViewCell.xib; sourceTree = "<group>"; };
-		15263677246E771D00D01BE0 /* MXZHomeQuoteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeQuoteVC.xib; sourceTree = "<group>"; };
-		15263678246E771D00D01BE0 /* MXZHomeExpressVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeExpressVC.xib; sourceTree = "<group>"; };
-		1526367A246E771D00D01BE0 /* MXZHomeCalendarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeCalendarVC.xib; sourceTree = "<group>"; };
-		1526367B246E771D00D01BE0 /* MXZHomeExpressVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeExpressVC.h; sourceTree = "<group>"; };
-		1526367C246E771D00D01BE0 /* MXZHomeQuoteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXZHomeQuoteVC.m; sourceTree = "<group>"; };
-		1526367D246E771D00D01BE0 /* MXZHomeCalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeCalendarVC.h; sourceTree = "<group>"; };
-		15263680246E771D00D01BE0 /* MXZHomeExpressVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXZHomeExpressVC.m; sourceTree = "<group>"; };
 		15263681246E771D00D01BE0 /* MXZHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeVC.xib; sourceTree = "<group>"; };
 		15263682246E771D00D01BE0 /* MXZHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeVC.h; sourceTree = "<group>"; };
-		15263683246E771D00D01BE0 /* MXZHomeCalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXZHomeCalendarVC.m; sourceTree = "<group>"; };
-		15263685246E771D00D01BE0 /* MXZHomeQuoteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeQuoteVC.h; sourceTree = "<group>"; };
 		15263687246E771D00D01BE0 /* MXZHomeFourthSectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXZHomeFourthSectionCell.xib; sourceTree = "<group>"; };
 		15263688246E771D00D01BE0 /* MXZHomeFifthSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXZHomeFifthSectionCell.h; sourceTree = "<group>"; };
 		15263689246E771D00D01BE0 /* MXZHomeSecondSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXZHomeSecondSectionCell.m; sourceTree = "<group>"; };
@@ -382,8 +366,6 @@
 		15AA6EF6247F459300F416CF /* MXZFinanceAffairModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFinanceAffairModel.m; sourceTree = "<group>"; };
 		15AA6EFB247F4D7800F416CF /* MXZHomeThirdSectionHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZHomeThirdSectionHeadView.h; sourceTree = "<group>"; };
 		15AA6EFC247F4D7800F416CF /* MXZHomeThirdSectionHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZHomeThirdSectionHeadView.m; sourceTree = "<group>"; };
-		15CDF74D2473BAFD00B2811F /* MXZTtileVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZTtileVC.h; sourceTree = "<group>"; };
-		15CDF74E2473BAFD00B2811F /* MXZTtileVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZTtileVC.m; sourceTree = "<group>"; };
 		15CDFACE2474C2FB00B2811F /* MXZFullDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFullDisplay.h; sourceTree = "<group>"; };
 		15CDFACF2474C2FB00B2811F /* MXZFullDisplay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXZFullDisplay.m; sourceTree = "<group>"; };
 		15CDFAD32474C95900B2811F /* MXZFullFirstSectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXZFullFirstSectionCell.h; sourceTree = "<group>"; };
@@ -645,41 +627,12 @@
 				15263682246E771D00D01BE0 /* MXZHomeVC.h */,
 				184687A9247D1D98007BC2FC /* MXZHomeVC.m */,
 				15263681246E771D00D01BE0 /* MXZHomeVC.xib */,
-				1526367D246E771D00D01BE0 /* MXZHomeCalendarVC.h */,
-				15263683246E771D00D01BE0 /* MXZHomeCalendarVC.m */,
-				1526367A246E771D00D01BE0 /* MXZHomeCalendarVC.xib */,
-				1526367B246E771D00D01BE0 /* MXZHomeExpressVC.h */,
-				15263680246E771D00D01BE0 /* MXZHomeExpressVC.m */,
-				15263678246E771D00D01BE0 /* MXZHomeExpressVC.xib */,
-				15263685246E771D00D01BE0 /* MXZHomeQuoteVC.h */,
-				1526367C246E771D00D01BE0 /* MXZHomeQuoteVC.m */,
 				184687A5247D1D53007BC2FC /* MXZHomeIndustryVC.h */,
 				184687A4247D1D53007BC2FC /* MXZHomeIndustryVC.m */,
 				184687A6247D1D53007BC2FC /* MXZHomeIndustryVC.xib */,
-				15263677246E771D00D01BE0 /* MXZHomeQuoteVC.xib */,
-				15CDF74D2473BAFD00B2811F /* MXZTtileVC.h */,
-				15CDF74E2473BAFD00B2811F /* MXZTtileVC.m */,
 				15CDFACE2474C2FB00B2811F /* MXZFullDisplay.h */,
 				15CDFACF2474C2FB00B2811F /* MXZFullDisplay.m */,
 				15A6F1BC2475083A002C0930 /* MXZFullDisplay.xib */,
-				15593DFD247622FA007B3141 /* MXZSignVC.h */,
-				15593DFE247622FA007B3141 /* MXZSignVC.m */,
-				15593DFF247622FA007B3141 /* MXZSignVC.xib */,
-				157A71682477A282003D0081 /* MXZAnswerVC.h */,
-				157A71692477A282003D0081 /* MXZAnswerVC.m */,
-				157A716A2477A282003D0081 /* MXZAnswerVC.xib */,
-				151A95A7247BA995007F3AAB /* MXZSettingCenterVC.h */,
-				151A95A8247BA995007F3AAB /* MXZSettingCenterVC.m */,
-				151A95A9247BA995007F3AAB /* MXZSettingCenterVC.xib */,
-				151A95AC247BB82F007F3AAB /* MXZMessageCenterVC.h */,
-				151A95AD247BB82F007F3AAB /* MXZMessageCenterVC.m */,
-				151A95AE247BB82F007F3AAB /* MXZMessageCenterVC.xib */,
-				151A95B1247BBA3B007F3AAB /* MXZAboutUsVC.h */,
-				151A95B2247BBA3B007F3AAB /* MXZAboutUsVC.m */,
-				151A95B3247BBA3B007F3AAB /* MXZAboutUsVC.xib */,
-				1517AC69247CA579007BC789 /* MXZFeedbackVC.h */,
-				1517AC6A247CA579007BC789 /* MXZFeedbackVC.m */,
-				1517AC6B247CA579007BC789 /* MXZFeedbackVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -750,20 +703,6 @@
 				154C26B4247B8CEF00A9162D /* MXZAnswerTomorrowItem.h */,
 				154C26B5247B8CEF00A9162D /* MXZAnswerTomorrowItem.m */,
 				154C26B6247B8CEF00A9162D /* MXZAnswerTomorrowItem.xib */,
-				1517AC6E247CB83E007BC789 /* MXZFeedbackBtn.h */,
-				1517AC6F247CB83E007BC789 /* MXZFeedbackBtn.m */,
-				1517AC71247CBC3A007BC789 /* MXZFeedbackBtn.xib */,
-				1517AC73247CC7D2007BC789 /* MXZFeedbackFirstCell.h */,
-				1517AC74247CC7D2007BC789 /* MXZFeedbackFirstCell.m */,
-				1517AC76247D0497007BC789 /* MXZFeedbackSecondCell.h */,
-				1517AC77247D0497007BC789 /* MXZFeedbackSecondCell.m */,
-				1517AC78247D0497007BC789 /* MXZFeedbackSecondCell.xib */,
-				1517AC7B247D108C007BC789 /* MXZFeedbackThirdCell.h */,
-				1517AC7C247D108C007BC789 /* MXZFeedbackThirdCell.m */,
-				1517AC7D247D108C007BC789 /* MXZFeedbackThirdCell.xib */,
-				1517AC80247D1360007BC789 /* MXZFeedbackFourthCell.h */,
-				1517AC81247D1360007BC789 /* MXZFeedbackFourthCell.m */,
-				1517AC82247D1360007BC789 /* MXZFeedbackFourthCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1120,6 +1059,24 @@
 				CBFD7124248E21E000E8E009 /* MyImgPickerC.m */,
 				CBFD7126248E2A9800E8E009 /* MyTZimgPickerC.h */,
 				CBFD7127248E2A9800E8E009 /* MyTZimgPickerC.m */,
+				15593DFD247622FA007B3141 /* MXZSignVC.h */,
+				15593DFE247622FA007B3141 /* MXZSignVC.m */,
+				15593DFF247622FA007B3141 /* MXZSignVC.xib */,
+				157A71682477A282003D0081 /* MXZAnswerVC.h */,
+				157A71692477A282003D0081 /* MXZAnswerVC.m */,
+				157A716A2477A282003D0081 /* MXZAnswerVC.xib */,
+				151A95A7247BA995007F3AAB /* MXZSettingCenterVC.h */,
+				151A95A8247BA995007F3AAB /* MXZSettingCenterVC.m */,
+				151A95A9247BA995007F3AAB /* MXZSettingCenterVC.xib */,
+				151A95AC247BB82F007F3AAB /* MXZMessageCenterVC.h */,
+				151A95AD247BB82F007F3AAB /* MXZMessageCenterVC.m */,
+				151A95AE247BB82F007F3AAB /* MXZMessageCenterVC.xib */,
+				151A95B1247BBA3B007F3AAB /* MXZAboutUsVC.h */,
+				151A95B2247BBA3B007F3AAB /* MXZAboutUsVC.m */,
+				151A95B3247BBA3B007F3AAB /* MXZAboutUsVC.xib */,
+				1517AC69247CA579007BC789 /* MXZFeedbackVC.h */,
+				1517AC6A247CA579007BC789 /* MXZFeedbackVC.m */,
+				1517AC6B247CA579007BC789 /* MXZFeedbackVC.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1157,6 +1114,20 @@
 				188FC3282484AF790004FF40 /* MineCodeView.h */,
 				188FC3292484AF790004FF40 /* MineCodeView.m */,
 				188FC32B2484AF880004FF40 /* MineCodeView.xib */,
+				1517AC6E247CB83E007BC789 /* MXZFeedbackBtn.h */,
+				1517AC6F247CB83E007BC789 /* MXZFeedbackBtn.m */,
+				1517AC71247CBC3A007BC789 /* MXZFeedbackBtn.xib */,
+				1517AC73247CC7D2007BC789 /* MXZFeedbackFirstCell.h */,
+				1517AC74247CC7D2007BC789 /* MXZFeedbackFirstCell.m */,
+				1517AC76247D0497007BC789 /* MXZFeedbackSecondCell.h */,
+				1517AC77247D0497007BC789 /* MXZFeedbackSecondCell.m */,
+				1517AC78247D0497007BC789 /* MXZFeedbackSecondCell.xib */,
+				1517AC7B247D108C007BC789 /* MXZFeedbackThirdCell.h */,
+				1517AC7C247D108C007BC789 /* MXZFeedbackThirdCell.m */,
+				1517AC7D247D108C007BC789 /* MXZFeedbackThirdCell.xib */,
+				1517AC80247D1360007BC789 /* MXZFeedbackFourthCell.h */,
+				1517AC81247D1360007BC789 /* MXZFeedbackFourthCell.m */,
+				1517AC82247D1360007BC789 /* MXZFeedbackFourthCell.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -1326,7 +1297,6 @@
 				1517AC84247D1360007BC789 /* MXZFeedbackFourthCell.xib in Resources */,
 				188FC320248495A00004FF40 /* forgetPwdVC.xib in Resources */,
 				151A95AB247BA995007F3AAB /* MXZSettingCenterVC.xib in Resources */,
-				15263698246E771D00D01BE0 /* MXZHomeCalendarVC.xib in Resources */,
 				151AC1A024726AAF00EAE0BD /* MXZIndustryTableViewCell.xib in Resources */,
 				183B78E4247E535300D23A59 /* ZZHDateCollectionViewCell.xib in Resources */,
 				18D4F0DA248E4121007865DE /* ZZHTimeLineTableViewCell.xib in Resources */,
@@ -1351,7 +1321,6 @@
 				157A7164247676CE003D0081 /* MXZSignPopView.xib in Resources */,
 				18E8AC822474D51D00E3D7C4 /* CommunityBannerCell.xib in Resources */,
 				1859014224692D8B00CA7A68 /* PublishVC.xib in Resources */,
-				15263697246E771D00D01BE0 /* MXZHomeExpressVC.xib in Resources */,
 				18C2DE192473788900116E2E /* CommunityBannerViewCell.xib in Resources */,
 				18C2DE2C2473DD9700116E2E /* CommunityFriendCell.xib in Resources */,
 				151A95B0247BB82F007F3AAB /* MXZMessageCenterVC.xib in Resources */,
@@ -1380,7 +1349,6 @@
 				1846879B247D1D2C007BC2FC /* AttentionTableViewCell.xib in Resources */,
 				15A6F1CF24752C15002C0930 /* MXZFullFourthSectionCell.xib in Resources */,
 				154DFC702468F4B00098498C /* Assets.xcassets in Resources */,
-				15263696246E771D00D01BE0 /* MXZHomeQuoteVC.xib in Resources */,
 				15A6F1D124753351002C0930 /* MXZFullFourthSectionFootVIew.xib in Resources */,
 				157A71732477B14F003D0081 /* MXZAnswerWeekItem.xib in Resources */,
 				15CDFAD72474C95900B2811F /* MXZFullFirstSectionCell.xib in Resources */,
@@ -1445,7 +1413,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1538357724863FA400EA6578 /* MXZDiscussModel.m in Sources */,
-				15CDF74F2473BAFD00B2811F /* MXZTtileVC.m in Sources */,
 				15593E00247622FA007B3141 /* MXZSignVC.m in Sources */,
 				183B78C7247E533000D23A59 /* ZZHQuotesVC.m in Sources */,
 				189BD820246D45C300490E35 /* CommunityChildAVC.m in Sources */,
@@ -1492,10 +1459,8 @@
 				18132965247E6C22009FEE55 /* BaseModel.m in Sources */,
 				151AC1942472595D00EAE0BD /* ZKCycleScrollViewFlowLayout.m in Sources */,
 				18E8AC792474C60E00E3D7C4 /* CommunityFriendModel.m in Sources */,
-				15263699246E771D00D01BE0 /* MXZHomeQuoteVC.m in Sources */,
 				1828C5C92486358E00462796 /* ZCBaseView.m in Sources */,
 				18C2DE272473C97300116E2E /* CommunityTopicModel.m in Sources */,
-				1526369E246E771D00D01BE0 /* MXZHomeCalendarVC.m in Sources */,
 				183B78DF247E535300D23A59 /* ZZHDateCollectionViewCell.m in Sources */,
 				1828C5C82486358E00462796 /* NetWork.m in Sources */,
 				1526D6D2247E0A7C006A2556 /* EGHImagePickerVCManager.m in Sources */,
@@ -1545,7 +1510,6 @@
 				15CDFADB2474D49800B2811F /* MXZFullSecondSectionCell.m in Sources */,
 				1846878A247D1D0D007BC2FC /* ZZHQuoteDateModel.m in Sources */,
 				184687A1247D1D2C007BC2FC /* MineDynamicVC.m in Sources */,
-				1526369C246E771D00D01BE0 /* MXZHomeExpressVC.m in Sources */,
 				1859014124692D8B00CA7A68 /* PublishVC.m in Sources */,
 				18699D16247BB55E000A1022 /* MineInformationSexView.m in Sources */,
 				18A584872472544400C0437F /* ContentBaseViewController.m in Sources */,

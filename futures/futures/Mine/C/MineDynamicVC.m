@@ -49,6 +49,7 @@
 @property (strong, nonatomic)UserModel *user;
 
 @property (nonatomic, strong)NSNumber *userId;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *avatarImgViewBottom;
 
 @end
 
@@ -60,6 +61,27 @@ NSString *DynamicCell3 = @"DynamicCell3";
     [super viewDidLoad];
     
     [self getUserDefault];
+    
+    CGFloat bottomConstant = 132;
+    
+    if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 667)
+    {
+        bottomConstant = 132;
+    }
+    else if(SCREEN_WIDTH == 375 && SCREEN_HEIGHT == 812)
+    {
+        bottomConstant = 115;
+    }
+    else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 736)
+    {
+        bottomConstant = 132;
+    }
+    else if (SCREEN_WIDTH == 414 && SCREEN_HEIGHT == 896)
+    {
+        bottomConstant = 110;
+    }
+    
+    _avatarImgViewBottom.constant = bottomConstant;
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_back "] style:0 target:self action:@selector(backBtnClicked)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage originalImageWithName:@"ic_share it_homepage"] style:0 target:self action:nil];

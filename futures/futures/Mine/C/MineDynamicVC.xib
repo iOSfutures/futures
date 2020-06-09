@@ -13,6 +13,7 @@
                 <outlet property="AttentionView" destination="xhm-gq-SI8" id="4Fy-hL-O80"/>
                 <outlet property="attentionCountLabel" destination="vxl-Ne-dRw" id="uhi-cD-Hbm"/>
                 <outlet property="avatarImgView" destination="nu9-lF-pLL" id="TWe-Qg-3dd"/>
+                <outlet property="avatarImgViewBottom" destination="9zb-6q-I7J" id="WnG-uB-4x9"/>
                 <outlet property="constraintH" destination="Ro0-n5-j2G" id="2Xi-KI-7MT"/>
                 <outlet property="dynamicBtn" destination="wYD-At-KUP" id="nGn-Ta-lDC"/>
                 <outlet property="dynamicTableView" destination="S6p-XG-Lde" id="daC-jF-sYX"/>

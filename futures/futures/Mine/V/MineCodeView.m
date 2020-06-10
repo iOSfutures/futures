@@ -35,7 +35,7 @@
     gl.startPoint = CGPointMake(0, 0);
     gl.endPoint = CGPointMake(1, 1);
     gl.colors = @[(__bridge id)[UIColor colorWithRed:252/255.0 green:189/255.0 blue:38/255.0 alpha:1.0].CGColor,(__bridge id)[UIColor colorWithRed:255/255.0 green:88/255.0 blue:33/255.0 alpha:1.0].CGColor];
-    gl.locations = @[@(0.0f),@(1.0f)];
+    gl.locations = @[@(0.0),@(1.0)];
     [_confirmBtn.layer addSublayer:gl];
     
     UIGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(codeImgViewClicked)];
